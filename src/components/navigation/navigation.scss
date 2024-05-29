@@ -1,18 +1,22 @@
 .navigation {
-  padding: 20px 10px;
+  display: flex;
   width: 200px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  height: 50vh;
-  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 10px;
+  box-shadow: 0 0 50px rgba(159, 157, 157, 0.3);
+  height: 95vh;
   border-radius: 10px;
+  position: relative;
 
-  .icon {
-    margin-top: 25px;
-    font-size: 25px;
-    transition: fill 0.3s ease; // Smooth transition for fill color change
+  .nav_intro_div {
+    width: 200px;
 
-    &:hover {
-      fill: rgb(253, 19, 253); // Color change on hover
+    .nav_pic {
+      height: 200px;
+      border-radius: 50px;
+      margin: 6%;
     }
   }
 
@@ -22,25 +26,53 @@
     align-items: center;
     font-size: 12px;
     width: 100%;
-    margin: 25px 0;
     cursor: pointer;
     transition: color 0.3s ease;
 
     &:hover {
-      color: rgb(197, 0, 197);
+      color: var(--main-color);
     }
 
     svg {
-      margin-bottom: 5px;
+      margin-bottom: 2px;
       font-size: 25px;
     }
   }
 
   .active {
-    color: rgb(197, 0, 197);
+    color: var(--main-color);
 
     svg {
-      fill: rgb(197, 0, 197);
+      fill: var(--main-color);
     }
+  }
+}
+
+@media all and (max-width: 1050px) {
+  .navigation {
+    flex-direction: row;
+    position: sticky;
+    top: 0;
+    height: 10%;
+    width: 100%;
+
+    .nav_intro_div {
+      min-width: 160px;
+      margin: 0 10%;
+
+      .nav_pic {
+        display: none;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 750px) {
+  .navigation .nav_intro_div {
+    margin: 0;
+  }
+
+  .navigation svg {
+    font-size: 15px;
   }
 }

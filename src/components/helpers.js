@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const TypingEffect = () => {
-    const fullText = "Junior Web Developer";
+    const fullText = "Junior Developer";
     const [text, setText] = useState('');
     const [isDeleting, setIsDeleting] = useState(false);
     const [blink, setBlink] = useState(true);
@@ -39,7 +39,7 @@ const TypingEffect = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ ease: "linear", duration: 0.5 }}
-            style={{ fontFamily: 'monospace', fontSize: '16px', position: 'relative', whiteSpace: 'nowrap', margin: '10px 0', color: 'rgb(253, 19, 253)' }}
+            style={{ fontFamily: 'monospace', fontSize: '16px', position: 'relative', whiteSpace: 'nowrap', color: 'var(--main-color)' }}
         >
             {text}
             <motion.span

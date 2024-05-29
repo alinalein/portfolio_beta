@@ -1,0 +1,45 @@
+.floating-container {
+    display: flex;
+    width: 95%;
+    height: 90%;
+    box-shadow: 0 0 30px rgba(159, 157, 157, 0.3);
+    position: relative;
+    border-radius: 10px;
+    padding: 5px;
+    overflow: auto;
+    text-align: center;
+
+    .content {
+        overflow: auto;
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 8px;
+        scrollbar-width: thin;
+        scrollbar-color: var(--main-color) rgb(207, 206, 206);
+        scroll-behavior: smooth;
+
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: red;
+            border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: red;
+            border-radius: 10px;
+
+            &:hover {
+                background: #555;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 1050px) {
+    .floating-container {
+        height: auto;
+    }
+}

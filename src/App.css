@@ -1,10 +1,15 @@
 :root {
   --background-color-light: white;
   --text-color-light: black;
-  --background-color-dark: gray;
+  --background-color-dark: rgb(48, 48, 48);
   --text-color-dark: white;
   --box-shadow-dark: white;
   --box-shadow-light: gray;
+  --main-color: #ee4040;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body.light-mode {
@@ -18,11 +23,27 @@ body.dark-mode {
 }
 
 .app_container {
+  overflow: auto;
   display: flex;
+  justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   text-align: center;
-  overflow-y: auto;
   height: 100vh;
+  margin: 0;
+}
 
+.route_container {
+  overflow: auto;
+  display: flex;
+  height: 100%;
+  width: 70%;
+  justify-content: center;
+  align-items: center;
+}
+
+@media all and (max-width: 1050px) {
+  .app_container {
+    flex-direction: column;
+  }
 }

@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import './navigation.scss'
 import { useNavigate } from 'react-router-dom';
-
+import profilePic from '../../assets/img/IMG_1732.jpeg';
 import TypingAnimation from '../helpers.js';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import MessageIcon from '@mui/icons-material/Message';
@@ -31,14 +31,19 @@ const Navigation = () => {
 
     return (
         <nav className="navigation">
-            <div >
-                Hello I am Alina
+            <div className='nav_intro_div'>
+                <div>
+                    Hello I am Alina
+                </div>
+                <div>
+                    <img src={profilePic} alt='Profile picture' className="nav_pic" />
+                </div>
+                <div>
+                    <TypingAnimation />
+                </div>
             </div>
-            <div>
-                <TypingAnimation />
-            </div>
-            <div onClick={toggleTheme}>
-                {theme === 'light' ? <DarkModeIcon className="icon" /> : <WbSunnyIcon className="icon" />}
+            <div onClick={toggleTheme} className='menu-item'>
+                {theme === 'light' ? <DarkModeIcon /> : <WbSunnyIcon />}
             </div>
             {menuItems.map((item) => (
                 <div

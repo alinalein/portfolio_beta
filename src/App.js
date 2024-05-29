@@ -12,13 +12,15 @@ function App() {
     <BrowserRouter>
       <div className="app_container">
         <Navigation />
-        <Routes>
-          <Route path='/about' element={<AboutMe />} />
-          <Route path='/work' element={<Work />} />
-          <Route path='/contact' element={<Contact />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+        <div className='route_container'>
+          <Routes >
+            <Route path='/about' element={<AboutMe />} />
+            <Route path='/work' element={<Work />} />
+            <Route path='/contact' element={<Contact />} />
+          </Routes>
+        </div >
+      </div >
+    </BrowserRouter >
   );
 }
 
