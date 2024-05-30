@@ -51,10 +51,14 @@
 @media all and (max-width: 1050px) {
   .navigation {
     flex-direction: row;
-    position: sticky;
+    position: fixed;
     top: 0;
-    height: 10%;
+    height: 8%;
     width: 100%;
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(159, 157, 157, 0.3);
+    background-color: rgb(244, 237, 244);
+    border-radius: 0 0 20px 20px;
 
     .nav_intro_div {
       min-width: 160px;
@@ -72,7 +76,16 @@
     margin: 0;
   }
 
-  .navigation svg {
-    font-size: 15px;
+  .name_div {
+    font-size: 10px;
+  }
+
+  .navigation .menu-item {
+    font-size: 10px;
+
+    svg {
+      margin-bottom: 1px;
+      font-size: 15px;
+    }
   }
 }

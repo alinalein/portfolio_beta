@@ -17,13 +17,18 @@ body.light-mode {
   color: var(--text-color-light);
 }
 
+body.dark-mode .navigation {
+  background-color: rgb(70, 70, 79);
+  color: var(--text-color-dark);
+}
+
 body.dark-mode {
   background-color: var(--background-color-dark);
   color: var(--text-color-dark);
 }
 
 .app_container {
-  overflow: auto;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,7 +39,7 @@ body.dark-mode {
 }
 
 .route_container {
-  overflow: auto;
+  overflow: hidden;
   display: flex;
   height: 100%;
   width: 70%;
@@ -44,6 +49,23 @@ body.dark-mode {
 
 @media all and (max-width: 1050px) {
   .app_container {
+    height: auto;
+    flex-direction: column;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--main-color) rgb(207, 206, 206);
+    scroll-behavior: smooth;
+
+  }
+
+  .route_container .small-screen {
+    flex-direction: row;
+  }
+
+  .route_container {
+    height: auto;
+    width: 95%;
+    overflow: visible;
     flex-direction: column;
   }
 }

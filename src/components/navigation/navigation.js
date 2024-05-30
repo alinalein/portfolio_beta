@@ -1,5 +1,5 @@
 // Navigation.js
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './navigation.scss'
 import { useNavigate } from 'react-router-dom';
 import profilePic from '../../assets/img/IMG_1732.jpeg';
@@ -13,8 +13,37 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 const Navigation = () => {
     const [activeItem, setActiveItem] = useState('ABOUT');
     const [theme, setTheme] = useState('light');
+    const [isWidthGreaterThan1050, setIsWidthGreaterThan1050] = useState(window.innerWidth > 1050);
 
     const navigate = useNavigate()
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsWidthGreaterThan1050(window.innerWidth > 1050);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+
+    const handleMenuItemClick = (path, name) => {
+
+        if (!isWidthGreaterThan1050) {
+
+            const section = document.getElementById(name.toLowerCase());
+
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+            } else {
+                // Update URL without reloading
+                navigate(path, { replace: true });
+            }
+        } else {
+            navigate(path);
+        }
+    };
 
     const menuItems = [
         { name: 'ABOUT', icon: <PersonOutlineIcon className='menu-icon' />, path: '/about' },
@@ -32,8 +61,8 @@ const Navigation = () => {
     return (
         <nav className="navigation">
             <div className='nav_intro_div'>
-                <div>
-                    Hello I am Alina
+                <div className='name_div'>
+                    Hello I'm Alina
                 </div>
                 <div>
                     <img src={profilePic} alt='Profile picture' className="nav_pic" />
@@ -49,7 +78,10 @@ const Navigation = () => {
                 <div
                     key={item.name}
                     className={`menu-item ${activeItem === item.name ? 'active' : ''}`}
-                    onClick={() => { setActiveItem(item.name); navigate(item.path); }}
+                    onClick={() => {
+                        setActiveItem(item.name);
+                        handleMenuItemClick(item.path, item.name);
+                    }}
                 > {item.icon}
                     {item.name}
                 </div>
