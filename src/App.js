@@ -19,11 +19,11 @@ function App() {
   return (
     <BrowserRouter>
       <div className="app_container">
-        <Navigation />
+        <Navigation isWidthGreaterThan1050={isWidthGreaterThan1050} />
         <div className='route_container'>
           <Routes >
             {isWidthGreaterThan1050 ? (
-              <>
+              <><Route path='/' element={<AboutMe />} />
                 <Route path='/about' element={<AboutMe id="about" />} />
                 <Route path='/work' element={<Work id="work" />} />
                 <Route path='/contact' element={<Contact id="contact" />} />
