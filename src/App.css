@@ -1,10 +1,8 @@
 :root {
   --background-color-light: white;
   --text-color-light: black;
-  --background-color-dark: rgb(48, 48, 48);
+  --background-color-dark: rgb(34, 33, 33);
   --text-color-dark: white;
-  --box-shadow-dark: white;
-  --box-shadow-light: gray;
   --main-color: #ee4040;
 }
 
@@ -18,16 +16,30 @@ body.light-mode {
 }
 
 body.dark-mode .navigation {
-  background-color: rgb(70, 70, 79);
-  color: var(--text-color-dark);
-}
-
-body.dark-mode {
   background-color: var(--background-color-dark);
   color: var(--text-color-dark);
 }
 
+body.dark-mode .floating-container {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+.animation_bubbles {
+  background-color: var(--background-color-light);
+}
+
+body.dark-mode .animation_bubbles {
+  background-color: var(--background-color-dark);
+}
+
+body.dark-mode .app_container {
+  background: linear-gradient(180deg, black, red);
+}
+
 .app_container {
+  background: linear-gradient(180deg, white, red);
+  z-index: -2;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -50,6 +62,7 @@ body.dark-mode {
 @media all and (max-width: 1050px) {
   .app_container {
     height: auto;
+    /* change later to 100vh */
     flex-direction: column;
     overflow: auto;
     scrollbar-width: thin;

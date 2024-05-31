@@ -1,9 +1,8 @@
 // Navigation.js
 import React, { useState, useEffect } from 'react'
 import './navigation.scss'
-import { useNavigate } from 'react-router-dom';
-import profilePic from '../../assets/img/happy.jpg';
-import TypingAnimation from '../helpers.js';
+import profilePic from '../../assets/img/IMG_1732.jpeg';
+import TypingAnimation from '../utils/typing_effect.js';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import MessageIcon from '@mui/icons-material/Message';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
@@ -13,6 +12,13 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 const Navigation = ({ isWidthGreaterThan1050, setActiveComponent }) => {
     const [activeItem, setActiveItem] = useState('ABOUT');
     const [theme, setTheme] = useState('light')
+
+    useEffect(() => {
+        const hash = window.location.hash.replace('#', '').toUpperCase();
+        if (hash && ['ABOUT', 'WORK', 'CONTACT'].includes(hash)) {
+            setActiveItem(hash);
+        }
+    }, []);
 
     const handleMenuItemClick = (name) => {
         setActiveItem(name);
@@ -49,10 +55,10 @@ const Navigation = ({ isWidthGreaterThan1050, setActiveComponent }) => {
                     Hello I'm Alina
                 </div>
                 <div>
-                    <img src={profilePic} alt='Profile picture' className="nav_pic" />
+                    <TypingAnimation />
                 </div>
                 <div>
-                    <TypingAnimation />
+                    <img src={profilePic} alt='Profile picture' className="nav_pic" />
                 </div>
             </div>
             <div onClick={toggleTheme} className='menu-item'>

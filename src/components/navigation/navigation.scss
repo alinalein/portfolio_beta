@@ -1,6 +1,6 @@
 .navigation {
   display: flex;
-  width: 200px;
+  width: 150px;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
@@ -9,9 +9,11 @@
   height: 95vh;
   border-radius: 10px;
   position: relative;
+  background-color: var(--background-color-light);
+  z-index: 999;
 
   .nav_intro_div {
-    width: 200px;
+    width: 150px;
 
     .nav_pic {
       height: 130px;
@@ -55,9 +57,9 @@
     top: 0;
     height: 9%;
     width: 100%;
-    z-index: 1;
+    z-index: 999;
     box-shadow: 0 0 10px rgba(159, 157, 157, 0.3);
-    background-color: rgb(244, 237, 244);
+    background-color: var(--background-color-light);
     border-radius: 0 0 20px 20px;
 
     .nav_intro_div {
