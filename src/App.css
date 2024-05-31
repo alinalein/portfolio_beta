@@ -63,7 +63,6 @@ body.dark-mode {
   }
 
   .route_container {
-    height: auto;
     width: 95%;
     overflow: visible;
     flex-direction: column;

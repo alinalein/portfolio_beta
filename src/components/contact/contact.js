@@ -2,15 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './contact.scss'
 
-const Contact = ({ id }) => {
-    const [isWidthGreaterThan1050, setIsWidthGreaterThan1050] = useState(window.innerWidth > 1050);
-
-    useEffect(() => {
-        const handleResize = () => setIsWidthGreaterThan1050(window.innerWidth > 1050);
-        // Attach the resize event listener
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
+const Contact = ({ id, isWidthGreaterThan1050 }) => {
 
     const variants = {
         // strarting point of the div

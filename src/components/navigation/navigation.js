@@ -1,8 +1,8 @@
 // Navigation.js
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './navigation.scss'
 import { useNavigate } from 'react-router-dom';
-import profilePic from '../../assets/img/IMG_1732.jpeg';
+import profilePic from '../../assets/img/happy.jpg';
 import TypingAnimation from '../helpers.js';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import MessageIcon from '@mui/icons-material/Message';
@@ -10,34 +10,29 @@ import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 
-const Navigation = ({ isWidthGreaterThan1050 }) => {
+const Navigation = ({ isWidthGreaterThan1050, setActiveComponent }) => {
     const [activeItem, setActiveItem] = useState('ABOUT');
-    const [theme, setTheme] = useState('light');
+    const [theme, setTheme] = useState('light')
 
-    const navigate = useNavigate()
-
-    const handleMenuItemClick = (path, name) => {
+    const handleMenuItemClick = (name) => {
+        setActiveItem(name);
+        const sectionId = name.toLowerCase();
+        window.history.replaceState(null, null, '#' + sectionId);
 
         if (!isWidthGreaterThan1050) {
-
-            const section = document.getElementById(name.toLowerCase());
-
+            const section = document.getElementById(sectionId);
             if (section) {
                 section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-                //removes the # from the id generated path
-                window.history.replaceState({}, '', path)
-            } else {
-                navigate(path);
             }
-        };
+        } else {
+            setActiveComponent(name);
+        }
     }
 
-
     const menuItems = [
-        { name: 'ABOUT', icon: <PersonOutlineIcon className='menu-icon' />, path: '/about' },
-        { name: 'WORK', icon: <RemoveRedEyeIcon className='menu-icon' />, path: '/work' },
-        { name: 'CONTACT', icon: <MessageIcon className='menu-icon' />, path: '/contact' },
+        { name: 'ABOUT', icon: <PersonOutlineIcon className='menu-icon' /> },
+        { name: 'WORK', icon: <RemoveRedEyeIcon className='menu-icon' /> },
+        { name: 'CONTACT', icon: <MessageIcon className='menu-icon' /> },
 
     ];
 
@@ -69,7 +64,7 @@ const Navigation = ({ isWidthGreaterThan1050 }) => {
                     className={`menu-item ${activeItem === item.name ? 'active' : ''}`}
                     onClick={() => {
                         setActiveItem(item.name);
-                        handleMenuItemClick(item.path, item.name);
+                        handleMenuItemClick(item.name);
                     }}
                 > {item.icon}
                     {item.name}
