@@ -11,7 +11,7 @@ const Background = () => {
                     id: Math.random(),
                     size: Math.random() * 80 + 30, // Size between 30px and 110px
                     right: Math.random() * 100 + '%',
-                    duration: Math.random() * 15 + 10, // Duration between 15s and 40s
+                    duration: Math.random() * 25 + 10, // Duration between 15s and 40s
                 };
                 setBubbles(bubbles => [...bubbles, bubble]);
             }
@@ -29,7 +29,7 @@ const Background = () => {
                 width: '100%',
                 height: '100%',
                 overflow: 'hidden',
-                zIndex: 1
+                zIndex: 1,
             }}>
             <AnimatePresence>
                 {bubbles.map(bubble => (

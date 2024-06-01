@@ -25,7 +25,8 @@ const Contact = ({ id, isWidthGreaterThan1050 }) => {
         >
 
             <div className="content">
-                <h1>contact component!</h1>
+                <h2><span>C</span>ontact me!</h2>
+
                 <div>
                     <img src={contactForm} style={{ width: '70%' }} />
                 </div>

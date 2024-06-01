@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import profilePic from '../../assets/img/strawberry.jpg';
+import Tools from '../utils/tools';
 import './about.scss'
 
 const AboutMe = ({ id, isWidthGreaterThan1050 }) => {
@@ -18,7 +19,7 @@ const AboutMe = ({ id, isWidthGreaterThan1050 }) => {
 
     return (
         <motion.div id={id}
-            className="about_container floating-container"
+            className="floating-container"
             initial={isWidthGreaterThan1050 ? "hidden" : ""}
             animate={isWidthGreaterThan1050 ? "visible" : ""}
             variants={isWidthGreaterThan1050 ? variants : {}}
@@ -30,13 +31,16 @@ const AboutMe = ({ id, isWidthGreaterThan1050 }) => {
                         <img src={profilePic} alt='Profile picture' className="about_pic" />
                     </div>
                     <div style={{ margin: '0 50px', textAlign: 'left' }}>
-                        <h1>About</h1>
+                        <h2><span>A</span>bout me</h2>
                         <p> Welcome to my page, I am Alina, some text about me will come soon. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
                     </div>
                 </div>
-                <div> Skills I have carousel.......... </div>
                 <div> Why I want to be a Developer, text comig soon..........  </div>
-                <button style={{ width: '50vw', alignSelf: 'center' }}> Download My CV </button>
+                <div>
+                    <h2><span>M</span>y skills</h2>
+                    <Tools />
+                </div>
+                <button style={{ width: '50vw', alignSelf: 'center' }}> <h2><span>D</span>onwload CV</h2></button>
             </div>
 
         </motion.div>

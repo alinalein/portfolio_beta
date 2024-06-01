@@ -1,6 +1,6 @@
 .navigation {
   display: flex;
-  width: 170px;
+  width: 180px;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
@@ -13,7 +13,7 @@
   z-index: 999;
 
   .nav_intro_div {
-    width: 170px;
+    width: 180px;
 
     .nav_pic {
       height: 130px;
@@ -76,7 +76,7 @@
     }
 
     .menu-item {
-      height: 8vh;
+      height: 7vh;
     }
   }
 }
@@ -96,7 +96,7 @@
 
   .navigation .menu-item {
     font-size: 10px;
-    height: 5.5vh;
+    height: 5vh;
 
     svg {
       margin-bottom: 1px;
