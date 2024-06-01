@@ -1,9 +1,9 @@
 :root {
   --background-color-light: white;
   --text-color-light: black;
-  --background-color-dark: rgb(34, 33, 33);
+  --background-color-dark: rgb(63, 63, 63);
   --text-color-dark: white;
-  --main-color: #ee4040;
+  --main-color: #56da73e3;
 }
 
 * {
@@ -34,11 +34,11 @@ body.dark-mode .animation_bubbles {
 }
 
 body.dark-mode .app_container {
-  background: linear-gradient(180deg, black, red);
+  background: linear-gradient(180deg, var(--main-color), rgb(78, 111, 116));
 }
 
 .app_container {
-  background: linear-gradient(180deg, white, red);
+  background: linear-gradient(180deg, rgb(165, 238, 248), var(--main-color));
   z-index: -2;
   overflow: hidden;
   display: flex;
@@ -53,8 +53,8 @@ body.dark-mode .app_container {
 .route_container {
   overflow: hidden;
   display: flex;
-  height: 100%;
-  width: 70%;
+  height: 80%;
+  width: 60%;
   justify-content: center;
   align-items: center;
 }
@@ -76,7 +76,7 @@ body.dark-mode .app_container {
   }
 
   .route_container {
-    width: 95%;
+    width: 92%;
     overflow: visible;
     flex-direction: column;
   }

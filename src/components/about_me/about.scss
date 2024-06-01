@@ -4,7 +4,7 @@
      height: 90%;
      box-shadow: 0 0 30px rgba(159, 157, 157, 0.3);
      position: relative;
-     border-radius: 10px;
+     border-radius: 5px;
      padding: 5px;
      overflow: auto;
      text-align: center;
@@ -18,7 +18,10 @@
          border-radius: 8px;
          scrollbar-width: thin;
          scrollbar-color: var(--main-color) rgb(207, 206, 206);
+         //  display: flex;
+         //  justify-content: center;
          scroll-behavior: smooth;
+         //  flex-direction: column;
 
          &::-webkit-scrollbar {
              width: 10px;
@@ -37,7 +40,19 @@
                  background: #555;
              }
          }
+
+         .about_img_div {
+             display: flex;
+             flex-direction: row;
+             justify-content: space-between;
+         }
      }
+ }
+
+ .about_pic {
+     display: none;
+     border-radius: 40%;
+     margin: 4%;
  }
 
  @media all and (max-width: 1050px) {
@@ -46,11 +61,17 @@
          height: auto;
          margin: 2% 0;
          box-shadow: 0 0 10px rgba(159, 157, 157, 0.3);
+
      }
 
      .floating-container .content {
          overflow: visible;
          margin-top: 9vh;
+     }
+
+     .floating-container .about_pic {
+         display: block;
+         height: 30vh;
      }
  }
 
@@ -58,5 +79,9 @@
      .floating-container .content {
          overflow: visible;
          margin-top: 7vh;
+     }
+
+     .floating-container .about_pic {
+         height: 15vh;
      }
  }

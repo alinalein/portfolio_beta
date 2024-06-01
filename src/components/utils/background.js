@@ -6,7 +6,7 @@ const Background = () => {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            if (bubbles.length < 8) {
+            if (bubbles.length < 12) {
                 const bubble = {
                     id: Math.random(),
                     size: Math.random() * 80 + 30, // Size between 30px and 110px

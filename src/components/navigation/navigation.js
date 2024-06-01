@@ -1,7 +1,7 @@
 // Navigation.js
 import React, { useState, useEffect } from 'react'
 import './navigation.scss'
-import profilePic from '../../assets/img/IMG_1732.jpeg';
+import profilePic from '../../assets/img/strawberry.jpg';
 import TypingAnimation from '../utils/typing_effect.js';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import MessageIcon from '@mui/icons-material/Message';
@@ -12,6 +12,37 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 const Navigation = ({ isWidthGreaterThan1050, setActiveComponent }) => {
     const [activeItem, setActiveItem] = useState('ABOUT');
     const [theme, setTheme] = useState('light')
+
+    const menuItems = [
+        { name: 'ABOUT', icon: <PersonOutlineIcon className='menu-icon' /> },
+        { name: 'WORK', icon: <RemoveRedEyeIcon className='menu-icon' /> },
+        { name: 'CONTACT', icon: <MessageIcon className='menu-icon' /> },
+
+    ];
+
+    useEffect(() => {
+        const handleScroll = () => {
+            // List of section IDs corresponds to menuItems
+            const sections = ['about', 'work', 'contact'];
+            sections.forEach(section => {
+                const sectionElement = document.getElementById(section);
+                if (sectionElement) {
+                    const bounds = sectionElement.getBoundingClientRect();
+                    // Check if section is in the viewport
+                    if (bounds.top <= window.innerHeight / 2 && bounds.bottom >= window.innerHeight / 2) {
+                        setActiveItem(section.toUpperCase());
+                    }
+                }
+            });
+        };
+
+        if (!isWidthGreaterThan1050) {
+            window.addEventListener('scroll', handleScroll);
+        }
+
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [isWidthGreaterThan1050]);
+
 
     useEffect(() => {
         const hash = window.location.hash.replace('#', '').toUpperCase();
@@ -34,13 +65,6 @@ const Navigation = ({ isWidthGreaterThan1050, setActiveComponent }) => {
             setActiveComponent(name);
         }
     }
-
-    const menuItems = [
-        { name: 'ABOUT', icon: <PersonOutlineIcon className='menu-icon' /> },
-        { name: 'WORK', icon: <RemoveRedEyeIcon className='menu-icon' /> },
-        { name: 'CONTACT', icon: <MessageIcon className='menu-icon' /> },
-
-    ];
 
     const toggleTheme = () => {
         const newTheme = theme === 'light' ? 'dark' : 'light';
