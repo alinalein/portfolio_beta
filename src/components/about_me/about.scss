@@ -11,13 +11,14 @@
      background-color: var(--background-color-light);
      z-index: 1;
 
+
      .content {
          overflow: auto;
          margin: 0 10x;
          padding: 10px;
          border-radius: 8px;
          scrollbar-width: thin;
-         scrollbar-color: var(--main-color) rgb(207, 206, 206);
+         scrollbar-color: var(--main-color) rgba(159, 157, 157, 0.3);
          //  display: flex;
          //  justify-content: center;
          scroll-behavior: smooth;
@@ -43,25 +44,51 @@
 
          .about_img_div {
              display: flex;
-             flex-direction: row;
-             justify-content: space-between;
-
-
+             align-items: center;
+             justify-content: space-around;
+             margin-bottom: 20px;
          }
      }
  }
 
  .about_pic {
-     display: none;
+     max-width: 70%;
      border-radius: 40%;
      margin: 4%;
+     height: auto;
  }
 
- span {
+ .span_title {
      color: var(--main-color);
      background: linear-gradient(135deg, rgba(201, 202, 200, 0.3) 0%, rgba(120, 204, 109, .01) 100%);
      padding: 4px 2px 4px 20px;
      border-radius: 50%;
+ }
+
+ .component_title {
+     display: flex;
+     justify-content: left;
+     position: relative;
+     padding-bottom: 0.5px;
+     margin-bottom: 20px
+ }
+
+ .component_title::after {
+     content: '';
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     height: 1px;
+     background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+
+ }
+
+ .download_button {
+     border-radius: 5px;
+     height: 30px;
+     max-width: 60%;
+     height: auto;
  }
 
  @media all and (max-width: 1050px) {
@@ -73,14 +100,13 @@
 
      }
 
+     .component_title {
+         justify-content: center;
+     }
+
      .floating-container .content {
          overflow: visible;
          margin-top: 9vh;
-     }
-
-     .floating-container .about_pic {
-         display: block;
-         height: 30vh;
      }
  }
 
@@ -90,7 +116,11 @@
          margin-top: 7vh;
      }
 
+     .about_img_div {
+         flex-direction: column;
+     }
+
      .floating-container .about_pic {
-         height: 15vh;
+         max-width: 80%;
      }
  }

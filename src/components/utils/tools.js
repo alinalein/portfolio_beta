@@ -25,12 +25,12 @@ const Tools = () => {
 
     useEffect(() => {
         const sequence = async () => {
-            // 100px x svg icons number
-            const totalWidth = 105 * svgs.length;
+            // 92px x svg icons number (92 px  calculated based on the width of each svg)
+            const totalWidth = 92 * svgs.length;
             await controls.start({
                 x: -totalWidth,
                 // move left to the total width of all icons
-                transition: { duration: 1 * svgs.length, ease: "linear", repeat: Infinity }
+                transition: { duration: 1.5 * svgs.length, ease: "linear", repeat: Infinity }
             });
         };
 
@@ -38,18 +38,20 @@ const Tools = () => {
     }, [controls, svgs.length]);
 
     return (
-        <div style={{
-            overflow: 'hidden', backgroundColor: 'rgba(231, 231, 231, 0.6)',
-            boxShadow: '0 0 20px rgba(159, 157, 157, 0.4)',
-            borderRadius: '5px', width: '50vw', display: 'flex', flexDirection: 'center'
-        }}>
+        <div
+            className='tools_div'
+            style={{
+                overflow: 'hidden', backgroundColor: 'rgba(231, 231, 231, 0.6)',
+                boxShadow: '0 0 10px rgba(159, 157, 157, 0.4)',
+                borderRadius: '5px', margin: '20px 0',
+            }}>
             <motion.div
                 initial={{ x: 0 }}
                 animate={controls}
-                style={{ display: 'flex', width: `calc(105px * ${svgs.length})` }}
+                style={{ display: 'flex', width: `calc(92px * ${svgs.length})` }}
             >
                 {doubledSvgs.map((SvgIcon, index) => (
-                    <img key={index} src={SvgIcon} style={{ width: '100px', height: '50px', margin: ' 10px 20px', }} />
+                    <img key={index} src={SvgIcon} style={{ width: '80px', height: '40px', margin: ' 10px 20px', }} />
                 ))}
             </motion.div>
         </div>

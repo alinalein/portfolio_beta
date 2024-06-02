@@ -22,8 +22,10 @@ const Work = ({ id, isWidthGreaterThan1050 }) => {
             variants={isWidthGreaterThan1050 ? variants : {}}
         >
             <div className="content">
-                <h2><span>W</span>ork</h2>
 
+                <div className='component_title' >
+                    <h2><span className='span_title'>W</span>ork</h2>
+                </div>
                 <div>
                     picture will scale up when hover, overflow hidden ,text gets green . + to see more details & the mobile version of it                </div>
                 <div>

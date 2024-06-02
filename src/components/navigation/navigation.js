@@ -1,7 +1,6 @@
 // Navigation.js
 import React, { useState, useEffect } from 'react'
 import './navigation.scss'
-import profilePic from '../../assets/img/strawberry.jpg';
 import TypingAnimation from '../utils/typing_effect.js';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import MessageIcon from '@mui/icons-material/Message';
@@ -9,41 +8,46 @@ import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 
-const Navigation = ({ isWidthGreaterThan1050, setActiveComponent }) => {
+const Navigation = ({ isWidthGreaterThan1050, setActiveComponent, scrollToComponent }) => {
     const [activeItem, setActiveItem] = useState('ABOUT');
     const [theme, setTheme] = useState('light')
 
+    console.log('active', activeItem)
     const menuItems = [
         { name: 'ABOUT', icon: <PersonOutlineIcon className='menu-icon' /> },
         { name: 'WORK', icon: <RemoveRedEyeIcon className='menu-icon' /> },
         { name: 'CONTACT', icon: <MessageIcon className='menu-icon' /> },
-
     ];
 
     useEffect(() => {
         const handleScroll = () => {
-            // List of section IDs corresponds to menuItems
+            // list of section IDs corresponds to menuItems
             const sections = ['about', 'work', 'contact'];
-            sections.forEach(section => {
+            let currentSection = '';
+            for (let section of sections) {
                 const sectionElement = document.getElementById(section);
                 if (sectionElement) {
                     const bounds = sectionElement.getBoundingClientRect();
-                    // Check if section is in the viewport
                     if (bounds.top <= window.innerHeight / 2 && bounds.bottom >= window.innerHeight / 2) {
-                        setActiveItem(section.toUpperCase());
+                        currentSection = section.toUpperCase();
+                        break;
                     }
                 }
-            });
+            }
+
+            if (currentSection !== activeItem && currentSection !== '') {
+                setActiveItem(currentSection);
+                setActiveComponent(currentSection);
+            }
         };
 
-        if (!isWidthGreaterThan1050) {
-            window.addEventListener('scroll', handleScroll);
-        }
+        if (!isWidthGreaterThan1050) { window.addEventListener('scroll', handleScroll); }
 
         return () => window.removeEventListener('scroll', handleScroll);
-    }, [isWidthGreaterThan1050]);
+    }, [isWidthGreaterThan1050, activeItem, setActiveComponent]);
 
 
+    // set activeItem icon to the #id , when one id page was open on new page
     useEffect(() => {
         const hash = window.location.hash.replace('#', '').toUpperCase();
         if (hash && ['ABOUT', 'WORK', 'CONTACT'].includes(hash)) {
@@ -52,16 +56,13 @@ const Navigation = ({ isWidthGreaterThan1050, setActiveComponent }) => {
     }, []);
 
     const handleMenuItemClick = (name) => {
-        setActiveItem(name);
         const sectionId = name.toLowerCase();
+        // sets url to component id
         window.history.replaceState(null, null, '#' + sectionId);
-
         if (!isWidthGreaterThan1050) {
-            const section = document.getElementById(sectionId);
-            if (section) {
-                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
+            scrollToComponent(sectionId)
         } else {
+            setActiveItem(name)
             setActiveComponent(name);
         }
     }
@@ -79,11 +80,9 @@ const Navigation = ({ isWidthGreaterThan1050, setActiveComponent }) => {
                     Hello I'm Alina
                 </div>
                 <div>
-                    <TypingAnimation />
+
                 </div>
-                <div>
-                    <img src={profilePic} alt='Profile picture' className="nav_pic" />
-                </div>
+                <div> <TypingAnimation /></div>
             </div>
             <div onClick={toggleTheme} className='menu-item'>
                 {theme === 'light' ? <DarkModeIcon /> : <WbSunnyIcon />}
@@ -92,10 +91,7 @@ const Navigation = ({ isWidthGreaterThan1050, setActiveComponent }) => {
                 <div
                     key={item.name}
                     className={`menu-item ${activeItem === item.name ? 'active' : ''}`}
-                    onClick={() => {
-                        setActiveItem(item.name);
-                        handleMenuItemClick(item.name);
-                    }}
+                    onClick={() => { handleMenuItemClick(item.name); }}
                 > {item.icon}
                     {item.name}
                 </div>

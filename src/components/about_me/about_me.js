@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import profilePic from '../../assets/img/strawberry.jpg';
+import profilePic from '../../assets/img/strawberry.jpg'
 import Tools from '../utils/tools';
 import './about.scss'
 
@@ -26,23 +26,40 @@ const AboutMe = ({ id, isWidthGreaterThan1050 }) => {
         >
 
             <div className="content">
-                <div className='about_img_div'>
-                    <div>
-                        <img src={profilePic} alt='Profile picture' className="about_pic" />
-                    </div>
-                    <div style={{ margin: '0 50px', textAlign: 'left' }}>
-                        <h2><span>A</span>bout me</h2>
-                        <p> Welcome to my page, I am Alina, some text about me will come soon. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-                    </div>
-                </div>
-                <div> Why I want to be a Developer, text comig soon..........  </div>
                 <div>
-                    <h2><span>M</span>y skills</h2>
+                    <div className='component_title' >
+                        <h2><span className='span_title'>A</span>bout me</h2>
+                    </div>
+                    <div className='about_img_div'>
+                        <div style={{ width: '20vw', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <img src={profilePic} alt='Profile picture' className="about_pic" />
+                        </div>
+                        {/* on smaller screens with to 100% */}
+                        <div style={{ display: 'flex', textAlign: 'left', alignItems: 'center', width: '90%', flexDirection: 'column' }}>
+                            <p> Welcome to my page, I am Alina, some text about me will come soon.
+                                Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+                                dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+                                elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                                takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                            <a href='../../assets/img/CV.pdf' class="link" target="_blank" download="CV.pdf"><span>D</span>onwload CV</a>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div className='component_title'>
+                    <h2><span className='span_title'>M</span>y skills</h2>
+                </div>
+                <div className='about_img_div'>
                     <Tools />
                 </div>
-                <button style={{ width: '50vw', alignSelf: 'center' }}> <h2><span>D</span>onwload CV</h2></button>
+                <div className='component_title'>
+                    <h2><span className='span_title'>W</span>hy coding?</h2>
+                </div>
+                <p>Some more text ... </p>
             </div>
-
         </motion.div>
     );
 }

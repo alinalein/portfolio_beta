@@ -11,6 +11,7 @@ function App() {
   const [isWidthGreaterThan1050, setIsWidthGreaterThan1050] = useState(window.innerWidth > 1050);
   const [activeComponent, setActiveComponent] = useState('ABOUT');
 
+  console.log('activecomponent', activeComponent)
   const components = {
     // key in lower case to match the hash
     about: AboutMe,
@@ -23,14 +24,23 @@ function App() {
     // Attach the resize event listener
     window.addEventListener('resize', handleResize);
 
-    // so the initial load is exactly on tge hash of the url
+    // so the initial load is exactly on the hash of the url 
     const hash = window.location.hash.replace('#', '');
-    if (hash && components[hash]) {
+    if (isWidthGreaterThan1050 && hash && components[hash]) {
       setActiveComponent(hash.toUpperCase());
+    } else {
+      scrollToComponent(hash);
     }
 
     return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  }, [isWidthGreaterThan1050]);
+
+  const scrollToComponent = (componentId) => {
+    const element = document.getElementById(componentId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
   const ActiveComponent = components[activeComponent.toLowerCase()];
 
@@ -38,7 +48,7 @@ function App() {
     <BrowserRouter>
       <div className="app_container">
         <Background />
-        <Navigation isWidthGreaterThan1050={isWidthGreaterThan1050} setActiveComponent={setActiveComponent} className="navigation_component" />
+        <Navigation isWidthGreaterThan1050={isWidthGreaterThan1050} setActiveComponent={setActiveComponent} scrollToComponent={scrollToComponent} className="navigation_component" />
         <div className='route_container'>
           <Routes>
             {isWidthGreaterThan1050 ? (
