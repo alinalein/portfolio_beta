@@ -11,7 +11,6 @@ function App() {
   const [isWidthGreaterThan1050, setIsWidthGreaterThan1050] = useState(window.innerWidth > 1050);
   const [activeComponent, setActiveComponent] = useState('ABOUT');
 
-  console.log('activecomponent', activeComponent)
   const components = {
     // key in lower case to match the hash
     about: AboutMe,

@@ -25,6 +25,10 @@ body.dark-mode .floating-container {
   color: var(--text-color-dark);
 }
 
+body.dark-mode .social_item_div .social_icon {
+  color: var(--text-color-dark);
+}
+
 .animation_bubbles {
   background-color: var(--background-color-light);
 }
@@ -33,11 +37,11 @@ body.dark-mode .animation_bubbles {
   background-color: var(--background-color-dark);
 }
 
-.background-container {
+.background-container_bubbles {
   background: linear-gradient(180deg, rgb(185, 238, 245), var(--main-color));
 }
 
-body.dark-mode .background-container {
+body.dark-mode .background-container_bubbles {
   background: linear-gradient(180deg, var(--main-color), rgb(78, 111, 116));
 }
 

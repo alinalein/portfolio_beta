@@ -22,34 +22,56 @@
     }
   }
 
-  .menu-item {
-    display: flex;
-    border-radius: 50px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    width: 100%;
-    height: 8vh;
-    box-shadow: 0 0 10px rgba(159, 157, 157, 0.3);
-    cursor: pointer;
-    transition: color 0.3s ease;
-
-    &:hover {
-      color: var(--main-color);
-    }
-
-    svg {
-      margin-bottom: 2px;
-      font-size: 25px;
-    }
-  }
-
   .active {
     color: var(--main-color);
 
     svg {
       fill: var(--main-color);
+    }
+  }
+}
+
+.menu-item {
+  display: flex;
+  border-radius: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  width: 100%;
+  height: 8vh;
+  box-shadow: 0 0 10px rgba(159, 157, 157, 0.3);
+  cursor: pointer;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--main-color);
+  }
+
+  svg {
+    margin-bottom: 2px;
+    font-size: 25px;
+  }
+}
+
+.social_item_div {
+  display: flex;
+  margin: 10px 0;
+  flex-direction: row;
+  justify-content: space-around;
+
+  .social_item {
+    width: 40%;
+    height: auto;
+
+    .social_icon {
+      font-size: 35px;
+      color: black;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: var(--main-color);
+      }
     }
   }
 }
@@ -78,6 +100,10 @@
     .menu-item {
       height: 7vh;
     }
+  }
+
+  .nav_intro_div .social_item_div {
+    display: none;
   }
 }
 

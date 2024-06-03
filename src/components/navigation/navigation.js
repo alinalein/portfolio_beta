@@ -7,6 +7,8 @@ import MessageIcon from '@mui/icons-material/Message';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const Navigation = ({ isWidthGreaterThan1050, setActiveComponent, scrollToComponent }) => {
     const [activeItem, setActiveItem] = useState('ABOUT');
@@ -76,13 +78,18 @@ const Navigation = ({ isWidthGreaterThan1050, setActiveComponent, scrollToCompon
     return (
         <nav className="navigation">
             <div className='nav_intro_div'>
-                <div className='name_div'>
+                <div className=' name_div'>
                     Hello I'm Alina
                 </div>
-                <div>
-
-                </div>
                 <div> <TypingAnimation /></div>
+                <div className='social_item_div'>
+                    <a href="https://de.linkedin.com/in/alina-leinweber-901b94135" className='social_item menu-item'>
+                        <LinkedInIcon className='social_icon' />
+                    </a>
+                    <a href="https://github.com/alinalein " className='social_item menu-item' >
+                        <GitHubIcon className='social_icon' />
+                    </a>
+                </div>
             </div>
             <div onClick={toggleTheme} className='menu-item'>
                 {theme === 'light' ? <DarkModeIcon /> : <WbSunnyIcon />}

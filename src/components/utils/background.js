@@ -21,7 +21,7 @@ const Background = () => {
     }, [bubbles]);
 
     return (
-        <div className="background-container"
+        <div className="background-container_bubbles"
             style={{
                 position: 'fixed',
                 top: 0,
