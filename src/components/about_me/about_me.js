@@ -43,14 +43,14 @@ const AboutMe = ({ id, isWidthGreaterThan1050 }) => {
                                 magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
                                 justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
                                 takimata sanctus est Lorem ipsum dolor sit amet.</p>
-                            <a href='../../assets/img/CV.pdf' class="link" target="_blank" download="CV.pdf"><span>D</span>onwload CV</a>
+                            {/* <a href='../../assets/img/CV.pdf' class="link" target="_blank" download="CV.pdf"><span>D</span>onwload CV</a> */}
                         </div>
                     </div>
 
 
                 </div>
                 <div className='component_title'>
-                    <h2><span className='span_title'>M</span>y skills</h2>
+                    <h2><span className='span_title'>S</span>kills & Technologies</h2>
                 </div>
                 <div className='about_img_div'>
                     <Tools />
