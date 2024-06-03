@@ -15,11 +15,13 @@ body.light-mode {
   color: var(--text-color-light);
 }
 
+/* scss for navigation.js */
 body.dark-mode .navigation {
   background-color: var(--background-color-dark);
   color: var(--text-color-dark);
 }
 
+/* scss for about.js */
 body.dark-mode .floating-container {
   background-color: var(--background-color-dark);
   color: var(--text-color-dark);
@@ -29,6 +31,7 @@ body.dark-mode .social_item_div .social_icon {
   color: var(--text-color-dark);
 }
 
+/* scss for background.js */
 .animation_bubbles {
   background-color: var(--background-color-light);
 }
@@ -45,6 +48,7 @@ body.dark-mode .background-container_bubbles {
   background: linear-gradient(180deg, var(--main-color), rgb(78, 111, 116));
 }
 
+/* scss for App.js */
 .app_container {
   background-color: rgba(231, 231, 231, 0.2);
   overflow: hidden;
@@ -76,10 +80,7 @@ body.dark-mode .background-container_bubbles {
     /* change later to 100vh */
     flex-direction: column;
     overflow: auto;
-    scrollbar-width: thin;
-    scrollbar-color: var(--main-color) rgb(207, 206, 206);
     scroll-behavior: smooth;
-
   }
 
   .tools_div {

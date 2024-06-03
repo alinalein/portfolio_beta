@@ -1,5 +1,81 @@
-// scss for the social social_item_div and children is defined in navigation.scss
+// scss for the floating-container and children is defined in about_me.scss
+// scss for the social social_item_div, its children and parts for the button is defined in navigation.scss
 
-.contact_pic {
-    width: 30%;
+// scss for contact form here:
+.contact-form {
+    max-width: 70%;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    .input-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        width: 100%;
+        margin-bottom: 20px;
+
+        input {
+            font-size: 15px;
+            padding: 10px;
+            height: 50px;
+            border-radius: 5px;
+            border: 2px solid rgba(231, 231, 231, 0.4);
+            width: 100%;
+            background-color: rgba(231, 231, 231, 0.01);
+            outline: none;
+
+            &:focus {
+                border: 2px solid var(--main-color);
+            }
+        }
+    }
+
+    textarea {
+        font-size: 15px;
+        width: 100%;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 10px;
+        border: 2px solid rgba(231, 231, 231, 0.4);
+        border-radius: 5px;
+        height: 120px;
+        margin-bottom: 20px;
+        background-color: rgba(231, 231, 231, 0.01);
+        // otherwise focus color not visible 
+        outline: none;
+
+        &:focus {
+            border: 2px solid var(--main-color);
+
+        }
+    }
+
+    button {
+        flex-direction: row;
+        font-size: 15px;
+        width: 40%;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        box-shadow: none;
+        height: 50px;
+        background-color: rgba(231, 231, 231, 0.3);
+
+        .send_icon {
+            width: 15%;
+            // padding-left  , hat to be written , otherwise color transitions later than from the text
+            transition: padding-left 0.3s ease;
+        }
+
+        // hover applies only on the icon
+        &:hover .send_icon {
+            padding-left: 20px;
+        }
+    }
+}
+
+@media all and (max-width: 750px) {
+    .contact-form {
+        max-width: 90%;
+    }
 }

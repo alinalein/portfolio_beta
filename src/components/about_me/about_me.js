@@ -35,7 +35,7 @@ const AboutMe = ({ id, isWidthGreaterThan1050 }) => {
                             <img src={profilePic} alt='Profile picture' className="about_pic" />
                         </div>
                         {/* on smaller screens with to 100% */}
-                        <div style={{ display: 'flex', textAlign: 'left', alignItems: 'center', width: '90%', flexDirection: 'column' }}>
+                        <div style={{ display: 'flex', textAlign: 'left', alignItems: 'center', width: '90%', flexDirection: 'column', margin: '0 10px' }}>
                             <p> Welcome to my page, I am Alina, some text about me will come soon.
                                 Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
                                 dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
@@ -46,8 +46,6 @@ const AboutMe = ({ id, isWidthGreaterThan1050 }) => {
                             {/* <a href='../../assets/img/CV.pdf' class="link" target="_blank" download="CV.pdf"><span>D</span>onwload CV</a> */}
                         </div>
                     </div>
-
-
                 </div>
                 <div className='component_title'>
                     <h2><span className='span_title'>S</span>kills & Technologies</h2>

@@ -21,6 +21,7 @@ const Background = () => {
     }, [bubbles]);
 
     return (
+        // dark theme css is in App.css
         <div className="background-container_bubbles"
             style={{
                 position: 'fixed',
