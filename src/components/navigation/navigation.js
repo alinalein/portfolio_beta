@@ -14,7 +14,6 @@ const Navigation = ({ isWidthGreaterThan1050, setActiveComponent, scrollToCompon
     const [activeItem, setActiveItem] = useState('ABOUT');
     const [theme, setTheme] = useState('light')
 
-    console.log('active', activeItem)
     const menuItems = [
         { name: 'ABOUT', icon: <PersonOutlineIcon className='menu-icon' /> },
         { name: 'WORK', icon: <RemoveRedEyeIcon className='menu-icon' /> },
