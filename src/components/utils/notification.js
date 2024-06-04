@@ -4,7 +4,10 @@ const Notification = ({ message, type, onClose }) => {
     if (!message) return null;
 
     const notificationStyle = {
-        display: 'flex', with: 'auto', flexDirection: 'row', justifyContent: 'center',
+        display: 'flex',
+        with: 'auto',
+        flexDirection: 'row',
+        justifyContent: 'center',
         padding: '10px 15px',
         margin: '10px 0',
         borderRadius: '5px',
@@ -20,9 +23,17 @@ const Notification = ({ message, type, onClose }) => {
     };
 
     const buttonStye = {
-        background: 'none', border: 'none', cursor: 'pointer', position: 'relative',
-        top: '0', right: '0', width: '10px', height: '10px', padding: '0 10px 0 15px',
-        color: 'white', boxShadow: '0 0 30px rgba(159, 157, 157, 0.9)'
+        background: 'none',
+        border: 'none',
+        cursor: 'pointer',
+        position: 'relative',
+        top: '0',
+        right: '0',
+        width: '10px',
+        height: '10px',
+        padding: '0 10px 0 15px',
+        color: 'white',
+        boxShadow: '0 0 30px rgba(159, 157, 157, 0.9)'
 
     }
     return (

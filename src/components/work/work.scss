@@ -1,5 +1,6 @@
 .work_grid {
     display: grid;
+    position: relative;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
@@ -25,7 +26,7 @@
                 left: -999px;
                 right: -999px;
                 margin: auto;
-                transition: transform .5s ease;
+                transition: transform .7s ease;
             }
 
             .portfolio-overlay {
@@ -62,7 +63,7 @@
         &:hover {
             .work_img_div {
                 .work_img {
-                    transform: scale(1.1);
+                    transform: scale(1.05);
                 }
 
                 .portfolio-overlay {

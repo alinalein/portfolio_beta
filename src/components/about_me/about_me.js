@@ -3,20 +3,10 @@ import { motion } from 'framer-motion';
 import profilePic from '../../assets/img/image2.jpeg'
 import Tools from '../utils/tools';
 import CV from '../../assets/pdf/CV.pdf'
+import variants from '../utils/variants'
 import './about.scss'
 
 const AboutMe = ({ id, isWidthGreaterThan1050 }) => {
-
-    const variants = {
-        // strarting point of the div
-        hidden: { opacity: 0, x: '-70vw' },
-        visible: {
-            opacity: 1,
-            x: 0,
-            transition: { type: 'tween', duration: 2, ease: 'circOut' }
-            // transition: { type: 'tween', duration: 2, ease: 'easeOut' }
-        }
-    };
 
     return (
         <motion.div id={id}

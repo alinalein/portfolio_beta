@@ -5,22 +5,12 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import emailjs from '@emailjs/browser';
 import Notification from '../utils/notification';
+import variants from '../utils/variants'
 import './contact.scss'
 
 const Contact = ({ id, isWidthGreaterThan1050 }) => {
-
     const [notification, setNotification] = useState({ message: '', type: '' });
     const form = useRef();
-
-    const variants = {
-        // strarting point of the div animation
-        hidden: { opacity: 0, x: '-70vw' },
-        visible: {
-            opacity: 1,
-            x: 0,
-            transition: { type: 'tween', duration: 2, ease: 'circOut' }
-        }
-    };
 
     const closeNotification = () => {
         setNotification({ message: '', type: '' });
