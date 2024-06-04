@@ -15,13 +15,13 @@ body.light-mode {
   color: var(--text-color-light);
 }
 
-/* scss for navigation.js */
+/* css for navigation.js */
 body.dark-mode .navigation {
   background-color: var(--background-color-dark);
   color: var(--text-color-dark);
 }
 
-/* scss for about.js */
+/* css for about.js */
 body.dark-mode .floating-container {
   background-color: var(--background-color-dark);
   color: var(--text-color-dark);
@@ -31,7 +31,13 @@ body.dark-mode .social_item_div .social_icon {
   color: var(--text-color-dark);
 }
 
-/* scss for background.js */
+/* contact */
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+  color: var(--text-color-dark);
+}
+
+/* css for background.js */
 .animation_bubbles {
   background-color: var(--background-color-light);
 }
@@ -48,7 +54,7 @@ body.dark-mode .background-container_bubbles {
   background: linear-gradient(180deg, var(--main-color), rgb(78, 111, 116));
 }
 
-/* scss for App.js */
+/* css for App.js */
 .app_container {
   background-color: rgba(231, 231, 231, 0.2);
   overflow: hidden;

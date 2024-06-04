@@ -4,11 +4,8 @@ const Notification = ({ message, type, onClose }) => {
     if (!message) return null;
 
     const notificationStyle = {
-        display: 'flex',
-        with: 'auto',
-        flexDirection: 'row',
-        justifyContent: 'center',
-        padding: '20px 20px',
+        display: 'flex', with: 'auto', flexDirection: 'row', justifyContent: 'center',
+        padding: '10px 15px',
         margin: '10px 0',
         borderRadius: '5px',
         color: '#fff',
@@ -22,14 +19,16 @@ const Notification = ({ message, type, onClose }) => {
         boxShadow: '0px 2px 10px rgba(0,0,0,0.1)'
     };
 
+    const buttonStye = {
+        background: 'none', border: 'none', cursor: 'pointer', position: 'relative',
+        top: '0', right: '0', width: '10px', height: '10px', padding: '0 10px 0 15px',
+        color: 'white', boxShadow: '0 0 30px rgba(159, 157, 157, 0.9)'
+
+    }
     return (
         <div style={notificationStyle}>
-            {message}
-            <button onClick={onClose} style={{
-                background: 'none', border: 'none', cursor: 'pointer', position: 'relative',
-                top: '0', right: '0', width: '10px', height: '10px', paddingRight: '0 15px 0  15px',
-                color: 'white', fontWeight: 'bold'
-            }}>
+            <p>{message}</p>
+            <button onClick={onClose} style={buttonStye}>
                 x
             </button>
         </div>

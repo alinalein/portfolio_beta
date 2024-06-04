@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import profilePic from '../../assets/img/strawberry.jpg'
+import profilePic from '../../assets/img/image0.jpeg'
 import Tools from '../utils/tools';
 import './about.scss'
 
