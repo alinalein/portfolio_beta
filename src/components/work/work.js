@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
+import defaultPic from '../../assets/img/strawberry.jpg'
 import './work.scss'
 
 const Work = ({ id, isWidthGreaterThan1050 }) => {
@@ -26,29 +27,58 @@ const Work = ({ id, isWidthGreaterThan1050 }) => {
                 <div className='component_title' >
                     <h2><span className='span_title'>W</span>ork</h2>
                 </div>
-                <div>
-                    picture will scale up when hover, overflow hidden ,text gets green . + to see more details & the mobile version of it                </div>
-                <div>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                </div>
-                <div>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                </div>
-                <div>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                </div>
-                <div>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                </div>
-                <div>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                </div>
-                <div>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                <div className='work_grid'>
+                    <div className='work_grid_item'>
+                        <div className='work_img_div'>
+                            <img className='work_img' src={defaultPic} ></img>
+                            <div className="portfolio-overlay"><p className='overlay_plus'>+</p></div>
+                        </div>
+                        <h3>Title</h3>
+                        <p>Short discription</p>
+                    </div>
+                    <div className='work_grid_item' >
+                        <div className='work_img_div'>
+                            <img className='work_img' src={defaultPic} ></img>
+                            <div className="portfolio-overlay"><p className='overlay_plus'>+</p></div>
+                        </div>
+                        <h3>Title</h3>
+                        <p>Short discription</p>
+                    </div>
+                    <div className='work_grid_item' >
+                        <div className='work_img_div'>
+                            <img className='work_img' src={defaultPic} ></img>
+                            <div className="portfolio-overlay"><p className='overlay_plus'>+</p></div>
+                        </div>
+                        <h3>Title</h3>
+                        <p>Short discription</p>
+                    </div>
+                    <div className='work_grid_item' >
+                        <div className='work_img_div'>
+                            <img className='work_img' src={defaultPic} ></img>
+                            <div className="portfolio-overlay"><p className='overlay_plus'>+</p></div>
+                        </div>
+                        <h3>Title</h3>
+                        <p>Short discription</p>
+                    </div>
+                    <div className='work_grid_item' >
+                        <div className='work_img_div'>
+                            <img className='work_img' src={defaultPic} ></img>
+                            <div className="portfolio-overlay"><p className='overlay_plus'>+</p></div>
+                        </div>
+                        <h3>Title</h3>
+                        <p>Short discription</p>
+                    </div>
+                    <div className='work_grid_item' >
+                        <div className='work_img_div'>
+                            <img className='work_img' src={defaultPic} ></img>
+                            <div className="portfolio-overlay"><p className='overlay_plus'>+</p></div>
+                        </div>
+                        <h3>Title</h3>
+                        <p>Short discription</p>
+                    </div>
                 </div>
             </div>
-
-        </motion.div>
+        </motion.div >
     );
 }
 

@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import profilePic from '../../assets/img/image0.jpeg'
+import profilePic from '../../assets/img/image2.jpeg'
 import Tools from '../utils/tools';
+import CV from '../../assets/pdf/CV.pdf'
 import './about.scss'
 
 const AboutMe = ({ id, isWidthGreaterThan1050 }) => {
@@ -31,11 +32,10 @@ const AboutMe = ({ id, isWidthGreaterThan1050 }) => {
                         <h2><span className='span_title'>A</span>bout me</h2>
                     </div>
                     <div className='about_img_div'>
-                        <div style={{ width: '20vw', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                            <img src={profilePic} alt='Profile picture' className="about_pic" />
+                        <div className='img_div' >
+                            <img src={profilePic} alt='Profile' className="about_pic" />
                         </div>
-                        {/* on smaller screens with to 100% */}
-                        <div style={{ display: 'flex', textAlign: 'left', alignItems: 'center', width: '90%', flexDirection: 'column', margin: '0 10px' }}>
+                        <div className='text_div'>
                             <p> Welcome to my page, I am Alina, some text about me will come soon.
                                 Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
                                 dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
@@ -43,7 +43,7 @@ const AboutMe = ({ id, isWidthGreaterThan1050 }) => {
                                 magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
                                 justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
                                 takimata sanctus est Lorem ipsum dolor sit amet.</p>
-                            {/* <a href='../../assets/img/CV.pdf' class="link" target="_blank" download="CV.pdf"><span>D</span>onwload CV</a> */}
+                            <a href={CV} style={{ color: 'var(--main-color)' }} rel='noreferrer' target='_blank'>Donwload CV</a>
                         </div>
                     </div>
                 </div>

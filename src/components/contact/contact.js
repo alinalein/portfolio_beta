@@ -78,7 +78,7 @@ const Contact = ({ id, isWidthGreaterThan1050 }) => {
                 <div className='component_title' >
                     <h2><span className='span_title'>G</span>et in touch</h2>
                 </div>
-                <div className='social_item_div'>
+                <div className='social_item_div contact_icons_div'>
                     <a href="https://de.linkedin.com/in/alina-leinweber-901b94135" className='menu-item social_item '>
                         <LinkedInIcon className='social_icon' />
                     </a>

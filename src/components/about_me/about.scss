@@ -37,15 +37,27 @@
              display: flex;
              align-items: center;
              justify-content: space-around;
-             margin-bottom: 20px;
+             margin: 40px 0;
 
-             .about_pic {
-                 max-width: 70%;
-                 border-radius: 40%;
-                 margin: 4%;
-                 height: auto;
+             .img_div {
+                 width: 20vw;
+                 justify-content: center;
+
+                 .about_pic {
+                     max-width: 70%;
+                     border-radius: 40%;
+                     margin: 4%;
+                     height: auto;
+                 }
              }
 
+             .text_div {
+                 align-items: left;
+                 text-align: left;
+                 width: 90%;
+                 flex-direction: column;
+                 margin: 0 10px;
+             }
          }
      }
  }
