@@ -1,11 +1,11 @@
 import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
 import SendIcon from '@mui/icons-material/Send';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import emailjs from '@emailjs/browser';
 import Notification from '../utils/notification';
-import variants from '../utils/variants'
+import variants from '../utils/variantsAnimation'
 import './contact.scss'
 
 const Contact = ({ id, isWidthGreaterThan1050 }) => {

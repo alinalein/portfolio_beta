@@ -15,6 +15,16 @@ body.light-mode {
   color: var(--text-color-light);
 }
 
+/* css for project_details.js */
+body.dark-mode .modal_div {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+body.dark-mode .details_link {
+  color: var(--text-color-dark);
+}
+
 /* css for navigation.js */
 body.dark-mode .navigation {
   background-color: var(--background-color-dark);

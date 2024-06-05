@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import profilePic from '../../assets/img/image2.jpeg'
+import variants from '../utils/variantsAnimation'
 import Tools from '../utils/tools';
 import CV from '../../assets/pdf/CV.pdf'
-import variants from '../utils/variants'
+import profilePic from '../../assets/img/image2.jpeg'
 import './about.scss'
 
 const AboutMe = ({ id, isWidthGreaterThan1050 }) => {

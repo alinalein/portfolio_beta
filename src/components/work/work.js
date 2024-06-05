@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import defaultPic from '../../assets/img/strawberry.jpg'
-import variants from '../utils/variants'
-import { Modal, Box, Typography, Button } from '@mui/material';
+import variants from '../utils/variantsAnimation'
+import ProjectDetails from './project_details'
 
+// svg icons
 import Angular from '../../assets/svgs/Angular.svg'
 import Bootstrap from '../../assets/svgs/Bootstrap.svg'
 import CSS from '../../assets/svgs/CSS.svg'
@@ -20,11 +20,14 @@ import TS from '../../assets/svgs/Typescript.svg'
 import VS from '../../assets/svgs/Visual_Studio.svg'
 import './work.scss'
 
+// project pictures
+import defaultPic from '../../assets/img/strawberry.jpg'
+
 const Work = ({ id, isWidthGreaterThan1050 }) => {
     const [activeItem, setActiveItem] = useState(null);
 
     const workItems = [
-        { imgSrc: defaultPic, title: "Title 1", description: "Short description 1", linkGit: 'https://github.com/alin', linkLive: 'https://github.com/alin', languagesUsed: [ReactNat, SQL, Mongo], phonePic: '' },
+        { imgSrc: defaultPic, title: "Title 1", description: "Short description 1", linkGit: 'https://github.com/alin', linkLive: '', languagesUsed: [ReactNat, SQL, Mongo], phonePic: '' },
         { imgSrc: defaultPic, title: "Title 2", description: "Short description 2", linkGit: 'https://github.com/alin', linkLive: 'https://github.com/alin', languagesUsed: [ReactNat, Reacticon], phonePic: '' },
         { imgSrc: defaultPic, title: "Title 3", description: "Short description 3", linkGit: 'https://github.com/alin', linkLive: 'https://github.com/alin', languagesUsed: [], phonePic: '' },
         { imgSrc: defaultPic, title: "Title 4", description: "Short description 4", linkGit: 'https://github.com/alin', linkLive: 'https://github.com/alin', languagesUsed: [], phonePic: '' },
@@ -40,18 +43,6 @@ const Work = ({ id, isWidthGreaterThan1050 }) => {
     const onClose = () => {
         setActiveItem(null);
         // document.body.style.overflow = 'auto';
-    };
-
-    const style = {
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        width: 400,
-        bgcolor: 'background.paper',
-        border: '2px solid #000',
-        boxShadow: 24,
-        p: 4,
     };
 
     return (
@@ -78,29 +69,9 @@ const Work = ({ id, isWidthGreaterThan1050 }) => {
                     ))}
                 </div>
                 {activeItem &&
-                    <Modal
-                        open={true}
-                        onClose={onClose}
-                        aria-labelledby="modal-modal-title"
-                        aria-describedby="modal-modal-description"
-                    >
-                        <Box sx={style}>
-                            <h3>{activeItem.title}</h3>
-                            <Typography id="modal-modal-title" variant="h6" component="h2">
-                                <img style={{ height: '200px' }} src={activeItem.imgSrc} alt={activeItem.title} />
-                                <p>{activeItem.description}</p>
-                                <div> <p>Used languages:</p>
-                                    {activeItem.languagesUsed.map((src, index) => (
-                                        <img key={index} src={src} alt="Language Icon" style={{ width: 'auto', height: '40px', padding: '0 10p' }} />
-                                    ))}
-                                </div>
-                            </Typography>
-                            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                                <a href={activeItem.linkGit} target="_blank" rel="noopener noreferrer">GitHub Project</a>
-                                <a href={activeItem.linkLive} target="_blank" rel="noopener noreferrer">Live Project</a>
-                            </Typography>
-                        </Box>
-                    </Modal>
+                    <ProjectDetails onClose={onClose}
+                        title={activeItem.title} description={activeItem.description} imgSrc={activeItem.imgSrc}
+                        languagesUsed={activeItem.languagesUsed} linkLive={activeItem.linkLive} linkGit={activeItem.linkGit} />
                 }
             </div>
         </motion.div >

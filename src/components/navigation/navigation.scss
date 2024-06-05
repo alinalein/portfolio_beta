@@ -69,9 +69,12 @@
       font-size: 35px;
       color: black;
       transition: color 0.3s ease;
+    }
 
-      &:hover {
+    &:hover {
+      .social_icon {
         color: var(--main-color);
+
       }
     }
   }
