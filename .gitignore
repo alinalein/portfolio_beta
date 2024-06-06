@@ -6,7 +6,7 @@
 .pnp.js
 
 #assets
-img
+img_hidden
 
 # testing
 /coverage

@@ -20,19 +20,57 @@ import TS from '../../assets/svgs/Typescript.svg'
 import VS from '../../assets/svgs/Visual_Studio.svg'
 import './work.scss'
 
-// project pictures
-import defaultPic from '../../assets/img/strawberry.jpg'
+// project pictures 
+import chat_work from '../../assets/img/chat_work.png'
+import chat_main from '../../assets/img/chat_main.png'
+import chat_chat from '../../assets/img/chat_chat.png'
+
+import angular from '../../assets/img/myFlix_Angular.png'
+import angular_main from '../../assets/img/angular_phone_main.png'
+
+import pokemon from '../../assets/img/pokemon.png'
+
+import api from '../../assets/img/api.png'
+
+import react from '../../assets/img/myFlix_React.png'
+
+import meet from '../../assets/img/meet.png'
+
 
 const Work = ({ id, isWidthGreaterThan1050 }) => {
     const [activeItem, setActiveItem] = useState(null);
 
     const workItems = [
-        { imgSrc: defaultPic, title: "Title 1", description: "Short description 1", linkGit: 'https://github.com/alin', linkLive: '', languagesUsed: [ReactNat, SQL, Mongo], phonePic: '' },
-        { imgSrc: defaultPic, title: "Title 2", description: "Short description 2", linkGit: 'https://github.com/alin', linkLive: 'https://github.com/alin', languagesUsed: [ReactNat, Reacticon], phonePic: '' },
-        { imgSrc: defaultPic, title: "Title 3", description: "Short description 3", linkGit: 'https://github.com/alin', linkLive: 'https://github.com/alin', languagesUsed: [], phonePic: '' },
-        { imgSrc: defaultPic, title: "Title 4", description: "Short description 4", linkGit: 'https://github.com/alin', linkLive: 'https://github.com/alin', languagesUsed: [], phonePic: '' },
-        { imgSrc: defaultPic, title: "Title 5", description: "Short description 5", linkGit: 'https://github.com/alin', linkLive: 'https://github.com/alin', languagesUsed: [], phonePic: '' },
-        { imgSrc: defaultPic, title: "Title 6", description: "Short description 6", linkGit: 'https://github.com/alin', linkLive: 'https://github.com/alin', languagesUsed: [], phonePic: '' },
+        {
+            imgSrc: angular, title: "Angular myFlix",
+            description: "This is the Angular frontend for the Movie_API backend project. The app will feature multiple interface views to interact with data via the REST API endpoints defined in the Movie_API server-side application.",
+            linkGit: 'https://github.com/alinalein/myFlix-Angular-client', linkLive: 'https://alinalein.github.io/myFlix-Angular-client/welcome', languagesUsed: [ReactNat, SQL, Mongo], phonePic: [angular_main, angular]
+        },
+        {
+            imgSrc: chat_work, title: "React Native Chat",
+            description: "This app is designed for mobile devices using React Native. It provides users with a chat interface and options to chat, share images, share audios and their location.",
+            linkGit: 'https://github.com/alinalein/chat', linkLive: '', languagesUsed: [ReactNat, Reacticon], phonePic: [chat_main, chat_chat]
+        },
+        {
+            imgSrc: pokemon, title: "JavaScript Pokédex",
+            description: "This small application fetches data about Pokémon from an external API. It displays details about a Pokémon when its modal is clicked and allows the user to search for a specific Pokémon by name.",
+            linkGit: 'https://github.com/alinalein/JS-App', linkLive: 'https://alinalein.github.io/JS-App/', languagesUsed: [], phonePic: [pokemon]
+        },
+        {
+            imgSrc: api, title: "Node.JS Movie_API",
+            description: "This API gives users access to details about various movies, directors and genres. Users will be able to sign up, update their personal information, delete their profile and create a list of their favorite movies.",
+            linkGit: 'https://github.com/alinalein/movie_api', linkLive: '', languagesUsed: [], phonePic: [api]
+        },
+        {
+            imgSrc: react, title: "React myFlix",
+            description: "This is the React frontend for the Movie_API backend projectThe application will incorporate multiple interface views to manage data through the REST API endpoints defined in the Movie_API server-side application.",
+            linkGit: 'https://github.com/alinalein/movie_api-client', linkLive: 'https://myflix-alinalein.netlify.app', languagesUsed: [], phonePic: [react]
+        },
+        {
+            imgSrc: meet, title: "React PWA Meet",
+            description: "The application is designed for event management, using React and a test-driven development approach. It is a serverless and progressive web app, that fetches upcoming events through the Google Calendar API.",
+            linkGit: 'https://github.com/alinalein/meet', linkLive: 'https://alinalein.github.io/meet/', languagesUsed: [], phonePic: [meet]
+        },
     ];
 
     const showDetails = (item) => {
@@ -63,15 +101,15 @@ const Work = ({ id, isWidthGreaterThan1050 }) => {
                                 <img className='work_img' src={item.imgSrc} alt={item.title} />
                                 <div className="portfolio-overlay"><p className='overlay_plus'>+</p></div>
                             </div>
-                            <h3>{item.title}</h3>
-                            <p>{item.description}</p>
+                            <p>{item.title}</p>
                         </div>
                     ))}
                 </div>
                 {activeItem &&
                     <ProjectDetails onClose={onClose}
-                        title={activeItem.title} description={activeItem.description} imgSrc={activeItem.imgSrc}
-                        languagesUsed={activeItem.languagesUsed} linkLive={activeItem.linkLive} linkGit={activeItem.linkGit} />
+                        title={activeItem.title} description={activeItem.description}
+                        languagesUsed={activeItem.languagesUsed} linkLive={activeItem.linkLive} linkGit={activeItem.linkGit}
+                        phonePic={activeItem.phonePic} />
                 }
             </div>
         </motion.div >

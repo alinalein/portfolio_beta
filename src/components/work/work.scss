@@ -4,7 +4,7 @@
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
-    margin: 40px 20% 40px 20%;
+    margin: 40px 20% 20px 20%;
     grid-gap: 10px 20px;
 
     .work_grid_item {
@@ -20,12 +20,8 @@
 
             .work_img {
                 // centers the img in the div / if needed adjust width
-                position: absolute;
-                top: -999px;
-                bottom: -999px;
-                left: -999px;
-                right: -999px;
-                margin: auto;
+                max-width: 100%;
+                object-fit: cover;
                 transition: transform .7s ease;
             }
 
@@ -40,7 +36,7 @@
                 transition: all .5s ease;
 
                 .overlay_plus {
-                    color: rgba(231, 231, 231, 0.5);
+                    color: rgba(231, 231, 231, 0.95);
                     font-size: 50px;
                     position: relative;
                     bottom: -20%;
@@ -49,14 +45,10 @@
             }
         }
 
-        h3 {
+        p {
             margin: 5px 0;
             transition: color 0.5s ease;
-        }
-
-        p {
-            padding: 0;
-            margin: 0;
+            padding: 5px 0;
         }
 
         // effect will apply when hover over work_grid_item 
@@ -71,7 +63,7 @@
                 }
             }
 
-            h3 {
+            p {
                 color: var(--main-color);
             }
         }

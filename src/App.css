@@ -10,18 +10,14 @@
   box-sizing: border-box;
 }
 
-body.light-mode {
+/* body.light-mode {
   background-color: var(--background-color-light);
   color: var(--text-color-light);
-}
+} */
 
 /* css for project_details.js */
 body.dark-mode .modal_div {
   background-color: var(--background-color-dark);
-  color: var(--text-color-dark);
-}
-
-body.dark-mode .details_link {
   color: var(--text-color-dark);
 }
 
