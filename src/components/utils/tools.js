@@ -14,12 +14,20 @@ import ReactNat from '../../assets/svgs/ReactNative.svg'
 import SQL from '../../assets/svgs/Sql.svg'
 import TS from '../../assets/svgs/Typescript.svg'
 import VS from '../../assets/svgs/Visual_Studio.svg'
+import AWS from '../../assets/svgs/AWS.svg'
+import Jest from '../../assets/svgs/Jest.svg'
+import Cucumber from '../../assets/svgs/Cucumber.svg'
+import Postman from '../../assets/svgs/Postman.svg'
+import Express from '../../assets/svgs/Express.svg'
+import Redux from '../../assets/svgs/Redux.svg'
+import Saas from '../../assets/svgs/sass-1.svg'
 
 const Tools = () => {
     const controls = useAnimation();
     const svgs = [
         Angular, Bootstrap, CSS, Firebase, GitHub, HTML,
-        Mongo, Node, JS, Reacticon, SQL, TS, ReactNat, VS
+        Mongo, AWS, Node, JS, Reacticon, SQL, TS, ReactNat,
+        VS, Jest, Cucumber, Postman, Redux, Express, Saas
     ]
     const doubledSvgs = [...svgs, ...svgs];
 

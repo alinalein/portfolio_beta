@@ -82,7 +82,7 @@ const Navigation = ({ isWidthGreaterThan1050, setActiveComponent, scrollToCompon
                 </div>
                 <div> <TypingAnimation /></div>
                 <div className='social_item_div'>
-                    <a href="https://de.linkedin.com/in/alina-leinweber-901b94135" className='social_item menu-item'>
+                    <a href="https://github.com/alinalein" className='social_item menu-item'>
                         <LinkedInIcon className='social_icon' />
                     </a>
                     <a href="https://github.com/alinalein " className='social_item menu-item' >

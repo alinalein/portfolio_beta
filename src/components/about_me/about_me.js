@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import variants from '../utils/variantsAnimation'
 import Tools from '../utils/tools';
 import CV from '../../assets/pdf/CV.pdf'
-import profilePic from '../../assets/img/43276846411745289.jpg'
+import profilePic from '../../assets/img/profile.png'
 import './about.scss'
 
 const AboutMe = ({ id, isWidthGreaterThan1050 }) => {
