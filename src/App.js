@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import AboutMe from './components/about_me/about_me';
 import Navigation from './components/navigation/navigation';
 import Work from './components/work/work';
@@ -23,51 +23,35 @@ function App() {
     // Attach the resize event listener
     window.addEventListener('resize', handleResize);
 
-    // so the initial load is exactly on the hash of the url 
-    const hash = window.location.hash.replace('#', '');
-    if (isWidthGreaterThan1050 && hash && components[hash]) {
-      setActiveComponent(hash.toUpperCase());
-    } else {
-      scrollToComponent(hash);
-    }
-
     return () => window.removeEventListener('resize', handleResize);
   }, [isWidthGreaterThan1050]);
-
-  const scrollToComponent = (componentId) => {
-    const element = document.getElementById(componentId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
 
   const ActiveComponent = components[activeComponent.toLowerCase()];
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="app_container">
         <Background />
-        <Navigation isWidthGreaterThan1050={isWidthGreaterThan1050} setActiveComponent={setActiveComponent} scrollToComponent={scrollToComponent} className="navigation_component" />
+        <Navigation components={components} isWidthGreaterThan1050={isWidthGreaterThan1050} setActiveComponent={setActiveComponent} className="navigation_component" />
         <div className='route_container'>
           <Routes>
             {isWidthGreaterThan1050 ? (
-              < Route path='/' element={
-                <ActiveComponent id={activeComponent.toLowerCase()} isWidthGreaterThan1050={isWidthGreaterThan1050} />
-              }></Route>
+              <Route path="/" element={<ActiveComponent id={activeComponent.toLowerCase()} isWidthGreaterThan1050={isWidthGreaterThan1050} />} />
             ) : (
               <>
-                <Route path='/' element={<>
-                  <AboutMe id="about" isWidthGreaterThan1050={isWidthGreaterThan1050} />
-                  <Work id="work" isWidthGreaterThan1050={isWidthGreaterThan1050} />
-                  <Contact id="contact" isWidthGreaterThan1050={isWidthGreaterThan1050} />
-                </>} />
+                <Route path="/" element={
+                  <>
+                    <AboutMe id="about" isWidthGreaterThan1050={isWidthGreaterThan1050} />
+                    <Work id="work" isWidthGreaterThan1050={isWidthGreaterThan1050} />
+                    <Contact id="contact" isWidthGreaterThan1050={isWidthGreaterThan1050} />
+                  </>
+                } />
               </>
-            )
-            }
+            )}
           </Routes>
-        </div >
-      </div >
-    </BrowserRouter>
+        </div>
+      </div>
+    </HashRouter>
   );
 }
 

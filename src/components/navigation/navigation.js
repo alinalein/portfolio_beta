@@ -1,5 +1,6 @@
 // Navigation.js
 import React, { useState, useEffect } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom';
 import './navigation.scss'
 import TypingAnimation from '../utils/typing_effect.js';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
@@ -10,9 +11,11 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
-const Navigation = ({ isWidthGreaterThan1050, setActiveComponent, scrollToComponent }) => {
+const Navigation = ({ components, isWidthGreaterThan1050, setActiveComponent }) => {
     const [activeItem, setActiveItem] = useState('ABOUT');
     const [theme, setTheme] = useState('light')
+    const navigate = useNavigate();
+    const location = useLocation();
 
     const menuItems = [
         { name: 'ABOUT', icon: <PersonOutlineIcon className='menu-icon' /> },
@@ -20,6 +23,7 @@ const Navigation = ({ isWidthGreaterThan1050, setActiveComponent, scrollToCompon
         { name: 'CONTACT', icon: <MessageIcon className='menu-icon' /> },
     ];
 
+    // change active icon depending on the section the user scrolled to
     useEffect(() => {
         const handleScroll = () => {
             // list of section IDs corresponds to menuItems
@@ -47,19 +51,30 @@ const Navigation = ({ isWidthGreaterThan1050, setActiveComponent, scrollToCompon
         return () => window.removeEventListener('scroll', handleScroll);
     }, [isWidthGreaterThan1050, activeItem, setActiveComponent]);
 
-
-    // set activeItem icon to the #id , when one id page was open on new page
-    useEffect(() => {
-        const hash = window.location.hash.replace('#', '').toUpperCase();
-        if (hash && ['ABOUT', 'WORK', 'CONTACT'].includes(hash)) {
-            setActiveItem(hash);
+    const scrollToComponent = (componentId) => {
+        const element = document.getElementById(componentId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-    }, []);
+    };
+
+    // set activeItem icon & the active component to the #id of the initialy loaded page
+    useEffect(() => {
+        const hash = location.hash.replace('#', '')
+        if (hash && ['about', 'work', 'contact'].includes(hash)) {
+            setActiveItem(hash.toUpperCase());
+        }
+        if (isWidthGreaterThan1050 && hash && components[hash]) {
+            setActiveComponent(hash.toUpperCase());
+        } else {
+            scrollToComponent(hash);
+        }
+    }, [isWidthGreaterThan1050]);
 
     const handleMenuItemClick = (name) => {
         const sectionId = name.toLowerCase();
         // sets url to component id
-        window.history.replaceState(null, null, '#' + sectionId);
+        navigate('/#' + sectionId);
         if (!isWidthGreaterThan1050) {
             scrollToComponent(sectionId)
         } else {
