@@ -104,7 +104,7 @@ const Work = ({ id, isWidthGreaterThan1050 }) => {
                     {workItems.map(item => (
                         <div className='work_grid_item' key={item.title} onClick={() => showDetails(item)}>
                             <div className='work_img_div'>
-                                <img className='work_img' src={item.imgSrc} alt={item.title} />
+                                <img className='work_img' src={item.imgSrc} alt={item.title} loading="lazy" />
                                 <div className="portfolio-overlay"><p className='overlay_plus'>+</p></div>
                             </div>
                             <p>{item.title}</p>

@@ -1,4 +1,5 @@
 import { Modal } from '@mui/material';
+
 import './project_details.scss';
 
 const ProjectDetails = ({ onClose, title, description, languagesUsed, linkGit, linkLive, phonePic }) => {
@@ -17,7 +18,8 @@ const ProjectDetails = ({ onClose, title, description, languagesUsed, linkGit, l
                 </div>
                 <div className='project_img_div'>
                     {phonePic.map((src, index) => (
-                        <img className='project_img' src={src} index={index} alt={title} />
+                        <img className='project_img' src={src} index={index} alt={title} loading="lazy"
+                        />
                     ))}
                 </div>
 
