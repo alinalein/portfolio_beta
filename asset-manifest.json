@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio_beta/static/css/main.5a5aca11.css",
-    "main.js": "/portfolio_beta/static/js/main.7b2df8f9.js",
+    "main.js": "/portfolio_beta/static/js/main.d53c646c.js",
     "static/js/453.88079593.chunk.js": "/portfolio_beta/static/js/453.88079593.chunk.js",
     "static/media/CV.pdf": "/portfolio_beta/static/media/CV.3df74ef816530466db62.pdf",
     "static/media/react_meet-phone.png": "/portfolio_beta/static/media/react_meet-phone.412a7b23f608ed104957.png",
@@ -42,11 +42,11 @@
     "static/media/CSS.svg": "/portfolio_beta/static/media/CSS.3ec320225ef851ed26cf9fd1c6ebaa54.svg",
     "static/media/React.svg": "/portfolio_beta/static/media/React.01f39db2fd76e3857fd97fe066f6f9eb.svg",
     "main.5a5aca11.css.map": "/portfolio_beta/static/css/main.5a5aca11.css.map",
-    "main.7b2df8f9.js.map": "/portfolio_beta/static/js/main.7b2df8f9.js.map",
+    "main.d53c646c.js.map": "/portfolio_beta/static/js/main.d53c646c.js.map",
     "453.88079593.chunk.js.map": "/portfolio_beta/static/js/453.88079593.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5a5aca11.css",
-    "static/js/main.7b2df8f9.js"
+    "static/js/main.d53c646c.js"
   ]
 }
