@@ -1,4 +1,4 @@
-const variants = {
+const variantsBig = {
     // strarting point of the div
     hidden: { opacity: 0, x: '-70vw' },
     visible: {
@@ -7,4 +7,4 @@ const variants = {
         transition: { type: 'tween', duration: 2, ease: 'circOut' }
     }
 };
-export default variants
+export default variantsBig

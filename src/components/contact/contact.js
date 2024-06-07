@@ -5,7 +5,7 @@ import SendIcon from '@mui/icons-material/Send';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Notification from '../utils/notification';
-import variants from '../utils/variantsAnimation'
+import variantsBig from '../utils/variantsAnimation'
 import './contact.scss'
 
 const Contact = ({ id, isWidthGreaterThan1050 }) => {
@@ -46,7 +46,7 @@ const Contact = ({ id, isWidthGreaterThan1050 }) => {
             className="floating-container"
             initial={isWidthGreaterThan1050 ? "hidden" : ""}
             animate={isWidthGreaterThan1050 ? "visible" : ""}
-            variants={isWidthGreaterThan1050 ? variants : {}}
+            variants={isWidthGreaterThan1050 ? variantsBig : {}}
         >
             <div className="content">
                 <div className='component_title' >

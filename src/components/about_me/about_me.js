@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import variants from '../utils/variantsAnimation'
+import variantsBig from '../utils/variantsAnimation'
 import Tools from '../utils/tools';
 import CV from '../../assets/pdf/CV.pdf'
 import profilePic from '../../assets/img/profile.png'
@@ -13,7 +13,7 @@ const AboutMe = ({ id, isWidthGreaterThan1050 }) => {
             className="floating-container"
             initial={isWidthGreaterThan1050 ? "hidden" : ""}
             animate={isWidthGreaterThan1050 ? "visible" : ""}
-            variants={isWidthGreaterThan1050 ? variants : {}}
+            variants={isWidthGreaterThan1050 ? variantsBig : {}}
         >
 
             <div className="content">

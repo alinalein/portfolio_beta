@@ -40,7 +40,7 @@ const TypingEffect = () => {
             animate={{ opacity: 1 }}
             transition={{ ease: "linear", duration: 0.5 }}
             style={{
-                fontFamily: 'monospace', fontSize: '16px', position: 'relative',
+                fontFamily: 'monospace', fontSize: '15px', position: 'relative',
                 whiteSpace: 'nowrap', color: 'var(--main-color)', padding: '2% 0'
             }}
         >

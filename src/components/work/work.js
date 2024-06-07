@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import variants from '../utils/variantsAnimation'
+import variantsBig from '../utils/variantsAnimation'
 import ProjectDetails from './project_details'
 
 // svg icons
@@ -94,7 +94,7 @@ const Work = ({ id, isWidthGreaterThan1050 }) => {
             className="floating-container"
             initial={isWidthGreaterThan1050 ? "hidden" : ""}
             animate={isWidthGreaterThan1050 ? "visible" : ""}
-            variants={isWidthGreaterThan1050 ? variants : {}}
+            variants={isWidthGreaterThan1050 ? variantsBig : {}}
         >
             <div className="content">
                 <div className='component_title' >
