@@ -6,12 +6,12 @@ const Background = () => {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            if (bubbles.length < 12) {
+            if (bubbles.length < 10) {
                 const bubble = {
                     id: Math.random(),
                     size: Math.random() * 80 + 30, // Size between 30px and 110px
-                    right: Math.random() * 100 + '%',
-                    duration: Math.random() * 25 + 10, // Duration between 15s and 40s
+                    right: Math.random() * 100 + '%', // Bubbles appear across the entire width 
+                    duration: Math.random() * 35 + 15, // Duration between 20s and 55s
                 };
                 setBubbles(bubbles => [...bubbles, bubble]);
             }
