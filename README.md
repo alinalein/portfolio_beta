@@ -7,5 +7,30 @@ This is my portfolio, which represents my most important projects. The website i
 - **React Material Design** : Set of React components that implement Google's Material Design for building consistent user interfaces.
 - **EmailJS** : Service that allows developers to send emails directly from client-side JavaScript without needing a backend server.
 
+## Getting started 
+### Clone the repository
+
+```
+git clone https://github.com/alinalein/portfolio_beta.git
+```
+
+### Change the directory
+
+```
+cd portfolio_beta
+```
+
+### Install the dependencies
+
+```
+npm install
+```
+
+### Run the server
+
+```
+npm start
+```
+
 ## Link to Live Page: 
 https://alinalein.github.io/portfolio_beta/
