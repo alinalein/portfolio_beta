@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio_beta/static/css/main.5a5aca11.css",
-    "main.js": "/portfolio_beta/static/js/main.5335934c.js",
+    "main.js": "/portfolio_beta/static/js/main.18da1bf5.js",
     "static/js/453.88079593.chunk.js": "/portfolio_beta/static/js/453.88079593.chunk.js",
     "static/media/CV.pdf": "/portfolio_beta/static/media/CV.3df74ef816530466db62.pdf",
     "static/media/myFlix_React.png": "/portfolio_beta/static/media/myFlix_React.d361a68e5d73bd33724e.png",
@@ -42,11 +42,11 @@
     "static/media/CSS.svg": "/portfolio_beta/static/media/CSS.3ec320225ef851ed26cf9fd1c6ebaa54.svg",
     "static/media/React.svg": "/portfolio_beta/static/media/React.01f39db2fd76e3857fd97fe066f6f9eb.svg",
     "main.5a5aca11.css.map": "/portfolio_beta/static/css/main.5a5aca11.css.map",
-    "main.5335934c.js.map": "/portfolio_beta/static/js/main.5335934c.js.map",
+    "main.18da1bf5.js.map": "/portfolio_beta/static/js/main.18da1bf5.js.map",
     "453.88079593.chunk.js.map": "/portfolio_beta/static/js/453.88079593.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5a5aca11.css",
-    "static/js/main.5335934c.js"
+    "static/js/main.18da1bf5.js"
   ]
 }
