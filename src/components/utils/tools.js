@@ -34,11 +34,11 @@ const Tools = () => {
     useEffect(() => {
         const sequence = async () => {
             // 92px x svg icons number (92 px  calculated based on the width of each svg)
-            const totalWidth = 92 * svgs.length;
+            const totalWidth = 88.6 * svgs.length;
             await controls.start({
                 x: -totalWidth,
                 // move left to the total width of all icons
-                transition: { duration: 1.5 * svgs.length, ease: "linear", repeat: Infinity }
+                transition: { duration: 1 * svgs.length, ease: "linear", repeat: Infinity }
             });
         };
 
@@ -56,7 +56,7 @@ const Tools = () => {
             <motion.div
                 initial={{ x: 0 }}
                 animate={controls}
-                style={{ display: 'flex', width: `calc(92px * ${svgs.length})` }}
+                style={{ display: 'flex', width: `calc(88.6px * ${svgs.length})` }}
             >
                 {doubledSvgs.map((SvgIcon, index) => (
                     <img key={index} src={SvgIcon} style={{ width: '80px', height: '40px', margin: ' 10px 20px', }} />
