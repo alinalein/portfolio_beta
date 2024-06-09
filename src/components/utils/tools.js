@@ -33,7 +33,9 @@ const Tools = () => {
 
     useEffect(() => {
         const sequence = async () => {
-            // 92px x svg icons number (92 px  calculated based on the width of each svg)
+            // 88.6px x svg icons number (88.6 px  calculated based on the width of each svg)
+            // if last icon jumps to the left, increase 88.6px 
+            // if the last icon jumps to the right, decrease 88.6px 
             const totalWidth = 88.6 * svgs.length;
             await controls.start({
                 x: -totalWidth,
@@ -56,6 +58,8 @@ const Tools = () => {
             <motion.div
                 initial={{ x: 0 }}
                 animate={controls}
+                // if last icon jumps to the left, increase 88.6px 
+                // if the last icon jumps to the right, decrease 88.6px 
                 style={{ display: 'flex', width: `calc(88.6px * ${svgs.length})` }}
             >
                 {doubledSvgs.map((SvgIcon, index) => (
