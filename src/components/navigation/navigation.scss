@@ -66,6 +66,8 @@
     padding: 10px 0;
 
     .social_icon {
+      height: 35px;
+      width: 35px;
       font-size: 35px;
       color: black;
       transition: color 0.3s ease;
@@ -74,7 +76,6 @@
     &:hover {
       .social_icon {
         color: var(--main-color);
-
       }
     }
   }
@@ -132,5 +133,11 @@
       margin-bottom: 1px;
       font-size: 15px;
     }
+  }
+
+  .social_item_div .social_item .social_icon {
+    font-size: 25px;
+    height: 25px;
+    width: 25px;
   }
 }

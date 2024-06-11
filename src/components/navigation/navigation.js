@@ -41,6 +41,7 @@ const Navigation = ({ components, isWidthGreaterThan1050, setActiveComponent }) 
             }
 
             if (currentSection !== activeItem && currentSection !== '') {
+                console.log('Current Section:', currentSection);
                 setActiveItem(currentSection);
                 setActiveComponent(currentSection);
             }

@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
 import SendIcon from '@mui/icons-material/Send';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import { ReactComponent as MediumIcon } from '../../assets/svgs/medium-icon.svg'
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Notification from '../utils/notification';
 import variantsBig from '../utils/variantsAnimation'
@@ -69,11 +70,14 @@ const Contact = ({ id, isWidthGreaterThan1050 }) => {
                     <h2><span className='span_title'>G</span>et in touch</h2>
                 </div>
                 <div className='social_item_div contact_icons_div'>
-                    <a href="https://github.com/alinalein" className='menu-item social_item '>
+                    <a href="https://github.com/alinalein" className='menu-item social_item ' style={{ width: '20%' }} >
                         <LinkedInIcon className='social_icon' />
                     </a>
-                    <a href="https://github.com/alinalein " className='social_item menu-item' >
+                    <a href="https://github.com/alinalein " className='social_item menu-item' style={{ width: '20%' }} >
                         <GitHubIcon className='social_icon' />
+                    </a>
+                    <a href="https://medium.com/@linatech123 " className='social_item menu-item' style={{ width: '20%' }}  >
+                        <MediumIcon className='social_icon' />
                     </a>
                 </div>
             </div>
