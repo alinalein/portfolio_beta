@@ -24,29 +24,30 @@ import Redux from '../../assets/svgs/Redux.svg'
 import Saas from '../../assets/svgs/sass-1.svg'
 import './work.scss'
 
-// project pictures 
-import chat_work from '../../assets/img/chat_work.png'
-import chat_main_phone from '../../assets/img/chat_main.png'
-import chat_chat_phone from '../../assets/img/chat_chat.png'
-
-import angular from '../../assets/img/myFlix_Angular.png'
-import angular_phone from '../../assets/img/angular_phone_main.png'
-
-import pokemon from '../../assets/img/pokemon.png'
-import pokemon_phone from '../../assets/img/js_pokemon-phone.png'
-
-import api from '../../assets/img/api.png'
-import postman from '../../assets/img/postman.png'
-
-import react from '../../assets/img/myFlix_React.png'
-import react_phone from '../../assets/img/myFlix_react_main_phone.png'
-
-import meet from '../../assets/img/meet.png'
-import meet_phone from '../../assets/img/react_meet-phone.png'
-
-
 const Work = ({ id, isWidthGreaterThan1050 }) => {
     const [activeItem, setActiveItem] = useState(null);
+
+    // project pictures 
+    const meet = `${process.env.PUBLIC_URL}/img/meet.png`;
+    const meet_phone = `${process.env.PUBLIC_URL}/img/react_meet-phone.png`;
+
+
+    const chat_work = `${process.env.PUBLIC_URL}/img/chat_work.png`;
+    const chat_main_phone = `${process.env.PUBLIC_URL}/img/chat_main.png`;
+    const chat_chat_phone = `${process.env.PUBLIC_URL}/img/chat_chat.png`;
+
+    const angular = `${process.env.PUBLIC_URL}/img/myFlix_Angular.png`;
+    const angular_phone = `${process.env.PUBLIC_URL}/img/angular_phone_main.png`;
+
+    const pokemon = `${process.env.PUBLIC_URL}/img/pokemon.png`;
+    const pokemon_phone = `${process.env.PUBLIC_URL}/img/js_pokemon-phone.png`;
+
+    const api = `${process.env.PUBLIC_URL}/img/api.png`;
+    const postman = `${process.env.PUBLIC_URL}/img/postman.png`;
+
+    const react = `${process.env.PUBLIC_URL}/img/myFlix_React.png`;
+    const react_phone = `${process.env.PUBLIC_URL}/img/myFlix_react_main_phone.png`;
+
 
     const workItems = [
         {

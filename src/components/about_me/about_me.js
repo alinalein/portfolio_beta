@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import variantsBig from '../utils/variantsAnimation'
 import Tools from '../utils/tools';
 import CV from '../../assets/pdf/CV.pdf'
-import profilePic from '../../assets/img/profile.png'
+// import profilePic from '../../assets/img/profile.png'
 import './about.scss'
 
 const AboutMe = ({ id, isWidthGreaterThan1050 }) => {
@@ -23,7 +23,7 @@ const AboutMe = ({ id, isWidthGreaterThan1050 }) => {
                     </div>
                     <div className='about_img_div'>
                         <div className='img_div' >
-                            <img src={profilePic} alt='Profile' className="about_pic" />
+                            <img src={`${process.env.PUBLIC_URL}/img/profile.png`} alt='Profile' className="about_pic" />
                         </div>
                         <div className='text_div'>
                             <p> Welcome to my page, I am Alina, some text about me will come soon.

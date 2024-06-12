@@ -18,7 +18,7 @@ const ProjectDetails = ({ onClose, title, description, languagesUsed, linkGit, l
                 </div>
                 <div className='project_img_div'>
                     {phonePic.map((src, index) => (
-                        <img className='project_img' src={src} index={index} alt={title} loading="lazy"
+                        <img className='project_img' src={src} key={index} alt={title} loading="lazy"
                         />
                     ))}
                 </div>
