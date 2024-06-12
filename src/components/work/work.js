@@ -25,12 +25,12 @@ import Saas from '../../assets/svgs/sass-1.svg'
 import './work.scss'
 
 const Work = ({ id, isWidthGreaterThan1050 }) => {
+
     const [activeItem, setActiveItem] = useState(null);
 
-    // project pictures 
+    // project pictures imports from public folder
     const meet = `${process.env.PUBLIC_URL}/img/meet.png`;
     const meet_phone = `${process.env.PUBLIC_URL}/img/react_meet-phone.png`;
-
 
     const chat_work = `${process.env.PUBLIC_URL}/img/chat_work.png`;
     const chat_main_phone = `${process.env.PUBLIC_URL}/img/chat_main.png`;
@@ -47,7 +47,6 @@ const Work = ({ id, isWidthGreaterThan1050 }) => {
 
     const react = `${process.env.PUBLIC_URL}/img/myFlix_React.png`;
     const react_phone = `${process.env.PUBLIC_URL}/img/myFlix_react_main_phone.png`;
-
 
     const workItems = [
         {
