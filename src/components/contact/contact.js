@@ -7,9 +7,10 @@ import { ReactComponent as MediumIcon } from '../../assets/svgs/medium-icon.svg'
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Notification from '../utils/notification';
 import variantsBig from '../utils/variantsAnimation'
+import Texts from '../utils/texts.js';
 import './contact.scss'
 
-const Contact = ({ id, isWidthGreaterThan1050 }) => {
+const Contact = ({ id, isWidthGreaterThan1050, language }) => {
     const [notification, setNotification] = useState({ message: '', type: '' });
     const form = useRef();
 
@@ -27,12 +28,12 @@ const Contact = ({ id, isWidthGreaterThan1050 }) => {
             })
             .then((result) => {
                 console.log('Email sent:', result.text);
-                setNotification({ message: 'You successfully sent your message', type: 'success' });
+                setNotification({ message: Texts[language].contact.successMessage, type: 'success' });
                 setTimeout(closeNotification, 5000);
             }, (error) => {
                 console.log('Email sending error:', error.text);
                 setNotification({
-                    message: 'Unfortunately your message could not be sent, please try again',
+                    message: Texts[language].contact.errorMessage,
                     type: 'error'
                 });
                 setTimeout(closeNotification, 5000);
@@ -51,23 +52,31 @@ const Contact = ({ id, isWidthGreaterThan1050 }) => {
         >
             <div className="content">
                 <div className='component_title' >
-                    <h2><span className='span_title'>C</span>ontact Form</h2>
+                    <h2>
+                        <span className='span_title'>{Texts[language].contact.formTitle.charAt(0)}</span>
+                        {Texts[language].contact.formTitle.slice(1)}
+                    </h2>
                 </div>
                 <div className="contact-form">
                     <form ref={form} onSubmit={sendMessage}>
                         <div className="input-row">
-                            <input type="text" name='user_name' placeholder="Full Name" required />
-                            <input type="email" name='user_email' placeholder="Email Address" required />
+                            <input type="text" name='user_name' placeholder={Texts[language].contact.namePlaceholder} required />
+                            <input type="email" name='user_email' placeholder={Texts[language].contact.emailPlaceholder} required />
                         </div>
                         <textarea name='message' placeholder="Your Message" maxLength="240" required></textarea>
-                        <button className='menu-item' type="submit">SEND MESSAGE <SendIcon className='send_icon' /></button>
-                    </form>
+                        <button className='menu-item' type="submit">
+                            {Texts[language].contact.sendMessageButton} <SendIcon className='send_icon' />
+                        </button>                    </form>
                     <Notification message={notification.message} type={notification.type} onClose={closeNotification} />
                 </div>
 
 
-                <div className='component_title' >
-                    <h2><span className='span_title'>G</span>et in touch</h2>
+                {/* Dynamic title for 'Get in Touch' */}
+                <div className='component_title'>
+                    <h2>
+                        <span className='span_title'>{Texts[language].contact.getInTouchTitle.charAt(0)}</span>
+                        {Texts[language].contact.getInTouchTitle.slice(1)}
+                    </h2>
                 </div>
                 <div className='social_item_div contact_icons_div'>
                     <a href="https://github.com/alinalein" className='menu-item social_item ' style={{ width: '20%' }} >

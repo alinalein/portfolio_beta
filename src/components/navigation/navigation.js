@@ -10,17 +10,20 @@ import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import Texts from '../utils/texts.js';
 
-const Navigation = ({ components, isWidthGreaterThan1050, setActiveComponent }) => {
-    const [activeItem, setActiveItem] = useState('ABOUT');
-    const [theme, setTheme] = useState('light')
+const Navigation = ({ components, isWidthGreaterThan1050, setActiveComponent, language, setLanguage }) => {
+    const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+    const [activeItem, setActiveItem] = useState(localStorage.getItem('activeItem') || 'ABOUT');
+
     const navigate = useNavigate();
     const location = useLocation();
+    // load english a default otherwise from localstrorage 
 
     const menuItems = [
-        { name: 'ABOUT', icon: <PersonOutlineIcon className='menu-icon' /> },
-        { name: 'WORK', icon: <RemoveRedEyeIcon className='menu-icon' /> },
-        { name: 'CONTACT', icon: <MessageIcon className='menu-icon' /> },
+        { name: 'ABOUT', label: Texts[language].navigation.ABOUT, icon: <PersonOutlineIcon className='menu-icon' /> },
+        { name: 'WORK', label: Texts[language].navigation.WORK, icon: <RemoveRedEyeIcon className='menu-icon' /> },
+        { name: 'CONTACT', label: Texts[language].navigation.CONTACT, icon: <MessageIcon className='menu-icon' /> },
     ];
 
     // change active icon depending on the section the user scrolled to
@@ -90,11 +93,23 @@ const Navigation = ({ components, isWidthGreaterThan1050, setActiveComponent }) 
         document.body.className = newTheme + "-mode";
     };
 
+    const toggleLanguage = () => {
+        const newLanguage = language === 'en' ? 'de' : 'en';
+        setLanguage(newLanguage);
+    };
+
+    // Save the selected language , theme in localStorage whenever it changes
+    useEffect(() => {
+        localStorage.setItem('language', language);
+        localStorage.setItem('theme', theme);
+        localStorage.setItem('activeItem', activeItem);
+    }, [language, theme, activeItem]);
+
     return (
         <nav className="navigation">
             <div className='nav_intro_div'>
                 <div className=' name_div'>
-                    Hello I'm Alina
+                    {Texts[language].greeting}
                 </div>
                 <div> <TypingAnimation /></div>
                 <div className='social_item_div'>
@@ -106,8 +121,19 @@ const Navigation = ({ components, isWidthGreaterThan1050, setActiveComponent }) 
                     </a>
                 </div>
             </div>
+
             <div onClick={toggleTheme} className='menu-item'>
                 {theme === 'light' ? <DarkModeIcon /> : <WbSunnyIcon />}
+            </div>
+            <div onClick={toggleLanguage} className="menu-item">
+                {/* You can switch icons or use abbreviations for the languages */}
+                {language === 'en' ? (
+                    <span className="lang-icon">DE</span>
+                ) : (
+                    <span className="lang-icon">EN</span>
+                )}
+                {/* Alternatively, you can use a general language icon */}
+
             </div>
             {menuItems.map((item) => (
                 <div
@@ -115,7 +141,7 @@ const Navigation = ({ components, isWidthGreaterThan1050, setActiveComponent }) 
                     className={`menu-item ${activeItem === item.name ? 'active' : ''}`}
                     onClick={() => { handleMenuItemClick(item.name); }}
                 > {item.icon}
-                    {item.name}
+                    {item.label}
                 </div>
             ))}
         </nav>

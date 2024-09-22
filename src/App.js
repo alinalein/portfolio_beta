@@ -10,6 +10,7 @@ import Background from './components/utils/background';
 function App() {
   const [isWidthGreaterThan1050, setIsWidthGreaterThan1050] = useState(window.innerWidth > 1050);
   const [activeComponent, setActiveComponent] = useState('ABOUT');
+  const [language, setLanguage] = useState(localStorage.getItem('language') || 'en');
 
   const components = {
     // key in lower case to match the hash
@@ -32,18 +33,18 @@ function App() {
     <HashRouter>
       <div className="app_container">
         <Background />
-        <Navigation components={components} isWidthGreaterThan1050={isWidthGreaterThan1050} setActiveComponent={setActiveComponent} className="navigation_component" />
+        <Navigation language={language} setLanguage={setLanguage} components={components} isWidthGreaterThan1050={isWidthGreaterThan1050} setActiveComponent={setActiveComponent} className="navigation_component" />
         <div className='route_container'>
           <Routes>
             {isWidthGreaterThan1050 ? (
-              <Route path="/" element={<ActiveComponent id={activeComponent.toLowerCase()} isWidthGreaterThan1050={isWidthGreaterThan1050} />} />
+              <Route path="/" element={<ActiveComponent id={activeComponent.toLowerCase()} isWidthGreaterThan1050={isWidthGreaterThan1050} language={language} />} />
             ) : (
               <>
                 <Route path="/" element={
                   <>
-                    <AboutMe id="about" isWidthGreaterThan1050={isWidthGreaterThan1050} />
-                    <Work id="work" isWidthGreaterThan1050={isWidthGreaterThan1050} />
-                    <Contact id="contact" isWidthGreaterThan1050={isWidthGreaterThan1050} />
+                    <AboutMe id="about" isWidthGreaterThan1050={isWidthGreaterThan1050} language={language} />
+                    <Work id="work" isWidthGreaterThan1050={isWidthGreaterThan1050} language={language} />
+                    <Contact id="contact" isWidthGreaterThan1050={isWidthGreaterThan1050} language={language} />
                   </>
                 } />
               </>

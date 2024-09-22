@@ -1,8 +1,8 @@
 import { Modal } from '@mui/material';
-
+import Texts from '../utils/texts.js';
 import './project_details.scss';
 
-const ProjectDetails = ({ onClose, title, description, languagesUsed, linkGit, linkLive, phonePic }) => {
+const ProjectDetails = ({ onClose, title, description, languagesUsed, linkGit, linkLive, phonePic, language }) => {
 
     return (
         <Modal
@@ -25,7 +25,7 @@ const ProjectDetails = ({ onClose, title, description, languagesUsed, linkGit, l
 
                 <p>{description}</p>
                 <div style={{ margin: '10px 0' }}>
-                    <p className='modal_technologies'>Technologies</p>
+                    <p className='modal_technologies'>   {Texts[language].project_details}</p>
                     <br />
                     {languagesUsed.map((src, index) => (
                         <img key={index} src={src} alt="Language Icon" style={{ width: 'auto', height: '40px', padding: '0 10px' }} />

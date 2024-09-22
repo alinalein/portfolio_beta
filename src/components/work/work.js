@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import variantsBig from '../utils/variantsAnimation'
+import Texts from '../utils/texts.js';
 import ProjectDetails from './project_details'
 
 // svg icons
@@ -24,7 +25,7 @@ import Redux from '../../assets/svgs/Redux.svg'
 import Saas from '../../assets/svgs/sass-1.svg'
 import './work.scss'
 
-const Work = ({ id, isWidthGreaterThan1050 }) => {
+const Work = ({ id, isWidthGreaterThan1050, language }) => {
 
     const [activeItem, setActiveItem] = useState(null);
 
@@ -50,34 +51,58 @@ const Work = ({ id, isWidthGreaterThan1050 }) => {
 
     const workItems = [
         {
-            imgSrc: angular, title: "Angular myFlix",
-            description: "This is the Angular frontend for the Movie_API backend project. The app will feature multiple interface views to interact with data via the REST API endpoints defined in the Movie_API server-side application.",
-            linkGit: 'https://github.com/alinalein/myFlix-Angular-client', linkLive: 'https://alinalein.github.io/myFlix-Angular-client/welcome', languagesUsed: [TS, Angular, Saas], phonePic: [angular_phone, angular]
+            imgSrc: angular,
+            title: Texts[language].work.projects.angular.title,
+            description: Texts[language].work.projects.angular.description,
+            linkGit: 'https://github.com/alinalein/myFlix-Angular-client',
+            linkLive: 'https://alinalein.github.io/myFlix-Angular-client/welcome',
+            languagesUsed: [TS, Angular, Saas],
+            phonePic: [angular_phone, angular]
         },
         {
-            imgSrc: chat_work, title: "React Native Chat",
-            description: "This app is designed for mobile devices using React Native. It provides users with a chat interface and options to chat, share images, share audios and their location.",
-            linkGit: 'https://github.com/alinalein/chat', linkLive: '', languagesUsed: [ReactNat, Firebase], phonePic: [chat_main_phone, chat_chat_phone]
+            imgSrc: chat_work,
+            title: Texts[language].work.projects.chat.title,
+            description: Texts[language].work.projects.chat.description,
+            linkGit: 'https://github.com/alinalein/chat',
+            linkLive: '',
+            languagesUsed: [ReactNat, Firebase],
+            phonePic: [chat_main_phone, chat_chat_phone]
         },
         {
-            imgSrc: pokemon, title: "JavaScript Pokédex",
-            description: "This small application fetches data about Pokémon from an external API. It displays details about a Pokémon when its modal is clicked and allows the user to search for a specific Pokémon by name.",
-            linkGit: 'https://github.com/alinalein/JS-App', linkLive: 'https://alinalein.github.io/JS-App/', languagesUsed: [JS, HTML, CSS, Bootstrap], phonePic: [pokemon_phone, pokemon]
+            imgSrc: pokemon,
+            title: Texts[language].work.projects.pokemon.title,
+            description: Texts[language].work.projects.pokemon.description,
+            linkGit: 'https://github.com/alinalein/JS-App',
+            linkLive: 'https://alinalein.github.io/JS-App/',
+            languagesUsed: [JS, HTML, CSS, Bootstrap],
+            phonePic: [pokemon_phone, pokemon]
         },
         {
-            imgSrc: api, title: "Node.JS Movie_API",
-            description: "This API gives users access to details about various movies, directors and genres. Users will be able to sign up, update their personal information, delete their profile and create a list of their favorite movies.",
-            linkGit: 'https://github.com/alinalein/movie_api', linkLive: '', languagesUsed: [Node, Mongo, Express, Postman], phonePic: [postman]
+            imgSrc: api,
+            title: Texts[language].work.projects.api.title,
+            description: Texts[language].work.projects.api.description,
+            linkGit: 'https://github.com/alinalein/movie_api',
+            linkLive: '',
+            languagesUsed: [Node, Mongo, Express, Postman],
+            phonePic: [postman]
         },
         {
-            imgSrc: react, title: "React myFlix",
-            description: "This is the React frontend for the Movie_API backend projectThe application will incorporate multiple interface views to manage data through the REST API endpoints defined in the Movie_API server-side application.",
-            linkGit: 'https://github.com/alinalein/movie_api-client', linkLive: 'https://myflix-alinalein.netlify.app', languagesUsed: [Reacticon, Bootstrap, Redux, Saas], phonePic: [react_phone, react]
+            imgSrc: react,
+            title: Texts[language].work.projects.react.title,
+            description: Texts[language].work.projects.react.description,
+            linkGit: 'https://github.com/alinalein/movie_api-client',
+            linkLive: 'https://myflix-alinalein.netlify.app',
+            languagesUsed: [Reacticon, Bootstrap, Redux, Saas],
+            phonePic: [react_phone, react]
         },
         {
-            imgSrc: meet, title: "React PWA Meet",
-            description: "The application is designed for event management, using React and a test-driven development approach. It is a serverless and progressive web app, that fetches upcoming events through the Google Calendar API.",
-            linkGit: 'https://github.com/alinalein/meet', linkLive: 'https://alinalein.github.io/meet/', languagesUsed: [Reacticon, Jest, AWS, Cucumber], phonePic: [meet_phone, meet]
+            imgSrc: meet,
+            title: Texts[language].work.projects.meet.title,
+            description: Texts[language].work.projects.meet.description,
+            linkGit: 'https://github.com/alinalein/meet',
+            linkLive: 'https://alinalein.github.io/meet/',
+            languagesUsed: [Reacticon, Jest, AWS, Cucumber],
+            phonePic: [meet_phone, meet]
         },
     ];
 
@@ -98,7 +123,8 @@ const Work = ({ id, isWidthGreaterThan1050 }) => {
         >
             <div className="content">
                 <div className='component_title' >
-                    <h2><span className='span_title'>W</span>ork</h2>
+                    <h2> <span className='span_title'>{Texts[language].work.title.charAt(0)}</span>
+                        {Texts[language].work.title.slice(1)}</h2>
                 </div>
                 <div className='work_grid'>
                     {workItems.map(item => (
@@ -112,7 +138,7 @@ const Work = ({ id, isWidthGreaterThan1050 }) => {
                     ))}
                 </div>
                 {activeItem &&
-                    <ProjectDetails onClose={onClose}
+                    <ProjectDetails onClose={onClose} language={language}
                         title={activeItem.title} description={activeItem.description}
                         languagesUsed={activeItem.languagesUsed} linkLive={activeItem.linkLive} linkGit={activeItem.linkGit}
                         phonePic={activeItem.phonePic} />
