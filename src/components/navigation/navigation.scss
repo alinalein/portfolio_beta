@@ -54,6 +54,49 @@
   }
 }
 
+.language-toggle {
+  position: relative;
+  display: flex;
+  width: 65%;
+  height: 6vh;
+  background-color: var(--background-color-light); // Background of the switch
+  border-radius: 25px;
+  border: 1px solid var(--main-color); // Border color
+  overflow: hidden;
+
+  .language-option {
+    width: 50%; // Each option takes 50% of the container
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-color);
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &.active {
+      color: #fff; // Active language color
+    }
+  }
+
+  .language-toggle-indicator {
+    position: absolute;
+    width: 50%; // Same width as a single option
+    height: 100%;
+    background-color: var(--main-color); // Background for the active option
+    border-radius: 25px;
+    transition: all 0.3s ease;
+
+    &.left {
+      left: 0;
+    }
+
+    &.right {
+      left: 50%;
+    }
+  }
+}
+
 .social_item_div {
   display: flex;
   margin: 10px 0;
@@ -92,6 +135,7 @@
     box-shadow: 0 0 10px rgba(159, 157, 157, 0.3);
     background-color: var(--background-color-light);
     border-radius: 0 0 20px 20px;
+    justify-content: space-around;
 
     .nav_intro_div {
       min-width: 160px;
@@ -102,8 +146,14 @@
       }
     }
 
-    .menu-item {
+    .menu-item,
+    .language-toggle {
       height: 7vh;
+      margin: 0 5px;
+    }
+
+    .language-toggle {
+      width: 80%;
     }
   }
 
@@ -115,24 +165,31 @@
 @media all and (max-width: 750px) {
   .navigation {
     height: 6vh;
-  }
+    justify-content: space-around;
 
-  .navigation .nav_intro_div {
-    margin: 0;
+    .nav_intro_div {
+      margin: 0;
+    }
+
+    .menu-item,
+    .language-toggle {
+      font-size: 10px;
+      height: 5vh;
+      margin: 0 5px;
+
+      svg {
+        margin-bottom: 1px;
+        font-size: 15px;
+      }
+    }
+
+    .language-toggle {
+      width: 90%;
+    }
   }
 
   .name_div {
     font-size: 10px;
-  }
-
-  .navigation .menu-item {
-    font-size: 10px;
-    height: 5vh;
-
-    svg {
-      margin-bottom: 1px;
-      font-size: 15px;
-    }
   }
 
   .social_item_div .social_item .social_icon {

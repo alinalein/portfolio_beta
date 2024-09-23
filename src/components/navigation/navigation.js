@@ -93,10 +93,13 @@ const Navigation = ({ components, isWidthGreaterThan1050, setActiveComponent, la
         document.body.className = newTheme + "-mode";
     };
 
-    const toggleLanguage = () => {
-        const newLanguage = language === 'en' ? 'de' : 'en';
-        setLanguage(newLanguage);
+    const toggleLanguage = (selectedLanguage) => {
+        if (language !== selectedLanguage) {
+            setLanguage(selectedLanguage);
+            localStorage.setItem('language', selectedLanguage);  // Persist the language change
+        }
     };
+
 
     // Save the selected language , theme in localStorage whenever it changes
     useEffect(() => {
@@ -122,18 +125,23 @@ const Navigation = ({ components, isWidthGreaterThan1050, setActiveComponent, la
                 </div>
             </div>
 
+            <div className="language-toggle">
+                <div
+                    className={`language-option ${language === 'en' ? 'active' : ''}`}
+                    onClick={() => toggleLanguage('en')}
+                >
+                    EN
+                </div>
+                <div
+                    className={`language-option ${language === 'de' ? 'active' : ''}`}
+                    onClick={() => toggleLanguage('de')}
+                >
+                    DE
+                </div>
+                <div className={`language-toggle-indicator ${language === 'en' ? 'left' : 'right'}`}></div>
+            </div>
             <div onClick={toggleTheme} className='menu-item'>
                 {theme === 'light' ? <DarkModeIcon /> : <WbSunnyIcon />}
-            </div>
-            <div onClick={toggleLanguage} className="menu-item">
-                {/* You can switch icons or use abbreviations for the languages */}
-                {language === 'en' ? (
-                    <span className="lang-icon">DE</span>
-                ) : (
-                    <span className="lang-icon">EN</span>
-                )}
-                {/* Alternatively, you can use a general language icon */}
-
             </div>
             {menuItems.map((item) => (
                 <div
