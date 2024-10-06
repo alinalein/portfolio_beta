@@ -87,6 +87,11 @@ const Navigation = ({ components, isWidthGreaterThan1050, setActiveComponent, la
         }
     }
 
+    // apply on initial load theme from localstorage if there is one 
+    useEffect(() => {
+        document.body.className = theme + '-mode';
+    }, [theme]);
+
     const toggleTheme = () => {
         const newTheme = theme === 'light' ? 'dark' : 'light';
         setTheme(newTheme);
@@ -96,10 +101,8 @@ const Navigation = ({ components, isWidthGreaterThan1050, setActiveComponent, la
     const toggleLanguage = (selectedLanguage) => {
         if (language !== selectedLanguage) {
             setLanguage(selectedLanguage);
-            localStorage.setItem('language', selectedLanguage);  // Persist the language change
         }
     };
-
 
     // Save the selected language , theme in localStorage whenever it changes
     useEffect(() => {
@@ -136,9 +139,9 @@ const Navigation = ({ components, isWidthGreaterThan1050, setActiveComponent, la
                     className={`language-option ${language === 'de' ? 'active' : ''}`}
                     onClick={() => toggleLanguage('de')}
                 >
-                    DE
+                    {Texts[language].navigation.DE}
                 </div>
-                <div className={`language-toggle-indicator ${language === 'en' ? 'left' : 'right'}`}></div>
+                <div className={`language-toggle-indicator ${language === 'en' ? 'active-en' : 'active-de'}`}></div>
             </div>
             <div onClick={toggleTheme} className='menu-item'>
                 {theme === 'light' ? <DarkModeIcon /> : <WbSunnyIcon />}

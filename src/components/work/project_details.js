@@ -40,7 +40,6 @@ const ProjectDetails = ({ onClose, title, description, languagesUsed, linkGit, l
                         )}
                 </div>
             </div>
-
         </Modal>
     )
 

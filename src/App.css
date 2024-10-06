@@ -23,7 +23,8 @@ body.dark-mode .modal_div {
 
 /* css for navigation.js */
 body.dark-mode .navigation,
-body.dark-mode .language-toggle {
+body.dark-mode .language-toggle,
+body.dark-mode .language-option {
   background-color: var(--background-color-dark);
   color: var(--text-color-dark);
 }

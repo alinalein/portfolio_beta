@@ -2,7 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import variantsBig from '../utils/variantsAnimation'
 import Tools from '../utils/tools';
-import CV from '../../assets/pdf/CV.pdf'
+import CV_en from '../../assets/pdf/CV_en.pdf'
+import CV_de from '../../assets/pdf/CV_de.pdf'
 import Texts from '../utils/texts.js';
 // import profilePic from '../../assets/img/profile.png'
 import './about.scss'
@@ -25,14 +26,16 @@ const AboutMe = ({ id, isWidthGreaterThan1050, language }) => {
                     </div>
                     <div className='about_img_div'>
                         <div className='img_div' >
-                            <img src={`${process.env.PUBLIC_URL}/img/profile.png`} alt='Profile' className="about_pic" />
+                            <img src={`${process.env.PUBLIC_URL}/img_hidden/4.png`} alt='Profile' className="about_pic" />
                         </div>
                         <div className='text_div'>
                             <p>{Texts[language].about.welcomeText}</p>
                             <p>{Texts[language].about.description}</p>
-                            <a href={CV} style={{ color: 'var(--main-color)' }} rel='noreferrer' target='_blank'>
-                                {language === 'en' ? 'Download CV' : 'Lebenslauf herunterladen'}
-                            </a>
+                            {language === 'en' ?
+                                <a href={CV_en} style={{ color: 'var(--main-color)' }} rel='noreferrer' target='_blank'>
+                                    Download CV </a>
+                                : <a href={CV_de} style={{ color: 'var(--main-color)' }} rel='noreferrer' target='_blank'>
+                                    Lebenslauf herunterladen</a>}
                         </div>
                     </div>
                 </div>

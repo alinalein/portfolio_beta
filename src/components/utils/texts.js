@@ -4,6 +4,7 @@ const Texts = {
             ABOUT: 'About',
             WORK: 'Work',
             CONTACT: 'Contact',
+            DE: 'GER'
         },
         greeting: "Hello I'm Alina",
         work: {
@@ -60,6 +61,7 @@ const Texts = {
             ABOUT: 'Über mich',
             WORK: 'Arbeit',
             CONTACT: 'Kontakt',
+            DE: 'DE'
         },
         greeting: "Hallo, ich bin Alina",
         work: {
