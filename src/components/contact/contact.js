@@ -79,18 +79,17 @@ const Contact = ({ id, isWidthGreaterThan1050, language }) => {
                     </h2>
                 </div>
                 <div className='social_item_div contact_icons_div'>
-                    <a href="https://github.com/alinalein" className='menu-item social_item ' style={{ width: '20%' }} >
+                    <a href="https://www.linkedin.com/in/alina-leinweber-901b94135" className='menu-item social_item ' style={{ width: '20%' }} >
                         <LinkedInIcon className='social_icon' />
                     </a>
                     <a href="https://github.com/alinalein " className='social_item menu-item' style={{ width: '20%' }} >
                         <GitHubIcon className='social_icon' />
                     </a>
-                    <a href="https://medium.com/@linatech123 " className='social_item menu-item' style={{ width: '20%' }}  >
+                    {/* <a href="https://medium.com/@linatech123 " className='social_item menu-item' style={{ width: '20%' }}  >
                         <MediumIcon className='social_icon' />
-                    </a>
+                    </a> */}
                 </div>
             </div>
-
         </motion.div>
     );
 }

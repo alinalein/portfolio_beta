@@ -32,9 +32,9 @@ const AboutMe = ({ id, isWidthGreaterThan1050, language }) => {
                             <p>{Texts[language].about.welcomeText}</p>
                             <p>{Texts[language].about.description}</p>
                             {language === 'en' ?
-                                <a href={CV_en} style={{ color: 'var(--main-color)' }} rel='noreferrer' target='_blank'>
+                                <a href={CV_en} style={{ color: 'var(--main-color)' }} rel='noopener noreferrer' target='_blank'>
                                     Download CV </a>
-                                : <a href={CV_de} style={{ color: 'var(--main-color)' }} rel='noreferrer' target='_blank'>
+                                : <a href={CV_de} style={{ color: 'var(--main-color)' }} rel='noopener noreferrer' target='_blank'>
                                     Lebenslauf herunterladen</a>}
                         </div>
                     </div>

@@ -9,7 +9,7 @@ import Background from './components/utils/background';
 
 function App() {
   const [isWidthGreaterThan1050, setIsWidthGreaterThan1050] = useState(window.innerWidth > 1050);
-  const [activeComponent, setActiveComponent] = useState('ABOUT');
+  const [activeComponent, setActiveComponent] = useState(localStorage.getItem('activeComponent') || 'ABOUT');
   const [language, setLanguage] = useState(localStorage.getItem('language') || 'en');
 
   const components = {
@@ -33,7 +33,7 @@ function App() {
     <HashRouter>
       <div className="app_container">
         <Background />
-        <Navigation language={language} setLanguage={setLanguage} components={components} isWidthGreaterThan1050={isWidthGreaterThan1050} setActiveComponent={setActiveComponent} className="navigation_component" />
+        <Navigation language={language} setLanguage={setLanguage} components={components} isWidthGreaterThan1050={isWidthGreaterThan1050} setActiveComponent={setActiveComponent} activeComponent={activeComponent} className="navigation_component" />
         <div className='route_container'>
           <Routes>
             {isWidthGreaterThan1050 ? (

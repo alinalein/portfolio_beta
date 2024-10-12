@@ -23,6 +23,7 @@ import Postman from '../../assets/svgs/Postman.svg'
 import Express from '../../assets/svgs/Express.svg'
 import Redux from '../../assets/svgs/Redux.svg'
 import Saas from '../../assets/svgs/sass-1.svg'
+
 import './work.scss'
 
 const Work = ({ id, isWidthGreaterThan1050, language }) => {
@@ -64,7 +65,7 @@ const Work = ({ id, isWidthGreaterThan1050, language }) => {
             title: Texts[language].work.projects.chat.title,
             description: Texts[language].work.projects.chat.description,
             linkGit: 'https://github.com/alinalein/chat',
-            linkLive: '',
+            linkCase: 'add_later',
             languagesUsed: [ReactNat, Firebase],
             phonePic: [chat_main_phone, chat_chat_phone]
         },
@@ -82,7 +83,7 @@ const Work = ({ id, isWidthGreaterThan1050, language }) => {
             title: Texts[language].work.projects.api.title,
             description: Texts[language].work.projects.api.description,
             linkGit: 'https://github.com/alinalein/movie_api',
-            linkLive: '',
+            linkCase: 'add_later',
             languagesUsed: [Node, Mongo, Express, Postman],
             phonePic: [postman]
         },
@@ -141,7 +142,7 @@ const Work = ({ id, isWidthGreaterThan1050, language }) => {
                     <ProjectDetails onClose={onClose} language={language}
                         title={activeItem.title} description={activeItem.description}
                         languagesUsed={activeItem.languagesUsed} linkLive={activeItem.linkLive} linkGit={activeItem.linkGit}
-                        phonePic={activeItem.phonePic} />
+                        phonePic={activeItem.phonePic} linkCase={activeItem.linkCase} />
                 }
             </div>
         </motion.div >

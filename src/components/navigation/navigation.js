@@ -12,7 +12,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Texts from '../utils/texts.js';
 
-const Navigation = ({ components, isWidthGreaterThan1050, setActiveComponent, language, setLanguage }) => {
+const Navigation = ({ components, isWidthGreaterThan1050, setActiveComponent, activeComponent, language, setLanguage }) => {
     const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
     const [activeItem, setActiveItem] = useState(localStorage.getItem('activeItem') || 'ABOUT');
 
@@ -109,7 +109,8 @@ const Navigation = ({ components, isWidthGreaterThan1050, setActiveComponent, la
         localStorage.setItem('language', language);
         localStorage.setItem('theme', theme);
         localStorage.setItem('activeItem', activeItem);
-    }, [language, theme, activeItem]);
+        localStorage.setItem('activeComponent', activeComponent);
+    }, [language, theme, activeItem, activeComponent]);
 
     return (
         <nav className="navigation">

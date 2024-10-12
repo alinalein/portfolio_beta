@@ -2,7 +2,7 @@ import { Modal } from '@mui/material';
 import Texts from '../utils/texts.js';
 import './project_details.scss';
 
-const ProjectDetails = ({ onClose, title, description, languagesUsed, linkGit, linkLive, phonePic, language }) => {
+const ProjectDetails = ({ onClose, title, description, languagesUsed, linkGit, linkLive, phonePic, language, linkCase }) => {
 
     return (
         <Modal
@@ -33,11 +33,16 @@ const ProjectDetails = ({ onClose, title, description, languagesUsed, linkGit, l
                 </div>
                 <div className='social_item_div'>
                     <a href={linkGit} target="_blank" rel="noopener noreferrer" className='details_link'>GitHub Project</a>
-                    {linkLive === '' ?
-                        ('')
-                        : (
-                            <a href={linkLive} target="_blank" rel="noopener noreferrer" className='details_link'>Live Project</a>
-                        )}
+                    {linkLive && (
+                        <a href={linkLive} target="_blank" rel="noopener noreferrer" className='details_link'>
+                            Live Project
+                        </a>
+                    )}
+                    {linkCase && (
+                        <a href={linkCase} target="_blank" rel="noopener noreferrer" className='details_link'>
+                            Case Study
+                        </a>
+                    )}
                 </div>
             </div>
         </Modal>
