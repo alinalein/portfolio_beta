@@ -3,11 +3,12 @@ import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
 import SendIcon from '@mui/icons-material/Send';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { ReactComponent as MediumIcon } from '../../assets/svgs/medium-icon.svg'
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Notification from '../utils/notification';
 import variantsBig from '../utils/variantsAnimation'
 import Texts from '../utils/texts.js';
+import ImpressumDE from '../../assets/pdf/Impressum_Alina_Leinweber_DE.pdf'
+import ImpressumEN from '../../assets/pdf/Impressum_Alina_Leinweber_ENG.pdf'
 import './contact.scss'
 
 const Contact = ({ id, isWidthGreaterThan1050, language }) => {
@@ -85,10 +86,18 @@ const Contact = ({ id, isWidthGreaterThan1050, language }) => {
                     <a href="https://github.com/alinalein " className='social_item menu-item' style={{ width: '20%' }} >
                         <GitHubIcon className='social_icon' />
                     </a>
-                    {/* <a href="https://medium.com/@linatech123 " className='social_item menu-item' style={{ width: '20%' }}  >
-                        <MediumIcon className='social_icon' />
-                    </a> */}
                 </div>
+                {isWidthGreaterThan1050 ?
+                    '' :
+                    <a
+                        href={language === 'en' ? ImpressumEN : ImpressumDE}
+                        style={{ color: 'var(--main-color)' }}
+                        rel='noopener noreferrer'
+                        target='_blank'
+                    >
+                        Impressum
+                    </a>
+                }
             </div>
         </motion.div>
     );

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const TypingEffect = () => {
-    const fullText = "Junior Developer";
+    const fullText = "Web Developer";
     const [text, setText] = useState('');
     const [isDeleting, setIsDeleting] = useState(false);
     const [blink, setBlink] = useState(true);
