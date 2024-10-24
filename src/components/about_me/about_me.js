@@ -2,8 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import variantsBig from '../utils/variantsAnimation'
 import Tools from '../utils/tools';
-import CV_en from '../../assets/pdf/CV_en.pdf'
-import CV_de from '../../assets/pdf/CV_de.pdf'
+import CV_en from '../../assets/pdf/Leinweber Alina_Web Developer_Resume.pdf'
+import CV_de from '../../assets/pdf/Leinweber Alina_Web Developer_Lebenslauf.pdf'
 import Texts from '../utils/texts.js';
 // import profilePic from '../../assets/img/profile.png'
 import './about.scss'
@@ -30,7 +30,25 @@ const AboutMe = ({ id, isWidthGreaterThan1050, language }) => {
                         </div>
                         <div className='text_div'>
                             <p>{Texts[language].about.welcomeText}</p>
-                            <p>{Texts[language].about.description}</p>
+                            <p>
+                                {Texts[language].about.description.split('\n').map((line, index) => (
+                                    <span key={index}>
+                                        {line.split(' ').map((word, wordIndex) => {
+                                            const technologiesToBold = ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js'];
+                                            const cleanedWord = word.replace(/[,]/g, ''); // Remove commas only.
+
+                                            const isBold = technologiesToBold.some(tech => cleanedWord.toLowerCase() === tech.toLowerCase());
+
+                                            return (
+                                                <React.Fragment key={wordIndex}>
+                                                    {isBold ? <strong>{word}</strong> : word}{' '}
+                                                </React.Fragment>
+                                            );
+                                        })}
+                                    </span>
+                                ))}
+                            </p>
+
                             {language === 'en' ?
                                 <a href={CV_en} style={{ color: 'var(--main-color)' }} rel='noopener noreferrer' target='_blank'>
                                     Download CV </a>
@@ -50,7 +68,11 @@ const AboutMe = ({ id, isWidthGreaterThan1050, language }) => {
                     {/* Dynamic title for 'Why Coding?' */}
                     <h2><span className='span_title'>{Texts[language].about.whyCodingTitle.charAt(0)}</span>{Texts[language].about.whyCodingTitle.slice(1)}</h2>
                 </div>
-                <p style={{ padding: '10px', textAlign: 'left' }}> {Texts[language].about.whyCodingText} </p>
+                <p style={{ padding: '10px', textAlign: 'left' }}>
+                    {Texts[language].about.whyCodingText.split('\n').map((line, index) => (
+                        <span key={index}>{line}<br /></span>
+                    ))}
+                </p>
             </div>
         </motion.div>
     );

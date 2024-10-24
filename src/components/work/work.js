@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import variantsBig from '../utils/variantsAnimation'
 import Texts from '../utils/texts.js';
 import ProjectDetails from './project_details'
-
+import API_Case from '../../assets/pdf/Case Study API.pdf'
 // svg icons
 import Angular from '../../assets/svgs/Angular.svg'
 import Bootstrap from '../../assets/svgs/Bootstrap.svg'
@@ -65,7 +65,7 @@ const Work = ({ id, isWidthGreaterThan1050, language }) => {
             title: Texts[language].work.projects.chat.title,
             description: Texts[language].work.projects.chat.description,
             linkGit: 'https://github.com/alinalein/chat',
-            linkCase: 'add_later',
+            linkCase: '',
             languagesUsed: [ReactNat, Firebase],
             phonePic: [chat_main_phone, chat_chat_phone]
         },
@@ -83,7 +83,7 @@ const Work = ({ id, isWidthGreaterThan1050, language }) => {
             title: Texts[language].work.projects.api.title,
             description: Texts[language].work.projects.api.description,
             linkGit: 'https://github.com/alinalein/movie_api',
-            linkCase: 'add_later',
+            linkCase: API_Case,
             languagesUsed: [Node, Mongo, Express, Postman],
             phonePic: [postman]
         },
