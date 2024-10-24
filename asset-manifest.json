@@ -1,10 +1,13 @@
 {
   "files": {
     "main.css": "/portfolio_beta/static/css/main.0df35d37.css",
-    "main.js": "/portfolio_beta/static/js/main.6f1f68b7.js",
+    "main.js": "/portfolio_beta/static/js/main.fa7209cc.js",
     "static/js/453.2ddb282f.chunk.js": "/portfolio_beta/static/js/453.2ddb282f.chunk.js",
-    "static/media/CV_en.pdf": "/portfolio_beta/static/media/CV_en.3df74ef816530466db62.pdf",
-    "static/media/CV_de.pdf": "/portfolio_beta/static/media/CV_de.234f4859ab8e86b89187.pdf",
+    "static/media/Case Study API.pdf": "/portfolio_beta/static/media/Case Study API.88bc52b6baa60f5f6912.pdf",
+    "static/media/Leinweber Alina_Web Developer_Resume.pdf": "/portfolio_beta/static/media/Leinweber Alina_Web Developer_Resume.5adc26f5645800a8ef76.pdf",
+    "static/media/Leinweber Alina_Web Developer_Lebenslauf.pdf": "/portfolio_beta/static/media/Leinweber Alina_Web Developer_Lebenslauf.0690950f33355e543867.pdf",
+    "static/media/Impressum_Alina_Leinweber_ENG.pdf": "/portfolio_beta/static/media/Impressum_Alina_Leinweber_ENG.e01fe444ab60ed6920c9.pdf",
+    "static/media/Impressum_Alina_Leinweber_DE.pdf": "/portfolio_beta/static/media/Impressum_Alina_Leinweber_DE.59c9fd991e0edb7fb3b2.pdf",
     "service-worker.js": "/portfolio_beta/service-worker.js",
     "static/media/MongoDB.svg": "/portfolio_beta/static/media/MongoDB.b508609b24c1a2bc58576411df58bb4b.svg",
     "static/media/ReactNative.svg": "/portfolio_beta/static/media/ReactNative.55360266b3781dae00a5a77c8916f82d.svg",
@@ -29,11 +32,11 @@
     "static/media/CSS.svg": "/portfolio_beta/static/media/CSS.3ec320225ef851ed26cf9fd1c6ebaa54.svg",
     "static/media/React.svg": "/portfolio_beta/static/media/React.e93389782af17568b23e69bd25850f64.svg",
     "main.0df35d37.css.map": "/portfolio_beta/static/css/main.0df35d37.css.map",
-    "main.6f1f68b7.js.map": "/portfolio_beta/static/js/main.6f1f68b7.js.map",
+    "main.fa7209cc.js.map": "/portfolio_beta/static/js/main.fa7209cc.js.map",
     "453.2ddb282f.chunk.js.map": "/portfolio_beta/static/js/453.2ddb282f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0df35d37.css",
-    "static/js/main.6f1f68b7.js"
+    "static/js/main.fa7209cc.js"
   ]
 }
