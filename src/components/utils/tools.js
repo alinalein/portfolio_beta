@@ -49,11 +49,10 @@ const Tools = () => {
 
     return (
         <div
-            className='tools_div'
             style={{
                 overflow: 'hidden', backgroundColor: 'rgba(231, 231, 231, 0.6)',
                 boxShadow: '0 0 10px rgba(159, 157, 157, 0.4)',
-                borderRadius: '5px', margin: '20px 0',
+                borderRadius: '5px', margin: '20px 0', width: '96%'
             }}>
             <motion.div
                 initial={{ x: 0 }}

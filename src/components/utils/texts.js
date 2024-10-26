@@ -54,7 +54,7 @@ const Texts = {
         },
         contact: {
             formTitle: "Contact Form",
-            getInTouchTitle: "Get in touch",
+            getInTouchTitle: "Let’s connect",
             namePlaceholder: "Full Name",
             emailPlaceholder: "Email Address",
             messagePlaceholder: "Your Message",

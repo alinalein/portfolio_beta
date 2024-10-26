@@ -25,9 +25,9 @@ const AboutMe = ({ id, isWidthGreaterThan1050, language }) => {
                         <h2><span className='span_title'>{Texts[language].about.title.charAt(0)}</span>{Texts[language].about.title.slice(1)}</h2>
                     </div>
                     <div className='about_img_div'>
-                        <div className='img_div' >
-                            <img src={`${process.env.PUBLIC_URL}/img_hidden/4.png`} alt='Profile' className="about_pic" />
-                        </div>
+
+                        <img src={`${process.env.PUBLIC_URL}/img_hidden/4.png`} alt='ProfilePic' className="about_pic " />
+
                         <div className='text_div'>
                             <p>{Texts[language].about.welcomeText}</p>
                             <p>

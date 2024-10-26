@@ -37,30 +37,26 @@
              display: flex;
              align-items: center;
              justify-content: space-around;
-             margin: 40px 0;
+             margin: 40px auto;
 
-             .img_div {
-                 width: 20vw;
-                 justify-content: center;
-
-                 .about_pic {
-                     max-width: 70%;
-                     border-radius: 40%;
-                     margin: 4%;
-                     height: auto;
-                 }
+             .about_pic {
+                 max-width: 25%;
+                 border-radius: 40%;
+                 height: auto;
+                 margin: auto 2.5%;
              }
+         }
 
-             .text_div {
-                 align-items: left;
-                 text-align: left;
-                 width: 90%;
-                 flex-direction: column;
-                 margin: 0 10px;
-             }
+         .text_div {
+             align-items: left;
+             text-align: left;
+             width: 90%;
+             flex-direction: column;
+             margin: 0 10px;
          }
      }
  }
+
 
  .span_title {
      color: var(--main-color);
@@ -114,6 +110,11 @@
 
      .about_img_div {
          flex-direction: column;
+
+         .about_pic {
+             width: 20vw;
+         }
+
      }
 
      .floating-container .about_pic {
