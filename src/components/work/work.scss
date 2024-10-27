@@ -4,7 +4,7 @@
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
-    margin: 40px 20% 20px 20%;
+    margin: 20px 20% 20px 20%;
     grid-gap: 10px 20px;
 
     .work_grid_item {
@@ -13,8 +13,8 @@
 
         .work_img_div {
             position: relative;
-            width: 25vw;
-            height: 150px;
+            width: 30vw;
+            height: 200px;
             overflow: hidden;
             border-radius: 4px;
 
@@ -68,6 +68,18 @@
             }
         }
     }
+}
+
+.scrollable_images_container {
+    display: flex;
+    overflow: auto;
+    /* Enable horizontal scrolling */
+    padding: 10px 0;
+    /* Optional: Adds some vertical padding for better UX */
+    gap: 10px;
+    /* Space between images */
+    max-width: 100%;
+    /* Ensure it doesn't exceed the width of parent container */
 }
 
 @media all and (max-width: 1050px) {

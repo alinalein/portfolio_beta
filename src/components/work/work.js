@@ -55,54 +55,66 @@ const Work = ({ id, isWidthGreaterThan1050, language }) => {
             imgSrc: angular,
             title: Texts[language].work.projects.angular.title,
             description: Texts[language].work.projects.angular.description,
+            features: Texts[language].work.projects.angular.features,
             linkGit: 'https://github.com/alinalein/myFlix-Angular-client',
             linkLive: 'https://alinalein.github.io/myFlix-Angular-client/welcome',
-            languagesUsed: [TS, Angular, Saas],
+            // languagesUsed: [TS, Angular, Saas],
+            languagesUsed: ['TypeScript', 'Angular', 'Angular Material', 'Sass', 'SCSS', 'HTML', 'TypeDoc'],
             phonePic: [angular_phone, angular]
         },
         {
             imgSrc: chat_work,
             title: Texts[language].work.projects.chat.title,
             description: Texts[language].work.projects.chat.description,
+            features: Texts[language].work.projects.chat.features,
             linkGit: 'https://github.com/alinalein/chat',
             linkCase: '',
-            languagesUsed: [ReactNat, Firebase],
+            // languagesUsed: [ReactNat, Firebase],
+            languagesUsed: ['Android Studio', 'React Native', 'Firebase', 'Firestore', 'GiftedChat', 'Expo'],
             phonePic: [chat_main_phone, chat_chat_phone]
         },
         {
             imgSrc: pokemon,
             title: Texts[language].work.projects.pokemon.title,
             description: Texts[language].work.projects.pokemon.description,
+            features: Texts[language].work.projects.pokemon.features,
             linkGit: 'https://github.com/alinalein/JS-App',
             linkLive: 'https://alinalein.github.io/JS-App/',
-            languagesUsed: [JS, HTML, CSS, Bootstrap],
+            // languagesUsed: [JS, HTML, CSS, Bootstrap],
+            languagesUsed: ['JavaScript', 'HTML', 'CSS', 'Bootstrap'],
             phonePic: [pokemon_phone, pokemon]
         },
         {
             imgSrc: api,
             title: Texts[language].work.projects.api.title,
             description: Texts[language].work.projects.api.description,
+            features: Texts[language].work.projects.api.features,
             linkGit: 'https://github.com/alinalein/movie_api',
             linkCase: API_Case,
-            languagesUsed: [Node, Mongo, Express, Postman],
+            // languagesUsed: [Node, Mongo, Express, Postman],
+            languagesUsed: ['Node.js', 'MongoDB', 'Express', 'Postman', 'HTML', 'Mongoose', 'JSDoc', 'CORS', 'JWT', 'Heroku'],
             phonePic: [postman]
         },
         {
             imgSrc: react,
             title: Texts[language].work.projects.react.title,
             description: Texts[language].work.projects.react.description,
+            features: Texts[language].work.projects.react.features,
             linkGit: 'https://github.com/alinalein/movie_api-client',
             linkLive: 'https://myflix-alinalein.netlify.app',
-            languagesUsed: [Reacticon, Bootstrap, Redux, Saas],
+            // languagesUsed: [Reacticon, Bootstrap, Redux, Saas],
+            languagesUsed: ['React', 'React Bootstrap', 'Redux', 'Sass ', 'HTML', 'Parcel', 'Netlify'],
             phonePic: [react_phone, react]
         },
         {
             imgSrc: meet,
             title: Texts[language].work.projects.meet.title,
             description: Texts[language].work.projects.meet.description,
+            features: Texts[language].work.projects.meet.features,
             linkGit: 'https://github.com/alinalein/meet',
             linkLive: 'https://alinalein.github.io/meet/',
-            languagesUsed: [Reacticon, Jest, AWS, Cucumber],
+            // languagesUsed: [Reacticon, Jest, AWS, Cucumber],
+            languagesUsed: ['AWS Lambda', 'Jest', 'Cucumber', 'Puppeteer', 'HTML', 'Sass', 'React', 'Google Calendar API', 'OAuth2', 'Recharts'],
             phonePic: [meet_phone, meet]
         },
     ];
@@ -114,7 +126,7 @@ const Work = ({ id, isWidthGreaterThan1050, language }) => {
     const onClose = () => {
         setActiveItem(null);
     };
-
+    console.log(activeItem);
     return (
         <motion.div id={id}
             className="floating-container"
@@ -138,12 +150,14 @@ const Work = ({ id, isWidthGreaterThan1050, language }) => {
                         </div>
                     ))}
                 </div>
-                {activeItem &&
-                    <ProjectDetails onClose={onClose} language={language}
-                        title={activeItem.title} description={activeItem.description}
-                        languagesUsed={activeItem.languagesUsed} linkLive={activeItem.linkLive} linkGit={activeItem.linkGit}
-                        phonePic={activeItem.phonePic} linkCase={activeItem.linkCase} />
-                }
+                <div className="scrollable_images_container">
+                    {activeItem &&
+                        <ProjectDetails onClose={onClose} language={language}
+                            title={activeItem.title} description={activeItem.description} features={activeItem.features}
+                            languagesUsed={activeItem.languagesUsed} linkLive={activeItem.linkLive} linkGit={activeItem.linkGit}
+                            phonePic={activeItem.phonePic} linkCase={activeItem.linkCase} />
+                    }
+                </div>
             </div>
         </motion.div >
     );

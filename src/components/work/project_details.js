@@ -2,7 +2,7 @@ import { Modal } from '@mui/material';
 import Texts from '../utils/texts.js';
 import './project_details.scss';
 
-const ProjectDetails = ({ onClose, title, description, languagesUsed, linkGit, linkLive, phonePic, language, linkCase }) => {
+const ProjectDetails = ({ onClose, title, description, languagesUsed, linkGit, linkLive, phonePic, language, linkCase, features }) => {
 
     return (
         <Modal
@@ -18,18 +18,39 @@ const ProjectDetails = ({ onClose, title, description, languagesUsed, linkGit, l
                 </div>
                 <div className='project_img_div'>
                     {phonePic.map((src, index) => (
-                        <img className='project_img' src={src} key={index} alt={title} loading="lazy"
-                        />
+                        <a href={src} target="_blank" rel="noopener noreferrer" key={index} className='project_img'>
+                            <img className='project_img' src={src} key={index} alt={title} loading="lazy" style={{ cursor: 'pointer' }}
+                            />
+                        </a>
                     ))}
+
                 </div>
 
                 <p>{description}</p>
-                <div style={{ margin: '10px 0' }}>
-                    <p className='modal_technologies'>   {Texts[language].project_details}</p>
-                    <br />
-                    {languagesUsed.map((src, index) => (
-                        <img key={index} src={src} alt="Language Icon" style={{ width: 'auto', height: '40px', padding: '0 10px' }} />
+
+                <p className='modal_technologies' style={{ marginBottom: '5px' }}> Features</p>
+                {Array.isArray(features) && features.map((feature, index) => (
+                    <div className="feature-item" key={index}>
+                        <span className="feature-bullet">❍  </span>
+                        <span>{feature}</span>
+                    </div>
+                ))}
+
+
+                <div >
+                    <p className='modal_technologies' style={{ marginTop: '14px' }}>   {Texts[language].project_details}</p>
+                    {languagesUsed.map((language, index) => (
+                        <span
+                            key={index}
+                            className='languagesProject'
+                        >
+                            {language}
+                        </span>
                     ))}
+                    {/* when change to render svg instead of written technologies */}
+                    {/* {languagesUsed.map((src, index) => (
+                        < img key={index} src={src} alt="Language Icon" style={{ padding: '0 10px' }} />
+                    ))} */}
                 </div>
                 <div className='social_item_div'>
                     <a href={linkGit} target="_blank" rel="noopener noreferrer" className='details_link'>GitHub Project</a>

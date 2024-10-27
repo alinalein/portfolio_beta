@@ -66,6 +66,15 @@ const AboutMe = ({ id, isWidthGreaterThan1050, language }) => {
                 </div>
                 <div className='component_title'>
                     {/* Dynamic title for 'Why Coding?' */}
+                    <h2><span className='span_title'>{Texts[language].about.backgroundTitle.charAt(0)}</span>{Texts[language].about.backgroundTitle.slice(1)}</h2>
+                </div>
+                <p style={{ padding: '10px', textAlign: 'left' }}>
+                    {Texts[language].about.backgroundText.split('\n').map((line, index) => (
+                        <span key={index}>{line}<br /></span>
+                    ))}
+                </p>
+                <div className='component_title'>
+                    {/* Dynamic title for 'Why Coding?' */}
                     <h2><span className='span_title'>{Texts[language].about.whyCodingTitle.charAt(0)}</span>{Texts[language].about.whyCodingTitle.slice(1)}</h2>
                 </div>
                 <p style={{ padding: '10px', textAlign: 'left' }}>

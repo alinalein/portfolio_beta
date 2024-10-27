@@ -20,14 +20,14 @@ import Cucumber from '../../assets/svgs/Cucumber.svg'
 import Postman from '../../assets/svgs/Postman.svg'
 import Express from '../../assets/svgs/Express.svg'
 import Redux from '../../assets/svgs/Redux.svg'
-import Saas from '../../assets/svgs/sass-1.svg'
+import Sass from '../../assets/svgs/sass-1.svg'
 
 const Tools = () => {
     const controls = useAnimation();
     const svgs = [
         Angular, Bootstrap, CSS, Firebase, GitHub, HTML,
         Mongo, AWS, Node, JS, Reacticon, SQL, TS, ReactNat,
-        VS, Jest, Cucumber, Postman, Redux, Express, Saas
+        VS, Jest, Cucumber, Postman, Redux, Express, Sass
     ]
     const doubledSvgs = [...svgs, ...svgs];
 

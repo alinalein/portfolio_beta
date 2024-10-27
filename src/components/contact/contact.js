@@ -58,13 +58,21 @@ const Contact = ({ id, isWidthGreaterThan1050, language }) => {
                         {Texts[language].contact.formTitle.slice(1)}
                     </h2>
                 </div>
+                <div>
+                    <p>
+                        {Texts[language].contact.formMessage}
+                        <a href="mailto:alina.leinweber@gmx.de" style={{ color: "var(--main-color)", textDecoration: "none" }}>
+                            alina.leinweber@gmx.de
+                        </a>.
+                    </p>
+                </div>
                 <div className="contact-form">
                     <form ref={form} onSubmit={sendMessage}>
                         <div className="input-row">
                             <input type="text" name='user_name' placeholder={Texts[language].contact.namePlaceholder} required />
                             <input type="email" name='user_email' placeholder={Texts[language].contact.emailPlaceholder} required />
                         </div>
-                        <textarea name='message' placeholder="Your Message" maxLength="240" required></textarea>
+                        <textarea name='message' placeholder={Texts[language].contact.messagePlaceholder} maxLength="240" required></textarea>
                         <button className='menu-item' type="submit">
                             {Texts[language].contact.sendMessageButton} <SendIcon className='send_icon' />
                         </button>                    </form>
@@ -79,13 +87,18 @@ const Contact = ({ id, isWidthGreaterThan1050, language }) => {
                         {Texts[language].contact.getInTouchTitle.slice(1)}
                     </h2>
                 </div>
-                <div className='social_item_div contact_icons_div'>
+                <div
+                    className="social_item_div " style={{ margin: '30px' }}
+                >
                     <a href="https://www.linkedin.com/in/alina-leinweber-901b94135" className='menu-item social_item ' style={{ width: '20%' }} >
                         <LinkedInIcon className='social_icon' />
                     </a>
                     <a href="https://github.com/alinalein " className='social_item menu-item' style={{ width: '20%' }} >
                         <GitHubIcon className='social_icon' />
                     </a>
+                </div>
+                <div className='contactPic'>
+                    <img src={`${process.env.PUBLIC_URL}/img_hidden/connect.jpg`} alt='ContactPic' className='contactPic' />
                 </div>
                 {isWidthGreaterThan1050 ?
                     '' :
@@ -98,6 +111,7 @@ const Contact = ({ id, isWidthGreaterThan1050, language }) => {
                         Impressum
                     </a>
                 }
+
             </div>
         </motion.div>
     );

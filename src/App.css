@@ -60,7 +60,7 @@ body.dark-mode .background-container_bubbles {
 /* css for App.js */
 .app_container {
   background-color: rgba(231, 231, 231, 0.2);
-  overflow: hidden;
+  /* overflow: hidden; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,7 +71,7 @@ body.dark-mode .background-container_bubbles {
 }
 
 .route_container {
-  overflow: hidden;
+  overflow-x: hidden;
   display: flex;
   height: 90%;
   width: 70%;
@@ -98,7 +98,7 @@ body.dark-mode .background-container_bubbles {
 
   .route_container {
     width: 92%;
-    overflow: visible;
+    overflow-x: visible;
     flex-direction: column;
   }
 }
