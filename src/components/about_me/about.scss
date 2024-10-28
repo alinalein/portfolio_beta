@@ -37,7 +37,7 @@
              display: flex;
              align-items: center;
              justify-content: space-around;
-             margin: 40px auto;
+             margin: 30px auto;
 
              .about_pic {
                  max-width: 25%;
@@ -81,6 +81,19 @@
          height: 1px;
          background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
      }
+ }
+
+ .CSM_pic {
+     float: right;
+     margin: 0 10px;
+     border-radius: 5px;
+     border: 2px solid var(--main-color);
+     max-width: 400px;
+     height: auto
+ }
+
+ .remove_p-margin {
+     margin: 0;
  }
 
  @media all and (max-width: 1050px) {

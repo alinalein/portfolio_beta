@@ -29,7 +29,7 @@ const AboutMe = ({ id, isWidthGreaterThan1050, language }) => {
                         <img src={`${process.env.PUBLIC_URL}/img_hidden/4.png`} alt='ProfilePic' className="about_pic " />
 
                         <div className='text_div'>
-                            <p>{Texts[language].about.welcomeText}</p>
+                            <p className='remove_p-margin'>{Texts[language].about.welcomeText}</p>
                             <p>
                                 {Texts[language].about.description.split('\n').map((line, index) => (
                                     <span key={index}>
@@ -57,6 +57,7 @@ const AboutMe = ({ id, isWidthGreaterThan1050, language }) => {
                         </div>
                     </div>
                 </div>
+
                 <div className='component_title'>
                     {/* Dynamic title for 'Skills & Technologies' */}
                     <h2><span className='span_title'>{Texts[language].about.skillsTitle.charAt(0)}</span>{Texts[language].about.skillsTitle.slice(1)}</h2>
@@ -64,22 +65,37 @@ const AboutMe = ({ id, isWidthGreaterThan1050, language }) => {
                 <div className='about_img_div'>
                     <Tools />
                 </div>
+
                 <div className='component_title'>
-                    {/* Dynamic title for 'Why Coding?' */}
+                    {/* Dynamic title for 'My background' */}
                     <h2><span className='span_title'>{Texts[language].about.backgroundTitle.charAt(0)}</span>{Texts[language].about.backgroundTitle.slice(1)}</h2>
                 </div>
-                <p style={{ padding: '10px', textAlign: 'left' }}>
-                    {Texts[language].about.backgroundText.split('\n').map((line, index) => (
-                        <span key={index}>{line}<br /></span>
-                    ))}
-                </p>
+                <div className='about_img_div' style={{ margin: '30px auto 10px auto' }}>
+                    <p style={{ textAlign: 'left', padding: '0 10px' }} className='remove_p-margin'>
+                        {Texts[language].about.backgroundText.split('\n\n').map((paragraph, pIndex) => (
+                            <span key={pIndex}>
+                                {paragraph.split('**').map((part, i) =>
+                                    i % 2 === 1 ? <strong key={i}>{part}</strong> : part
+                                )}
+                                <br /><br />
+                            </span>
+                        ))}
+                    </p>
+                    <img src={`${process.env.PUBLIC_URL}/img_hidden/CSM.jpg`} alt='CSMPic' className="CSM_pic" />
+                </div>
+
                 <div className='component_title'>
                     {/* Dynamic title for 'Why Coding?' */}
                     <h2><span className='span_title'>{Texts[language].about.whyCodingTitle.charAt(0)}</span>{Texts[language].about.whyCodingTitle.slice(1)}</h2>
                 </div>
-                <p style={{ padding: '10px', textAlign: 'left' }}>
-                    {Texts[language].about.whyCodingText.split('\n').map((line, index) => (
-                        <span key={index}>{line}<br /></span>
+
+                <p style={{ textAlign: 'left', margin: '30px 10px' }} className='remove_p-margin'>
+                    {Texts[language].about.whyCodingText.split('\n\n').map((paragraph, index) => (
+                        <p key={index}>
+                            {paragraph.split('**').map((part, i) =>
+                                i % 2 === 1 ? <strong key={i}>{part}</strong> : part
+                            )}
+                        </p>
                     ))}
                 </p>
             </div>

@@ -12,13 +12,23 @@ const Texts = {
             projects: {
                 angular: {
                     title: "Angular myFlix",
-                    description: "This is the Angular frontend for the Movie_API backend project. The app will feature multiple interface views to interact with data via the REST API endpoints defined in the Movie_API server-side application.",
-                    features: []
+                    description: "This is the Angular frontend for the Movie_API backend project. \
+                    The application provides multiple interface views and allows users to interact with data through the REST API endpoints defined in the Movie_API server.",
+                    features: ['Welcome Screen: Allows users to log in or register a new account.',
+                        'Movie List View: Shows a complete list of movies for authenticated users, with options to add or remove movies from their favorites list.',
+                        'Movie Cards: Each movie card in the list includes buttons to view detailed information about the movie, explore its genre, or learn about the director.',
+                        'Profile View: Enables users to view and update their personal information, with an option to deregister. Users can also view their favorite movies here.',
+                        'Navigation: Icons for Profile, All Movies, and Logout.'
+                    ]
                 },
                 chat: {
                     title: "React Native Chat",
                     description: "This app is designed for mobile devices using React Native. It provides users with a chat interface and options to chat, share images, share audios and their location.",
-                    features: []
+                    features: [
+                        'Customization page where users can enter their name and select a chat background color before joining the chat.',
+                        'Chat screen with real-time conversation display, message input, and send button.',
+                        'Communication options allow users to send images (from the library or camera), voice messages, and share their location.',
+                        'Anonymous authentication through Google Firebase. Data storage via Google Firestore Database supports both online and offline access.']
                 },
                 pokemon: {
                     title: "JavaScript Pokédex",
@@ -31,31 +41,34 @@ const Texts = {
                 },
                 api: {
                     title: "Node.JS Movie_API",
-                    description: "This API gives users access to details about various movies, directors and genres. Users will be able to sign up, update their personal information, delete their profile and create a list of their favorite movies.",
-                    features: ['Provide a list of all movies.', 'Retrieve detailed information about a specific movie, genre, or director.',
-                        'Allow new users to sign up and manage their account info.', 'Enable users to add or remove movies from their favorites.', 'Allow users to delete their account.']
+                    description: "This API serves as the back end for React and Angular frontends, providing users access to details about various movies, directors, and genres. Users can sign up, update their personal information, delete their profile, and create a list of favorite movies.",
+                    features: ['Provide a list of all movies.',
+                        'Retrieve detailed information about a specific movie, genre, or director.',
+                        'Allow new users to sign up and manage their account info.',
+                        'Enable users to add or remove movies from their favorites.',
+                        'Allow users to delete their account.']
                 },
                 react: {
                     title: "React myFlix",
                     description: "This is the React frontend for the Movie_API backend project. The application incorporates multiple interface views to manage data through REST API endpoints defined in the Movie_API server-side application.",
                     features: [
-                        'Movie List: Displays movies with images and titles, allows genre filtering, title search, and adding/removing favorites.',
-                        'Movie Details: Shows full movie info with options to add/remove favorites.',
-                        'Authentication: Login and signup with user details.',
-                        'Profile: View and update user info, with an option to deregister.',
-                        'Navigation: Simple navigation with logout; manage favorites in List, Details, and My List views.'
+                        'Welcome Screen: Allows users to log in or register a new account.',
+                        'Movie List View: Displays movies with images and titles, includes genre filtering, title search, and options to add or remove favorites.',
+                        'Movie Details: Shows full movie information with options to add or remove the movie from the favorites list.',
+                        'Profile View: Enables users to view and update personal information, with an option to deregister.',
+                        'Navigation: Provides access to Home, Genres, My List, Profile, and Logout.'
                     ]
                 },
                 meet: {
                     title: "React PWA Meet",
                     description: "The application is designed for event management using React and a test-driven development approach. It is a serverless and progressive web app that fetches upcoming events through the Google Calendar API.",
                     features: [
-                        'Filter events by city to view only those happening in a specific location.',
-                        'Show or hide event details as needed for a cleaner view.',
-                        'Set the number of events displayed on the screen at once.',
-                        'Use the app offline, with access to saved event details.',
-                        'Add a shortcut to the app on your home screen for quick access.',
-                        'View charts that visualize event data for better insights.'
+                        'Event filter to select a city and view location-specific events.',
+                        'Event display options to show or hide details for a streamlined view.',
+                        'Setting to adjust the number of events shown on the screen.',
+                        'Offline access to previously saved event details.',
+                        'Home screen shortcut for quick app access.',
+                        'Data visualizations with charts to gain event insights.'
                     ]
                 }
             }
@@ -67,16 +80,21 @@ const Texts = {
             description: "I enjoy exploring new places and challenging myself with activities like escape rooms, skydiving, and hiking unfamiliar trails. \
             I bring the same curiosity, determination, and problem-solving mindset to my coding projects, where I apply my skills in HTML, CSS, JavaScript, React, Node.js, and debugging.",
             skillsTitle: "Skills & Technologies",
-            backgroundTitle: "Some background info",
-            backgroundText: " Böa balsl ",
+            backgroundTitle: "My background",
+            backgroundText: "With over five years of experience in Sales and Customer Success, primarily in the SaaS industry, \
+            I have spent the past three years as a Customer Success Manager, handling sensitive CRM data and working closely with product teams to improve our software.\
+            I contribute to CRM data documentation, assist in troubleshooting software issues for clients through cross-functional teamwork, and enjoy brainstorming with my team to boost the customer experience.\
+             \n\nThrough this role, I have gained a solid understanding of user needs, software functionality, and the importance of clear, effective communication between technical and non-technical teams, all while strengthening my problem-solving skills.",
             whyCodingTitle: "Why coding?",
-            whyCodingText: "Working in a SaaS company in customer-focused roles sparked my interest in web development. \
+            whyCodingText: "**Working in a SaaS company** in customer-focused roles sparked my interest in web development. \
             As a Customer Success Manager, I frequently troubleshot software issues and acted as an intermediary. \
             Wanting to improve efficiency and contribute more directly, I took the initiative and began teaching myself coding two years ago. \
-            I quickly became fascinated by it and enrolled in a formal course, driven by a desire to keep learning. \
-            \n\nMy coding journey is fueled by a passion for creating user-friendly experiences, I enjoy every aspect of building interactive apps—from front-end to back-end development.\
+            I quickly became fascinated by it and enrolled in a formal course as a Full Stack Web Developer course at CareerFoundry, driven by a desire to keep learning. \
+            \n\n**My coding journey** is fueled by a passion for creating user-friendly experiences, I enjoy every aspect of building interactive apps—from front-end to back-end development.\
             I find the debugging process especially thrilling, it feels like detective work, solving puzzles and uncovering the root cause of issues. \
-            \n\nI'm excited to finally transition my career into the field I would love to work in—coding!"
+             \n\n**As a web developer**, I prioritize writing clean, well-structured code and building layouts that are both visually appealing and efficient, designed to perform seamless on any device. \
+            I create interfaces that are easy to use and accessible, making sure every user can navigate smoothly and have a great experience. Just as I guided customers to success in my current role,  I now aim to guide users through digital interfaces with ease. \
+            \n\nI'm excited to finally transition my career into the field I would love to work in and make a meaningful impact—**coding**!"
         },
         contact: {
             formTitle: "Get in touch",
@@ -142,7 +160,7 @@ const Texts = {
             Diese Neugier und Entschlossenheit, kombiniert mit meinem lösungsorientierten Ansatz, bringe ich auch in meine Coding-Projekte ein, \
              in denen ich meine Fähigkeiten in HTML, CSS, JavaScript, React, Node.js und Debugging einsetze.",
             skillsTitle: "Skills & Technologien",
-            backgroundTitle: "",
+            backgroundTitle: "Werdegang",
             backgroundText: "",
             whyCodingTitle: "Warum Coding?",
             whyCodingText: "Durch meine Tätigkeit in einem SaaS-Unternehmen in einer kundenorientierten Rolle wurde mein Interesse an Coding geweckt.\

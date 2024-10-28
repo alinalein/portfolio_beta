@@ -4,7 +4,7 @@
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
-    margin: 20px 20% 20px 20%;
+    margin: 20px 20% 0 20%;
     grid-gap: 10px 20px;
 
     .work_grid_item {
@@ -74,7 +74,7 @@
     display: flex;
     overflow: auto;
     /* Enable horizontal scrolling */
-    padding: 10px 0;
+    padding: 10px 0 0 0;
     /* Optional: Adds some vertical padding for better UX */
     gap: 10px;
     /* Space between images */

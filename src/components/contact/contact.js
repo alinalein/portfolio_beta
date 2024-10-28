@@ -59,7 +59,7 @@ const Contact = ({ id, isWidthGreaterThan1050, language }) => {
                     </h2>
                 </div>
                 <div>
-                    <p>
+                    <p className='remove_p-margin'>
                         {Texts[language].contact.formMessage}
                         <a href="mailto:alina.leinweber@gmx.de" style={{ color: "var(--main-color)", textDecoration: "none" }}>
                             alina.leinweber@gmx.de
