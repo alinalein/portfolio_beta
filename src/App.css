@@ -6,6 +6,7 @@
   --main-color: #33b4c5e3;
 }
 
+/* Margin between the title + item below on the page and the last item + bottom of the page: 30px.*/
 * {
   box-sizing: border-box;
 }

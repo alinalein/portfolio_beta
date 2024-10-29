@@ -70,7 +70,7 @@ const AboutMe = ({ id, isWidthGreaterThan1050, language }) => {
                     {/* Dynamic title for 'My background' */}
                     <h2><span className='span_title'>{Texts[language].about.backgroundTitle.charAt(0)}</span>{Texts[language].about.backgroundTitle.slice(1)}</h2>
                 </div>
-                <div className='about_img_div' style={{ margin: '30px auto 10px auto' }}>
+                <div className='about_img_div background_div' style={{ margin: '30px auto 10px auto' }}>
                     <p style={{ textAlign: 'left', padding: '0 10px' }} className='remove_p-margin'>
                         {Texts[language].about.backgroundText.split('\n\n').map((paragraph, pIndex) => (
                             <span key={pIndex}>

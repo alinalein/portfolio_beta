@@ -13,36 +13,36 @@ const Texts = {
                 angular: {
                     title: "Angular myFlix",
                     description: "This is the Angular frontend for the Movie_API backend project. \
-                    The application provides multiple interface views and allows users to interact with data through the REST API endpoints defined in the Movie_API server.",
+                    The application includes multiple interface views, enabling users to interact with data through REST API endpoints defined in the Movie_API server.",
                     features: ['Welcome Screen: Allows users to log in or register a new account.',
-                        'Movie List View: Shows a complete list of movies for authenticated users, with options to add or remove movies from their favorites list.',
-                        'Movie Cards: Each movie card in the list includes buttons to view detailed information about the movie, explore its genre, or learn about the director.',
+                        'Movie List View: Shows a complete list of movies for authenticated users',
+                        'Movie Cards: Each movie card in the list includes buttons to view detailed information about the movie, explore its genre, or learn about the director. Users can add or remove movies from their favorites list here.',
                         'Profile View: Enables users to view and update their personal information, with an option to deregister. Users can also view their favorite movies here.',
                         'Navigation: Icons for Profile, All Movies, and Logout.'
                     ]
                 },
                 chat: {
                     title: "React Native Chat",
-                    description: "This app is designed for mobile devices using React Native. It provides users with a chat interface and options to chat, share images, share audios and their location.",
+                    description: "This app is designed for mobile devices using React Native. It offers users a chat interface with options to chat, share images, audio files, and location.",
                     features: [
                         'Customization page where users can enter their name and select a chat background color before joining the chat.',
                         'Chat screen with real-time conversation display, message input, and send button.',
                         'Communication options allow users to send images (from the library or camera), voice messages, and share their location.',
-                        'Anonymous authentication through Google Firebase. Data storage via Google Firestore Database supports both online and offline access.']
+                        'Anonymous authentication through Google Firebase. Data is stored in Google Firestore Database, available both online and offline.']
                 },
                 pokemon: {
                     title: "JavaScript Pokédex",
                     description: "This small application fetches data about Pokémon from an external API. It displays details about a Pokémon when its modal is clicked and allows the user to search for a specific Pokémon by name.",
                     features: ['Fetch and display data on Pokémon from an external API.',
                         'Show a list of items for the user to browse.',
-                        'Allow users to search for specific items by name through a search bar.',
+                        'Allows users to search for specific items by name using a search bar.',
                         'Let users click on any item to view more details about it.',
                         'Allow users to filter items by selecting a generation from a dropdown menu.']
                 },
                 api: {
                     title: "Node.JS Movie_API",
                     description: "This API serves as the back end for React and Angular frontends, providing users access to details about various movies, directors, and genres. Users can sign up, update their personal information, delete their profile, and create a list of favorite movies.",
-                    features: ['Provide a list of all movies.',
+                    features: ['Provides a list of all movies stored in the database.',
                         'Retrieve detailed information about a specific movie, genre, or director.',
                         'Allow new users to sign up and manage their account info.',
                         'Enable users to add or remove movies from their favorites.',
@@ -50,7 +50,8 @@ const Texts = {
                 },
                 react: {
                     title: "React myFlix",
-                    description: "This is the React frontend for the Movie_API backend project. The application incorporates multiple interface views to manage data through REST API endpoints defined in the Movie_API server-side application.",
+                    description: "This is the React frontend for the Movie_API backend project. \
+                    The application includes multiple interface views, enabling users to interact with data through REST API endpoints defined in the Movie_API server.",
                     features: [
                         'Welcome Screen: Allows users to log in or register a new account.',
                         'Movie List View: Displays movies with images and titles, includes genre filtering, title search, and options to add or remove favorites.',
@@ -61,7 +62,7 @@ const Texts = {
                 },
                 meet: {
                     title: "React PWA Meet",
-                    description: "The application is designed for event management using React and a test-driven development approach. It is a serverless and progressive web app that fetches upcoming events through the Google Calendar API.",
+                    description: "This application is built for event management using React and a test-driven development approach. It is a serverless and progressive web app that fetches upcoming events through the Google Calendar API.",
                     features: [
                         'Event filter to select a city and view location-specific events.',
                         'Event display options to show or hide details for a streamlined view.',
@@ -122,33 +123,70 @@ const Texts = {
             projects: {
                 angular: {
                     title: "Angular myFlix",
-                    description: "Dies ist das Angular-Frontend für das Movie_API-Backend-Projekt. Die App bietet verschiedene Interface-Ansichten, um mit Daten über die in der Movie_API-Server-Anwendung definierten REST-API-Endpunkte zu interagieren.",
-                    features: []
+                    description: "Dies ist das Angular-Frontend für das Movie_API-Backend-Projekt. Die App bietet verschiedene Interface-Ansichten und ermöglicht es Usern, über die im Movie_API-Server definierten REST-API-Endpunkte auf die Daten in der Datenbank zuzugreifen.",
+                    features: [
+                        'Willkommensseite: User können sich anmelden oder ein neues Konto erstellen.',
+                        'Filmliste: Zeigt alle Filme für angemeldete User an.',
+                        'Filmkarten: Jede Filmkarte enthält Buttons, um Infos zum Film, Genre oder Regisseur anzusehen. Zusätzlich können User hier Filme zur Favoritenliste hinzufügen oder entfernen',
+                        'Profilseite: User können ihre Daten ansehen und aktualisieren oder ihr Profil löschen. Ebenso sind hier die Lieblingsfilme des jeweiligen Users gelistet.',
+                        'Navigation: Icons für Profil, alle Filme und zum Abmelden aus dem Profil.'
+                    ]
                 },
                 chat: {
                     title: "React Native Chat",
-                    description: "Diese App wurde für mobile Geräte mit React Native entwickelt. Sie bietet Usern eine Chat-Oberfläche und Optionen zum Chatten, Teilen von Bildern, Audios und ihrem Standort.",
-                    features: []
+                    description: "Diese React Native-App wurde für mobile Geräte entwickelt und bietet Usern eine einfache Chat-Oberfläche mit Optionen zum Chatten, Teilen des Standorts sowie zum Senden von Bildern und Audios.",
+                    features: [
+                        'Startseite: User können ihren Namen eingeben und eine Hintergrundfarbe für den Chat auswählen, bevor sie beitreten.',
+                        'Chatbildschirm: Zeigt die Unterhaltung in Echtzeit an und bietet ein Eingabefeld sowie einen Sende-Button.',
+                        'Kommunikationsoptionen: User können Bilder (aus der Bibliothek oder Kamera), Sprachnachrichten und ihren Standort teilen.',
+                        'Anonyme Authentifizierung über Google Firebase, mit Speicherung der Daten in der Google Firestore-Datenbank, verfügbar sowohl online als auch offline.'
+                    ]
                 },
                 pokemon: {
                     title: "JavaScript Pokédex",
-                    description: "Diese kleine Anwendung ruft Daten über Pokémon von einer externen API ab. Sie zeigt Details zu einem Pokémon an, wenn dessen Modal angeklickt wird, und ermöglicht es dem User, nach einem bestimmten Pokémon zu suchen.",
-                    features: []
+                    description: "Diese App ruft Pokémon-Daten über eine externe API ab und zeigt Details zu einem Pokémon an, wenn dessen Modalfenster angeklickt wird. User können gezielt nach einem bestimmten Pokémon anhand des Namens suchen.",
+                    features: [
+                        'Pokémon-Daten werden über eine externe API abgerufen und angezeigt.',
+                        'Eine Liste der Pokémon wird dem User zur Verfügung gestellt.',
+                        'Ermöglicht die gezielte Suche nach Pokémon über eine Suchleiste.',
+                        'User können auf ein beliebiges Pokémon klicken, um weitere Details zu sehen.',
+                        'User können Pokémon nach Generation über ein Dropdown-Menü filtern.'
+                    ]
                 },
                 api: {
                     title: "Node.JS Movie_API",
-                    description: "Diese API gibt Usern Zugriff auf Details zu verschiedenen Filmen, Regisseuren und Genres. User können sich anmelden, ihre persönlichen Informationen aktualisieren, ihr Profil löschen und eine Liste ihrer Lieblingsfilme erstellen.",
-                    features: []
+                    description: "Diese API dient als Backend für React- und Angular-Frontends. User erhalten Zugriff auf eine Übersicht zu Filmen, Regisseuren, Genres und Filmbeschreibungen. Sie können sich registrieren, ihre persönlichen Daten aktualisieren, ihr Profil löschen und eine Liste ihrer Lieblingsfilme erstellen.",
+                    features: [
+                        'Zeigt eine Liste aller Filme in der Datenbank an.',
+                        'Ermöglicht das Abrufen detaillierter Informationen zu einem bestimmten Film, Genre oder Regisseur.',
+                        'Neue User können sich registrieren, bestehende User sich einloggen und ihre Kontoinformationen verwalten.',
+                        'User können Filme zur Favoritenliste hinzufügen oder daraus entfernen.',
+                        'User haben die Möglichkeit, ihr Konto zu löschen.'
+                    ]
                 },
                 react: {
                     title: "React myFlix",
-                    description: "Dies ist das React-Frontend für das Movie_API-Backend-Projekt. Die Anwendung bietet mehrere Interface-Ansichten, um Daten über die in der Movie_API-Serveranwendung definierten REST-API-Endpunkte zu verwalten.",
-                    features: []
+                    description: "Dies ist das React-Frontend für das Movie_API-Backend-Projekt. Die App bietet verschiedene Interface-Ansichten und ermöglicht es Usern, über die im Movie_API-Server definierten REST-API-Endpunkte auf die Daten in der Datenbank zuzugreifen.",
+                    features: [
+                        'Willkommensseite: User können sich anmelden oder ein neues Konto erstellen.',
+                        'Profilseite: User können ihre Daten ansehen und aktualisieren oder ihr Profil löschen. Ebenso sind hier die Lieblingsfilme des jeweiligen Users gelistet.',
+                        'Filmliste: Zeigt alle Filme für angemeldete User an, bietet Filteroptionen nach Genre, eine Titelsuche sowie Optionen zum Hinzufügen oder Entfernen von Favoriten.',
+                        'Filmdetails: Zeigt vollständige Informationen zum Film mit Optionen, den Film zur Favoritenliste hinzuzufügen oder daraus zu entfernen.',
+                        'Profilseite: User können ihre Daten ansehen, aktualisieren oder ihr Profil löschen.',
+                        'Navigation: Bietet Zugriff auf die Startseite, Genres, Meine Liste, Profil und Abmelden.'
+                    ]
                 },
                 meet: {
                     title: "React PWA Meet",
-                    description: "Die Anwendung ist für das Eventmanagement mit React und einem testgetriebenen Entwicklungsansatz ausgelegt. Es ist eine serverlose und progressive Web-App, die bevorstehende Ereignisse über die Google Calendar API abruft.",
-                    features: []
+                    description: "Die App wurde für das Eventmanagement entwickelt und nutzt React sowie einen testgetriebenen Entwicklungsansatz. Sie ist eine serverlose, progressive Web-App, die bevorstehende Events über die Google Calendar API abruft.",
+                    features: [
+                        'User können eine Stadt auswählen, um standortspezifische Events anzuzeigen.',
+                        'Eventdetails lassen sich nach Bedarf ein- oder ausblenden.',
+                        'Die Anzahl der angezeigten Events ist individuell einstellbar.',
+                        'Bereits gespeicherte Eventdetails sind auch offline verfügbar.',
+                        'Eine Startbildschirm-Verknüpfung ermöglicht schnellen Zugriff auf die App.',
+                        'Diagramme bieten zusätzliche Einblicke in Eventdaten.'
+                    ]
                 }
             }
         },
