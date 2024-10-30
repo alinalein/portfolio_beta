@@ -6,18 +6,18 @@ const Texts = {
             CONTACT: 'Contact',
             DE: 'GER'
         },
-        greeting: "Hello I'm Alina",
+        greeting: "Hello, I'm Alina",
         work: {
             title: "Work",
             projects: {
                 angular: {
                     title: "Angular myFlix",
-                    description: "This is the Angular frontend for the Movie_API backend project. \
+                    description: "This is the Angular front-end for the Movie_API back-end project. \
                     The application includes multiple interface views, enabling users to interact with data through REST API endpoints defined in the Movie_API server.",
                     features: ['Welcome Screen: Allows users to log in or register a new account.',
-                        'Movie List View: Shows a complete list of movies for authenticated users',
+                        'Movie List View: Shows a complete list of movies for logged-in users.',
                         'Movie Cards: Each movie card in the list includes buttons to view detailed information about the movie, explore its genre, or learn about the director. Users can add or remove movies from their favorites list here.',
-                        'Profile View: Enables users to view and update their personal information, with an option to deregister. Users can also view their favorite movies here.',
+                        'Profile View: Enables users to view and update their personal information with an option to deregister. Users can also view their favorite movies here.',
                         'Navigation: Icons for Profile, All Movies, and Logout.'
                     ]
                 },
@@ -25,7 +25,7 @@ const Texts = {
                     title: "React Native Chat",
                     description: "This app is designed for mobile devices using React Native. It offers users a chat interface with options to chat, share images, audio files, and location.",
                     features: [
-                        'Customization page where users can enter their name and select a chat background color before joining the chat.',
+                        'Customization Page where users can enter their name and select a chat background color before joining the chat.',
                         'Chat screen with real-time conversation display, message input, and send button.',
                         'Communication options allow users to send images (from the library or camera), voice messages, and share their location.',
                         'Anonymous authentication through Google Firebase. Data is stored in Google Firestore Database, available both online and offline.']
@@ -41,7 +41,7 @@ const Texts = {
                 },
                 api: {
                     title: "Node.JS Movie_API",
-                    description: "This API serves as the back end for React and Angular frontends, providing users access to details about various movies, directors, and genres. Users can sign up, update their personal information, delete their profile, and create a list of favorite movies.",
+                    description: "This API serves as the back end for React and Angular front-ends, providing users access to details about various movies, directors, and genres. Users can sign up, update their personal information, delete their profile, and create a list of favorite movies.",
                     features: ['Provides a list of all movies stored in the database.',
                         'Retrieve detailed information about a specific movie, genre, or director.',
                         'Allow new users to sign up and manage their account info.',
@@ -50,7 +50,7 @@ const Texts = {
                 },
                 react: {
                     title: "React myFlix",
-                    description: "This is the React frontend for the Movie_API backend project. \
+                    description: "This is the React front-end for the Movie_API back-end project. \
                     The application includes multiple interface views, enabling users to interact with data through REST API endpoints defined in the Movie_API server.",
                     features: [
                         'Welcome Screen: Allows users to log in or register a new account.',
@@ -77,8 +77,8 @@ const Texts = {
         project_details: "Technologies",
         about: {
             title: "About me",
-            welcomeText: "Welcome to my page! I am Alina, a  freshly certified Full-Stack Web Developer living all over the world but mostly in Berlin.🖤",
-            description: "I enjoy exploring new places and challenging myself with activities like escape rooms, skydiving, and hiking unfamiliar trails. \
+            welcomeText: "Welcome to my page! I am Alina, a newly certified Full-Stack Web Developer living all over the world but mostly in Berlin.🖤",
+            description: "I enjoy exploring new places and challenging myself with activities like escape rooms, skydiving and hiking unfamiliar trails. \
             I bring the same curiosity, determination, and problem-solving mindset to my coding projects, where I apply my skills in HTML, CSS, JavaScript, React, Node.js, and debugging.",
             skillsTitle: "Skills & Technologies",
             backgroundTitle: "My background",
@@ -87,14 +87,14 @@ const Texts = {
             I contribute to CRM data documentation, assist in troubleshooting software issues for clients through cross-functional teamwork, and enjoy brainstorming with my team to boost the customer experience.\
              \n\nThrough this role, I have gained a solid understanding of user needs, software functionality, and the importance of clear, effective communication between technical and non-technical teams, all while strengthening my problem-solving skills.",
             whyCodingTitle: "Why coding?",
-            whyCodingText: "**Working in a SaaS company** in customer-focused roles sparked my interest in web development. \
-            As a Customer Success Manager, I frequently troubleshot software issues and acted as an intermediary. \
+            whyCodingText: "**Working in a SaaS company** in a customer-focused role sparked my interest in web development. \
+            As a Customer Success Manager, I often assisted in troubleshooting software issues and acted as an intermediary. \
             Wanting to improve efficiency and contribute more directly, I took the initiative and began teaching myself coding two years ago. \
-            I quickly became fascinated by it and enrolled in a formal course as a Full Stack Web Developer course at CareerFoundry, driven by a desire to keep learning. \
+            I quickly became fascinated by it and enrolled in a Full Stack Web Developer course at CareerFoundry, driven by a desire to keep learning. \
             \n\n**My coding journey** is fueled by a passion for creating user-friendly experiences, I enjoy every aspect of building interactive apps—from front-end to back-end development.\
             I find the debugging process especially thrilling, it feels like detective work, solving puzzles and uncovering the root cause of issues. \
-             \n\n**As a web developer**, I prioritize writing clean, well-structured code and building layouts that are both visually appealing and efficient, designed to perform seamless on any device. \
-            I create interfaces that are easy to use and accessible, making sure every user can navigate smoothly and have a great experience. Just as I guided customers to success in my current role,  I now aim to guide users through digital interfaces with ease. \
+             \n\n**As a web developer**, I prioritize writing clean, well-structured code and building layouts that are both visually appealing and efficient, designed to perform seamlessly on any device.\
+            I create interfaces that are easy to use and accessible, making sure every user can navigate smoothly and have a great experience. Just as I guided customers to success in my current role, I now aim to guide users through digital interfaces with ease. \
             \n\nI'm excited to finally transition my career into the field I would love to work in and make a meaningful impact—**coding**!"
         },
         contact: {
@@ -123,7 +123,7 @@ const Texts = {
             projects: {
                 angular: {
                     title: "Angular myFlix",
-                    description: "Dies ist das Angular-Frontend für das Movie_API-Backend-Projekt. Die App bietet verschiedene Interface-Ansichten und ermöglicht es Usern, über die im Movie_API-Server definierten REST-API-Endpunkte auf die Daten in der Datenbank zuzugreifen.",
+                    description: "Dies ist das Angular-Front-End für das Movie_API-Back-End-Projekt. Die App bietet verschiedene Interface-Ansichten und ermöglicht es Usern über die REST-API-Endpunkte des Movie_API-Servers auf die Daten in der Datenbank zuzugreifen.",
                     features: [
                         'Willkommensseite: User können sich anmelden oder ein neues Konto erstellen.',
                         'Filmliste: Zeigt alle Filme für angemeldete User an.',
@@ -155,7 +155,7 @@ const Texts = {
                 },
                 api: {
                     title: "Node.JS Movie_API",
-                    description: "Diese API dient als Backend für React- und Angular-Frontends. User erhalten Zugriff auf eine Übersicht zu Filmen, Regisseuren, Genres und Filmbeschreibungen. Sie können sich registrieren, ihre persönlichen Daten aktualisieren, ihr Profil löschen und eine Liste ihrer Lieblingsfilme erstellen.",
+                    description: "Diese API dient als Back-End für React- und Angular-Front-Ends. User erhalten Zugriff auf eine Übersicht zu Filmen, Regisseuren, Genres und Filmbeschreibungen. Sie können sich registrieren, ihre persönlichen Daten aktualisieren, ihr Profil löschen und eine Liste ihrer Lieblingsfilme erstellen.",
                     features: [
                         'Zeigt eine Liste aller Filme in der Datenbank an.',
                         'Ermöglicht das Abrufen detaillierter Informationen zu einem bestimmten Film, Genre oder Regisseur.',
@@ -166,10 +166,9 @@ const Texts = {
                 },
                 react: {
                     title: "React myFlix",
-                    description: "Dies ist das React-Frontend für das Movie_API-Backend-Projekt. Die App bietet verschiedene Interface-Ansichten und ermöglicht es Usern, über die im Movie_API-Server definierten REST-API-Endpunkte auf die Daten in der Datenbank zuzugreifen.",
+                    description: "Dies ist das React-Front-End für das Movie_API-Back-End-Projekt. Die App bietet verschiedene Interface-Ansichten und ermöglicht es Usern über die REST-API-Endpunkte des Movie_API-Servers auf die Daten in der Datenbank zuzugreifen.",
                     features: [
                         'Willkommensseite: User können sich anmelden oder ein neues Konto erstellen.',
-                        'Profilseite: User können ihre Daten ansehen und aktualisieren oder ihr Profil löschen. Ebenso sind hier die Lieblingsfilme des jeweiligen Users gelistet.',
                         'Filmliste: Zeigt alle Filme für angemeldete User an, bietet Filteroptionen nach Genre, eine Titelsuche sowie Optionen zum Hinzufügen oder Entfernen von Favoriten.',
                         'Filmdetails: Zeigt vollständige Informationen zum Film mit Optionen, den Film zur Favoritenliste hinzuzufügen oder daraus zu entfernen.',
                         'Profilseite: User können ihre Daten ansehen, aktualisieren oder ihr Profil löschen.',
@@ -185,7 +184,7 @@ const Texts = {
                         'Die Anzahl der angezeigten Events ist individuell einstellbar.',
                         'Bereits gespeicherte Eventdetails sind auch offline verfügbar.',
                         'Eine Startbildschirm-Verknüpfung ermöglicht schnellen Zugriff auf die App.',
-                        'Diagramme bieten zusätzliche Einblicke in Eventdaten.'
+                        'Diagramme bieten visuelle Einblicke in Eventdaten.'
                     ]
                 }
             }
@@ -199,15 +198,22 @@ const Texts = {
              in denen ich meine Fähigkeiten in HTML, CSS, JavaScript, React, Node.js und Debugging einsetze.",
             skillsTitle: "Skills & Technologien",
             backgroundTitle: "Werdegang",
-            backgroundText: "",
+            backgroundText: "Ich bringe über fünf Jahre Erfahrung im Bereich Sales und Customer Success mit, vor allem in der SaaS-Branche, und arbeite seit drei Jahren als Customer Success Manager. \
+            In dieser Rolle verwalte ich sensible CRM-Daten und arbeite eng mit den Produktteams zusammen, um unsere Software stetig zu verbessern. \
+            Ich dokumentiere CRM-Daten, unterstütze bereichsübergreifend bei der Lösung von Softwareproblemen und sammle mit meinem Team gerne in Brainstorming-Sitzungen Ideen zur Verbesserung der Kundenerfahrung.\
+            \n\nDurch diese Tätigkeit habe ich ein tiefes Verständnis für die Bedürfnisse der User, die Funktionalität der Software und die Bedeutung klarer, effektiver Kommunikation zwischen technischen und nicht-technischen Teams gewonnen. \
+            Zudem konnte ich meine Fähigkeiten im Problemlösen weiter ausbauen.",
             whyCodingTitle: "Warum Coding?",
-            whyCodingText: "Durch meine Tätigkeit in einem SaaS-Unternehmen in einer kundenorientierten Rolle wurde mein Interesse an Coding geweckt.\
-            Als Customer Success Manager habe ich häufig beim Lösen von Softwareproblemen als Vermittlerin agiert. \
-            Ich wollte aktiver zur Lösung beitragen und den gesamten Prozess beschleunigen, deshalb habe ich vor zwei Jahren begonnen, mir das Programmieren selbst beizubringen.\
-            Schon bald war ich davon so fasziniert, dass ich mich zu einem formalen Kurs anmeldete, um noch mehr darüber zu lernen. \
-             \n\nHeute macht es mir besonders Spaß, interaktive Apps und Webseiten zu entwickeln – von der Frontend- bis zur Backend-Entwicklung. \
-             Der Debugging-Prozess macht mir besonders Spaß, denn er fühlt sich für mich an wie Detektivarbeit, Probleme analysieren, Lösungen finden und die Ursachen aufdecken. \
-             \n\nIch freue mich darauf, meine Karriere nun ganz auf den Bereich auszurichten, der mich begeistert – das Programmieren!"
+            whyCodingText: "**Die Arbeit in einem SaaS-Unternehmen** in einer kundenorientierten Rolle weckte mein Interesse an der Webentwicklung. \
+            Als Customer Success Manager unterstützte ich oft bei der Fehlerbehebung von Softwareproblemen und fungierte als Vermittler. \
+            Ich wollte mehr zum Problemlösen beitragen und den Prozess beschleunigen, deshalb ergriff ich die Initiative und begann vor zwei Jahren, mir das Programmieren selbst beizubringen. \
+            Schon bald war ich davon fasziniert und meldete mich, angetrieben von dem Wunsch, kontinuierlich dazuzulernen, bei CareerFoundry zu einem Full-Stack Web Developer Kurs an.\
+            \n\n**Mein Programmierweg** wird durch meine Leidenschaft für die Gestaltung positiver User Experience angetrieben. Ich genieße jeden Aspekt der Entwicklung interaktiver Apps – von der Front-End- bis zur Back-End-Entwicklung. \
+            Besonders spannend finde ich den Debugging-Prozess, es fühlt sich an wie Detektivarbeit, bei der ich Rätsel löse und den Ursachen von Problemen auf den Grund gehe.\
+            \n\n**Als Webentwickler** achte ich darauf, sauberen und übersichtlichen Code zu schreiben und Layouts zu gestalten, die sowohl ansprechend als auch effizient sind und auf jedem Gerät problemlos funktionieren. \
+            Ich erstelle Benutzeroberflächen, die einfach zu bedienen und gut zugänglich sind, damit sich jeder User leicht zurechtfindet und eine angenehme User Experience hat. \
+            So wie ich in meiner aktuellen Rolle Kunden erfolgreich unterstützt habe, möchte ich nun Usern helfen, sich mühelos und sicher durch digitale Oberflächen zu bewegen.\
+            \n\nIch freue mich darauf, meine Karriere endlich in das Feld zu verlagern, in dem ich arbeiten möchte, und etwas Bedeutendes beizutragen – **Coding**!"
         },
         contact: {
             formTitle: "Melde dich gerne bei mir",
