@@ -1,8 +1,10 @@
 // Navigation.js
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom';
 import { useNavigate, useLocation } from 'react-router-dom';
 import './navigation.scss'
 import TypingAnimation from '../utils/typing_effect.js';
+import Impressum from '../utils/impressum';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import MessageIcon from '@mui/icons-material/Message';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
@@ -10,13 +12,12 @@ import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import Texts from '../utils/texts.js';
+import Texts from '../utils/texts';
 import ImpressumDE from '../../assets/pdf/Impressum_Alina_Leinweber_DE.pdf'
 import ImpressumEN from '../../assets/pdf/Impressum_Alina_Leinweber_ENG.pdf'
-import { col } from 'framer-motion/client';
-import { color } from 'framer-motion';
 
 const Navigation = ({ components, isWidthGreaterThan1050, setActiveComponent, activeComponent, language, setLanguage }) => {
+
     const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
     const [activeItem, setActiveItem] = useState(localStorage.getItem('activeItem') || 'ABOUT');
 
@@ -161,14 +162,9 @@ const Navigation = ({ components, isWidthGreaterThan1050, setActiveComponent, ac
                 </div>
             ))}
             {isWidthGreaterThan1050 ?
-                <a
-                    href={language === 'en' ? ImpressumEN : ImpressumDE}
-                    style={{ color: 'var(--main-color)' }}
-                    rel='noopener noreferrer'
-                    target='_blank'
-                >
+                <Link to="/impressum" style={{ color: 'var(--main-color)', textDecoration: 'underline' }}>
                     Impressum
-                </a>
+                </Link>
                 : ''
             }
         </nav>

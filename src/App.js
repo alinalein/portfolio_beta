@@ -6,6 +6,7 @@ import Navigation from './components/navigation/navigation';
 import Work from './components/work/work';
 import Contact from './components/contact/contact';
 import Background from './components/utils/background';
+import Impressum from '../src/components/utils/impressum'
 
 function App() {
   const [isWidthGreaterThan1050, setIsWidthGreaterThan1050] = useState(window.innerWidth > 1050);
@@ -36,6 +37,7 @@ function App() {
         <Navigation language={language} setLanguage={setLanguage} components={components} isWidthGreaterThan1050={isWidthGreaterThan1050} setActiveComponent={setActiveComponent} activeComponent={activeComponent} className="navigation_component" />
         <div className='route_container'>
           <Routes>
+            <Route path="/impressum" element={<Impressum language={language} isWidthGreaterThan1050={isWidthGreaterThan1050} />} />
             {isWidthGreaterThan1050 ? (
               <Route path="/" element={<ActiveComponent id={activeComponent.toLowerCase()} isWidthGreaterThan1050={isWidthGreaterThan1050} language={language} />} />
             ) : (

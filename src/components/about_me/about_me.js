@@ -4,7 +4,7 @@ import variantsBig from '../utils/variantsAnimation'
 import Tools from '../utils/tools';
 import CV_en from '../../assets/pdf/Leinweber Alina_Web Developer_Resume.pdf'
 import CV_de from '../../assets/pdf/Leinweber Alina_Web Developer_Lebenslauf.pdf'
-import Texts from '../utils/texts.js';
+import Texts from '../utils/texts';
 // import profilePic from '../../assets/img/profile.png'
 import './about.scss'
 
@@ -34,7 +34,7 @@ const AboutMe = ({ id, isWidthGreaterThan1050, language }) => {
                                 {Texts[language].about.description.split('\n').map((line, index) => (
                                     <span key={index}>
                                         {line.split(' ').map((word, wordIndex) => {
-                                            const technologiesToBold = ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js'];
+                                            const technologiesToBold = ['HTML', 'CSS', 'JavaScript', 'React', 'TypeScript', 'Node.js'];
                                             const cleanedWord = word.replace(/[,]/g, ''); // Remove commas only.
 
                                             const isBold = technologiesToBold.some(tech => cleanedWord.toLowerCase() === tech.toLowerCase());

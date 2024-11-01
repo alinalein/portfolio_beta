@@ -1,3 +1,5 @@
+import Impressum from "./impressum";
+
 const Texts = {
     en: {
         navigation: {
@@ -79,7 +81,7 @@ const Texts = {
             title: "About me",
             welcomeText: "Welcome to my page! I am Alina, a newly certified Full-Stack Web Developer living all over the world but mostly in Berlin.🖤",
             description: "I enjoy exploring new places and challenging myself with activities like escape rooms, skydiving and hiking unfamiliar trails. \
-            I bring the same curiosity, determination, and problem-solving mindset to my coding projects, where I apply my skills in HTML, CSS, JavaScript, React, Node.js, and debugging.",
+            I bring the same curiosity, determination, and problem-solving mindset to my coding projects, where I apply my skills in HTML, CSS, JavaScript, React, TypeScript, Node.js, and debugging.",
             skillsTitle: "Skills & Technologies",
             backgroundTitle: "My background",
             backgroundText: "With over five years of experience in Sales and Customer Success, primarily in the SaaS industry, \
@@ -108,6 +110,11 @@ const Texts = {
             sendMessageButton: "SEND MESSAGE",
             successMessage: "You successfully sent your message",
             errorMessage: "Unfortunately, your message could not be sent. Please try again.",
+        },
+        impressum: {
+            information: "Information in accordance with § 5 TMG:",
+            register: "There is no entry in the Commercial Register.",
+            email: "Email:"
         }
     },
     de: {
@@ -195,7 +202,7 @@ const Texts = {
             welcomeText: "Willkommen auf meiner Seite! Ich bin Alina, kürzlich zertifizierte Full-Stack Web Developer, ich lebe überall auf der Welt, habe aber meinen Hauptsitz in Berlin.🖤",
             description: "Ich entdecke gerne neue Orte und stelle mich Herausforderungen wie Escape Rooms, Fallschirmspringen oder Wanderungen auf unbekannten Pfaden. \
             Diese Neugier und Entschlossenheit, kombiniert mit meinem lösungsorientierten Ansatz, bringe ich auch in meine Coding-Projekte ein, \
-             in denen ich meine Fähigkeiten in HTML, CSS, JavaScript, React, Node.js und Debugging einsetze.",
+             in denen ich meine Fähigkeiten in HTML, CSS, JavaScript, React, TypeScript, Node.js und Debugging einsetze.",
             skillsTitle: "Skills & Technologien",
             backgroundTitle: "Werdegang",
             backgroundText: "Ich bringe über fünf Jahre Erfahrung im Bereich Sales und Customer Success mit, vor allem in der SaaS-Branche, und arbeite seit drei Jahren als Customer Success Manager. \
@@ -225,6 +232,11 @@ const Texts = {
             sendMessageButton: "NACHRICHT SENDEN",
             successMessage: "Vielen Dank! Deine Nachricht wurde erfolgreich gesendet.",
             errorMessage: "Leider konnte deine Nachricht nicht gesendet werden. Bitte versuche es erneut.",
+        },
+        impressum: {
+            information: "Angaben gemäß § 5 TMG",
+            register: "Es gibt keinen Eintrag im Handelsregister.",
+            email: "E-Mail:"
         }
     }
 };

@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import variantsBig from '../utils/variantsAnimation'
-import Texts from '../utils/texts.js';
+import Texts from '../utils/texts';
 import ProjectDetails from './project_details'
 import API_Case from '../../assets/pdf/Case Study API.pdf'
+import Casestudy from '../utils/casestudy.js';
 // svg icons
 import Angular from '../../assets/svgs/Angular.svg'
 import Bootstrap from '../../assets/svgs/Bootstrap.svg'

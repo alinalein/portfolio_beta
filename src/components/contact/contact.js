@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
 import SendIcon from '@mui/icons-material/Send';
@@ -6,7 +7,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Notification from '../utils/notification';
 import variantsBig from '../utils/variantsAnimation'
-import Texts from '../utils/texts.js';
+import Texts from '../utils/texts';
 import ImpressumDE from '../../assets/pdf/Impressum_Alina_Leinweber_DE.pdf'
 import ImpressumEN from '../../assets/pdf/Impressum_Alina_Leinweber_ENG.pdf'
 import './contact.scss'
@@ -102,14 +103,9 @@ const Contact = ({ id, isWidthGreaterThan1050, language }) => {
                 </div>
                 {isWidthGreaterThan1050 ?
                     '' :
-                    <a
-                        href={language === 'en' ? ImpressumEN : ImpressumDE}
-                        style={{ color: 'var(--main-color)' }}
-                        rel='noopener noreferrer'
-                        target='_blank'
-                    >
+                    <Link to="/impressum" style={{ color: 'var(--main-color)', textDecoration: 'underline' }}>
                         Impressum
-                    </a>
+                    </Link>
                 }
 
             </div>
