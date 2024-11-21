@@ -2,7 +2,7 @@
   --background-color-light: white;
   --text-color-light: black;
   --background-color-dark: rgb(63, 63, 63);
-  --text-color-dark: white;
+  --text-color-dark: rgba(255, 255, 255, 0.842);
   --main-color: #33b4c5e3;
 }
 

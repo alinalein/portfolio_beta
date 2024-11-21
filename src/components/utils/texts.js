@@ -87,6 +87,7 @@ const Texts = {
             backgroundText: "With over five years of experience in Sales and Customer Success, primarily in the SaaS industry, \
             I have spent the past three years as a Customer Success Manager, handling sensitive CRM data and working closely with product teams to improve our software.\
             I contribute to CRM data documentation, assist in troubleshooting software issues for clients through cross-functional teamwork, and enjoy brainstorming with my team to boost the customer experience.\
+            Additionally, I have two years of experience in software troubleshooting and three years in digital solutions, which have helped me build solid technical expertise.\
              \n\nThrough this role, I have gained a solid understanding of user needs, software functionality, and the importance of clear, effective communication between technical and non-technical teams, all while strengthening my problem-solving skills.",
             whyCodingTitle: "Why coding?",
             whyCodingText: "**Working in a SaaS company** in a customer-focused role sparked my interest in web development. \
@@ -103,7 +104,7 @@ const Texts = {
             formTitle: "Get in touch",
             getInTouchTitle: "Let’s connect!",
             formMessage: "I’m based in Berlin and excited about inspiring remote positions—whether part-time, full-time, or freelance.\
-             Feel free to reach out via the contact form or simply email me at ",
+             Feel free to reach out via the contact form or simply email me at: ",
             namePlaceholder: "Full Name",
             emailPlaceholder: "Email Address",
             messagePlaceholder: "Your Message",
@@ -199,33 +200,35 @@ const Texts = {
         project_details: "Technologien",
         about: {
             title: "Über mich",
-            welcomeText: "Willkommen auf meiner Seite! Ich bin Alina, kürzlich zertifizierte Full-Stack Web Developer, ich lebe überall auf der Welt, habe aber meinen Hauptsitz in Berlin.🖤",
-            description: "Ich entdecke gerne neue Orte und stelle mich Herausforderungen wie Escape Rooms, Fallschirmspringen oder Wanderungen auf unbekannten Pfaden. \
-            Diese Neugier und Entschlossenheit, kombiniert mit meinem lösungsorientierten Ansatz, bringe ich auch in meine Coding-Projekte ein, \
-             in denen ich meine Fähigkeiten in HTML, CSS, JavaScript, React, TypeScript, Node.js und Debugging einsetze.",
+            welcomeText: "Hallo und willkommen auf meiner Seite! Hallo, ich bin Alina, frisch zertifizierte Full-Stack Web Developer.\
+            Ich lebe überall auf der Welt, aber mein Hauptsitz ist Berlin.🖤",
+            description: "Ich liebe es, neue Orte zu entdecken und mich Herausforderungen zu stellen – sei es in Escape Rooms, \
+            beim Fallschirmspringen oder auf abenteuerlichen Wanderungen abseits bekannter Pfade. \
+            Diese Neugier und Entschlossenheit spiegeln sich auch in meinen Coding-Projekten wider, in denen ich mit einem lösungsorientierten Ansatz meine Kenntnisse in HTML, CSS, JavaScript, React, TypeScript, Node.js und Debugging einbringe.",
             skillsTitle: "Skills & Technologien",
             backgroundTitle: "Werdegang",
-            backgroundText: "Ich bringe über fünf Jahre Erfahrung im Bereich Sales und Customer Success mit, vor allem in der SaaS-Branche, und arbeite seit drei Jahren als Customer Success Manager. \
-            In dieser Rolle verwalte ich sensible CRM-Daten und arbeite eng mit den Produktteams zusammen, um unsere Software stetig zu verbessern. \
-            Ich dokumentiere CRM-Daten, unterstütze bereichsübergreifend bei der Lösung von Softwareproblemen und sammle mit meinem Team gerne in Brainstorming-Sitzungen Ideen zur Verbesserung der Kundenerfahrung.\
-            \n\nDurch diese Tätigkeit habe ich ein tiefes Verständnis für die Bedürfnisse der User, die Funktionalität der Software und die Bedeutung klarer, effektiver Kommunikation zwischen technischen und nicht-technischen Teams gewonnen. \
-            Zudem konnte ich meine Fähigkeiten im Problemlösen weiter ausbauen.",
+            backgroundText: "Ich habe über fünf Jahre Erfahrung in Sales und Customer Success, davon drei Jahre als Customer Success Manager in der SaaS-Branche. \
+            Dabei betreue ich sensible CRM-Daten, unterstütze bei der Lösung von Softwareproblemen und arbeite eng mit Produktteams an der Weiterentwicklung unserer Software. \
+            Gemeinsam mit meinem Team arbeite ich stetig an Ideen zur Verbesserung der Kundenerfahrung. Zusätzlich habe ich zwei Jahre Erfahrung in der Software-Fehlerbehebung \
+            und drei Jahre im Bereich digitaler Lösungen gesammelt, wodurch ich mir technische Expertise aufbauen konnte.\
+            \n\nIn dieser Tätigkeit habe ich viel gelernt über die Bedürfnisse der User, die Funktionalität der Software und wie wichtig klare Kommunikation zwischen technischen und nicht-technischen Teams ist. \
+            Gleichzeitig konnte ich immer besser Probleme lösen und mich mit digitalen Herausforderungen auseinandersetzen.",
             whyCodingTitle: "Warum Coding?",
             whyCodingText: "**Die Arbeit in einem SaaS-Unternehmen** in einer kundenorientierten Rolle weckte mein Interesse an der Webentwicklung. \
             Als Customer Success Manager unterstützte ich oft bei der Fehlerbehebung von Softwareproblemen und fungierte als Vermittler. \
             Ich wollte mehr zum Problemlösen beitragen und den Prozess beschleunigen, deshalb ergriff ich die Initiative und begann vor zwei Jahren, mir das Programmieren selbst beizubringen. \
-            Schon bald war ich davon fasziniert und meldete mich, angetrieben von dem Wunsch, kontinuierlich dazuzulernen, bei CareerFoundry zu einem Full-Stack Web Developer Kurs an.\
-            \n\n**Mein Programmierweg** wird durch meine Leidenschaft für die Gestaltung positiver User Experience angetrieben. Ich genieße jeden Aspekt der Entwicklung interaktiver Apps – von der Front-End- bis zur Back-End-Entwicklung. \
-            Besonders spannend finde ich den Debugging-Prozess, es fühlt sich an wie Detektivarbeit, bei der ich Rätsel löse und den Ursachen von Problemen auf den Grund gehe.\
-            \n\n**Als Webentwickler** achte ich darauf, sauberen und übersichtlichen Code zu schreiben und Layouts zu gestalten, die sowohl ansprechend als auch effizient sind und auf jedem Gerät problemlos funktionieren. \
-            Ich erstelle Benutzeroberflächen, die einfach zu bedienen und gut zugänglich sind, damit sich jeder User leicht zurechtfindet und eine angenehme User Experience hat. \
-            So wie ich in meiner aktuellen Rolle Kunden erfolgreich unterstützt habe, möchte ich nun Usern helfen, sich mühelos und sicher durch digitale Oberflächen zu bewegen.\
-            \n\nIch freue mich darauf, meine Karriere endlich in das Feld zu verlagern, in dem ich arbeiten möchte, und etwas Bedeutendes beizutragen – **Coding**!"
+           Ich war schnell begeistert und meldete mich bei CareerFoundry zu einem Full-Stack-Web-Developer-Kurs an. Mein Ziel: meine Kenntnisse immer weiter auszubauen.\
+            \n\n**Meine Leidenschaft** für die Entwicklung interaktiver Apps treibt mich an, \
+            stets bessere Lösungen zu schaffen. Ich genieße sowohl die Front-End- als auch die Back-End-Entwicklung und finde den Debugging-Prozess besonders spannend – wie ein Detektiv löse ich Rätsel und gehe Problemen auf den Grund.\
+            \n\n**Als Web Developer** lege ich großen Wert auf sauberen, strukturierten Code und gestalte User Interfaces, die intuitiv, barrierefrei und geräteübergreifend nutzbar sind. \
+            Ich will ansprechende und funktionale digitale Lösungen schaffen, die den Usern eine mühelose und sichere Orientierung ermöglichen. Ich habe bereits erfolgreich Kunden unterstützt und freue mich darauf, \
+            meine Fähigkeiten einzubringen, um die digitale User Experience weiter zu optimieren.\
+            \n\nIch freue mich wirklich sehr, dass ich nun endlich die Möglichkeit erhalte, mich in dem Bereich zu verwirklichen, in dem ich schon lange arbeiten möchte – **Coding**!"
         },
         contact: {
             formTitle: "Melde dich gerne bei mir",
             getInTouchTitle: "Lass uns in Kontakt bleiben!",
-            formMessage: "Ich bin in Berlin ansässig und freue mich auf inspirierende Remote-Positionen – ob Teilzeit, Vollzeit oder freiberuflich. Schreib mir einfach über das Kontaktformular oder schick mir direkt eine E-Mail an ",
+            formMessage: "Ich wohne in Berlin und bin offen für spannende Remote-Positionen – sei es in Teilzeit, Vollzeit oder als Freelancer. Melde dich einfach über das Kontaktformular oder direkt per E-Mail bei mir: ",
             namePlaceholder: "Vollständiger Name",
             emailPlaceholder: "E-Mail-Adresse",
             messagePlaceholder: "Nachricht",
