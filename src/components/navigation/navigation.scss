@@ -29,6 +29,18 @@
       fill: var(--main-color);
     }
   }
+
+  .nav_impressum {
+    color: var(--text-color-light);
+    box-shadow: none;
+    font-size: 12px;
+    height: 3vh;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: var(--main-color);
+    }
+  }
 }
 
 .menu-item {

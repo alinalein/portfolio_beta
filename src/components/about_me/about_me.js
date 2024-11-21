@@ -89,7 +89,7 @@ const AboutMe = ({ id, isWidthGreaterThan1050, language }) => {
                     <h2><span className='span_title'>{Texts[language].about.whyCodingTitle.charAt(0)}</span>{Texts[language].about.whyCodingTitle.slice(1)}</h2>
                 </div>
 
-                <p style={{ textAlign: 'left', margin: '30px 10px' }} className='remove_p-margin'>
+                <p style={{ textAlign: 'left', margin: '30px 10px 20px 10px' }} className='remove_p-margin'>
                     {Texts[language].about.whyCodingText.split('\n\n').map((paragraph, index) => (
                         <p key={index}>
                             {paragraph.split('**').map((part, i) =>

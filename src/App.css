@@ -20,7 +20,8 @@ body.dark-mode .modal_div {
 /* css for navigation.js */
 body.dark-mode .navigation,
 body.dark-mode .language-toggle,
-body.dark-mode .language-option {
+body.dark-mode .language-option,
+body.dark-mode .nav_impressum {
   background-color: var(--background-color-dark);
   color: var(--text-color-dark);
 }
@@ -56,6 +57,17 @@ body.dark-mode .animation_bubbles {
 
 body.dark-mode .background-container_bubbles {
   background: linear-gradient(180deg, var(--main-color), rgb(78, 111, 116));
+}
+
+/* css for impressum.js */
+.impressum {
+  z-index: 1;
+  align-items: flex-start;
+  color: var(--text-color-light);
+}
+
+body.dark-mode .impressum {
+  color: var(--text-color-dark);
 }
 
 /* css for App.js */

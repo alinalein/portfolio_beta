@@ -162,7 +162,7 @@ const Navigation = ({ components, isWidthGreaterThan1050, setActiveComponent, ac
                 </div>
             ))}
             {isWidthGreaterThan1050 ?
-                <Link to="/impressum" style={{ color: 'var(--main-color)', textDecoration: 'underline' }}>
+                <Link to="/impressum" className='nav_impressum'>
                     Impressum
                 </Link>
                 : ''

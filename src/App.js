@@ -17,7 +17,7 @@ function App() {
     // key in lower case to match the hash
     about: AboutMe,
     work: Work,
-    contact: Contact
+    contact: Contact,
   };
 
   useEffect(() => {

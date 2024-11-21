@@ -99,7 +99,7 @@ const Contact = ({ id, isWidthGreaterThan1050, language }) => {
                     </a>
                 </div>
                 <div className='contactPic'>
-                    <img src={`${process.env.PUBLIC_URL}/img_hidden/connect.jpg`} alt='ContactPic' className='contactPic' />
+                    <img src={`${process.env.PUBLIC_URL}/img_hidden/connect.jpg`} alt='ContactPic' />
                 </div>
                 {isWidthGreaterThan1050 ?
                     '' :
