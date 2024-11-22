@@ -8,11 +8,10 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Notification from '../utils/notification';
 import variantsBig from '../utils/variantsAnimation'
 import Texts from '../utils/texts';
-import ImpressumDE from '../../assets/pdf/Impressum_Alina_Leinweber_DE.pdf'
-import ImpressumEN from '../../assets/pdf/Impressum_Alina_Leinweber_ENG.pdf'
 import './contact.scss'
 
-const Contact = ({ id, isWidthGreaterThan1050, language }) => {
+const Contact = ({ id, handleImpressumClick, isWidthGreaterThan1050, language, setActiveComponent, setActiveItem }) => {
+
     const [notification, setNotification] = useState({ message: '', type: '' });
     const form = useRef();
 
@@ -43,7 +42,6 @@ const Contact = ({ id, isWidthGreaterThan1050, language }) => {
 
         event.target.reset();
     }
-
 
     return (
         <motion.div id={id}
@@ -101,13 +99,11 @@ const Contact = ({ id, isWidthGreaterThan1050, language }) => {
                 <div className='contactPic'>
                     <img src={`${process.env.PUBLIC_URL}/img_hidden/connect.jpg`} alt='ContactPic' />
                 </div>
-                {isWidthGreaterThan1050 ?
-                    '' :
-                    <Link to="/impressum" style={{ color: 'var(--main-color)', textDecoration: 'underline' }}>
+                {isWidthGreaterThan1050 ? null : (
+                    <Link to="/impressum" onClick={handleImpressumClick} className='nav_impressum'>
                         Impressum
                     </Link>
-                }
-
+                )}
             </div>
         </motion.div>
     );

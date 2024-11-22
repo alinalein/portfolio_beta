@@ -1,10 +1,10 @@
 import Texts from './texts';
 
-const Impressum = ({ language, isWidthGreaterThan1050 }) => {
+const Impressum = ({ id, language, isWidthGreaterThan1050 }) => {
     const marginTop = isWidthGreaterThan1050 ? '0' : '25vh';
 
     return (
-        <div className='impressum'
+        <div className='impressum' id={id}
             style={{
                 marginTop: marginTop,
             }}

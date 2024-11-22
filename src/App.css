@@ -20,10 +20,17 @@ body.dark-mode .modal_div {
 /* css for navigation.js */
 body.dark-mode .navigation,
 body.dark-mode .language-toggle,
-body.dark-mode .language-option,
-body.dark-mode .nav_impressum {
+body.dark-mode .language-option {
   background-color: var(--background-color-dark);
   color: var(--text-color-dark);
+}
+
+body.dark-mode .nav_impressum {
+  color: var(--text-color-dark);
+
+  &:hover {
+    color: var(--main-color);
+  }
 }
 
 /* css for about.js */

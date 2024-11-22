@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { useNavigate, useLocation } from 'react-router-dom';
 import './navigation.scss'
 import TypingAnimation from '../utils/typing_effect.js';
-import Impressum from '../utils/impressum';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import MessageIcon from '@mui/icons-material/Message';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
@@ -13,22 +12,21 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Texts from '../utils/texts';
-import ImpressumDE from '../../assets/pdf/Impressum_Alina_Leinweber_DE.pdf'
-import ImpressumEN from '../../assets/pdf/Impressum_Alina_Leinweber_ENG.pdf'
 
-const Navigation = ({ components, isWidthGreaterThan1050, setActiveComponent, activeComponent, language, setLanguage }) => {
+const Navigation = ({ handleImpressumClick, activeItem, setActiveItem, components, isWidthGreaterThan1050, setActiveComponent, activeComponent, language, setLanguage }) => {
 
     const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
-    const [activeItem, setActiveItem] = useState(localStorage.getItem('activeItem') || 'ABOUT');
+    // const [activeItem, setActiveItem] = useState(localStorage.getItem('activeItem') || 'ABOUT');
 
     const navigate = useNavigate();
     const location = useLocation();
-    // load english a default otherwise from localstrorage 
 
     const menuItems = [
         { name: 'ABOUT', label: Texts[language].navigation.ABOUT, icon: <PersonOutlineIcon className='menu-icon' /> },
         { name: 'WORK', label: Texts[language].navigation.WORK, icon: <RemoveRedEyeIcon className='menu-icon' /> },
         { name: 'CONTACT', label: Texts[language].navigation.CONTACT, icon: <MessageIcon className='menu-icon' /> },
+        // ...(isWidthGreaterThan1050 ? [{ name: 'IMPRESSUM', label: 'Impressum', className: 'nav_impressum' }] : []),
+        // { name: 'IMPRESSUM', label: 'Impressum', className: 'nav_impressum' }
     ];
 
     // change active icon depending on the section the user scrolled to
@@ -70,7 +68,7 @@ const Navigation = ({ components, isWidthGreaterThan1050, setActiveComponent, ac
     // set activeItem icon & the active component to the #id of the initialy loaded page
     useEffect(() => {
         const hash = location.hash.replace('#', '')
-        if (hash && ['about', 'work', 'contact'].includes(hash)) {
+        if (hash && ['about', 'work', 'contact', 'impressum'].includes(hash)) {
             setActiveItem(hash.toUpperCase());
         }
         if (isWidthGreaterThan1050 && hash && components[hash]) {
@@ -156,17 +154,16 @@ const Navigation = ({ components, isWidthGreaterThan1050, setActiveComponent, ac
                 <div
                     key={item.name}
                     className={`menu-item ${activeItem === item.name ? 'active' : ''}`}
-                    onClick={() => { handleMenuItemClick(item.name); }}
+                    onClick={() => { handleMenuItemClick(item.name) }}
                 > {item.icon}
                     {item.label}
                 </div>
             ))}
-            {isWidthGreaterThan1050 ?
-                <Link to="/impressum" className='nav_impressum'>
+            {isWidthGreaterThan1050 ? (
+                <Link to="/impressum" onClick={handleImpressumClick} className='nav_impressum'>
                     Impressum
                 </Link>
-                : ''
-            }
+            ) : null}
         </nav>
     );
 }

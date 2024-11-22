@@ -11,13 +11,22 @@ import Impressum from '../src/components/utils/impressum'
 function App() {
   const [isWidthGreaterThan1050, setIsWidthGreaterThan1050] = useState(window.innerWidth > 1050);
   const [activeComponent, setActiveComponent] = useState(localStorage.getItem('activeComponent') || 'ABOUT');
+  // load english a default otherwise from localstrorage 
   const [language, setLanguage] = useState(localStorage.getItem('language') || 'en');
+  const [activeItem, setActiveItem] = useState(localStorage.getItem('activeItem') || 'ABOUT')
 
   const components = {
     // key in lower case to match the hash
     about: AboutMe,
     work: Work,
     contact: Contact,
+    impressum: Impressum
+  };
+
+  //if null -> error active component null 
+  const handleImpressumClick = () => {
+    setActiveComponent('');
+    setActiveItem('');
   };
 
   useEffect(() => {
@@ -34,10 +43,10 @@ function App() {
     <HashRouter>
       <div className="app_container">
         <Background />
-        <Navigation language={language} setLanguage={setLanguage} components={components} isWidthGreaterThan1050={isWidthGreaterThan1050} setActiveComponent={setActiveComponent} activeComponent={activeComponent} className="navigation_component" />
+        <Navigation handleImpressumClick={handleImpressumClick} setActiveItem={setActiveItem} activeItem={activeItem} language={language} setLanguage={setLanguage} components={components} isWidthGreaterThan1050={isWidthGreaterThan1050} setActiveComponent={setActiveComponent} activeComponent={activeComponent} className="navigation_component" />
         <div className='route_container'>
           <Routes>
-            <Route path="/impressum" element={<Impressum language={language} isWidthGreaterThan1050={isWidthGreaterThan1050} />} />
+            <Route path="/impressum" element={<Impressum id="impressum" language={language} isWidthGreaterThan1050={isWidthGreaterThan1050} />} />
             {isWidthGreaterThan1050 ? (
               <Route path="/" element={<ActiveComponent id={activeComponent.toLowerCase()} isWidthGreaterThan1050={isWidthGreaterThan1050} language={language} />} />
             ) : (
@@ -46,7 +55,7 @@ function App() {
                   <>
                     <AboutMe id="about" isWidthGreaterThan1050={isWidthGreaterThan1050} language={language} />
                     <Work id="work" isWidthGreaterThan1050={isWidthGreaterThan1050} language={language} />
-                    <Contact id="contact" isWidthGreaterThan1050={isWidthGreaterThan1050} language={language} />
+                    <Contact id="contact" handleImpressumClick={handleImpressumClick} setActiveItem={setActiveItem} setActiveComponent={setActiveComponent} isWidthGreaterThan1050={isWidthGreaterThan1050} language={language} />
                   </>
                 } />
               </>
