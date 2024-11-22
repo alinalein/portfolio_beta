@@ -16,8 +16,6 @@ import Texts from '../utils/texts';
 const Navigation = ({ handleImpressumClick, activeItem, setActiveItem, components, isWidthGreaterThan1050, setActiveComponent, activeComponent, language, setLanguage }) => {
 
     const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
-    // const [activeItem, setActiveItem] = useState(localStorage.getItem('activeItem') || 'ABOUT');
-
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -25,59 +23,57 @@ const Navigation = ({ handleImpressumClick, activeItem, setActiveItem, component
         { name: 'ABOUT', label: Texts[language].navigation.ABOUT, icon: <PersonOutlineIcon className='menu-icon' /> },
         { name: 'WORK', label: Texts[language].navigation.WORK, icon: <RemoveRedEyeIcon className='menu-icon' /> },
         { name: 'CONTACT', label: Texts[language].navigation.CONTACT, icon: <MessageIcon className='menu-icon' /> },
-        // ...(isWidthGreaterThan1050 ? [{ name: 'IMPRESSUM', label: 'Impressum', className: 'nav_impressum' }] : []),
-        // { name: 'IMPRESSUM', label: 'Impressum', className: 'nav_impressum' }
     ];
 
-    // change active icon depending on the section the user scrolled to
     useEffect(() => {
-        const handleScroll = () => {
-            // list of section IDs corresponds to menuItems
+        const scrollDetector = () => {
+            // Array of section IDs
             const sections = ['about', 'work', 'contact'];
-            let currentSection = '';
-            for (let section of sections) {
-                const sectionElement = document.getElementById(section);
-                if (sectionElement) {
-                    const bounds = sectionElement.getBoundingClientRect();
-                    if (bounds.top <= window.innerHeight / 2 && bounds.bottom >= window.innerHeight / 2) {
-                        currentSection = section.toUpperCase();
-                        break;
-                    }
-                }
-            }
 
-            if (currentSection !== activeItem && currentSection !== '') {
-                console.log('Current Section:', currentSection);
-                setActiveItem(currentSection);
-                setActiveComponent(currentSection);
+            // Find the first section that matches the criteria
+            const currentSection = sections.find(section => {
+                const element = document.getElementById(section);
+                if (element) {
+                    const bounds = element.getBoundingClientRect();
+                    return bounds.top <= window.innerHeight / 2 && bounds.bottom >= window.innerHeight / 2;
+                }
+                return false;
+            });
+
+            // Update active states only if there's a change in sections
+            // if (currentSection && currentSection.toUpperCase() !== activeItem)
+            if (currentSection !== activeItem && currentSection !== null) {
+                console.log('Current Section:', currentSection.toUpperCase());
+                setActiveItem(currentSection.toUpperCase());
+                setActiveComponent(currentSection.toUpperCase());
             }
         };
 
-        if (!isWidthGreaterThan1050) { window.addEventListener('scroll', handleScroll); }
+        if (!isWidthGreaterThan1050) {
+            window.addEventListener('scroll', scrollDetector);
+        }
 
-        return () => window.removeEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', scrollDetector);
     }, [isWidthGreaterThan1050, activeItem, setActiveComponent]);
 
-    const scrollToComponent = (componentId) => {
-        const element = document.getElementById(componentId);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    };
 
     // set activeItem icon & the active component to the #id of the initialy loaded page
     useEffect(() => {
-        const hash = location.hash.replace('#', '')
-        if (hash && ['about', 'work', 'contact', 'impressum'].includes(hash)) {
-            setActiveItem(hash.toUpperCase());
+        const hash = location.hash.replace('#', '');
+        if (hash) {
+            if (isWidthGreaterThan1050) {
+                // For larger screens, set the active component
+                setActiveItem(hash.toUpperCase());
+                setActiveComponent(hash.toUpperCase());
+            } else {
+                // For smaller screens, scroll to the component
+                scrollToComponent(hash);
+                setActiveItem(hash.toUpperCase());
+            }
         }
-        if (isWidthGreaterThan1050 && hash && components[hash]) {
-            setActiveComponent(hash.toUpperCase());
-        } else {
-            scrollToComponent(hash);
-        }
-    }, [isWidthGreaterThan1050]);
+    }, [isWidthGreaterThan1050, location.hash]);
 
+    // set activeItem icon & the active component on user click
     const handleMenuItemClick = (name) => {
         const sectionId = name.toLowerCase();
         // sets url to component id
@@ -90,15 +86,21 @@ const Navigation = ({ handleImpressumClick, activeItem, setActiveItem, component
         }
     }
 
-    // apply on initial load theme from localstorage if there is one 
+    const scrollToComponent = (componentId) => {
+        const element = document.getElementById(componentId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    };
+
+    // Apply the theme the first time it is loaded from the local memory, if it has been set beforehand 
     useEffect(() => {
-        document.body.className = theme + '-mode';
+        document.body.className = `${theme}-mode`;
     }, [theme]);
 
     const toggleTheme = () => {
         const newTheme = theme === 'light' ? 'dark' : 'light';
         setTheme(newTheme);
-        document.body.className = newTheme + "-mode";
     };
 
     const toggleLanguage = (selectedLanguage) => {
@@ -107,7 +109,7 @@ const Navigation = ({ handleImpressumClick, activeItem, setActiveItem, component
         }
     };
 
-    // Save the selected language , theme in localStorage whenever it changes
+    // Save the selected language, theme, activeItem in localStorage whenever it changes
     useEffect(() => {
         localStorage.setItem('language', language);
         localStorage.setItem('theme', theme);

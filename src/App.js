@@ -13,7 +13,7 @@ function App() {
   const [activeComponent, setActiveComponent] = useState(localStorage.getItem('activeComponent') || 'ABOUT');
   // load english a default otherwise from localstrorage 
   const [language, setLanguage] = useState(localStorage.getItem('language') || 'en');
-  const [activeItem, setActiveItem] = useState(localStorage.getItem('activeItem') || 'ABOUT')
+  const [activeItem, setActiveItem] = useState(localStorage.getItem('activeItem') || '')
 
   const components = {
     // key in lower case to match the hash
@@ -25,6 +25,7 @@ function App() {
 
   //if null -> error active component null 
   const handleImpressumClick = () => {
+    // Reset the active states
     setActiveComponent('');
     setActiveItem('');
   };
