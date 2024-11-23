@@ -133,10 +133,15 @@
          .about_pic {
              width: 20vw;
          }
-
      }
 
      .floating-container .about_pic {
          max-width: 80%;
+     }
+ }
+
+ @media all and (max-width: 750px) {
+     .CSM_pic {
+         max-width: 300px;
      }
  }

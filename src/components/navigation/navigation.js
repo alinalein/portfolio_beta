@@ -30,22 +30,23 @@ const Navigation = ({ handleImpressumClick, activeItem, setActiveItem, component
             // Array of section IDs
             const sections = ['about', 'work', 'contact'];
 
-            // Find the first section that matches the criteria
-            const currentSection = sections.find(section => {
-                const element = document.getElementById(section);
-                if (element) {
-                    const bounds = element.getBoundingClientRect();
-                    return bounds.top <= window.innerHeight / 2 && bounds.bottom >= window.innerHeight / 2;
+            let currentSection = '';
+            for (let section of sections) {
+                const sectionElement = document.getElementById(section);
+                if (sectionElement) {
+                    const bounds = sectionElement.getBoundingClientRect();
+                    if (bounds.top <= window.innerHeight / 2 && bounds.bottom >= window.innerHeight / 2) {
+                        //ste the current section to upper case, as active Item & Component are also both in upper 
+                        currentSection = section.toUpperCase();
+                        break;
+                    }
                 }
-                return false;
-            });
-
+            }
             // Update active states only if there's a change in sections
-            // if (currentSection && currentSection.toUpperCase() !== activeItem)
             if (currentSection !== activeItem && currentSection !== null) {
-                console.log('Current Section:', currentSection.toUpperCase());
-                setActiveItem(currentSection.toUpperCase());
-                setActiveComponent(currentSection.toUpperCase());
+                console.log('Current Section:', currentSection);
+                setActiveItem(currentSection);
+                setActiveComponent(currentSection);
             }
         };
 
@@ -55,7 +56,6 @@ const Navigation = ({ handleImpressumClick, activeItem, setActiveItem, component
 
         return () => window.removeEventListener('scroll', scrollDetector);
     }, [isWidthGreaterThan1050, activeItem, setActiveComponent]);
-
 
     // set activeItem icon & the active component to the #id of the initialy loaded page
     useEffect(() => {
@@ -123,7 +123,7 @@ const Navigation = ({ handleImpressumClick, activeItem, setActiveItem, component
                 <div className=' name_div'>
                     {Texts[language].greeting}
                 </div>
-                <div> <TypingAnimation /></div>
+                <TypingAnimation />
                 <div className='social_item_div'>
                     <a href="https://github.com/alinalein" className='social_item menu-item'>
                         <LinkedInIcon className='social_icon' />

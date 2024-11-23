@@ -14,12 +14,6 @@
 
   .nav_intro_div {
     width: 180px;
-
-    .nav_pic {
-      height: 130px;
-      border-radius: 40%;
-      margin: 6%;
-    }
   }
 
   .active {
@@ -150,10 +144,6 @@
     .nav_intro_div {
       min-width: 160px;
       margin: 0 10%;
-
-      .nav_pic {
-        display: none;
-      }
     }
 
     .menu-item,
@@ -175,7 +165,7 @@
 @media all and (max-width: 750px) {
   .navigation {
     height: 6vh;
-    justify-content: space-around;
+    justify-content: space-between;
 
     .nav_intro_div {
       margin: 0;
@@ -185,7 +175,7 @@
     .language-toggle {
       font-size: 10px;
       height: 5vh;
-      margin: 0 5px;
+      margin: 0 3px;
 
       svg {
         margin-bottom: 1px;
@@ -194,7 +184,7 @@
     }
 
     .language-toggle {
-      width: 90%;
+      width: 100%;
     }
   }
 
@@ -207,4 +197,12 @@
     height: 25px;
     width: 25px;
   }
+}
+
+@media all and (max-width: 450px) {
+
+  .navigation .nav_intro_div {
+    min-width: 115px;
+  }
+
 }
