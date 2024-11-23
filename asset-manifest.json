@@ -1,13 +1,11 @@
 {
   "files": {
-    "main.css": "/portfolio_beta/static/css/main.63ac37e4.css",
-    "main.js": "/portfolio_beta/static/js/main.9a0af293.js",
+    "main.css": "/portfolio_beta/static/css/main.d04f8b76.css",
+    "main.js": "/portfolio_beta/static/js/main.d477ebb0.js",
     "static/js/453.2ddb282f.chunk.js": "/portfolio_beta/static/js/453.2ddb282f.chunk.js",
     "static/media/Case Study API.pdf": "/portfolio_beta/static/media/Case Study API.88bc52b6baa60f5f6912.pdf",
     "static/media/Leinweber Alina_Web Developer_Resume.pdf": "/portfolio_beta/static/media/Leinweber Alina_Web Developer_Resume.ec3af20a18a30d666282.pdf",
     "static/media/Leinweber Alina_Web Developer_Lebenslauf.pdf": "/portfolio_beta/static/media/Leinweber Alina_Web Developer_Lebenslauf.673f043ac660ce897587.pdf",
-    "static/media/Impressum_Alina_Leinweber_ENG.pdf": "/portfolio_beta/static/media/Impressum_Alina_Leinweber_ENG.e01fe444ab60ed6920c9.pdf",
-    "static/media/Impressum_Alina_Leinweber_DE.pdf": "/portfolio_beta/static/media/Impressum_Alina_Leinweber_DE.59c9fd991e0edb7fb3b2.pdf",
     "service-worker.js": "/portfolio_beta/service-worker.js",
     "static/media/MongoDB.svg": "/portfolio_beta/static/media/MongoDB.b508609b24c1a2bc58576411df58bb4b.svg",
     "static/media/ReactNative.svg": "/portfolio_beta/static/media/ReactNative.55360266b3781dae00a5a77c8916f82d.svg",
@@ -31,12 +29,12 @@
     "static/media/HTML5.svg": "/portfolio_beta/static/media/HTML5.cf51b3879972e0e8c0c9be2135162847.svg",
     "static/media/CSS.svg": "/portfolio_beta/static/media/CSS.3ec320225ef851ed26cf9fd1c6ebaa54.svg",
     "static/media/React.svg": "/portfolio_beta/static/media/React.e93389782af17568b23e69bd25850f64.svg",
-    "main.63ac37e4.css.map": "/portfolio_beta/static/css/main.63ac37e4.css.map",
-    "main.9a0af293.js.map": "/portfolio_beta/static/js/main.9a0af293.js.map",
+    "main.d04f8b76.css.map": "/portfolio_beta/static/css/main.d04f8b76.css.map",
+    "main.d477ebb0.js.map": "/portfolio_beta/static/js/main.d477ebb0.js.map",
     "453.2ddb282f.chunk.js.map": "/portfolio_beta/static/js/453.2ddb282f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.63ac37e4.css",
-    "static/js/main.9a0af293.js"
+    "static/css/main.d04f8b76.css",
+    "static/js/main.d477ebb0.js"
   ]
 }
