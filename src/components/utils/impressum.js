@@ -13,8 +13,8 @@ const Impressum = ({ id, language, isWidthGreaterThan1050 }) => {
             <p>{Texts[language].impressum.information}</p>
             <p>Alina Leinweber</p>
             <p>Zauritzweg 9, 10585 Berlin</p>
-            <p>{Texts[language].impressum.email}  <a href="mailto:alina.leinweber@gmx.de" className='impressum'>
-                alina.leinweber@gmx.de
+            <p>{Texts[language].impressum.email}  <a href="mailto:leinweber.alina@gmx.de" className='impressum'>
+                leinweber.alina@gmx.de
             </a></p>
             <p>{Texts[language].impressum.register}</p>
         </div>

@@ -125,7 +125,7 @@ const Navigation = ({ handleImpressumClick, activeItem, setActiveItem, component
                 </div>
                 <TypingAnimation />
                 <div className='social_item_div'>
-                    <a href="https://github.com/alinalein" className='social_item menu-item'>
+                    <a href="https://www.linkedin.com/in/alina-leinweber/" className='social_item menu-item'>
                         <LinkedInIcon className='social_icon' />
                     </a>
                     <a href="https://github.com/alinalein " className='social_item menu-item' >

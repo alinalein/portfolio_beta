@@ -60,8 +60,8 @@ const Contact = ({ id, handleImpressumClick, isWidthGreaterThan1050, language, s
                 <div>
                     <p className='remove_p-margin'>
                         {Texts[language].contact.formMessage}
-                        <a href="mailto:alina.leinweber@gmx.de" style={{ color: "var(--main-color)", textDecoration: "none" }}>
-                            alina.leinweber@gmx.de
+                        <a href="mailto:leinweber.alina@gmx.de" style={{ color: "var(--main-color)", textDecoration: "none" }}>
+                            leinweber.alina@gmx.de
                         </a>.
                     </p>
                 </div>
@@ -89,7 +89,7 @@ const Contact = ({ id, handleImpressumClick, isWidthGreaterThan1050, language, s
                 <div
                     className="social_item_div " style={{ margin: '30px' }}
                 >
-                    <a href="https://www.linkedin.com/in/alina-leinweber-901b94135" className='menu-item social_item ' style={{ width: '20%' }} >
+                    <a href="https://www.linkedin.com/in/alina-leinweber/" className='menu-item social_item ' style={{ width: '20%' }} >
                         <LinkedInIcon className='social_icon' />
                     </a>
                     <a href="https://github.com/alinalein " className='social_item menu-item' style={{ width: '20%' }} >
