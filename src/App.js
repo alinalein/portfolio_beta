@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import { HashRouter, Routes, Route } from 'react-router-dom'
 import AboutMe from './components/about_me/about_me';
+import ApiCaseStudy from './components/work/apiCaseStudy'
+import ChatCaseStudy from './components/work/chatCaseStudy'
 import Navigation from './components/navigation/navigation';
 import Work from './components/work/work';
 import Contact from './components/contact/contact';
@@ -48,6 +50,9 @@ function App() {
         <div className='route_container'>
           <Routes>
             <Route path="/impressum" element={<Impressum id="impressum" language={language} isWidthGreaterThan1050={isWidthGreaterThan1050} />} />
+            {/* <Route path="/casestudy" element={<Casestudy id="casestudy" language={language} isWidthGreaterThan1050={isWidthGreaterThan1050} />} /> */}
+            <Route path="/case-study/api-project" element={<ApiCaseStudy id="apicase" language={language} isWidthGreaterThan1050={isWidthGreaterThan1050} />} />
+            <Route path="/case-study/chat-project" element={<ChatCaseStudy id="chatcase" language={language} isWidthGreaterThan1050={isWidthGreaterThan1050} />} />
             {isWidthGreaterThan1050 ? (
               <Route path="/" element={<ActiveComponent id={activeComponent.toLowerCase()} isWidthGreaterThan1050={isWidthGreaterThan1050} language={language} />} />
             ) : (

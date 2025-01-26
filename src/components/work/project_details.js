@@ -1,4 +1,5 @@
 import { Modal } from '@mui/material';
+import { Link } from 'react-router-dom';
 import Texts from '../utils/texts.js';
 import './project_details.scss';
 
@@ -59,10 +60,15 @@ const ProjectDetails = ({ onClose, title, description, languagesUsed, linkGit, l
                             Live Project
                         </a>
                     )}
-                    {linkCase && (
+                    {/* {linkCase && (
                         <a href={linkCase} target="_blank" rel="noopener noreferrer" className='details_link'>
                             Case Study
                         </a>
+                    )} */}
+                    {linkCase && (
+                        <Link to={linkCase} className='details_link'>
+                            Case Study
+                        </Link>
                     )}
                 </div>
             </div>

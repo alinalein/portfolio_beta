@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import variantsBig from '../utils/variantsAnimation'
 import Texts from '../utils/texts';
 import ProjectDetails from './project_details'
+import { useNavigate, useLocation } from 'react-router-dom';
 import API_Case from '../../assets/pdf/Case Study API.pdf'
-import Casestudy from '../utils/casestudy.js';
 // svg icons
 import Angular from '../../assets/svgs/Angular.svg'
 import Bootstrap from '../../assets/svgs/Bootstrap.svg'
@@ -30,6 +30,8 @@ import './work.scss'
 const Work = ({ id, isWidthGreaterThan1050, language }) => {
 
     const [activeItem, setActiveItem] = useState(null);
+    const navigate = useNavigate();
+    const location = useLocation();
 
     // project pictures imports from public folder
     const meet = `${process.env.PUBLIC_URL}/img/meet.png`;
@@ -53,6 +55,7 @@ const Work = ({ id, isWidthGreaterThan1050, language }) => {
 
     const workItems = [
         {
+            id: 'angular-project',
             imgSrc: angular,
             title: Texts[language].work.projects.angular.title,
             description: Texts[language].work.projects.angular.description,
@@ -64,17 +67,19 @@ const Work = ({ id, isWidthGreaterThan1050, language }) => {
             phonePic: [angular_phone, angular]
         },
         {
+            id: 'chat_project',
             imgSrc: chat_work,
             title: Texts[language].work.projects.chat.title,
             description: Texts[language].work.projects.chat.description,
             features: Texts[language].work.projects.chat.features,
             linkGit: 'https://github.com/alinalein/chat',
-            linkCase: '',
+            linkCase: '/case-study/chat-project',
             // languagesUsed: [ReactNat, Firebase],
             languagesUsed: ['Android Studio', 'React Native', 'Firebase', 'Firestore', 'GiftedChat', 'Expo'],
             phonePic: [chat_main_phone, chat_chat_phone]
         },
         {
+            id: 'pokemon_project',
             imgSrc: pokemon,
             title: Texts[language].work.projects.pokemon.title,
             description: Texts[language].work.projects.pokemon.description,
@@ -86,17 +91,19 @@ const Work = ({ id, isWidthGreaterThan1050, language }) => {
             phonePic: [pokemon_phone, pokemon]
         },
         {
+            id: 'api_project',
             imgSrc: api,
             title: Texts[language].work.projects.api.title,
             description: Texts[language].work.projects.api.description,
             features: Texts[language].work.projects.api.features,
             linkGit: 'https://github.com/alinalein/movie_api',
-            linkCase: API_Case,
+            linkCase: '/case-study/api-project',
             // languagesUsed: [Node, Mongo, Express, Postman],
             languagesUsed: ['Node.js', 'MongoDB', 'Express', 'Postman', 'HTML', 'Mongoose', 'JSDoc', 'CORS', 'JWT', 'Heroku'],
             phonePic: [postman]
         },
         {
+            id: 'react_project',
             imgSrc: react,
             title: Texts[language].work.projects.react.title,
             description: Texts[language].work.projects.react.description,
@@ -108,6 +115,7 @@ const Work = ({ id, isWidthGreaterThan1050, language }) => {
             phonePic: [react_phone, react]
         },
         {
+            id: 'meet_project',
             imgSrc: meet,
             title: Texts[language].work.projects.meet.title,
             description: Texts[language].work.projects.meet.description,
@@ -122,12 +130,24 @@ const Work = ({ id, isWidthGreaterThan1050, language }) => {
 
     const showDetails = (item) => {
         setActiveItem(item);
+        navigate(`${location.pathname}?project=${item.id}`, { state: { from: location.pathname, activeItem: item } });
     };
 
     const onClose = () => {
         setActiveItem(null);
+        navigate(location.state?.from || '/'); // Zurück zur letzten Position
     };
-    console.log(activeItem);
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const projectId = urlParams.get('project');
+
+    React.useEffect(() => {
+        if (projectId && !activeItem) {
+            const item = workItems.find((item) => item.id === projectId);
+            if (item) setActiveItem(item);
+        }
+    }, [projectId, activeItem]);
+
     return (
         <motion.div id={id}
             className="floating-container"
