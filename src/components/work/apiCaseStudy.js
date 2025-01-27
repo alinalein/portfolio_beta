@@ -1,20 +1,25 @@
 import { useNavigate, useLocation } from 'react-router-dom';
 
-const ApiCaseStudy = ({ id, language, isWidthGreaterThan1050 }) => {
+const ApiCaseStudy = ({ language, isWidthGreaterThan1050 }) => {
+
     const navigate = useNavigate();
     const location = useLocation();
+    const { from, activeProject } = location.state || {};
+
+    //    error here
+
+    console.log('activeItem_api', activeProject)
 
     const goBack = () => {
-        // Navigiere zum vorherigen Zustand zurück
-        if (location.state?.activeItem) {
-            navigate(`${location.state.from}?project=${location.state.activeItem.id}`);
+        if (from) {
+            navigate(from, { state: { activeProject } });
         } else {
-            navigate('/'); // Standardmäßig zur Hauptseite
+            navigate('/#work');
         }
     };
 
     return (
-        <div id={id}
+        <div
             style={{
                 zIndex: '999',
                 position: 'relative', // Add this line

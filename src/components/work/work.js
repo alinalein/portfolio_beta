@@ -1,37 +1,39 @@
-import React, { useState } from 'react';
+
+import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion';
 import variantsBig from '../utils/variantsAnimation'
 import Texts from '../utils/texts';
 import ProjectDetails from './project_details'
 import { useNavigate, useLocation } from 'react-router-dom';
-import API_Case from '../../assets/pdf/Case Study API.pdf'
+// import API_Case from '../../assets/pdf/Case Study API.pdf'
 // svg icons
-import Angular from '../../assets/svgs/Angular.svg'
-import Bootstrap from '../../assets/svgs/Bootstrap.svg'
-import CSS from '../../assets/svgs/CSS.svg'
-import Firebase from '../../assets/svgs/Firebase.svg'
-import HTML from '../../assets/svgs/HTML5.svg'
-import JS from '../../assets/svgs/JavaScript.svg'
-import Mongo from '../../assets/svgs/MongoDB.svg'
-import Node from '../../assets/svgs/Node_js.svg'
-import Reacticon from '../../assets/svgs/React.svg'
-import ReactNat from '../../assets/svgs/ReactNative.svg'
-import TS from '../../assets/svgs/Typescript.svg'
-import AWS from '../../assets/svgs/AWS.svg'
-import Jest from '../../assets/svgs/Jest.svg'
-import Cucumber from '../../assets/svgs/Cucumber.svg'
-import Postman from '../../assets/svgs/Postman.svg'
-import Express from '../../assets/svgs/Express.svg'
-import Redux from '../../assets/svgs/Redux.svg'
-import Saas from '../../assets/svgs/sass-1.svg'
+// import Angular from '../../assets/svgs/Angular.svg'
+// import Bootstrap from '../../assets/svgs/Bootstrap.svg'
+// import CSS from '../../assets/svgs/CSS.svg'
+// import Firebase from '../../assets/svgs/Firebase.svg'
+// import HTML from '../../assets/svgs/HTML5.svg'
+// import JS from '../../assets/svgs/JavaScript.svg'
+// import Mongo from '../../assets/svgs/MongoDB.svg'
+// import Node from '../../assets/svgs/Node_js.svg'
+// import Reacticon from '../../assets/svgs/React.svg'
+// import ReactNat from '../../assets/svgs/ReactNative.svg'
+// import TS from '../../assets/svgs/Typescript.svg'
+// import AWS from '../../assets/svgs/AWS.svg'
+// import Jest from '../../assets/svgs/Jest.svg'
+// import Cucumber from '../../assets/svgs/Cucumber.svg'
+// import Postman from '../../assets/svgs/Postman.svg'
+// import Express from '../../assets/svgs/Express.svg'
+// import Redux from '../../assets/svgs/Redux.svg'
+// import Saas from '../../assets/svgs/sass-1.svg'
 
 import './work.scss'
 
 const Work = ({ id, isWidthGreaterThan1050, language }) => {
 
-    const [activeItem, setActiveItem] = useState(null);
+    const [activeProject, setActiveProject] = useState(null);
     const navigate = useNavigate();
     const location = useLocation();
+    console.log('activeProject_work', activeProject)
 
     // project pictures imports from public folder
     const meet = `${process.env.PUBLIC_URL}/img/meet.png`;
@@ -73,7 +75,7 @@ const Work = ({ id, isWidthGreaterThan1050, language }) => {
             description: Texts[language].work.projects.chat.description,
             features: Texts[language].work.projects.chat.features,
             linkGit: 'https://github.com/alinalein/chat',
-            linkCase: '/case-study/chat-project',
+            linkCase: '/case-study/chat',
             // languagesUsed: [ReactNat, Firebase],
             languagesUsed: ['Android Studio', 'React Native', 'Firebase', 'Firestore', 'GiftedChat', 'Expo'],
             phonePic: [chat_main_phone, chat_chat_phone]
@@ -97,7 +99,7 @@ const Work = ({ id, isWidthGreaterThan1050, language }) => {
             description: Texts[language].work.projects.api.description,
             features: Texts[language].work.projects.api.features,
             linkGit: 'https://github.com/alinalein/movie_api',
-            linkCase: '/case-study/api-project',
+            linkCase: '/case-study/api',
             // languagesUsed: [Node, Mongo, Express, Postman],
             languagesUsed: ['Node.js', 'MongoDB', 'Express', 'Postman', 'HTML', 'Mongoose', 'JSDoc', 'CORS', 'JWT', 'Heroku'],
             phonePic: [postman]
@@ -128,25 +130,22 @@ const Work = ({ id, isWidthGreaterThan1050, language }) => {
         },
     ];
 
-    const showDetails = (item) => {
-        setActiveItem(item);
-        navigate(`${location.pathname}?project=${item.id}`, { state: { from: location.pathname, activeItem: item } });
+    const showDetails = (project) => {
+        setActiveProject(project);
+        navigate(`${location.pathname}?project=${project.id}`, { state: { from: location.pathname, activeProject: project } });
     };
 
     const onClose = () => {
-        setActiveItem(null);
-        navigate(location.state?.from || '/'); // Zurück zur letzten Position
+        setActiveProject(null);
+        navigate(location.state?.from || '/#work'); // Default to #work
     };
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const projectId = urlParams.get('project');
-
-    React.useEffect(() => {
-        if (projectId && !activeItem) {
-            const item = workItems.find((item) => item.id === projectId);
-            if (item) setActiveItem(item);
+    useEffect(() => {
+        // Check if activeProject exists in the location state
+        if (location.state?.activeProject) {
+            setActiveProject(location.state.activeProject); // Restore the active project
         }
-    }, [projectId, activeItem]);
+    }, [location.state]);
 
     return (
         <motion.div id={id}
@@ -161,22 +160,22 @@ const Work = ({ id, isWidthGreaterThan1050, language }) => {
                         {Texts[language].work.title.slice(1)}</h2>
                 </div>
                 <div className='work_grid'>
-                    {workItems.map(item => (
-                        <div className='work_grid_item' key={item.title} onClick={() => showDetails(item)}>
+                    {workItems.map(project => (
+                        <div className='work_grid_item' key={project.title} onClick={() => showDetails(project)}>
                             <div className='work_img_div'>
-                                <img className='work_img' src={item.imgSrc} alt={item.title} loading="lazy" />
+                                <img className='work_img' src={project.imgSrc} alt={project.title} loading="lazy" />
                                 <div className="portfolio-overlay"><p className='overlay_plus'>+</p></div>
                             </div>
-                            <p>{item.title}</p>
+                            <p>{project.title}</p>
                         </div>
                     ))}
                 </div>
                 <div className="scrollable_images_container">
-                    {activeItem &&
+                    {activeProject &&
                         <ProjectDetails onClose={onClose} language={language}
-                            title={activeItem.title} description={activeItem.description} features={activeItem.features}
-                            languagesUsed={activeItem.languagesUsed} linkLive={activeItem.linkLive} linkGit={activeItem.linkGit}
-                            phonePic={activeItem.phonePic} linkCase={activeItem.linkCase} />
+                            title={activeProject.title} description={activeProject.description} features={activeProject.features}
+                            languagesUsed={activeProject.languagesUsed} linkLive={activeProject.linkLive} linkGit={activeProject.linkGit}
+                            phonePic={activeProject.phonePic} linkCase={activeProject.linkCase} activeProject={activeProject} />
                     }
                 </div>
             </div>

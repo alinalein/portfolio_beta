@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 const ChatCaseStudy = ({ id, language, isWidthGreaterThan1050 }) => {
     const navigate = useNavigate();
     return (
-        <div id={id}
+        <div
             style={{
                 zIndex: '999',
                 position: 'relative', // Add this line

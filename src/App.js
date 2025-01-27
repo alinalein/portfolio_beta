@@ -51,8 +51,8 @@ function App() {
           <Routes>
             <Route path="/impressum" element={<Impressum id="impressum" language={language} isWidthGreaterThan1050={isWidthGreaterThan1050} />} />
             {/* <Route path="/casestudy" element={<Casestudy id="casestudy" language={language} isWidthGreaterThan1050={isWidthGreaterThan1050} />} /> */}
-            <Route path="/case-study/api-project" element={<ApiCaseStudy id="apicase" language={language} isWidthGreaterThan1050={isWidthGreaterThan1050} />} />
-            <Route path="/case-study/chat-project" element={<ChatCaseStudy id="chatcase" language={language} isWidthGreaterThan1050={isWidthGreaterThan1050} />} />
+            <Route path="/case-study/api" element={<ApiCaseStudy language={language} isWidthGreaterThan1050={isWidthGreaterThan1050} />} />
+            <Route path="/case-study/chat" element={<ChatCaseStudy language={language} isWidthGreaterThan1050={isWidthGreaterThan1050} />} />
             {isWidthGreaterThan1050 ? (
               <Route path="/" element={<ActiveComponent id={activeComponent.toLowerCase()} isWidthGreaterThan1050={isWidthGreaterThan1050} language={language} />} />
             ) : (

@@ -1,9 +1,13 @@
 import { Modal } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Texts from '../utils/texts.js';
 import './project_details.scss';
 
-const ProjectDetails = ({ onClose, title, description, languagesUsed, linkGit, linkLive, phonePic, language, linkCase, features }) => {
+const ProjectDetails = ({ onClose, title, description, languagesUsed, linkGit, linkLive, phonePic, language, linkCase, features, activeProject }) => {
+
+    const location = useLocation()
+
+    console.log('activeItem', title)
 
     return (
         <Modal
@@ -66,7 +70,14 @@ const ProjectDetails = ({ onClose, title, description, languagesUsed, linkGit, l
                         </a>
                     )} */}
                     {linkCase && (
-                        <Link to={linkCase} className='details_link'>
+                        <Link
+                            to={linkCase}
+                            className="details_link"
+                            state={{
+                                from: location.pathname,
+                                activeProject: activeProject// Current path of the Work component
+                            }}
+                        >
                             Case Study
                         </Link>
                     )}
