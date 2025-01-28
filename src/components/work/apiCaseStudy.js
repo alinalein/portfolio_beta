@@ -4,7 +4,7 @@ const ApiCaseStudy = ({ language, isWidthGreaterThan1050 }) => {
 
     const navigate = useNavigate();
     const location = useLocation();
-    const { from, activeProject } = location.state || {};
+    const { from, activeProject, id } = location.state || {};
 
     //    error here
 
@@ -12,7 +12,9 @@ const ApiCaseStudy = ({ language, isWidthGreaterThan1050 }) => {
 
     const goBack = () => {
         if (from) {
-            navigate(from, { state: { activeProject } });
+            navigate(`${from}?project=${id}`, {
+                state: { activeProject }
+            });;
         } else {
             navigate('/#work');
         }

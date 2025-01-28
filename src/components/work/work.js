@@ -137,7 +137,7 @@ const Work = ({ id, isWidthGreaterThan1050, language }) => {
 
     const onClose = () => {
         setActiveProject(null);
-        navigate(location.state?.from || '/#work'); // Default to #work
+        navigate('/#work');// Default to #work
     };
 
     useEffect(() => {
@@ -175,7 +175,7 @@ const Work = ({ id, isWidthGreaterThan1050, language }) => {
                         <ProjectDetails onClose={onClose} language={language}
                             title={activeProject.title} description={activeProject.description} features={activeProject.features}
                             languagesUsed={activeProject.languagesUsed} linkLive={activeProject.linkLive} linkGit={activeProject.linkGit}
-                            phonePic={activeProject.phonePic} linkCase={activeProject.linkCase} activeProject={activeProject} />
+                            phonePic={activeProject.phonePic} linkCase={activeProject.linkCase} activeProject={activeProject} id={activeProject.id} />
                     }
                 </div>
             </div>

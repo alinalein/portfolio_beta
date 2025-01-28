@@ -1,28 +1,34 @@
+import { useNavigate, useLocation } from 'react-router-dom'
 
-import { useNavigate } from 'react-router-dom';
-const ChatCaseStudy = ({ id, language, isWidthGreaterThan1050 }) => {
+const ChatCaseStudy = ({ language, isWidthGreaterThan1050 }) => {
     const navigate = useNavigate();
+    const location = useLocation();
+    const { from, activeProject, id } = location.state || {};
+
+    //    error here
+
+    console.log('activeItem_api', activeProject)
+
+    const goBack = () => {
+        if (from) {
+            navigate(`${from}?project=${id}`, {
+                state: { activeProject }
+            });;
+        } else {
+            navigate('/#work');
+        }
+    };
+
     return (
         <div
             style={{
                 zIndex: '999',
-                position: 'relative', // Add this line
+                position: 'relative',
+                border: 'none'
             }}
         >
             {/* Back Button */}
-            <button
-                onClick={() => navigate(-1)} // Navigates back to the previous page
-                style={{
-                    fontWeight: 'bold',
-                    backgroundColor: '#f0f0f0',
-                    color: '#333',
-                    border: '1px solid #ccc',
-                    borderRadius: '5px',
-                    padding: '10px 20px',
-                    cursor: 'pointer',
-                    margin: '20px',
-                }}
-            >
+            <button onClick={goBack} style={{ margin: '20px', padding: '10px' }}>
                 Go Back
             </button>
             <p

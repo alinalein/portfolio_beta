@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import Texts from '../utils/texts.js';
 import './project_details.scss';
 
-const ProjectDetails = ({ onClose, title, description, languagesUsed, linkGit, linkLive, phonePic, language, linkCase, features, activeProject }) => {
+const ProjectDetails = ({ onClose, title, description, languagesUsed, linkGit, linkLive, phonePic, language, linkCase, features, activeProject, id }) => {
 
     const location = useLocation()
 
@@ -75,7 +75,8 @@ const ProjectDetails = ({ onClose, title, description, languagesUsed, linkGit, l
                             className="details_link"
                             state={{
                                 from: location.pathname,
-                                activeProject: activeProject// Current path of the Work component
+                                activeProject: activeProject,
+                                id: id// Current path of the Work component
                             }}
                         >
                             Case Study

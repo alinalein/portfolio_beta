@@ -79,7 +79,7 @@ body.dark-mode .impressum {
 
 /* css for App.js */
 .app_container {
-  background-color: rgba(231, 231, 231, 0.2);
+  /* background-color: rgba(231, 231, 231, 0.2);  - what is that for? */
   /* overflow: hidden; */
   display: flex;
   justify-content: center;
