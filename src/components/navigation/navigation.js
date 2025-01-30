@@ -13,7 +13,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Texts from '../utils/texts';
 
-const Navigation = ({ handleImpressumClick, activeItem, setActiveItem, components, isWidthGreaterThan1050, setActiveComponent, activeComponent, language, setLanguage }) => {
+const Navigation = ({ handleImpressumClick, activeItem, setActiveItem, isWidthGreaterThan1050, setActiveComponent, activeComponent, language, setLanguage }) => {
 
     const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
     const navigate = useNavigate();

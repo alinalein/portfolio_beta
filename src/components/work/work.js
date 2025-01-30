@@ -30,10 +30,12 @@ import './work.scss'
 
 const Work = ({ id, isWidthGreaterThan1050, language }) => {
 
-    const [activeProject, setActiveProject] = useState(null);
     const navigate = useNavigate();
     const location = useLocation();
-    console.log('activeProject_work', activeProject)
+    const [activeProject, setActiveProject] = useState(null);
+    // get the project form the url params
+    const urlParams = new URLSearchParams(location.search);
+    const projectIdFromUrl = urlParams.get('project');
 
     // project pictures imports from public folder
     const meet = `${process.env.PUBLIC_URL}/img/meet.png`;
@@ -132,20 +134,24 @@ const Work = ({ id, isWidthGreaterThan1050, language }) => {
 
     const showDetails = (project) => {
         setActiveProject(project);
-        navigate(`${location.pathname}?project=${project.id}`, { state: { from: location.pathname, activeProject: project } });
+        navigate(`?project=${project.id}`, { state: { from: location.pathname, activeProject: project } });
     };
 
     const onClose = () => {
-        setActiveProject(null);
-        navigate('/#work');// Default to #work
+        setActiveProject(null); // Clear state
+        navigate('/#work'); // Navigate only after state updates
     };
 
+    // Handle query parameter of project on initial load of page
     useEffect(() => {
-        // Check if activeProject exists in the location state
-        if (location.state?.activeProject) {
-            setActiveProject(location.state.activeProject); // Restore the active project
+        if (projectIdFromUrl) {
+            const project = workItems.find((item) => item.id === projectIdFromUrl);
+            if (project) {
+                setActiveProject(project);
+            }
         }
-    }, [location.state]);
+    }, [projectIdFromUrl]);
+
 
     return (
         <motion.div id={id}

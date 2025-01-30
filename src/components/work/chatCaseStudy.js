@@ -27,7 +27,6 @@ const ChatCaseStudy = ({ language, isWidthGreaterThan1050 }) => {
                 border: 'none'
             }}
         >
-            {/* Back Button */}
             <button onClick={goBack} style={{ margin: '20px', padding: '10px' }}>
                 Go Back
             </button>
@@ -36,7 +35,7 @@ const ChatCaseStudy = ({ language, isWidthGreaterThan1050 }) => {
                     fontWeight: 'bold',
                     opacity: '1',
                     zIndex: '999',
-                    position: 'relative', // Add this line
+                    position: 'relative',
                     background: 'blue',
                     color: 'black',
                     margin: '100px',

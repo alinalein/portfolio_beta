@@ -4,12 +4,13 @@ const ApiCaseStudy = ({ language, isWidthGreaterThan1050 }) => {
 
     const navigate = useNavigate();
     const location = useLocation();
-    const { from, activeProject, id } = location.state || {};
 
-    //    error here
+    // activeItem Object - for component return , id string for the url cretaion (object not accepted)
+    const { from, activeProject, id } = location.state || {};
 
     console.log('activeItem_api', activeProject)
 
+    // loads the active project component and the corresponding url on back button 
     const goBack = () => {
         if (from) {
             navigate(`${from}?project=${id}`, {
@@ -24,10 +25,9 @@ const ApiCaseStudy = ({ language, isWidthGreaterThan1050 }) => {
         <div
             style={{
                 zIndex: '999',
-                position: 'relative', // Add this line
+                position: 'relative',
             }}
         >
-            {/* Back Button */}
             <button onClick={goBack} style={{ margin: '20px', padding: '10px' }}>
                 Go Back
             </button>

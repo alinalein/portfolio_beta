@@ -46,11 +46,10 @@ function App() {
     <HashRouter>
       <div className="app_container">
         <Background />
-        <Navigation handleImpressumClick={handleImpressumClick} setActiveItem={setActiveItem} activeItem={activeItem} language={language} setLanguage={setLanguage} components={components} isWidthGreaterThan1050={isWidthGreaterThan1050} setActiveComponent={setActiveComponent} activeComponent={activeComponent} className="navigation_component" />
+        <Navigation handleImpressumClick={handleImpressumClick} setActiveItem={setActiveItem} activeItem={activeItem} language={language} setLanguage={setLanguage} isWidthGreaterThan1050={isWidthGreaterThan1050} setActiveComponent={setActiveComponent} activeComponent={activeComponent} className="navigation_component" />
         <div className='route_container'>
           <Routes>
             <Route path="/impressum" element={<Impressum id="impressum" language={language} isWidthGreaterThan1050={isWidthGreaterThan1050} />} />
-            {/* <Route path="/casestudy" element={<Casestudy id="casestudy" language={language} isWidthGreaterThan1050={isWidthGreaterThan1050} />} /> */}
             <Route path="/case-study/api" element={<ApiCaseStudy language={language} isWidthGreaterThan1050={isWidthGreaterThan1050} />} />
             <Route path="/case-study/chat" element={<ChatCaseStudy language={language} isWidthGreaterThan1050={isWidthGreaterThan1050} />} />
             {isWidthGreaterThan1050 ? (
