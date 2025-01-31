@@ -77,7 +77,7 @@ const Work = ({ id, isWidthGreaterThan1050, language }) => {
             description: Texts[language].work.projects.chat.description,
             features: Texts[language].work.projects.chat.features,
             linkGit: 'https://github.com/alinalein/chat',
-            linkCase: '/case-study/chat',
+            // linkCase: '/case-study/chat',
             // languagesUsed: [ReactNat, Firebase],
             languagesUsed: ['Android Studio', 'React Native', 'Firebase', 'Firestore', 'GiftedChat', 'Expo'],
             phonePic: [chat_main_phone, chat_chat_phone]

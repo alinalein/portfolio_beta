@@ -1,5 +1,7 @@
 import { useNavigate, useLocation } from 'react-router-dom';
+import Texts from '../utils/texts';
 
+// need adjust to window size , enable scrolling y achse , build biew small & big screen , 
 const ApiCaseStudy = ({ language, isWidthGreaterThan1050 }) => {
 
     const navigate = useNavigate();
@@ -7,8 +9,6 @@ const ApiCaseStudy = ({ language, isWidthGreaterThan1050 }) => {
 
     // activeItem Object - for component return , id string for the url cretaion (object not accepted)
     const { from, activeProject, id } = location.state || {};
-
-    console.log('activeItem_api', activeProject)
 
     // loads the active project component and the corresponding url on back button 
     const goBack = () => {
@@ -28,9 +28,8 @@ const ApiCaseStudy = ({ language, isWidthGreaterThan1050 }) => {
                 position: 'relative',
             }}
         >
-            <button onClick={goBack} style={{ margin: '20px', padding: '10px' }}>
-                Go Back
-            </button>
+            <h1> Casse Study Movie_API</h1>
+
             <p
                 style={{
                     fontWeight: 'bold',
@@ -43,7 +42,9 @@ const ApiCaseStudy = ({ language, isWidthGreaterThan1050 }) => {
             >
                 HEYYYYYYYYYYY
             </p>
-
+            <button onClick={goBack} style={{ margin: '20px', padding: '10px' }}>
+                Go Back
+            </button>
         </div>
     );
 };

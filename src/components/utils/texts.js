@@ -1,5 +1,3 @@
-import Impressum from "./impressum";
-
 const Texts = {
     en: {
         navigation: {
@@ -116,6 +114,24 @@ const Texts = {
             information: "Information in accordance with § 5 TMG:",
             register: "There is no entry in the Commercial Register.",
             email: "Email:"
+        },
+        case_api: {
+            overview: {
+                purpose_and_context: " ",
+                project_duration: " ",
+                objective: " ",
+                tools: " "
+            },
+            rest_api: " ",
+            crud: " ",
+            mongodb: " ",
+            access_control: {
+                authentication: "",
+                authorization: " ",
+                security: " "
+            },
+            testing: " ",
+            final_conclusions: " "
         }
     },
     de: {
@@ -240,6 +256,24 @@ const Texts = {
             information: "Angaben gemäß § 5 TMG",
             register: "Es gibt keinen Eintrag im Handelsregister.",
             email: "E-Mail:"
+        },
+        case_api: {
+            overview: {
+                purpose_and_context: " ",
+                project_duration: " ",
+                objective: " ",
+                tools: ""
+            },
+            rest_api: " ",
+            crud: " ",
+            mongodb: " ",
+            access_control: {
+                authentication: "",
+                authorization: " ",
+                security: ""
+            },
+            testing: " ",
+            final_conclusions: " "
         }
     }
 };
