@@ -1,6 +1,6 @@
 import { Modal } from '@mui/material';
 import { Link, useLocation } from 'react-router-dom';
-import Texts from '../utils/texts.js';
+import Texts from '../utils/texts.jsx';
 import './project_details.scss';
 
 const ProjectDetails = ({ onClose, title, description, languagesUsed, linkGit, linkLive, phonePic, language, linkCase, features, activeProject, id }) => {

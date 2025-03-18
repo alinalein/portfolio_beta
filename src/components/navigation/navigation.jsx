@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import { useNavigate, useLocation } from 'react-router-dom';
 import './navigation.scss'
-import TypingAnimation from '../utils/typing_effect.js';
+import TypingAnimation from '../utils/typing_effect.jsx';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import MessageIcon from '@mui/icons-material/Message';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
@@ -11,7 +11,7 @@ import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import Texts from '../utils/texts';
+import Texts from '../utils/texts.jsx';
 
 const Navigation = ({ handleImpressumClick, activeItem, setActiveItem, isWidthGreaterThan1050, setActiveComponent, activeComponent, language, setLanguage }) => {
 

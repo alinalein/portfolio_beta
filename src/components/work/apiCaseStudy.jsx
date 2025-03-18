@@ -1,7 +1,7 @@
 import { useNavigate, useLocation } from 'react-router-dom';
 import Texts from '../utils/texts';
 
-// need adjust to window size , enable scrolling y achse , build biew small & big screen , 
+// need adjust to window size , enable scrolling y achse , build small & big screen, 
 const ApiCaseStudy = ({ language, isWidthGreaterThan1050 }) => {
 
     const navigate = useNavigate();
@@ -20,7 +20,7 @@ const ApiCaseStudy = ({ language, isWidthGreaterThan1050 }) => {
             navigate('/#work');
         }
     };
-
+ 
     return (
         <div
             style={{

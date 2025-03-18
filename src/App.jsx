@@ -8,7 +8,7 @@ import Navigation from './components/navigation/navigation';
 import Work from './components/work/work';
 import Contact from './components/contact/contact';
 import Background from './components/utils/background';
-import Impressum from '../src/components/utils/impressum'
+import Impressum from './components/utils/impressum'
 
 function App() {
   const [isWidthGreaterThan1050, setIsWidthGreaterThan1050] = useState(window.innerWidth > 1050);
