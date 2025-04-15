@@ -111,24 +111,8 @@
         font-weight: bold;
         margin: 0;
     }
-
-    .details_link {
-        font-size: medium;
-        text-decoration: none;
-        color: white;
-        background: linear-gradient(80deg, rgb(10, 10, 10), var(--main-color));
-        display: inline-block;
-        padding: 5px 10px;
-        border-radius: 4px;
-        margin-top: 25px;
-        opacity: 1;
-        transition: opacity .5s ease;
-
-        &:hover {
-            opacity: 0.5;
-        }
-    }
 }
+
 
 @media all and (max-width: 1050px) {
     .modal_div {

@@ -11,13 +11,23 @@
   box-sizing: border-box;
 }
 
-/* css for project_details.js */
-body.dark-mode .modal_div {
+/* about_me folder */
+body.dark-mode .floating-container {
   background-color: var(--background-color-dark);
   color: var(--text-color-dark);
 }
 
-/* css for navigation.js */
+body.dark-mode .social_item_div .social_icon {
+  color: var(--text-color-dark);
+}
+
+/* contact folder */
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+  color: var(--text-color-dark);
+}
+
+/* navigation folder */
 body.dark-mode .navigation,
 body.dark-mode .language-toggle,
 body.dark-mode .language-option {
@@ -33,23 +43,8 @@ body.dark-mode .nav_impressum {
   }
 }
 
-/* css for about.js */
-body.dark-mode .floating-container {
-  background-color: var(--background-color-dark);
-  color: var(--text-color-dark);
-}
-
-body.dark-mode .social_item_div .social_icon {
-  color: var(--text-color-dark);
-}
-
-/* contact */
-body.dark-mode .contact-form input,
-body.dark-mode .contact-form textarea {
-  color: var(--text-color-dark);
-}
-
-/* css for background.js */
+/* utils folder */
+/* background.js */
 .animation_bubbles {
   background-color: var(--background-color-light);
 }
@@ -66,7 +61,7 @@ body.dark-mode .background-container_bubbles {
   background: linear-gradient(180deg, var(--main-color), rgb(78, 111, 116));
 }
 
-/* css for impressum.js */
+/* impressum.js */
 .impressum {
   z-index: 1;
   align-items: flex-start;
@@ -77,7 +72,43 @@ body.dark-mode .impressum {
   color: var(--text-color-dark);
 }
 
-/* css for App.js */
+/* work folder */
+.details_link {
+  font-size: medium;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(80deg, rgb(10, 10, 10), var(--main-color));
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-top: 25px;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.details_link:hover {
+  opacity: 0.7;
+}
+
+
+/* project_details.js */
+body.dark-mode .modal_div {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+/* apiCaseStudy.js */
+body.dark-mode .case-study-wrapper {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark)
+}
+
+body.dark-mode .case-study-wrapper .table-wrapper th {
+  background: linear-gradient(180deg, var(--main-color), rgb(78, 111, 116));
+
+}
+
+/* App.js */
 .app_container {
   /* background-color: rgba(231, 231, 231, 0.2);  - what is that for? */
   /* overflow: hidden; */

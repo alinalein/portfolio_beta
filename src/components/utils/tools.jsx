@@ -30,6 +30,7 @@ const Tools = () => {
         Redux, Angular, Vue, ReactNat, Node, Mongo, Express,
         Jest, Cucumber, Postman, GitHub, VS, Firebase, SQL, AWS
     ]
+    //takes the svg array and puts it a new one and does thsie twice, so in new array all items from svgs are twice
     const doubledSvgs = [...svgs, ...svgs];
 
     useEffect(() => {

@@ -34,6 +34,7 @@ const ProjectDetails = ({ onClose, title, description, languagesUsed, linkGit, l
                 <p>{description}</p>
 
                 <p className='modal_technologies' style={{ marginBottom: '5px' }}> Features</p>
+                {/* check if featuare is an array, so it will not give error in case it will not give an array  */}
                 {Array.isArray(features) && features.map((feature, index) => (
                     <div className="feature-item" key={index}>
                         <span className="feature-bullet">❍  </span>
@@ -73,6 +74,7 @@ const ProjectDetails = ({ onClose, title, description, languagesUsed, linkGit, l
                         <Link
                             to={linkCase}
                             className="details_link"
+                            // states send to the api case study component 
                             state={{
                                 from: location.pathname,
                                 activeProject: activeProject,

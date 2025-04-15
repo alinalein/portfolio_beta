@@ -1,3 +1,5 @@
+import { title } from "framer-motion/client";
+
 const Texts = {
     en: {
         navigation: {
@@ -116,11 +118,23 @@ const Texts = {
             email: "Email:"
         },
         case_api: {
+            title: "Case Study Movie_API",
             overview: {
-                purpose_and_context: " ",
-                project_duration: " ",
-                objective: " ",
-                tools: " "
+                purpose_and_context: {
+                    title: "PURPOSE AND CONTEXT",
+                    description: "The challenge was to create the API and database from\
+scratch while ensuring a seamless connection between them."
+                },
+                project_duration: {
+                    title: "PROJECT DURATION",
+                    description: "The project was completed in about four weeks, with each week dedicated to a different stage \
+                    (server setup, database creation, API implementation, and cloud deployment)"
+                },
+                objective: {
+                    title: "OBJECTIVE",
+                    description: "The goal was to create a secure and efficient RESTful API that lets users manage profiles, \
+                    favorite movies, and explore film details, while being secure and efficient."
+                },
             },
             rest_api: " ",
             crud: " ",
@@ -258,11 +272,22 @@ const Texts = {
             email: "E-Mail:"
         },
         case_api: {
+            title: "Fallstudie Movie_API",
             overview: {
-                purpose_and_context: " ",
-                project_duration: " ",
-                objective: " ",
-                tools: ""
+                purpose_and_context: {
+                    title: "ZWECK UND KONTEXT",
+                    description: "Die Herausforderung bestand darin, die API und die Datenbank von Grund auf zu\
+neu zu erstellen und gleichzeitig eine nahtlose Verbindung zwischen ihnen zu gewährleisten."
+                },
+                project_duration: {
+                    title: "PROJEKTDAUER",
+                    description: "Das Projekt wurde in etwa vier Wochen abgeschlossen, wobei jede Woche einer anderen Phase gewidmet war (Servereinrichtung, Datenbankerstellung, API-Implementierung und Cloud-Bereitstellung)."
+                },
+                objective: {
+                    title: "ZIELE",
+                    description: "Ziel war es, eine sichere und effiziente RESTful-API zu entwickeln, \
+                    mit der die User Profile und Lieblingsfilme verwalten und Filmdetails erkunden können."
+                },
             },
             rest_api: " ",
             crud: " ",
