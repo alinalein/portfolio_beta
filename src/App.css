@@ -1,11 +1,15 @@
 :root {
-  --background-color-light: white;
+  --background-color-light: rgb(233, 233, 233);
   --text-color-light: black;
   --background-color-dark: rgb(63, 63, 63);
-  --text-color-dark: rgba(255, 255, 255, 0.842);
+  --text-color-dark: rgba(218, 213, 213, 0.842);
   --main-color: #33b4c5e3;
 }
 
+/* font size
+big screen:header: 19px;
+medium screen: 
+small screen- below 750px:  font-size: 14px / 13px; /     nav.menu-item:10px*/
 /* Margin between the title + item below on the page and the last item + bottom of the page: 30px.*/
 * {
   box-sizing: border-box;
@@ -90,7 +94,6 @@ body.dark-mode .impressum {
   opacity: 0.7;
 }
 
-
 /* project_details.js */
 body.dark-mode .modal_div {
   background-color: var(--background-color-dark);
@@ -99,14 +102,33 @@ body.dark-mode .modal_div {
 
 /* apiCaseStudy.js */
 body.dark-mode .case-study-wrapper {
-  background-color: var(--background-color-dark);
+  background: radial-gradient(circle at 30% 40%, var(--background-color-dark), transparent 60%),
+    radial-gradient(circle at 70% 70%, var(--background-color-dark), transparent 60%),
+    linear-gradient(to bottom right, rgba(14, 14, 14, 0.89), rgb(89, 155, 168));
+
   color: var(--text-color-dark)
+}
+
+body.dark-mode .case-study-wrapper .case-study-section .case-study-svgs {
+  background: linear-gradient(180deg, var(--main-color), rgb(78, 111, 116));
+
 }
 
 body.dark-mode .case-study-wrapper .table-wrapper th {
   background: linear-gradient(180deg, var(--main-color), rgb(78, 111, 116));
 
 }
+
+body.dark-mode .crud-section .glow-frame {
+  background: rgb(63, 63, 63)
+}
+
+body.dark-mode .mongo-section code,
+body.dark-mode .auth-section .label {
+  color: #33b4c5e3;
+}
+
+
 
 /* App.js */
 .app_container {
