@@ -136,16 +136,72 @@ scratch while ensuring a seamless connection between them."
                     favorite movies, and explore film details, while being secure and efficient."
                 },
             },
-            rest_api: " ",
-            crud: " ",
-            mongodb: " ",
-            access_control: {
-                authentication: "",
-                authorization: " ",
-                security: " "
+            rest_api: {
+                p: "A REST API is like a messenger between two different systems that lets them communicate.",
+                client: "CLIENT",
+                request: "REQUEST",
+                server: "SERVER",
+                respose: "RESPONSE",
+                database: "DATABASE"
             },
-            testing: " ",
-            final_conclusions: " "
+            crud: {
+                introduction: "CRUD stands for Create, Read, Update, and Delete. These four operations allow data to be added, \
+                viewed, changed, or removed from the database in software applications. This is used when building API endpoints.",
+                action: "CRUD IN ACTION",
+                description: "The documentation is always there to show how the endpoint that calls a CRUD operation is structured:"
+            },
+            mongodb: {
+                tag: "Mongo Database",
+                introduction_1: "In a software application, a database is used to store all kinds of information, \
+                like  product catalogs.",
+                introduction_2: "A MongoDB database stores this data in an easy-to-read format, similar to a list:",
+            },
+            access_control: {
+                tag: "Authentication",
+                overview: {
+                    authentication_title: "AUTHENTICATION",
+                    authentication: "Basic HTTP authentication securely sends login details in the header, \
+                    and the API verifies them with the database to log the user in.",
+                    authorization_title: "AUTHORIZATION",
+                    authorization: "If the username and password are correct, the app generates a secure token. This token is sent with each request and is required to access the app.",
+                    security_title: "SECURITY",
+                    security: "The movie API uses password hashing, converting passwords into secret codes before storing them. \
+                    Even if the database is hacked, the real passwords stay hidden and only the user knows them."
+                }
+            },
+            testing: {
+                tag: "Debugging",
+                introduction_1: "Postman is a tool that helps developers test how their web servers handle requests and responses.",
+                introduction_2: "It’s like a digital assistant that helps you make sure everything is communicating properly.",
+                error: "Error",
+                detects: "Postman detects it",
+                solution: "Solution"
+            },
+            challenges: {
+                tag: "Challenges",
+                overview: {
+                    strategic_title: "Strategic Debugging Across Stack Layers",
+                    strategic: "Encountering unexpected behavior in both frontend and backend flows, I relied on dev tools, \
+                                        structured console.log outputs, and try/catch blocks to isolate root causes.",
+                    implementing_title: "Implementing Access Control for User Data Integrity",
+                    implementing: "To prevent unauthorized data modifications, I implemented strict user validation by comparing the authenticated user token with route parameters:",
+                    resolving_title: "Resolving Cross-Framework API Compatibility Issues",
+                    resolving: "While integrating Angular, I discovered that JSON structures acceptable to React were triggering client-side errors.\
+                                I analyzed the response payloads, adjusted formatting and structure, and implemented conditional response logic to \
+                                support consistent behavior across multiple frontend frameworks."
+                }
+            },
+            final_conclusions: {
+                tag: "Final Conclusion",
+                looking_title: "Looking back",
+                looking_text: "I learned how to build secure, reliable APIs from scratch, with a strong focus on clean architecture \
+                                and error handling. The biggest takeaway: good error handling and attention to detail can prevent most bugs. \
+                                I also really enjoyed the problem-solving process—it felt like detective work.",
+                future_title: "In the future",
+                future_text: "In the future, I’d like to add a password reset feature and OAuth login to improve usability. \
+                                I'd also add user comments and ratings to enhance interaction and overall user experience."
+            },
+            back_button: "Go Back"
         }
     },
     de: {
@@ -289,16 +345,69 @@ neu zu erstellen und gleichzeitig eine nahtlose Verbindung zwischen ihnen zu gew
                     mit der die User Profile und Lieblingsfilme verwalten und Filmdetails erkunden können."
                 },
             },
-            rest_api: " ",
-            crud: " ",
-            mongodb: " ",
-            access_control: {
-                authentication: "",
-                authorization: " ",
-                security: ""
+            rest_api: {
+                p: "Eine REST-API ist wie ein Bote zwischen zwei verschiedenen Systemen, der sie miteinander kommunizieren lässt.",
+                client: "KUNDE",
+                request: "ANFRAGE",
+                respose: "ANTWORT",
+                database: "DATENBANK"
             },
-            testing: " ",
-            final_conclusions: " "
+            crud: {
+                introduction: "CRUD steht für Erstellen, Lesen, Aktualisieren und Löschen. Mit diesen vier Operationen können Daten in Softwareanwendungen hinzugefügt, angezeigt, geändert oder aus der Datenbank entfernt werden. Dies wird bei der Erstellung von API-Endpunkten verwendet.",
+                action: "CRUD IN AKTION",
+                description: "Die Dokumentation zeigt immer, wie der Endpunkt, der eine CRUD-Operation aufruft, aufgebaut ist:"
+            },
+            mongodb: {
+                tag: "Mongo Datenbank",
+                introduction_1: "In einer Softwareanwendung wird eine Datenbank verwendet, um alle Arten von Informationen zu speichern, z. B. Produktkataloge.",
+                introduction_2: "Eine MongoDB-Datenbank speichert diese Daten in einem leicht lesbaren Format, ähnlich wie eine Liste:",
+            },
+            access_control: {
+                tag: "Authentifizierung",
+                overview: {
+                    authentication_title: "AUTHENTIFIZIERUNG",
+                    authentication: "Bei der einfachen HTTP-Authentifizierung werden die Anmeldedaten sicher in der Kopfzeile gesendet, \
+                    und die API prüft sie mit der Datenbank, um den Benutzer anzumelden.",
+                    authorization_title: "AUTHORIZATION",
+                    authorization: "Wenn der Benutzername und das Passwort korrekt sind, generiert die App ein sicheres Token. Dieses Token wird mit jeder Anfrage gesendet und ist für den Zugriff auf die App erforderlich.",
+                    security_title: "SICHERHEIT",
+                    security: "Die Film-API verwendet Passwort-Hashing und wandelt Passwörter in Geheimcodes um, bevor sie gespeichert werden. \
+                    Selbst wenn die Datenbank gehackt wird, bleiben die echten Kennwörter verborgen und nur der Nutzer kennt sie."
+                }
+            },
+            testing: {
+                tag: "Fehlerbehebung",
+                introduction_1: "Postman ist ein Tool, mit dem Entwickler testen können, wie ihre Webserver Anfragen und Antworten verarbeiten.",
+                introduction_2: "Es ist wie ein digitaler Assistent, der ihnen hilft, sicherzustellen, dass alles richtig kommuniziert wird.",
+                error: "Fehler",
+                detects: "Postman entdeckt es",
+                solution: "Lösung"
+            },
+            challenges: {
+                tag: "Herausforderungen",
+                overview: {
+                    strategic_title: "Strategisches Debugging über Stack-Schichten hinweg",
+                    strategic: "Da ich sowohl im Frontend als auch im Backend auf unerwartetes Verhalten gestoßen bin, habe ich mich auf Entwicklungswerkzeuge, strukturierte \
+                             console.log-Ausgaben und try/catch-Blöcke, um die Ursachen zu isolieren.",
+                    implementing_title: "Implementierung der Zugriffskontrolle für die Integrität der Benutzerdaten",
+                    implementing: "Um unbefugte Datenänderungen zu verhindern, habe ich eine strenge Benutzervalidierung implementiert, bei der das authentifizierte Benutzertoken mit den Routenparametern verglichen wird:",
+                    resolving_title: "Behebung von Problemen mit der API-Kompatibilität zwischen verschiedenen Frameworks",
+                    resolving: "Bei der Integration von Angular stellte ich fest, dass JSON-Strukturen, die für React akzeptabel waren, clientseitige Fehler auslösten.\
+                                Ich analysierte die Antwort-Payloads, passte Formatierung und Struktur an und implementierte eine bedingte Antwortlogik, um \
+                                ein einheitliches Verhalten über mehrere Frontend-Frameworks hinweg zu unterstützen."
+                }
+            },
+            final_conclusions: {
+                tag: "Abschließendes Fazit",
+                looking_title: "Rückblick",
+                looking_text: "Ich habe gelernt, wie man sichere, zuverlässige APIs von Grund auf erstellt, mit einem starken Fokus auf eine saubere Architektur \
+                                und Fehlerbehandlung. Die wichtigste Erkenntnis: Eine gute Fehlerbehandlung und die Liebe zum Detail können die meisten Fehler verhindern. \
+                                Auch der Problemlösungsprozess hat mir viel Spaß gemacht - es war wie Detektivarbeit.",
+                future_title: "In der Zukunft",
+                future_text: "In Zukunft würde ich gerne eine Funktion zum Zurücksetzen des Passworts und eine OAuth-Anmeldung hinzufügen, um die Benutzerfreundlichkeit zu verbessern. \
+                                Ich würde auch Benutzerkommentare und Bewertungen hinzufügen, um die Interaktion und die allgemeine Benutzererfahrung zu verbessern."
+            },
+            back_button: "Zurück"
         }
     }
 };

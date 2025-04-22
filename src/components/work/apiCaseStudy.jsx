@@ -6,7 +6,10 @@ import LockIcon from '@mui/icons-material/Lock';
 import BuildIcon from '@mui/icons-material/Build';
 import FlagIcon from '@mui/icons-material/Flag';
 import StorageIcon from '@mui/icons-material/Storage';
-
+import EastSharpIcon from '@mui/icons-material/EastSharp';
+import BoltIcon from '@mui/icons-material/Bolt';
+import DoneAllIcon from '@mui/icons-material/DoneAll';
+import InterestsIcon from '@mui/icons-material/Interests';
 import './apiCaseStudy.scss'
 
 // need adjust to window size , enable scrolling y achse , build small & big screen, 
@@ -28,6 +31,25 @@ const ApiCaseStudy = ({ language, isWidthGreaterThan1050 }) => {
             navigate('/#work');
         }
     };
+    const GradientExtensionIcon = ({ ...props }) => (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="100%"
+            height="auto"
+            viewBox="0 0 24 24"
+            fill="url(#gradientFill)"
+            {...props}
+        >
+            <defs>
+                <linearGradient id="gradientFill" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#278692" />
+                    <stop offset="100%" stopColor="#00ffff" />
+                </linearGradient>
+            </defs>
+            <path d="M20.5 11H19V7c0-1.1-.9-2-2-2h-4V3.5C13 2.12 11.88 1 10.5 1S8 2.12 8 3.5V5H4c-1.1 0-1.99.9-1.99 2v3.8H3.5c1.49 0 2.7 1.21 2.7 2.7s-1.21 2.7-2.7 2.7H2V20c0 1.1.9 2 2 2h3.8v-1.5c0-1.49 1.21-2.7 2.7-2.7 1.49 0 2.7 1.21 2.7 2.7V22H17c1.1 0 2-.9 2-2v-4h1.5c1.38 0 2.5-1.12 2.5-2.5S21.88 11 20.5 11z" />
+        </svg>
+    );
+
 
     return (
         <div
@@ -36,7 +58,6 @@ const ApiCaseStudy = ({ language, isWidthGreaterThan1050 }) => {
             <div  >
                 <h2><span className='span_title'>{Texts[language].case_api.title.charAt(0)}</span>{Texts[language].case_api.title.slice(1)}</h2>
             </div>
-            {/* <img src={`${process.env.PUBLIC_URL}/img/case-study_movie-api.jpg`} alt='CaseStudyPic' className='case-study-pic' /> */}
             <div className="table-wrapper">
                 <table>
                     <thead>
@@ -61,12 +82,12 @@ const ApiCaseStudy = ({ language, isWidthGreaterThan1050 }) => {
                     <div className='case-study-header'>
                         <p className='case-study-header-p'>Rest API</p>
                         <div class="rest-api-diagram">
-                            <p>A REST API is like a messenger between two different systems that lets them communicate.
+                            <p>{Texts[language].case_api.rest_api.p}
                             </p>
                             <div class="top-row">
-                                <div class="box">CLIENT</div>
+                                <div class="box">{Texts[language].case_api.rest_api.client}</div>
                                 <div className="request-row">
-                                    <p class="request-row-p">REQUEST</p>
+                                    <p class="request-row-p">{Texts[language].case_api.rest_api.request}</p>
                                     {/* width & height removed for better controll */}
                                     <svg viewBox="0 0 150 80" xmlns="http://www.w3.org/2000/svg">
                                         <line x1="10" y1="10" x2="130" y2="10" stroke="black" stroke-width="2" />
@@ -81,29 +102,29 @@ const ApiCaseStudy = ({ language, isWidthGreaterThan1050 }) => {
 
                             <div class="bottom-row">
                                 <div class="response-row">
-                                    <div class="arrow-label">RESPONSE</div>
+                                    <div class="arrow-label">{Texts[language].case_api.rest_api.response}</div>
                                     <svg viewBox="0 0 300 80" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10 0 V60 H290 V0" stroke="black" stroke-width="2" fill="none" />
                                     </svg>
 
                                 </div>
-                                <div class="database">DATABASE</div>
+                                <div class="database">{Texts[language].case_api.rest_api.database}</div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div className='case-study-section'>
-                    <ExtensionIcon className="case-study-svgs" />
+                    <InterestsIcon className="case-study-svgs" />
                     <div className='case-study-header'>
 
                         <p className='case-study-header-p'>
                             CRUD
                         </p>
                         <div class="crud-section">
-                            <p>CRUD stands for Create, Read, Update, and Delete. These four operations allow data to be added, viewed, changed, or removed from the database in software applications. This is used when building API endpoints.</p>
-                            <span class="crud-text">CRUD IN ACTION</span>
-                            <p>The documentation is always there to show how the endpoint that calls a CRUD operation is structured:</p>
+                            <p>{Texts[language].case_api.crud.introduction}</p>
+                            <span class="crud-text">{Texts[language].case_api.crud.action}</span>
+                            <p>{Texts[language].case_api.crud.description}</p>
 
                             <div class="glow-frame">
                                 <div class="glow-inner">
@@ -118,12 +139,12 @@ const ApiCaseStudy = ({ language, isWidthGreaterThan1050 }) => {
                     <StorageIcon className="case-study-svgs" />
                     <div className='case-study-header'>
                         <p className='case-study-header-p'>
-                            Mongo Database
+                            {Texts[language].case_api.mongodb.tag}
                         </p>
                         <div className='mongo-section'>
                             <p>
-                                In a software application, a database is used to store all kinds of information, like  product catalogs.</p>
-                            <p>A MongoDB database stores this data in an easy-to-read format, similar to a list:</p>
+                                {Texts[language].case_api.mongodb.introduction_1}</p>
+                            <p>{Texts[language].case_api.mongodb.introduction_2}</p>
                             <pre>
                                 <code>
                                     {`{
@@ -139,7 +160,7 @@ const ApiCaseStudy = ({ language, isWidthGreaterThan1050 }) => {
     "Birth": "1959",
     "Death": null
   },
-  "ImagePath": "https://image.tmdb.org/t/p/original/veWPhVMQeQKcxggNEU8YmIo52R.jpg",
+  "ImagePath": "https://image.tmdb.org/t/p/original/example.jpg",
   "Featured": true,
   "Description": "The lives of guards on Death Row are affected by one of their charges: a man accused of child murder and rape, yet who has a mysterious gift.",
   "Actors": [
@@ -157,23 +178,20 @@ const ApiCaseStudy = ({ language, isWidthGreaterThan1050 }) => {
                     <LockIcon className="case-study-svgs" />
                     <div className='case-study-header'>
                         <p className='case-study-header-p'>
-                            Authentication
+                            {Texts[language].case_api.access_control.tag}
                         </p>
                         <div className="auth-section">
-                            <div className="label">AUTHENTICATION</div>
+                            <div className="label"> {Texts[language].case_api.access_control.overview.authentication_title}</div>
                             <div className="desc">
-                                Basic HTTP authentication securely sends login details in the header, and the API verifies them with the database to log the user in.
-                            </div>
+                                {Texts[language].case_api.access_control.overview.authentication} </div>
 
-                            <div className="label">AUTHORIZATION</div>
+                            <div className="label">{Texts[language].case_api.access_control.overview.authorization_title}</div>
                             <div className="desc">
-                                If the login is successful, a token is generated and sent with every request. Only users with a valid token can access the app, and the token’s complexity makes it very hard to crack.
-                            </div>
+                                {Texts[language].case_api.access_control.overview.authorization}                            </div>
 
-                            <div className="label">SECURITY</div>
+                            <div className="label">{Texts[language].case_api.access_control.overview.security_title}</div>
                             <div className="desc">
-                                The movie API uses password hashing, converting passwords into secret codes before storing them. Even if the database is hacked, the real passwords stay hidden and only the user knows them.
-                            </div>
+                                {Texts[language].case_api.access_control.overview.security}                            </div>
                         </div>
                     </div>
                 </div>
@@ -181,35 +199,86 @@ const ApiCaseStudy = ({ language, isWidthGreaterThan1050 }) => {
                     <BuildIcon className="case-study-svgs" />
                     <div className='case-study-header'>
                         <p className='case-study-header-p'>
-                            Debugging
+                            {Texts[language].case_api.testing.tag}
                         </p>
-                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <div className="debugging-section">
                             <p>
-                                Postman is a tool that helps developers test how their web servers handle requests and responses.
+                                {Texts[language].case_api.testing.introduction_1}
                             </p>
-                            <p>It’s like a digital assistant that helps you make sure everything is communicating properly.
+                            <p> {Texts[language].case_api.testing.introduction_2}
                             </p>
-                            <div style={{ display: 'flex', flexDirection: 'row' }}>
-                                <p>A</p> <p>B</p> <p>C</p>
+                            <div className='debugging-ui'>
+                                <div className="debugging-circles"> {Texts[language].case_api.testing.error}</div>
+                                <EastSharpIcon className='debugging-arrow' />
+                                <div className="debugging-circles"> {Texts[language].case_api.testing.detects}</div>
+                                <EastSharpIcon className='debugging-arrow' />
+                                <div className="debugging-circles"> {Texts[language].case_api.testing.solution}</div>
+
                             </div>
                         </div>
                     </div>
                 </div>
+                <div className='case-study-section'>
+                    <BoltIcon className="case-study-svgs" />
+                    <div className='case-study-header'>
+                        <p className='case-study-header-p'>
+                            {Texts[language].case_api.challenges.tag}
+                        </p>
+                        <div className="challenges-sections">
 
+                            <div className="challenges-section">
+                                <DoneAllIcon className="challenges-icon" />
+                                <div className="challenges-point">
+                                    <h3> {Texts[language].case_api.challenges.overview.strategic_title}
+                                    </h3>
+                                    <p>{Texts[language].case_api.challenges.overview.strategic}</p>
+                                </div>
+
+                            </div>
+                            <div className="challenges-section">
+                                <DoneAllIcon className="challenges-icon" />
+                                <div className="challenges-point">
+                                    <h3>{Texts[language].case_api.challenges.overview.implementing_title}</h3>
+                                    <p>{Texts[language].case_api.challenges.overview.implementing}
+                                        <span> if (req.user.Username !== req.params.Username)</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="challenges-section">
+                                <DoneAllIcon className="challenges-icon" />
+                                <div className="challenges-point">
+                                    <h3>{Texts[language].case_api.challenges.overview.resolving_title}</h3>
+                                    <p>{Texts[language].case_api.challenges.overview.resolving}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div className='case-study-section'>
                     <FlagIcon className="case-study-svgs" />
                     <div className='case-study-header'>
-
                         <p className='case-study-header-p'>
-                            Final Conclusion
+                            {Texts[language].case_api.final_conclusions.tag}
                         </p>
+                        <div className='final-section'>
+                            <h3>{Texts[language].case_api.final_conclusions.looking_title}
+                            </h3>
+                            <p>{Texts[language].case_api.final_conclusions.looking_text}</p>
+
+                            <div className='final-puzzle-section'>
+                                <GradientExtensionIcon className='first' />
+                                <ExtensionIcon className='second' />
+                                <GradientExtensionIcon className='third' />
+                            </div>
+                            <h3>{Texts[language].case_api.final_conclusions.future_title}</h3>
+                            <p>{Texts[language].case_api.final_conclusions.future_text}</p>
+                        </div>
                     </div>
                 </div>
 
             </div>
             <button onClick={goBack} className="details_link case-study-button">
-                Go Back
-            </button>
+                {Texts[language].case_api.back_button}            </button>
         </div >
     );
 };
