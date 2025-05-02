@@ -1,9 +1,8 @@
 {
   "files": {
-    "main.css": "/portfolio_beta/static/css/main.d04f8b76.css",
-    "main.js": "/portfolio_beta/static/js/main.43bf926d.js",
+    "main.css": "/portfolio_beta/static/css/main.e811de91.css",
+    "main.js": "/portfolio_beta/static/js/main.fa6237b6.js",
     "static/js/453.2ddb282f.chunk.js": "/portfolio_beta/static/js/453.2ddb282f.chunk.js",
-    "static/media/Case Study API.pdf": "/portfolio_beta/static/media/Case Study API.88bc52b6baa60f5f6912.pdf",
     "static/media/Leinweber Alina_Web Developer_Resume.pdf": "/portfolio_beta/static/media/Leinweber Alina_Web Developer_Resume.03226daa6131cde0b103.pdf",
     "static/media/Leinweber Alina_Web Developer_Lebenslauf.pdf": "/portfolio_beta/static/media/Leinweber Alina_Web Developer_Lebenslauf.f81554bb105b359b789a.pdf",
     "service-worker.js": "/portfolio_beta/service-worker.js",
@@ -27,14 +26,15 @@
     "static/media/Sql.svg": "/portfolio_beta/static/media/Sql.40435ee22f1dff3d77996b3632ac7ac2.svg",
     "static/media/Angular.svg": "/portfolio_beta/static/media/Angular.1fd4bbed6c6768b2fc3d823e861ebd80.svg",
     "static/media/HTML5.svg": "/portfolio_beta/static/media/HTML5.cf51b3879972e0e8c0c9be2135162847.svg",
+    "static/media/Vue.svg": "/portfolio_beta/static/media/Vue.89425b460c482910d22b4355e3d5f75f.svg",
     "static/media/CSS.svg": "/portfolio_beta/static/media/CSS.3ec320225ef851ed26cf9fd1c6ebaa54.svg",
     "static/media/React.svg": "/portfolio_beta/static/media/React.e93389782af17568b23e69bd25850f64.svg",
-    "main.d04f8b76.css.map": "/portfolio_beta/static/css/main.d04f8b76.css.map",
-    "main.43bf926d.js.map": "/portfolio_beta/static/js/main.43bf926d.js.map",
+    "main.e811de91.css.map": "/portfolio_beta/static/css/main.e811de91.css.map",
+    "main.fa6237b6.js.map": "/portfolio_beta/static/js/main.fa6237b6.js.map",
     "453.2ddb282f.chunk.js.map": "/portfolio_beta/static/js/453.2ddb282f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d04f8b76.css",
-    "static/js/main.43bf926d.js"
+    "static/css/main.e811de91.css",
+    "static/js/main.fa6237b6.js"
   ]
 }
