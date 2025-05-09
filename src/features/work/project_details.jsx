@@ -3,11 +3,19 @@ import { Link, useLocation } from 'react-router-dom';
 import Texts from '../utils/texts.jsx';
 import './project_details.scss';
 
-const ProjectDetails = ({ onClose, title, description, languagesUsed, linkGit, linkLive, phonePic, language, linkCase, features, activeProject, id }) => {
+const ProjectDetails = ({ onClose,
+    title, description,
+    languagesUsed,
+    linkGit,
+    linkLive,
+    phonePic,
+    language,
+    linkCase,
+    features,
+    activeProject,
+    id }) => {
 
     const location = useLocation()
-
-    console.log('activeItem', title)
 
     return (
         <Modal
@@ -22,7 +30,7 @@ const ProjectDetails = ({ onClose, title, description, languagesUsed, linkGit, l
                     <button onClick={onClose} className='modal_close_button'>x</button>
                 </div>
                 <div className='project_img_div'>
-                    {phonePic.map((src, index) => (
+                    {phonePic?.map((src, index) => (
                         <a href={src} target="_blank" rel="noopener noreferrer" key={index} className='project_img'>
                             <img className='project_img' src={src} key={index} alt={title} loading="lazy" style={{ cursor: 'pointer' }}
                             />
@@ -45,7 +53,7 @@ const ProjectDetails = ({ onClose, title, description, languagesUsed, linkGit, l
 
                 <div >
                     <p className='modal_technologies' style={{ marginTop: '14px' }}>   {Texts[language].project_details}</p>
-                    {languagesUsed.map((language, index) => (
+                    {languagesUsed?.map((language, index) => (
                         <span
                             key={index}
                             className='languagesProject'

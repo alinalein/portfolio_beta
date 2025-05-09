@@ -38,6 +38,8 @@
             border-spacing: 0;
 
             th {
+                border: 1px solid #ddd;
+                padding: 8px;
                 word-break: break-word;
                 overflow-wrap: break-word;
                 border-radius: 10px;
@@ -54,6 +56,8 @@
                 text-align: left;
                 line-height: 1.3;
                 padding: 2rem;
+                border: 1px solid #ddd;
+                padding: 8px;
             }
         }
     }
@@ -109,6 +113,7 @@
         /* aligns with center of icons */
         top: 40px;
         width: 2px;
+        bottom: 0px;
         background-color: rgba(151, 147, 147, 0.3);
         box-shadow: 0 0 2px rgba(173, 173, 173, 0.9);
         z-index: -1;
@@ -345,6 +350,7 @@
         font-weight: bold;
         font-size: 1.1rem;
         text-align: left;
+        margin-top: 2px;
     }
 
     .desc {
@@ -571,15 +577,9 @@
     }
 
     .case-study-wrapper .case-study-svgs-wrapper::before {
-        content: '';
-        position: absolute;
         left: 14px;
         top: 30px;
-        // nur benötigt, falls es nicht komplett zum Rand gehen soll
-        bottom: 0px;
         width: 1px;
-        box-shadow: 0 0 2px rgba(173, 173, 173, 0.9);
-        z-index: -1;
     }
 
     .table-wrapper {

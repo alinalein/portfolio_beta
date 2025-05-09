@@ -5,26 +5,6 @@ import variantsBig from '../utils/variantsAnimation'
 import Texts from '../utils/texts';
 import ProjectDetails from './project_details'
 import { useNavigate, useLocation } from 'react-router-dom';
-// import API_Case from '../../assets/pdf/Case Study API.pdf'
-// svg icons
-// import Angular from '../../assets/svgs/Angular.svg'
-// import Bootstrap from '../../assets/svgs/Bootstrap.svg'
-// import CSS from '../../assets/svgs/CSS.svg'
-// import Firebase from '../../assets/svgs/Firebase.svg'
-// import HTML from '../../assets/svgs/HTML5.svg'
-// import JS from '../../assets/svgs/JavaScript.svg'
-// import Mongo from '../../assets/svgs/MongoDB.svg'
-// import Node from '../../assets/svgs/Node_js.svg'
-// import Reacticon from '../../assets/svgs/React.svg'
-// import ReactNat from '../../assets/svgs/ReactNative.svg'
-// import TS from '../../assets/svgs/Typescript.svg'
-// import AWS from '../../assets/svgs/AWS.svg'
-// import Jest from '../../assets/svgs/Jest.svg'
-// import Cucumber from '../../assets/svgs/Cucumber.svg'
-// import Postman from '../../assets/svgs/Postman.svg'
-// import Express from '../../assets/svgs/Express.svg'
-// import Redux from '../../assets/svgs/Redux.svg'
-// import Saas from '../../assets/svgs/sass-1.svg'
 
 import './work.scss'
 
@@ -167,7 +147,7 @@ const Work = ({ id, isWidthGreaterThan1050, language }) => {
                 </div>
                 <div className='work_grid'>
                     {workItems.map(project => (
-                        <div className='work_grid_item' key={project.title} onClick={() => showDetails(project)}>
+                        <div className='work_grid_item' key={project.id} onClick={() => showDetails(project)}>
                             <div className='work_img_div'>
                                 <img className='work_img' src={project.imgSrc} alt={project.title} loading="lazy" />
                                 <div className="portfolio-overlay"><p className='overlay_plus'>+</p></div>

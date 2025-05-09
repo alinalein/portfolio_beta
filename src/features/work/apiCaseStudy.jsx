@@ -11,9 +11,10 @@ import BoltIcon from '@mui/icons-material/Bolt';
 import DoneAllIcon from '@mui/icons-material/DoneAll';
 import InterestsIcon from '@mui/icons-material/Interests';
 import './apiCaseStudy.scss'
+import GradientExtensionIcon from '../utils/GradientExtensionIcon'
 
 // need adjust to window size , enable scrolling y achse , build small & big screen, 
-const ApiCaseStudy = ({ language, isWidthGreaterThan1050 }) => {
+const ApiCaseStudy = ({ language }) => {
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -26,30 +27,11 @@ const ApiCaseStudy = ({ language, isWidthGreaterThan1050 }) => {
         if (from) {
             navigate(`${from}?project=${id}`, {
                 state: { activeProject }
-            });;
+            });
         } else {
             navigate('/#work');
         }
     };
-    const GradientExtensionIcon = ({ ...props }) => (
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="100%"
-            height="auto"
-            viewBox="0 0 24 24"
-            fill="url(#gradientFill)"
-            {...props}
-        >
-            <defs>
-                <linearGradient id="gradientFill" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#278692" />
-                    <stop offset="100%" stopColor="#00ffff" />
-                </linearGradient>
-            </defs>
-            <path d="M20.5 11H19V7c0-1.1-.9-2-2-2h-4V3.5C13 2.12 11.88 1 10.5 1S8 2.12 8 3.5V5H4c-1.1 0-1.99.9-1.99 2v3.8H3.5c1.49 0 2.7 1.21 2.7 2.7s-1.21 2.7-2.7 2.7H2V20c0 1.1.9 2 2 2h3.8v-1.5c0-1.49 1.21-2.7 2.7-2.7 1.49 0 2.7 1.21 2.7 2.7V22H17c1.1 0 2-.9 2-2v-4h1.5c1.38 0 2.5-1.12 2.5-2.5S21.88 11 20.5 11z" />
-        </svg>
-    );
-
 
     return (
         <div
@@ -62,16 +44,16 @@ const ApiCaseStudy = ({ language, isWidthGreaterThan1050 }) => {
                 <table>
                     <thead>
                         <tr>
-                            <th style={{ border: '1px solid #ddd', padding: '8px' }}>{Texts[language].case_api.overview.purpose_and_context.title}</th>
-                            <th style={{ border: '1px solid #ddd', padding: '8px' }}>{Texts[language].case_api.overview.project_duration.title}</th>
-                            <th style={{ border: '1px solid #ddd', padding: '8px' }}>{Texts[language].case_api.overview.objective.title}</th>
+                            <th>{Texts[language].case_api.overview.purpose_and_context.title}</th>
+                            <th>{Texts[language].case_api.overview.project_duration.title}</th>
+                            <th>{Texts[language].case_api.overview.objective.title}</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr >
-                            <td style={{ border: '1px solid #ddd', padding: '8px' }}>{Texts[language].case_api.overview.purpose_and_context.description}</td>
-                            <td style={{ border: '1px solid #ddd', padding: '8px' }}>{Texts[language].case_api.overview.project_duration.description}</td>
-                            <td style={{ border: '1px solid #ddd', padding: '8px' }}>{Texts[language].case_api.overview.objective.description}</td>
+                            <td>{Texts[language].case_api.overview.purpose_and_context.description}</td>
+                            <td>{Texts[language].case_api.overview.project_duration.description}</td>
+                            <td>{Texts[language].case_api.overview.objective.description}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -81,13 +63,13 @@ const ApiCaseStudy = ({ language, isWidthGreaterThan1050 }) => {
                     <CodeIcon className="case-study-svgs" />
                     <div className='case-study-header'>
                         <p className='case-study-header-p'>Rest API</p>
-                        <div class="rest-api-diagram">
+                        <div className="rest-api-diagram">
                             <p>{Texts[language].case_api.rest_api.p}
                             </p>
-                            <div class="top-row">
-                                <div class="box">{Texts[language].case_api.rest_api.client}</div>
+                            <div className="top-row">
+                                <div className="box">{Texts[language].case_api.rest_api.client}</div>
                                 <div className="request-row">
-                                    <p class="request-row-p">{Texts[language].case_api.rest_api.request}</p>
+                                    <p className="request-row-p">{Texts[language].case_api.rest_api.request}</p>
                                     {/* width & height removed for better controll */}
                                     <svg viewBox="0 0 150 80" xmlns="http://www.w3.org/2000/svg">
                                         <line x1="10" y1="10" x2="130" y2="10" stroke="black" stroke-width="2" />
@@ -97,18 +79,18 @@ const ApiCaseStudy = ({ language, isWidthGreaterThan1050 }) => {
                                     </svg>
 
                                 </div>
-                                <div class="box">SERVER</div>
+                                <div className="box">SERVER</div>
                             </div>
 
-                            <div class="bottom-row">
-                                <div class="response-row">
-                                    <div class="arrow-label">{Texts[language].case_api.rest_api.response}</div>
+                            <div className="bottom-row">
+                                <div className="response-row">
+                                    <div className="arrow-label">{Texts[language].case_api.rest_api.response}</div>
                                     <svg viewBox="0 0 300 80" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10 0 V60 H290 V0" stroke="black" stroke-width="2" fill="none" />
                                     </svg>
 
                                 </div>
-                                <div class="database">{Texts[language].case_api.rest_api.database}</div>
+                                <div className="database">{Texts[language].case_api.rest_api.database}</div>
                             </div>
                         </div>
                     </div>
@@ -121,13 +103,13 @@ const ApiCaseStudy = ({ language, isWidthGreaterThan1050 }) => {
                         <p className='case-study-header-p'>
                             CRUD
                         </p>
-                        <div class="crud-section">
+                        <div className="crud-section">
                             <p>{Texts[language].case_api.crud.introduction}</p>
                             <span class="crud-text">{Texts[language].case_api.crud.action}</span>
                             <p>{Texts[language].case_api.crud.description}</p>
 
-                            <div class="glow-frame">
-                                <div class="glow-inner">
+                            <div className="glow-frame">
+                                <div className="glow-inner">
                                     <img src={`${process.env.PUBLIC_URL}/img/CRUD-endpoint.jpg`} className='case-study-pic-crud' alt="CRUD Endpoint" />
                                 </div>
                             </div>
@@ -160,7 +142,7 @@ const ApiCaseStudy = ({ language, isWidthGreaterThan1050 }) => {
     "Birth": "1959",
     "Death": null
   },
-  "ImagePath": "https://image.tmdb.org/t/p/original/example.jpg",
+  "ImagePath": "https://image.tmdb./example.jpg",
   "Featured": true,
   "Description": "The lives of guards on Death Row are affected by one of their charges: a man accused of child murder and rape, yet who has a mysterious gift.",
   "Actors": [

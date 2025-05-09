@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import { HashRouter, Routes, Route } from 'react-router-dom'
-import AboutMe from './components/about_me/about_me';
-import ApiCaseStudy from './components/work/apiCaseStudy'
-import ChatCaseStudy from './components/work/chatCaseStudy'
-import Navigation from './components/navigation/navigation';
-import Work from './components/work/work';
-import Contact from './components/contact/contact';
-import Background from './components/utils/background';
-import Impressum from './components/utils/impressum'
+import { HashRouter, Routes, Route } from 'react-router-dom';
+import AboutMeView from './features/about_me/views/AboutMeView'
+import ApiCaseStudy from './features/work/apiCaseStudy';
+import ChatCaseStudy from './features/work/chatCaseStudy'
+import Navigation from './features/navigation/navigation';
+import Work from './features/work/work';
+import Contact from './features/contact/contact';
+import Background from './features/utils/background';
+import Impressum from './features/utils/impressum';
 
 function App() {
   const [isWidthGreaterThan1050, setIsWidthGreaterThan1050] = useState(window.innerWidth > 1050);
@@ -19,7 +19,7 @@ function App() {
 
   const components = {
     // key in lower case to match the hash
-    about: AboutMe,
+    about: AboutMeView,
     work: Work,
     contact: Contact,
     impressum: Impressum
@@ -50,7 +50,7 @@ function App() {
         <div className='route_container'>
           <Routes>
             <Route path="/impressum" element={<Impressum id="impressum" language={language} isWidthGreaterThan1050={isWidthGreaterThan1050} />} />
-            <Route path="/case-study/api" element={<ApiCaseStudy language={language} isWidthGreaterThan1050={isWidthGreaterThan1050} />} />
+            <Route path="/case-study/api" element={<ApiCaseStudy language={language} />} />
             <Route path="/case-study/chat" element={<ChatCaseStudy language={language} isWidthGreaterThan1050={isWidthGreaterThan1050} />} />
             {isWidthGreaterThan1050 ? (
               <Route path="/" element={<ActiveComponent id={activeComponent.toLowerCase()} isWidthGreaterThan1050={isWidthGreaterThan1050} language={language} />} />
@@ -58,7 +58,7 @@ function App() {
               <>
                 <Route path="/" element={
                   <>
-                    <AboutMe id="about" isWidthGreaterThan1050={isWidthGreaterThan1050} language={language} />
+                    <AboutMeView id="about" isWidthGreaterThan1050={isWidthGreaterThan1050} language={language} />
                     <Work id="work" isWidthGreaterThan1050={isWidthGreaterThan1050} language={language} />
                     <Contact id="contact" handleImpressumClick={handleImpressumClick} setActiveItem={setActiveItem} setActiveComponent={setActiveComponent} isWidthGreaterThan1050={isWidthGreaterThan1050} language={language} />
                   </>
