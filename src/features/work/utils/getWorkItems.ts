@@ -1,3 +1,4 @@
+import Texts, { Language } from '../../../shared/utils/texts';
 import meet from '../assets/img/meet.png';
 import meet_phone from '../assets/img/react_meet-phone.png';
 
@@ -17,7 +18,19 @@ import postman from '../assets/img/postman.png';
 import react from '../assets/img/myFlix_React.png';
 import react_phone from '../assets/img/myFlix_react_main_phone.png';
 
-const getWorkItems = (language, Texts) => {
+type WorkItem = {
+    id: string;
+    title: string;
+    description: string;
+    features: readonly string[];
+    linkGit: string;
+    linkLive?: string;
+    linkCase?: string;
+    languagesUsed: string[];
+    phonePic: string[];
+}
+
+const getWorkItems = (language: Language): WorkItem[] => {
 
     const workItems = [
         {

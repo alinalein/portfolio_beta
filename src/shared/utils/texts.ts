@@ -1,4 +1,3 @@
-
 const Texts = {
     en: {
         navigation: {
@@ -409,6 +408,12 @@ neu zu erstellen und gleichzeitig eine nahtlose Verbindung zwischen ihnen zu gew
             back_button: "Zurück"
         }
     }
-};
+    // tells TS to treat the entire Texts object as deeply read-only with literal types, not just general strings.
+} as const;
+
+
+// creates a TS type TextType that reflects structure of Texts { en: {...}, de:{...}}
+type TextsType = typeof Texts; // gives {en: {...}, de:{...}}
+export type Language = keyof TextsType; //gives "en" | "de"
 
 export default Texts;

@@ -4,14 +4,13 @@ import useScrollSectionDetector from '../hooks/useScrollSectionDetector'
 import usePersistToLocalStorage from '../hooks/usePersistToLocalStorage'
 import getMenuItems from '../utils/getMenuItems'
 import scrollToComponent from '../utils/scrollToComponent';
-import Texts from '../../../shared/utils/texts';
 
 const NavItemsSection = ({ language, activeItem, setActiveItem, activeComponent, setActiveComponent, isWidthGreaterThan1050 }) => {
 
     const navigate = useNavigate();
     const location = useLocation();
 
-    const menuItems = getMenuItems(language, Texts);
+    const menuItems = getMenuItems(language);
 
     useScrollSectionDetector({
         isActive: !isWidthGreaterThan1050,

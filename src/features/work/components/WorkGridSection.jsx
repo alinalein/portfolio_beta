@@ -8,7 +8,7 @@ const WorkGridSection = ({ language, Texts }) => {
     const [activeProject, setActiveProject] = useState(null);
     const navigate = useNavigate();
     const location = useLocation();
-    const workItems = getWorkItems(language, Texts);
+    const workItems = getWorkItems(language);
 
     const urlParams = new URLSearchParams(location.search);
     const projectIdFromUrl = urlParams.get("project");

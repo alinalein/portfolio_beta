@@ -1,7 +1,13 @@
-import React from "react";
+import { ReactNode } from "react";
 import { motion } from 'framer-motion'
 
-const FloatingContainer = ({ id, isWidthGreaterThan1050, children }) => {
+type FloatingContainerProps = {
+    id: string;
+    isWidthGreaterThan1050: boolean;
+    children: ReactNode;
+}
+
+const FloatingContainer = ({ id, isWidthGreaterThan1050, children }: FloatingContainerProps): JSX.Element => {
 
     const variantsBig = {
         // strarting point of the div
