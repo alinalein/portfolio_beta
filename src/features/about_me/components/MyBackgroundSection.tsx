@@ -1,12 +1,12 @@
-import Texts, { Language } from "../../../shared/utils/texts"
+import Texts from "../../../shared/utils/texts"
 import CSM from '../assets/img/CSM.jpg'
+import { useAppContext } from "../../../shared/context/AppContext";
 
-type MyBackgroundprops = {
-    language: Language
-}
-const MyBackground = ({ language }: MyBackgroundprops): JSX.Element => (
+const MyBackground = (): JSX.Element => {
 
-    <div className='about_img_div background_div' style={{ margin: '30px auto 10px auto' }}>
+    const { language } = useAppContext()
+
+    return (<div className='about_img_div background_div' style={{ margin: '30px auto 10px auto' }}>
         <p style={{ textAlign: 'left', padding: '0 10px' }} className='remove_p-margin'>
             {Texts[language].about.backgroundText.split('\n\n').map((paragraph, pIndex) => (
                 <span key={pIndex}>
@@ -18,6 +18,6 @@ const MyBackground = ({ language }: MyBackgroundprops): JSX.Element => (
             ))}
         </p>
         <img src={CSM} alt='CSMPic' className="CSM_pic" />
-    </div>
-)
+    </div>)
+}
 export default MyBackground;

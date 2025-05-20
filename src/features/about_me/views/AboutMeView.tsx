@@ -1,28 +1,29 @@
 import FloatingContainer from "../../../shared/components/FloatingContainer";
-import Texts, { Language } from "../../../shared/utils/texts";
+import Texts from "../../../shared/utils/texts";
 import AboutText from "../components/AboutText";
 import SkillSection from "../components/SkillsSection";
 import MyBackgroundSection from "../components/MyBackgroundSection";
 import WhyCodingSection from "../components/WhyCodingSection";
 import renderStyledTitle from "../../../shared/utils/renderStyledTitle";
+import { useAppContext } from "../../../shared/context/AppContext";
 import '../styles/about.scss'
 
 type AboutMeViewProps = {
     id: string;
-    isWidthGreaterThan1050: boolean;
-    language: Language;
 }
 
-const AboutMeView = ({ id, isWidthGreaterThan1050, language }: AboutMeViewProps): JSX.Element => (
+const AboutMeView = ({ id }: AboutMeViewProps): JSX.Element => {
+    const { language } = useAppContext()
 
-    <FloatingContainer id={id} isWidthGreaterThan1050={isWidthGreaterThan1050}>
+
+    return (<FloatingContainer id={id} >
         <div className="content">
             {/* Dynamic title for 'About Me' */}
             <div className="component_title">
                 {renderStyledTitle(Texts[language].about.title)}
             </div>
 
-            <AboutText language={language} />
+            <AboutText />
             {/* Dynamic title for 'Skills & Technologies' */}
             <div className="component_title">
                 {renderStyledTitle(Texts[language].about.skillsTitle)}
@@ -34,15 +35,15 @@ const AboutMeView = ({ id, isWidthGreaterThan1050, language }: AboutMeViewProps)
             <div className="component_title">
                 {renderStyledTitle(Texts[language].about.backgroundTitle)}
             </div>
-            <MyBackgroundSection language={language} />
+            <MyBackgroundSection />
 
             {/* Dynamic title for 'Why Coding?' */}
             <div className="component_title">
                 {renderStyledTitle(Texts[language].about.whyCodingTitle)}
             </div>
 
-            <WhyCodingSection language={language} />
+            <WhyCodingSection />
         </div>
-    </FloatingContainer>
-)
+    </FloatingContainer>)
+}
 export default AboutMeView;

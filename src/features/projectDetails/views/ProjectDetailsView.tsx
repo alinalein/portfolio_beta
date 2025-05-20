@@ -8,16 +8,15 @@ import TechnologyList from '../components/TechnologyList';
 import Texts, { Language } from '../../../shared/utils/texts'
 import type { WorkItem } from '../../../types/work';
 import renderStyledTitle from '../../../shared/utils/renderStyledTitle';
+import { useAppContext } from '../../../shared/context/AppContext';
 
 type ProjectDetailsViewProps = {
     onClose: () => void;
-    language: Language;
     activeProject: WorkItem
 }
 
 const ProjectDetailsView = ({
     onClose,
-    language,
     activeProject,
 }: ProjectDetailsViewProps): JSX.Element => {
 
@@ -32,6 +31,8 @@ const ProjectDetailsView = ({
         images,
         linkCase
     } = activeProject;
+
+    const { language } = useAppContext();
     const location = useLocation();
 
     return (

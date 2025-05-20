@@ -2,7 +2,7 @@ import { useNavigate, useLocation } from 'react-router-dom'
 
 // under construction
 
-const ChatCaseStudy = ({ language, isWidthGreaterThan1050 }) => {
+const ChatCaseStudy = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const { from, activeProject, id } = location.state || {};

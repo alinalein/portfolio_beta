@@ -1,20 +1,21 @@
 import React, { useRef, useState } from 'react';
 import Notification from '../utils/notification'
-import Texts, { Language } from '../../../shared/utils/texts';
+import Texts from '../../../shared/utils/texts';
 import emailjs from '@emailjs/browser';
 import SendIcon from '@mui/icons-material/Send';
+import { useAppContext } from '../../../shared/context/AppContext';
 
-type ContactFormSectionProps = {
-    language: Language;
-}
+const ContactFormSection = (): JSX.Element => {
 
-const ContactFormSection = ({ language }: ContactFormSectionProps): JSX.Element => {
+    const { language } = useAppContext()
 
     type Notification = {
         message: string;
         type: 'success' | 'error' | '';
     };
+
     const [notification, setNotification] = useState<Notification>({ message: '', type: '' });
+
     const form = useRef<HTMLFormElement>(null);
 
     const closeNotification = (): void => {

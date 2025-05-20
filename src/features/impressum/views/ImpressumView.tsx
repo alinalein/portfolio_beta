@@ -1,13 +1,12 @@
-import Texts, { Language } from '../../../shared/utils/texts';
+import Texts from '../../../shared/utils/texts';
+import { useAppContext } from '../../../shared/context/AppContext';
 
 type ImpressumProps = {
     id: string;
-    language: Language;
-    isWidthGreaterThan1050: boolean;
 };
 
-const Impressum = ({ id, language, isWidthGreaterThan1050 }: ImpressumProps): JSX.Element => {
-
+const Impressum = ({ id }: ImpressumProps): JSX.Element => {
+    const { language, isWidthGreaterThan1050 } = useAppContext();
     return (
         <div className='impressum' id={id}
             style={{

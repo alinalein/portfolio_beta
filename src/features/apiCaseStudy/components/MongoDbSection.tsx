@@ -1,24 +1,25 @@
 import StorageIcon from '@mui/icons-material/Storage';
-import Texts, { Language } from '../../../shared/utils/texts';
+import Texts from '../../../shared/utils/texts';
+import { useAppContext } from '../../../shared/context/AppContext';
 
-type MongoDbSectionProps = {
-    language: Language;
-}
+const MongoDbSection = (): JSX.Element => {
 
-const MongoDbSection = ({ language }: MongoDbSectionProps): JSX.Element => (
-    <div className='case-study-section'>
-        <StorageIcon className="case-study-svgs" />
-        <div className='case-study-header'>
-            <p className='case-study-header-p'>
-                {Texts[language].case_api.mongodb.tag}
-            </p>
-            <div className='mongo-section'>
-                <p>
-                    {Texts[language].case_api.mongodb.introduction_1}</p>
-                <p>{Texts[language].case_api.mongodb.introduction_2}</p>
-                <pre>
-                    <code>
-                        {`{
+    const { language } = useAppContext();
+
+    return (
+        <div className='case-study-section'>
+            <StorageIcon className="case-study-svgs" />
+            <div className='case-study-header'>
+                <p className='case-study-header-p'>
+                    {Texts[language].case_api.mongodb.tag}
+                </p>
+                <div className='mongo-section'>
+                    <p>
+                        {Texts[language].case_api.mongodb.introduction_1}</p>
+                    <p>{Texts[language].case_api.mongodb.introduction_2}</p>
+                    <pre>
+                        <code>
+                            {`{
   "_id": "ObjectId('65a9b1abeb496f127613d9b8')",
   "Title": "The Green Mile",
   "Genre": {
@@ -40,10 +41,11 @@ const MongoDbSection = ({ language }: MongoDbSectionProps): JSX.Element => (
     "David Morse"
   ]
 }`}
-                    </code>
-                </pre>
+                        </code>
+                    </pre>
+                </div>
             </div>
         </div>
-    </div>
-)
+    )
+}
 export default MongoDbSection;

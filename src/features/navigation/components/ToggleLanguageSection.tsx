@@ -1,14 +1,10 @@
 import Texts, { Language } from "../../../shared/utils/texts";
-import { Dispatch, SetStateAction } from "react";
 import usePersistToLocalStorage from '../hooks/usePersistToLocalStorage'
+import { useAppContext } from "../../../shared/context/AppContext";
 
-type ToggleLanguageSectionProps = {
-    language: Language;
-    setLanguage: Dispatch<SetStateAction<Language>>
-}
+const ToggleLanguageSection = (): JSX.Element => {
 
-const ToggleLanguageSection = ({ language, setLanguage }: ToggleLanguageSectionProps): JSX.Element => {
-
+    const { language, setLanguage } = useAppContext();
     const toggleLanguage = (selectedLanguage: Language): void => {
         if (language !== selectedLanguage) {
             setLanguage(selectedLanguage);

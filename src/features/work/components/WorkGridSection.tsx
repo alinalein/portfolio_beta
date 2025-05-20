@@ -3,13 +3,10 @@ import { useNavigate, useLocation } from "react-router-dom";
 import getWorkItems from "../utils/getWorkItems";
 import ProjectDetailsView from "../../projectDetails/views/ProjectDetailsView";
 import { WorkItem } from "../../../types/work";
-import { Language } from "../../../shared/utils/texts";
+import { useAppContext } from "../../../shared/context/AppContext";
 
-type WorkGridSectionProps = {
-    language: Language
-}
-
-const WorkGridSection = ({ language }: WorkGridSectionProps): JSX.Element => {
+const WorkGridSection = (): JSX.Element => {
+    const { language } = useAppContext()
 
     const [activeProject, setActiveProject] = useState<WorkItem | null>(null);
     const navigate = useNavigate();
@@ -67,7 +64,6 @@ const WorkGridSection = ({ language }: WorkGridSectionProps): JSX.Element => {
                 {activeProject && (
                     <ProjectDetailsView
                         onClose={onClose}
-                        language={language}
                         activeProject={activeProject}
                     />
                 )}

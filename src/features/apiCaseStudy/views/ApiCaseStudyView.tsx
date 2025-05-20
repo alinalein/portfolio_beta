@@ -1,6 +1,5 @@
 import { useNavigate, useLocation } from 'react-router-dom';
-import '../styles/apiCaseStudy.scss'
-import Texts, { Language } from '../../../shared/utils/texts'
+import Texts from '../../../shared/utils/texts'
 
 import OverviewTable from '../components/OverviewTable';
 import RestApiDiagram from '../components/RestApiDiagram';
@@ -12,11 +11,11 @@ import ChallengesSection from '../components/ChallengesSection';
 import FinalConclusions from '../components/FinalConclusions';
 import renderStyledTitle from '../../../shared/utils/renderStyledTitle';
 
-type ApiCaseStudyViewProps = {
-    language: Language
-}
-const ApiCaseStudyView = ({ language }: ApiCaseStudyViewProps): JSX.Element => {
+import { useAppContext } from '../../../shared/context/AppContext';
+import '../styles/apiCaseStudy.scss'
 
+const ApiCaseStudyView = (): JSX.Element => {
+    const { language } = useAppContext();
     const navigate = useNavigate();
 
     type LocationState = {
@@ -46,15 +45,15 @@ const ApiCaseStudyView = ({ language }: ApiCaseStudyViewProps): JSX.Element => {
             </div>
 
 
-            <OverviewTable language={language} />
+            <OverviewTable />
             <div className='case-study-svgs-wrapper'>
-                <RestApiDiagram language={language} />
-                <CrudSection language={language} />
-                <MongoDbSection language={language} />
-                <SecuritySection language={language} />
-                <TestingSection language={language} />
-                <ChallengesSection language={language} />
-                <FinalConclusions language={language} />
+                <RestApiDiagram />
+                <CrudSection />
+                <MongoDbSection />
+                <SecuritySection />
+                <TestingSection />
+                <ChallengesSection />
+                <FinalConclusions />
             </div>
             <button onClick={goBack} className="details_link case-study-button">
                 {Texts[language].case_api.back_button}

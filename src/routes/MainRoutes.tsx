@@ -5,22 +5,14 @@ import ChatCaseStudy from '../features/utils/chatCaseStudy';
 import WorkView from '../features/work/views/WorkView';
 import ContactView from '../features/contact/views/ContactView';
 import Impressum from '../features/impressum/views/ImpressumView';
+import { useAppContext } from '../shared/context/AppContext';
 import type { ComponentKey } from '../types/routes';
-import { Language } from '../shared/utils/texts';
 
-type MainRoutesProps = {
-    language: Language;
-    isWide: boolean;
-    handleImpressumClick: () => void;
-    activeComponent: ComponentKey;
-}
-
-const MainRoutes = ({
-    language,
-    isWide,
-    handleImpressumClick,
-    activeComponent,
-}: MainRoutesProps): JSX.Element => {
+const MainRoutes = (): JSX.Element => {
+    const {
+        isWidthGreaterThan1050,
+        activeComponent,
+    } = useAppContext();
 
     const components: Record<ComponentKey, (props: any) => JSX.Element> = {
         ABOUT: AboutMeView,
@@ -33,17 +25,17 @@ const MainRoutes = ({
 
     return (
         <Routes>
-            <Route path="/impressum" element={<Impressum id="impressum" language={language} isWidthGreaterThan1050={isWide} />} />
-            <Route path="/case-study/api" element={<ApiCaseStudyView language={language} />} />
-            <Route path="/case-study/chat" element={<ChatCaseStudy language={language} isWidthGreaterThan1050={isWide} />} />
+            <Route path="/impressum" element={<Impressum id="impressum" />} />
+            <Route path="/case-study/api" element={<ApiCaseStudyView />} />
+            <Route path="/case-study/chat" element={<ChatCaseStudy />} />
             <Route path="/" element={
-                isWide && ActiveComponent ? (
-                    <ActiveComponent id={activeComponent.toLowerCase()} isWidthGreaterThan1050={isWide} language={language} />
+                isWidthGreaterThan1050 && ActiveComponent ? (
+                    <ActiveComponent id={activeComponent.toLowerCase()} />
                 ) : (
                     <>
-                        <AboutMeView id="about" isWidthGreaterThan1050={isWide} language={language} />
-                        <WorkView id="work" isWidthGreaterThan1050={isWide} language={language} />
-                        <ContactView id="contact" handleImpressumClick={handleImpressumClick} isWidthGreaterThan1050={isWide} language={language} />
+                        <AboutMeView id="about" />
+                        <WorkView id="work" />
+                        <ContactView id="contact" />
                     </>
                 )
             } />

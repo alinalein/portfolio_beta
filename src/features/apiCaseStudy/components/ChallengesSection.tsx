@@ -1,13 +1,13 @@
 import BoltIcon from '@mui/icons-material/Bolt';
 import DoneAllIcon from '@mui/icons-material/DoneAll';
-import Texts, { Language } from '../../../shared/utils/texts';
+import Texts from '../../../shared/utils/texts';
+import { useAppContext } from '../../../shared/context/AppContext';
 
-type ChallengesSectionProps = {
-    language: Language;
-}
-const ChallengesSection = ({ language }: ChallengesSectionProps): JSX.Element => (
+const ChallengesSection = (): JSX.Element => {
 
-    <div className='case-study-section'>
+    const { language } = useAppContext();
+
+    return (<div className='case-study-section'>
         <BoltIcon className="case-study-svgs" />
         <div className='case-study-header'>
             <p className='case-study-header-p'>
@@ -42,6 +42,6 @@ const ChallengesSection = ({ language }: ChallengesSectionProps): JSX.Element =>
                 </div>
             </div>
         </div>
-    </div>
-)
+    </div>)
+}
 export default ChallengesSection;

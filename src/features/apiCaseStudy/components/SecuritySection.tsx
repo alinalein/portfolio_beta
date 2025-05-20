@@ -1,44 +1,45 @@
 import LockIcon from '@mui/icons-material/Lock';
-import Texts, { Language } from '../../../shared/utils/texts';
+import Texts from '../../../shared/utils/texts';
+import { useAppContext } from '../../../shared/context/AppContext';
 
-type SecuritySectionProps = {
-    language: Language;
-}
+const SecuritySection = (): JSX.Element => {
 
-const SecuritySection = ({ language }: SecuritySectionProps): JSX.Element => (
+    const { language } = useAppContext();
 
-    <div className='case-study-section'>
-        <LockIcon className="case-study-svgs" />
-        <div className='case-study-header'>
-            <p className='case-study-header-p'>
-                {Texts[language].case_api.access_control.tag}
-            </p>
-            <div className="auth-section">
-                <div className="label">
-                    {Texts[language].case_api.access_control.overview.authentication_title}
+    return (
+        <div className='case-study-section'>
+            <LockIcon className="case-study-svgs" />
+            <div className='case-study-header'>
+                <p className='case-study-header-p'>
+                    {Texts[language].case_api.access_control.tag}
+                </p>
+                <div className="auth-section">
+                    <div className="label">
+                        {Texts[language].case_api.access_control.overview.authentication_title}
 
-                </div>
-                <div className="desc">
-                    {Texts[language].case_api.access_control.overview.authentication}
-                </div>
+                    </div>
+                    <div className="desc">
+                        {Texts[language].case_api.access_control.overview.authentication}
+                    </div>
 
-                <div className="label">
-                    {Texts[language].case_api.access_control.overview.authorization_title}
+                    <div className="label">
+                        {Texts[language].case_api.access_control.overview.authorization_title}
 
-                </div>
-                <div className="desc">
-                    {Texts[language].case_api.access_control.overview.authorization}
-                </div>
+                    </div>
+                    <div className="desc">
+                        {Texts[language].case_api.access_control.overview.authorization}
+                    </div>
 
-                <div className="label">
-                    {Texts[language].case_api.access_control.overview.security_title}
-                </div>
-                <div className="desc">
-                    {Texts[language].case_api.access_control.overview.security}
+                    <div className="label">
+                        {Texts[language].case_api.access_control.overview.security_title}
+                    </div>
+                    <div className="desc">
+                        {Texts[language].case_api.access_control.overview.security}
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-)
+    )
+}
 
 export default SecuritySection;

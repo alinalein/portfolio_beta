@@ -1,13 +1,15 @@
 import { ReactNode } from "react";
 import { motion } from 'framer-motion'
+import { useAppContext } from "../context/AppContext";
 
 type FloatingContainerProps = {
     id: string;
-    isWidthGreaterThan1050: boolean;
     children: ReactNode;
 }
 
-const FloatingContainer = ({ id, isWidthGreaterThan1050, children }: FloatingContainerProps): JSX.Element => {
+const FloatingContainer = ({ id, children }: FloatingContainerProps): JSX.Element => {
+
+    const { isWidthGreaterThan1050 } = useAppContext()
 
     const variantsBig = {
         // strarting point of the div

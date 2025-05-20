@@ -1,24 +1,16 @@
-import { useEffect, Dispatch, SetStateAction } from 'react'
+import { useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom';
 import useScrollSectionDetector from '../hooks/useScrollSectionDetector'
 import usePersistToLocalStorage from '../hooks/usePersistToLocalStorage'
 import getMenuItems from '../utils/getMenuItems'
 import scrollToComponent from '../utils/scrollToComponent';
-import { Language } from '../../../shared/utils/texts';
+
 import type { ComponentKey } from '../../../types/routes';
+import { useAppContext } from '../../../shared/context/AppContext';
 
-type NavItemsSectionProps = {
-    language: Language;
-    activeItem: string;
-    // (item: string) => void and (component: string) => void define functions that accept a string and return nothing — matching typical setter functions from useState.
-    setActiveItem: Dispatch<SetStateAction<string>>;
-    activeComponent: ComponentKey;
-    setActiveComponent: Dispatch<SetStateAction<ComponentKey>>;
-    isWidthGreaterThan1050: boolean
-}
+const NavItemsSection = (): JSX.Element => {
 
-const NavItemsSection = ({ language, activeItem, setActiveItem, activeComponent, setActiveComponent, isWidthGreaterThan1050 }: NavItemsSectionProps): JSX.Element => {
-
+    const { language, activeItem, setActiveItem, activeComponent, setActiveComponent, isWidthGreaterThan1050 } = useAppContext()
     const navigate = useNavigate();
     const location = useLocation();
 

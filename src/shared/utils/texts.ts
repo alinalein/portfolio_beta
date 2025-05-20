@@ -101,8 +101,7 @@ const Texts = {
         contact: {
             formTitle: "Get in touch",
             getInTouchTitle: "Let’s connect!",
-            formMessage: `I’m based in Berlin and excited about inspiring remote positions—whether part-time, full-time, or freelance.
-             Feel free to reach out via the contact form or simply email me at:`,
+            formMessage: "I’m based in Berlin and excited about inspiring remote positions—whether part-time, full-time, or freelance. Feel free to reach out via the contact form or simply email me at: ",
             namePlaceholder: "Full Name",
             emailPlaceholder: "Email Address",
             messagePlaceholder: "Your Message",
