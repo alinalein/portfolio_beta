@@ -18,17 +18,7 @@ import postman from '../assets/img/postman.png';
 import react from '../assets/img/myFlix_React.png';
 import react_phone from '../assets/img/myFlix_react_main_phone.png';
 
-type WorkItem = {
-    id: string;
-    title: string;
-    description: string;
-    features: readonly string[];
-    linkGit: string;
-    linkLive?: string;
-    linkCase?: string;
-    languagesUsed: string[];
-    phonePic: string[];
-}
+import { WorkItem } from '../../../types/work';
 
 const getWorkItems = (language: Language): WorkItem[] => {
 
@@ -43,7 +33,7 @@ const getWorkItems = (language: Language): WorkItem[] => {
             linkLive: 'https://alinalein.github.io/myFlix-Angular-client/welcome',
             // languagesUsed: [TS, Angular, Saas],
             languagesUsed: ['TypeScript', 'Angular', 'Angular Material', 'Sass', 'SCSS', 'HTML', 'TypeDoc'],
-            phonePic: [angular_phone, angular]
+            images: [angular_phone, angular]
         },
         {
             id: 'chat_project',
@@ -55,7 +45,7 @@ const getWorkItems = (language: Language): WorkItem[] => {
             // linkCase: '/case-study/chat',
             // languagesUsed: [ReactNat, Firebase],
             languagesUsed: ['Android Studio', 'React Native', 'Firebase', 'Firestore', 'GiftedChat', 'Expo'],
-            phonePic: [chat_main_phone, chat_chat_phone]
+            images: [chat_main_phone, chat_chat_phone]
         },
         {
             id: 'pokemon_project',
@@ -67,7 +57,7 @@ const getWorkItems = (language: Language): WorkItem[] => {
             linkLive: 'https://alinalein.github.io/JS-App/',
             // languagesUsed: [JS, HTML, CSS, Bootstrap],
             languagesUsed: ['JavaScript', 'HTML', 'CSS', 'Bootstrap'],
-            phonePic: [pokemon_phone, pokemon]
+            images: [pokemon_phone, pokemon]
         },
         {
             id: 'api_project',
@@ -79,7 +69,7 @@ const getWorkItems = (language: Language): WorkItem[] => {
             linkCase: '/case-study/api',
             // languagesUsed: [Node, Mongo, Express, Postman],
             languagesUsed: ['Node.js', 'MongoDB', 'Express', 'Postman', 'HTML', 'Mongoose', 'JSDoc', 'CORS', 'JWT', 'Heroku'],
-            phonePic: [postman]
+            images: [postman]
         },
         {
             id: 'react_project',
@@ -91,7 +81,7 @@ const getWorkItems = (language: Language): WorkItem[] => {
             linkLive: 'https://myflix-alinalein.netlify.app',
             // languagesUsed: [Reacticon, Bootstrap, Redux, Saas],
             languagesUsed: ['React', 'React Bootstrap', 'Redux', 'Sass ', 'HTML', 'Parcel', 'Netlify'],
-            phonePic: [react_phone, react]
+            images: [react_phone, react]
         },
         {
             id: 'meet_project',
@@ -103,7 +93,7 @@ const getWorkItems = (language: Language): WorkItem[] => {
             linkLive: 'https://alinalein.github.io/meet/',
             // languagesUsed: [Reacticon, Jest, AWS, Cucumber],
             languagesUsed: ['AWS Lambda', 'Jest', 'Cucumber', 'Puppeteer', 'HTML', 'Sass', 'React', 'Google Calendar API', 'OAuth2', 'Recharts'],
-            phonePic: [meet_phone, meet]
+            images: [meet_phone, meet]
         },
     ];
     return workItems;

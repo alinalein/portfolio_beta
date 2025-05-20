@@ -17,18 +17,19 @@ function App(): JSX.Element {
 
     const getInitialComponent = (): ComponentKey => {
         const stored = localStorage.getItem('activeComponent')
-        const valid: ComponentKey[] = ['about', 'work', 'contact', 'impressum'];
-        return valid.includes(stored as ComponentKey) ? (stored as ComponentKey) : 'about';
+        const valid: ComponentKey[] = ['ABOUT', 'WORK', 'CONTACT', 'IMPRESSUM'];
+        return valid.includes(stored as ComponentKey) ? (stored as ComponentKey) : 'ABOUT';
     }
 
+    const [activeComponent, setActiveComponent] = useState<ComponentKey>(getInitialComponent);
     const isWide = useDeviceWidth();
 
     const [language, setLanguage] = useState<'en' | 'de'>(getInitialLanguage);
-    const [activeComponent, setActiveComponent] = useState<ComponentKey>(getInitialComponent);
+
     const [activeItem, setActiveItem] = useState<string>(() => localStorage.getItem('activeItem') || '');
 
     const handleImpressumClick = () => {
-        setActiveComponent('impressum');
+        setActiveComponent('IMPRESSUM');
         setActiveItem('');
     };
 

@@ -6,9 +6,10 @@ import WorkView from '../features/work/views/WorkView';
 import ContactView from '../features/contact/views/ContactView';
 import Impressum from '../features/impressum/views/ImpressumView';
 import type { ComponentKey } from '../types/routes';
+import { Language } from '../shared/utils/texts';
 
 type MainRoutesProps = {
-    language: string;
+    language: Language;
     isWide: boolean;
     handleImpressumClick: () => void;
     activeComponent: ComponentKey;
@@ -22,10 +23,10 @@ const MainRoutes = ({
 }: MainRoutesProps): JSX.Element => {
 
     const components: Record<ComponentKey, (props: any) => JSX.Element> = {
-        about: AboutMeView,
-        work: WorkView,
-        contact: ContactView,
-        impressum: Impressum,
+        ABOUT: AboutMeView,
+        WORK: WorkView,
+        CONTACT: ContactView,
+        IMPRESSUM: Impressum,
     };
 
     const ActiveComponent = activeComponent ? components[activeComponent] : null;

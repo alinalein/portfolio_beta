@@ -1,1 +1,1 @@
-export type ComponentKey = 'about' | 'work' | 'contact' | 'impressum';
+export type ComponentKey = 'ABOUT' | 'WORK' | 'CONTACT' | 'IMPRESSUM';
