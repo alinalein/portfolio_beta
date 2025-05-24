@@ -1,18 +1,21 @@
 import { Link } from 'react-router-dom';
 import { useAppContext } from '../../../shared/context/AppContext';
 
-const ImpressumSection = (): JSX.Element => {
-    const { isWidthGreaterThan1050, handleImpressumClick } = useAppContext();
-    return (
-        <>
-            {isWidthGreaterThan1050 ? (
-                <Link to="/impressum" onClick={handleImpressumClick} className='nav_impressum' aria-label="Open Impressum page">
-                    Impressum
-                </Link>
-            ) : null}
-        </>
-    )
+const ImpressumSection = (): JSX.Element | null => {
+  const { isWidthGreaterThan1050, handleImpressumClick, language } = useAppContext();
 
-}
+  return isWidthGreaterThan1050 ? (
+    <Link
+      to="/impressum"
+      onClick={handleImpressumClick}
+      className="nav_impressum"
+      aria-label={
+        language === 'en' ? 'Navigate to the Impressum page' : 'Navigieren zur Impressum-Seite'
+      }
+    >
+      Impressum
+    </Link>
+  ) : null;
+};
 
-export default ImpressumSection
+export default ImpressumSection;

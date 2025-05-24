@@ -3,23 +3,25 @@ import Texts from '../../../shared/utils/texts';
 import { useAppContext } from '../../../shared/context/AppContext';
 
 const MongoDbSection = (): JSX.Element => {
+  const { language } = useAppContext();
 
-    const { language } = useAppContext();
-
-    return (
-        <div className='case-study-section'>
-            <StorageIcon className="case-study-svgs" />
-            <div className='case-study-header'>
-                <p className='case-study-header-p'>
-                    {Texts[language].case_api.mongodb.tag}
-                </p>
-                <div className='mongo-section'>
-                    <p>
-                        {Texts[language].case_api.mongodb.introduction_1}</p>
-                    <p>{Texts[language].case_api.mongodb.introduction_2}</p>
-                    <pre>
-                        <code>
-                            {`{
+  return (
+    <section className="case-study-section" aria-labelledby="mongo-db-section">
+      <StorageIcon className="case-study-svgs" aria-hidden="true" />
+      <div className="case-study-header">
+        <h2 id="mongo-db-section" className="case-study-header-p">
+          {Texts[language].case_api.mongodb.tag}
+        </h2>
+        <div className="mongo-section">
+          <p>{Texts[language].case_api.mongodb.introduction_1}</p>
+          <p>{Texts[language].case_api.mongodb.introduction_2}</p>
+          <pre
+            aria-label={
+              language === 'en' ? 'MongoDB document example' : 'Beispiel für ein MongoDB-Dokument'
+            }
+          >
+            <code className="language-json">
+              {`{
   "_id": "ObjectId('65a9b1abeb496f127613d9b8')",
   "Title": "The Green Mile",
   "Genre": {
@@ -41,11 +43,11 @@ const MongoDbSection = (): JSX.Element => {
     "David Morse"
   ]
 }`}
-                        </code>
-                    </pre>
-                </div>
-            </div>
+            </code>
+          </pre>
         </div>
-    )
-}
+      </div>
+    </section>
+  );
+};
 export default MongoDbSection;

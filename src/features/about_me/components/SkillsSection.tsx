@@ -1,9 +1,8 @@
-import Tools from "../utils/Tools";
+import Tools from '../utils/Tools';
 
 const SkillSection = () => (
-
-    <div className='about_img_div'>
-        <Tools />
-    </div>
-)
-export default SkillSection
+  <section className="about_img_div" aria-labelledby="skills-heading">
+    <Tools />
+  </section>
+);
+export default SkillSection;

@@ -1,10 +1,22 @@
-import React from 'react';
+import { RefObject } from 'react';
 
-const renderStyledTitle = (title: string, style?: React.CSSProperties): JSX.Element => (
-    <h2>
-        <span className="span_title">{title.charAt(0)}</span>
-        {title.slice(1)}
-    </h2>
+interface renderStyledTitleProps {
+  title: string;
+  id?: string;
+  ref?: RefObject<HTMLHeadingElement>;
+  tabIndex?: number;
+}
+
+const renderStyledTitle = ({
+  title,
+  id,
+  ref,
+  tabIndex = 0,
+}: renderStyledTitleProps): JSX.Element => (
+  <h2 id={id} ref={ref} tabIndex={tabIndex}>
+    <span className="span_title">{title.charAt(0)}</span>
+    {title.slice(1)}
+  </h2>
 );
 
 export default renderStyledTitle;

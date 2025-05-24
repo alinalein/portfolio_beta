@@ -1,16 +1,20 @@
 type TechnologyListProps = {
-    technologies: string[];
-    label: string
-}
+  technologies: string[];
+  label: string;
+};
 
 const TechnologyList = ({ technologies, label }: TechnologyListProps): JSX.Element => (
-    <>
-        <div>
-            <p className="modal_technologies" style={{ marginTop: '14px' }}>{label}</p>
-            {technologies.map((technology) => (
-                <span key={technology} className="languagesProject">{technology}</span>
-            ))}
-        </div>
-    </>
+  <section aria-labelledby="technologies-section">
+    <h4 id="technologies-section" className="modal_technologies" style={{ margin: '10px 0' }}>
+      {label}
+    </h4>
+    <ul style={{ paddingLeft: '0' }}>
+      {technologies.map((technology) => (
+        <li key={technology} className="languagesProject">
+          {technology}
+        </li>
+      ))}
+    </ul>
+  </section>
 );
 export default TechnologyList;

@@ -12,6 +12,12 @@
   background-color: var(--background-color-light);
   z-index: 999;
 
+  .name_div {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
   .nav_intro_div {
     width: 180px;
   }
@@ -23,7 +29,6 @@
       fill: var(--main-color);
     }
   }
-
 }
 
 .social_item_div {
@@ -71,7 +76,9 @@
     align-items: center;
     color: var(--text-color-light);
     font-weight: bold;
+    border: none;
     cursor: pointer;
+    background-color: transparent;
     transition: color 0.3s;
   }
 
@@ -96,6 +103,8 @@
 
 .menu-item {
   display: flex;
+  background-color: transparent;
+  border: none;
   border-radius: 20px;
   flex-direction: column;
   align-items: center;
@@ -200,9 +209,7 @@
 }
 
 @media all and (max-width: 450px) {
-
   .navigation .nav_intro_div {
     min-width: 115px;
   }
-
 }
