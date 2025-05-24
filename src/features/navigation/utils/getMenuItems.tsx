@@ -2,7 +2,7 @@ import React from 'react';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import MessageIcon from '@mui/icons-material/Message';
-import Texts, { Language } from '../../../shared/utils/texts';
+import { Texts, Language } from '../../../shared';
 
 type MenuItem = {
   readonly name: string;

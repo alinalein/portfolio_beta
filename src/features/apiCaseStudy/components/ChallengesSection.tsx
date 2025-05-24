@@ -1,7 +1,7 @@
 import BoltIcon from '@mui/icons-material/Bolt';
 import DoneAllIcon from '@mui/icons-material/DoneAll';
-import Texts from '../../../shared/utils/texts';
-import { useAppContext } from '../../../shared/context/AppContext';
+
+import { useAppContext, Texts } from '../../../shared';
 
 const ChallengesSection = (): JSX.Element => {
   const { language } = useAppContext();

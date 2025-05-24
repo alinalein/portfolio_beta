@@ -4,7 +4,7 @@ import LetsConnectSection from '../components/LetsConnectSection';
 import ContactFormSection from '../components/ContactFormSection';
 import '../styles/contact.scss';
 import renderStyledTitle from '../../../shared/utils/renderStyledTitle';
-import useFocusOnMount from '../../../shared/utils/useFocusOnMount ';
+import useFocus from '../../../shared/utils/useFocus';
 import { useAppContext } from '../../../shared/context/AppContext';
 type ContactViewProps = {
   id: string;
@@ -12,7 +12,7 @@ type ContactViewProps = {
 
 const ContactView = ({ id }: ContactViewProps): JSX.Element => {
   const { language, focusKey } = useAppContext();
-  const { headingRef } = useFocusOnMount(focusKey);
+  const { headingRef } = useFocus(focusKey);
 
   return (
     <FloatingContainer id={id}>
@@ -23,7 +23,6 @@ const ContactView = ({ id }: ContactViewProps): JSX.Element => {
             title: Texts[language].contact.formTitle,
             id: 'contact-form-section',
             ref: headingRef,
-            tabIndex: -1,
           })}
         </div>
 

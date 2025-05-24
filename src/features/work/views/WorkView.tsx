@@ -1,9 +1,13 @@
-import FloatingContainer from '../../../shared/components/FloatingContainer';
-import Texts from '../../../shared/utils/texts';
 import WorkGridSection from '../components/WorkGridSection';
-import renderStyledTitle from '../../../shared/utils/renderStyledTitle';
-import useFocusOnMount from '../../../shared/utils/useFocusOnMount ';
-import { useAppContext } from '../../../shared/context/AppContext';
+
+import {
+  useAppContext,
+  useFocus,
+  renderStyledTitle,
+  Texts,
+  FloatingContainer,
+} from '../../../shared';
+
 import '../styles/work.scss';
 
 type WorkViewProps = {
@@ -13,7 +17,7 @@ type WorkViewProps = {
 const WorkView = ({ id }: WorkViewProps): JSX.Element => {
   const { language, focusKey } = useAppContext();
 
-  const { headingRef } = useFocusOnMount(focusKey);
+  const { headingRef } = useFocus(focusKey);
 
   return (
     <FloatingContainer id={id}>
@@ -23,7 +27,6 @@ const WorkView = ({ id }: WorkViewProps): JSX.Element => {
             title: Texts[language].work.title,
             id: 'work-section',
             ref: headingRef,
-            tabIndex: -1,
           })}
         </div>
         <WorkGridSection />

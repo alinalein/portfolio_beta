@@ -1,6 +1,6 @@
 import LockIcon from '@mui/icons-material/Lock';
-import Texts from '../../../shared/utils/texts';
-import { useAppContext } from '../../../shared/context/AppContext';
+
+import { useAppContext, Texts } from '../../../shared';
 
 const SecuritySection = (): JSX.Element => {
   const { language } = useAppContext();

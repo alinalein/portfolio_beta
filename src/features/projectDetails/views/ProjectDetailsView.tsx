@@ -1,16 +1,15 @@
 import { useEffect } from 'react';
 import { Modal } from '@mui/material';
 import { useLocation } from 'react-router-dom';
-import '../styles/projectDetails.scss';
+
 import FeatureList from '../components/FeatureList';
 import ImageGallery from '../components/ImageGallery';
 import TechnologyList from '../components/TechnologyList';
-import Texts from '../../../shared/utils/texts';
 import type { WorkItem } from '../../../types/work';
-import renderStyledTitle from '../../../shared/utils/renderStyledTitle';
-import useFocusOnMount from '../../../shared/utils/useFocusOnMount ';
-import SharedButton from '../../../shared/components/SharedButton';
-import { useAppContext } from '../../../shared/context/AppContext';
+
+import { useAppContext, SharedButton, useFocus, renderStyledTitle, Texts } from '../../../shared';
+
+import '../styles/projectDetails.scss';
 
 type ProjectDetailsViewProps = {
   onClose: () => void;
@@ -23,7 +22,7 @@ const ProjectDetailsView = ({ onClose, activeProject }: ProjectDetailsViewProps)
 
   const { language } = useAppContext();
   const location = useLocation();
-  const { headingRef } = useFocusOnMount();
+  const { headingRef } = useFocus();
 
   // for Accessibility
   useEffect(() => {
@@ -53,7 +52,6 @@ const ProjectDetailsView = ({ onClose, activeProject }: ProjectDetailsViewProps)
                 title,
                 id: `${title}-app-section`,
                 ref: headingRef,
-                tabIndex: -1,
               })}
             </>
           )}

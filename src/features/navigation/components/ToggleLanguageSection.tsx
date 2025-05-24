@@ -1,6 +1,5 @@
-import Texts, { Language } from '../../../shared/utils/texts';
 import usePersistToLocalStorage from '../hooks/usePersistToLocalStorage';
-import { useAppContext } from '../../../shared/context/AppContext';
+import { useAppContext, Texts, Language } from '../../../shared';
 
 const ToggleLanguageSection = (): JSX.Element => {
   const { language, setLanguage } = useAppContext();

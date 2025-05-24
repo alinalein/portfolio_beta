@@ -1,6 +1,5 @@
-import Texts from '../../../shared/utils/texts';
 import CSM from '../assets/img/CSM.jpg';
-import { useAppContext } from '../../../shared/context/AppContext';
+import { useAppContext, Texts } from '../../../shared';
 
 const MyBackground = (): JSX.Element => {
   const { language } = useAppContext();

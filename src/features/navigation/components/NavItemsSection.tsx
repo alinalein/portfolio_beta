@@ -6,7 +6,7 @@ import getMenuItems from '../utils/getMenuItems';
 import scrollToComponent from '../utils/scrollToComponent';
 
 import type { ComponentKey } from '../../../types/routes';
-import { useAppContext } from '../../../shared/context/AppContext';
+import { useAppContext } from '../../../shared';
 
 const NavItemsSection = (): JSX.Element => {
   const {

@@ -1,7 +1,9 @@
-import connect from '../assets/connect.jpg';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { Link } from 'react-router-dom';
+
+import connect from '../assets/connect.jpg';
+
 import { useAppContext } from '../../../shared/context/AppContext';
 
 const LetsConnectSection = (): JSX.Element => {

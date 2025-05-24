@@ -1,12 +1,14 @@
-import '../styles/navigation.scss';
-import Texts from '../../../shared/utils/texts';
-import TypingAnimation from '../utils/typing_effect';
+import TypingAnimation from '../utils/TypingEffect';
+
 import SocialsSection from '../components/SocialsSection';
 import ToggleLanguageSection from '../components/ToggleLanguageSection';
 import ToggleThemeSection from '../components/ToggleThemeSection';
 import NavItemsSection from '../components/NavItemsSection';
 import ImpressumSection from '../components/ImpressumSection';
-import { useAppContext } from '../../../shared/context/AppContext';
+
+import { Texts, useAppContext } from '../../../shared';
+
+import '../styles/navigation.scss';
 
 const NavigationView = (): JSX.Element => {
   const { language } = useAppContext();

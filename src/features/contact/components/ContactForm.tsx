@@ -1,9 +1,9 @@
 import React, { useRef, useState } from 'react';
-import Notification from '../utils/notification';
-import Texts from '../../../shared/utils/texts';
 import emailjs from '@emailjs/browser';
 import SendIcon from '@mui/icons-material/Send';
-import { useAppContext } from '../../../shared/context/AppContext';
+import Notification from '../utils/notification';
+
+import { useAppContext, Texts } from '../../../shared';
 
 const ContactForm = (): JSX.Element => {
   const { language } = useAppContext();

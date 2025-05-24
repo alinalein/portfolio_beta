@@ -1,6 +1,6 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { useAppContext } from '../../../shared/context/AppContext';
+import { useAppContext } from '../../../shared';
 
 const SocialsSection = (): JSX.Element => {
   const { language } = useAppContext();

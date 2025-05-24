@@ -1,4 +1,4 @@
-import { useAppContext } from '../../../shared/context/AppContext';
+import { useAppContext } from '../../../shared';
 
 type ImageGalleryProps = {
   images?: string[];

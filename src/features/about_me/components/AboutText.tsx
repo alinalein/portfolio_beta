@@ -1,8 +1,9 @@
 import React from 'react';
-import Texts from '../../../shared/utils/texts';
+
 import CV_en from '../assets/pdf/Leinweber Alina_Web Developer_Resume.pdf';
 import CV_ger from '../assets/pdf/Leinweber Alina_Web Developer_Lebenslauf.pdf';
-import { useAppContext } from '../../../shared/context/AppContext';
+
+import { useAppContext, Texts } from '../../../shared';
 
 const AboutText = (): JSX.Element => {
   const { language } = useAppContext();

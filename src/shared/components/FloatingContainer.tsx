@@ -1,7 +1,8 @@
 import { ReactNode } from 'react';
 import { motion } from 'framer-motion';
-import { useAppContext } from '../context/AppContext';
 import { useReducedMotion } from 'framer-motion';
+
+import { useAppContext } from '../context/AppContext';
 
 type FloatingContainerProps = {
   id: string;

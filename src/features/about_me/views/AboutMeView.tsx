@@ -1,12 +1,16 @@
-import FloatingContainer from '../../../shared/components/FloatingContainer';
-import Texts from '../../../shared/utils/texts';
 import AboutText from '../components/AboutText';
 import SkillSection from '../components/SkillsSection';
 import MyBackgroundSection from '../components/MyBackgroundSection';
 import WhyCodingSection from '../components/WhyCodingSection';
-import renderStyledTitle from '../../../shared/utils/renderStyledTitle';
-import { useAppContext } from '../../../shared/context/AppContext';
-import useFocusOnMount from '../../../shared/utils/useFocusOnMount ';
+
+import {
+  useAppContext,
+  FloatingContainer,
+  Texts,
+  useFocus,
+  renderStyledTitle,
+} from '../../../shared';
+
 import '../styles/about.scss';
 
 interface AboutMeViewProps {
@@ -15,7 +19,7 @@ interface AboutMeViewProps {
 
 const AboutMeView = ({ id }: AboutMeViewProps): JSX.Element => {
   const { language, focusKey } = useAppContext();
-  const { headingRef } = useFocusOnMount(focusKey);
+  const { headingRef } = useFocus(focusKey);
 
   return (
     <FloatingContainer id={id}>
@@ -26,7 +30,6 @@ const AboutMeView = ({ id }: AboutMeViewProps): JSX.Element => {
             title: Texts[language].about.title,
             id: 'about-heading',
             ref: headingRef,
-            tabIndex: -1,
           })}
         </div>
 

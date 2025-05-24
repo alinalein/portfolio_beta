@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
+
 import { ComponentKey } from '../../types/routes';
 import { Language } from '../utils/texts';
 
@@ -11,7 +12,7 @@ type AppContextType = {
   activeComponent: ComponentKey;
   setActiveComponent: React.Dispatch<React.SetStateAction<ComponentKey>>;
   handleImpressumClick: () => void;
-  focusKey: number;
+  focusKey: number | null;
   triggerFocus: () => void;
 };
 
@@ -52,7 +53,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   };
 
   // triggers focus on component, even the component is already active
-  const [focusKey, setFocusKey] = useState<number>(Date.now());
+  const [focusKey, setFocusKey] = useState<number | null>(null);
   const triggerFocus = () => {
     setFocusKey(Date.now()); // will change even if activeComponent stays the same
   };

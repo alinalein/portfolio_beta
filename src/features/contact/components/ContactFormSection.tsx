@@ -1,6 +1,5 @@
 import ContactForm from './ContactForm';
-import Texts from '../../../shared/utils/texts';
-import { useAppContext } from '../../../shared/context/AppContext';
+import { useAppContext, Texts } from '../../../shared';
 
 const ContactFormSection = (): JSX.Element => {
   const { language } = useAppContext();

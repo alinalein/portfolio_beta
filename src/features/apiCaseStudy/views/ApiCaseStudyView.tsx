@@ -1,5 +1,4 @@
 import { useNavigate, useLocation } from 'react-router-dom';
-import Texts from '../../../shared/utils/texts';
 
 import OverviewTable from '../components/OverviewTable';
 import RestApiDiagram from '../components/RestApiDiagram';
@@ -9,21 +8,21 @@ import SecuritySection from '../components/SecuritySection';
 import DebuggingSection from '../components/DebuggingSection';
 import ChallengesSection from '../components/ChallengesSection';
 import FinalConclusions from '../components/FinalConclusions';
-import renderStyledTitle from '../../../shared/utils/renderStyledTitle';
-import useFocusOnMount from '../../../shared/utils/useFocusOnMount ';
-import SharedButton from '../../../shared/components/SharedButton';
-import { useAppContext } from '../../../shared/context/AppContext';
+
+import { useAppContext, Texts, SharedButton, useFocus, renderStyledTitle } from '../../../shared';
 import '../styles/apiCaseStudy.scss';
 
 const ApiCaseStudyView = (): JSX.Element => {
   const { language } = useAppContext();
   const navigate = useNavigate();
-  const { headingRef } = useFocusOnMount();
+  const { headingRef } = useFocus();
+
   type LocationState = {
     from?: string;
     activeProject?: string;
     id?: string;
   };
+
   const location = useLocation();
   const { from, activeProject, id } = (location.state as LocationState) || {};
 
@@ -44,7 +43,6 @@ const ApiCaseStudyView = (): JSX.Element => {
           title: Texts[language].case_api.title,
           id: 'api-case-study-overview',
           ref: headingRef,
-          tabIndex: -1,
         })}
       </div>
 

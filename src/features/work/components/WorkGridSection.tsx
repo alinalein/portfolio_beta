@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import getWorkItems from '../utils/getWorkItems';
 import ProjectDetailsView from '../../projectDetails/views/ProjectDetailsView';
 import { WorkItem } from '../../../types/work';
-import { useAppContext } from '../../../shared/context/AppContext';
+import { useAppContext } from '../../../shared';
 
 const WorkGridSection = (): JSX.Element => {
   const { language } = useAppContext();

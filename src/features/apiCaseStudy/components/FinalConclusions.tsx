@@ -1,8 +1,8 @@
 import FlagIcon from '@mui/icons-material/Flag';
 import ExtensionIcon from '@mui/icons-material/Extension'; // Puzzle-like
 import GradientExtensionIcon from '../utils/GradientExtensionIcon';
-import Texts from '../../../shared/utils/texts';
-import { useAppContext } from '../../../shared/context/AppContext';
+
+import { useAppContext, Texts } from '../../../shared';
 
 const FinalConclusions = (): JSX.Element => {
   const { language } = useAppContext();
