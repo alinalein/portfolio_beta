@@ -1,0 +1,38 @@
+@use '../../../../shared/styles/main.scss' as *;
+
+.notification {
+  display: flex;
+  width: auto;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  bottom: 40%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-30%);
+  z-index: 1000;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  &__success {
+    background-color: $main-color;
+  }
+  &__error {
+    background-color: rgb(255, 62, 62);
+  }
+  &__button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    padding: 0 10px 0 15px;
+    color: white;
+    box-shadow: 0 0 30px rgba(159, 157, 157, 0.9);
+  }
+}

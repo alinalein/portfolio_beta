@@ -1,0 +1,121 @@
+@use './variables' as *;
+
+.p__no_margin {
+  margin: 0;
+}
+
+.about__section_layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 30px auto;
+}
+
+.view__content {
+  overflow: auto;
+  margin: 0 10x;
+  padding: 10px;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  width: 100%;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(159, 157, 157, 0.3);
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $main-color;
+    border-radius: 10px;
+  }
+}
+
+.section__title {
+  display: flex;
+  justify-content: left;
+  position: relative;
+  padding-bottom: 0.5px;
+  margin-bottom: 30px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  }
+}
+
+.icon_button {
+  display: flex;
+  background-color: transparent;
+  border: none;
+  border-radius: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  width: 100%;
+  height: 8vh;
+  box-shadow: 0 0 1px rgba(159, 157, 157, 0.3);
+  cursor: pointer;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $main-color;
+  }
+
+  svg {
+    margin-bottom: 2px;
+    font-size: 25px;
+  }
+}
+.impressum__link {
+  color: $text-color-light;
+  font-size: 12px;
+  height: 2vh;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $main-color;
+  }
+}
+@media all and (max-width: 1050px) {
+  .view__content {
+    overflow: visible;
+    margin-top: 9vh;
+  }
+  .section__title {
+    justify-content: center;
+  }
+  .icon_button {
+    height: 7vh;
+    margin: 0 5px;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .about__section_layout {
+    flex-direction: column;
+  }
+  .view__content {
+    overflow: visible;
+    margin-top: 7vh;
+  }
+  .icon_button {
+    font-size: 10px;
+    height: 5vh;
+    margin: 0 3px;
+
+    svg {
+      margin-bottom: 1px;
+      font-size: 15px;
+    }
+  }
+}

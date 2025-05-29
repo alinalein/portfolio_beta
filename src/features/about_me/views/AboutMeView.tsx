@@ -1,17 +1,9 @@
-import AboutText from '../components/AboutText';
-import SkillSection from '../components/SkillsSection';
-import MyBackgroundSection from '../components/MyBackgroundSection';
-import WhyCodingSection from '../components/WhyCodingSection';
+import AboutSection from '../components/AboutSection/AboutSection';
+import SkillSection from '../components/SkillsSection/SkillsSection';
+import MyBackgroundSection from '../components/MyBackgroundSection/MyBackgroundSection';
+import WhyCodingSection from '../components/WhyCodingSection/WhyCodingSection';
 
-import {
-  useAppContext,
-  FloatingContainer,
-  Texts,
-  useFocus,
-  renderStyledTitle,
-} from '../../../shared';
-
-import '../styles/about.scss';
+import { useAppContext, FloatingContainer, Texts, useFocus, Title } from '../../../shared';
 
 interface AboutMeViewProps {
   id: string;
@@ -23,20 +15,20 @@ const AboutMeView = ({ id }: AboutMeViewProps): JSX.Element => {
 
   return (
     <FloatingContainer id={id}>
-      <div className="content">
+      <div className="view__content">
         {/* Dynamic title for 'About Me' */}
-        <div className="component_title">
-          {renderStyledTitle({
+        <div className="section__title">
+          {Title({
             title: Texts[language].about.title,
             id: 'about-heading',
             ref: headingRef,
           })}
         </div>
 
-        <AboutText />
+        <AboutSection />
         {/* Dynamic title for 'Skills & Technologies' */}
-        <div className="component_title">
-          {renderStyledTitle({
+        <div className="section__title">
+          {Title({
             title: Texts[language].about.skillsTitle,
             id: 'skills-heading',
           })}
@@ -45,8 +37,8 @@ const AboutMeView = ({ id }: AboutMeViewProps): JSX.Element => {
         <SkillSection />
 
         {/* Dynamic title for 'My background' */}
-        <div className="component_title">
-          {renderStyledTitle({
+        <div className="section__title">
+          {Title({
             title: Texts[language].about.backgroundTitle,
             id: 'background-heading',
           })}
@@ -54,8 +46,8 @@ const AboutMeView = ({ id }: AboutMeViewProps): JSX.Element => {
         <MyBackgroundSection />
 
         {/* Dynamic title for 'Why Coding?' */}
-        <div className="component_title">
-          {renderStyledTitle({
+        <div className="section__title">
+          {Title({
             title: Texts[language].about.whyCodingTitle,
             id: 'why-coding-section',
           })}

@@ -1,0 +1,33 @@
+@use '../../styles/main.scss' as *;
+
+.social_items {
+  display: flex;
+  margin: 10px 0;
+  flex-direction: row;
+  justify-content: space-around;
+
+  &__item {
+    width: 40%;
+    height: auto;
+    padding: 10px 0;
+
+    .social_items__icon {
+      height: 35px;
+      width: 35px;
+      font-size: 35px;
+      color: black;
+      transition: color 0.3s ease;
+    }
+    &:hover .social_items__icon {
+      color: $main-color;
+    }
+  }
+}
+
+@media all and (max-width: 750px) {
+  .social_items__icon {
+    font-size: 25px;
+    height: 25px;
+    width: 25px;
+  }
+}

@@ -2,14 +2,13 @@ import { useEffect } from 'react';
 import { Modal } from '@mui/material';
 import { useLocation } from 'react-router-dom';
 
-import FeatureList from '../components/FeatureList';
-import ImageGallery from '../components/ImageGallery';
-import TechnologyList from '../components/TechnologyList';
+import FeatureSection from '../components/FeatureSection/FeatureSection';
+import ImagesSection from '../components/ImagesSection/ImagesSection';
+import TechnologySection from '../components/TechnologySection/TechnologySection';
 import type { WorkItem } from '../../../types/work';
 
-import { useAppContext, SharedButton, useFocus, renderStyledTitle, Texts } from '../../../shared';
-
-import '../styles/projectDetails.scss';
+import { useAppContext, SharedButton, useFocus, Title, Texts } from '../../../shared';
+import styles from './ProjectDetailsView.module.scss';
 
 type ProjectDetailsViewProps = {
   onClose: () => void;
@@ -40,15 +39,15 @@ const ProjectDetailsView = ({ onClose, activeProject }: ProjectDetailsViewProps)
   return (
     <Modal open onClose={onClose}>
       <section
-        className="modal_div"
+        className={styles.project_details}
         role="dialog"
         aria-modal="true"
         aria-labelledby={`${title}-app-section`}
       >
-        <div className="component_title" style={{ justifyContent: 'space-between' }}>
+        <div className={` ${styles.project_details__header} section__title`}>
           {title && (
             <>
-              {renderStyledTitle({
+              {Title({
                 title,
                 id: `${title}-app-section`,
                 ref: headingRef,
@@ -58,22 +57,22 @@ const ProjectDetailsView = ({ onClose, activeProject }: ProjectDetailsViewProps)
           <button
             onClick={onClose}
             aria-label={language === 'en' ? 'Close modal' : 'Modal schließen'}
-            className="modal_close_button"
+            className={styles.project_details__close_btn}
           >
             x
           </button>
         </div>
 
-        <ImageGallery images={images} title={title} />
+        <ImagesSection images={images} title={title} />
         <p>{description}</p>
 
-        {features && <FeatureList features={features} />}
-        <TechnologyList
+        {features && <FeatureSection features={features} />}
+        <TechnologySection
           technologies={languagesUsed}
           label={Texts[language].project_details.technologies}
         />
 
-        <div className="social_item_div">
+        <div className={styles.project_details__links}>
           <SharedButton href={linkGit} title={Texts[language].project_details.github} />
           {linkLive && (
             <SharedButton href={linkLive} title={Texts[language].project_details.live} />

@@ -7,7 +7,8 @@ import MainRoutes from './routes/MainRoutes';
 import { useAppContext, Background } from './shared';
 
 import './App.css';
-import './shared/styles/_accessibility.scss';
+import './shared/styles/main.scss';
+import './shared/styles/global.scss';
 
 function App(): JSX.Element {
   const { language } = useAppContext();

@@ -1,0 +1,8 @@
+@use '../../styles/main' as *;
+
+.title_span {
+  color: $main-color;
+  background: linear-gradient(135deg, rgba(201, 202, 200, 0.3) 0%, rgba(120, 204, 109, 0.01) 100%);
+  padding: 4px 2px 4px 20px;
+  border-radius: 50%;
+}

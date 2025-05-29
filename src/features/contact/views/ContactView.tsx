@@ -1,11 +1,8 @@
-import FloatingContainer from '../../../shared/components/FloatingContainer';
-import Texts from '../../../shared/utils/texts';
-import LetsConnectSection from '../components/LetsConnectSection';
-import ContactFormSection from '../components/ContactFormSection';
-import '../styles/contact.scss';
-import renderStyledTitle from '../../../shared/utils/renderStyledTitle';
-import useFocus from '../../../shared/utils/useFocus';
-import { useAppContext } from '../../../shared/context/AppContext';
+import LetsConnectSection from '../components/LetsConnectSection/LetsConnectSection';
+import ContactFormSection from '../components/ContactFormSection/ContactFormSection';
+
+import { useAppContext, Title, useFocus, Texts, FloatingContainer } from '../../../shared';
+
 type ContactViewProps = {
   id: string;
 };
@@ -17,9 +14,9 @@ const ContactView = ({ id }: ContactViewProps): JSX.Element => {
   return (
     <FloatingContainer id={id}>
       {/* Dynamic title for 'Get in Touch' */}
-      <div className="content">
-        <div className="component_title">
-          {renderStyledTitle({
+      <div className="view__content">
+        <div className="section__title">
+          {Title({
             title: Texts[language].contact.formTitle,
             id: 'contact-form-section',
             ref: headingRef,
@@ -29,8 +26,8 @@ const ContactView = ({ id }: ContactViewProps): JSX.Element => {
         <ContactFormSection />
 
         {/* Dynamic title for 'Let's connect! */}
-        <div className="component_title">
-          {renderStyledTitle({
+        <div className="section__title">
+          {Title({
             title: Texts[language].contact.getInTouchTitle,
             id: 'lets-connect-section',
           })}

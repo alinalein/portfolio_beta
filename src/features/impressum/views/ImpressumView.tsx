@@ -1,5 +1,5 @@
-import Texts from '../../../shared/utils/texts';
-import { useAppContext } from '../../../shared/context/AppContext';
+import { useAppContext, Texts } from '../../../shared';
+import styles from './ImpressumView.module.scss';
 
 type ImpressumProps = {
   id: string;
@@ -11,7 +11,7 @@ const Impressum = ({ id }: ImpressumProps): JSX.Element => {
   return (
     <section
       aria-labelledby="impressum-heading"
-      className="impressum"
+      className={styles.impressum_page}
       id={id}
       style={{
         marginTop: isWidthGreaterThan1050 ? '0' : '25vh',
@@ -23,7 +23,7 @@ const Impressum = ({ id }: ImpressumProps): JSX.Element => {
       <p>Zauritzweg 9, 10585 Berlin</p>
       <p>
         {Texts[language].impressum.email}{' '}
-        <a href="mailto:leinweber.alina@gmx.de" className="impressum">
+        <a href="mailto:leinweber.alina@gmx.de" className={styles.impressum_link}>
           leinweber.alina@gmx.de
         </a>
       </p>

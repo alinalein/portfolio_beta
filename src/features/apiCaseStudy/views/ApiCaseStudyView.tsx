@@ -1,16 +1,16 @@
 import { useNavigate, useLocation } from 'react-router-dom';
 
-import OverviewTable from '../components/OverviewTable';
-import RestApiDiagram from '../components/RestApiDiagram';
-import CrudSection from '../components/CrudSection';
-import MongoDbSection from '../components/MongoDbSection';
-import SecuritySection from '../components/SecuritySection';
-import DebuggingSection from '../components/DebuggingSection';
-import ChallengesSection from '../components/ChallengesSection';
-import FinalConclusions from '../components/FinalConclusions';
+import OverviewSection from '../components/OverviewSection/OverviewSection';
+import RestApiSection from '../components/RestApiSection/RestApiSection';
+import CrudSection from '../components/CrudSection/CrudSection';
+import MongoDbSection from '../components/MongoDbSection/MongoDbSection';
+import SecuritySection from '../components/SecuritySection/SecuritySection';
+import DebuggingSection from '../components/DebuggingSection/DebuggingSection';
+import ChallengesSection from '../components/ChallengesSection/ChallengesSection';
+import FinalConclusions from '../components/FinalConclusions/FinalConclusions';
 
-import { useAppContext, Texts, SharedButton, useFocus, renderStyledTitle } from '../../../shared';
-import '../styles/apiCaseStudy.scss';
+import { useAppContext, Texts, SharedButton, useFocus, Title } from '../../../shared';
+import styles from './ApiCaseStudyView.module.scss';
 
 const ApiCaseStudyView = (): JSX.Element => {
   const { language } = useAppContext();
@@ -37,18 +37,21 @@ const ApiCaseStudyView = (): JSX.Element => {
   };
 
   return (
-    <main className="case-study-wrapper" aria-labelledby="api-case-study-overview">
+    <main
+      className={`api_case_study ${styles.api_case_study}`}
+      aria-labelledby="api-case-study-overview"
+    >
       <div>
-        {renderStyledTitle({
+        {Title({
           title: Texts[language].case_api.title,
           id: 'api-case-study-overview',
           ref: headingRef,
         })}
       </div>
 
-      <OverviewTable />
-      <div className="case-study-svgs-wrapper">
-        <RestApiDiagram />
+      <OverviewSection />
+      <div className={styles.api_case_study__sections}>
+        <RestApiSection />
         <CrudSection />
         <MongoDbSection />
         <SecuritySection />
@@ -57,7 +60,7 @@ const ApiCaseStudyView = (): JSX.Element => {
         <FinalConclusions />
       </div>
       <SharedButton
-        className={'case-study-button'}
+        className={styles.api_case_study__back_button}
         title={Texts[language].case_api.back_button}
         goBack={goBack}
       />

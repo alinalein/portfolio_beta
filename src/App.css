@@ -1,6 +1,4 @@
 .app_container {
-  /* background-color: rgba(231, 231, 231, 0.2);  - what is that for? */
-  /* overflow: hidden; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,10 +17,6 @@
   align-items: center;
 }
 
-.tools_div {
-  width: 50vw;
-}
-
 @media all and (max-width: 1050px) {
   .app_container {
     height: auto;
@@ -30,10 +24,6 @@
     flex-direction: column;
     overflow: auto;
     scroll-behavior: smooth;
-  }
-
-  .route_container .small-screen {
-    flex-direction: row;
   }
 
   .route_container {

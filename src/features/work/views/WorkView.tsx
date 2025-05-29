@@ -1,14 +1,6 @@
-import WorkGridSection from '../components/WorkGridSection';
+import WorkGridSection from '../components/WorkGridSection/WorkGridSection';
 
-import {
-  useAppContext,
-  useFocus,
-  renderStyledTitle,
-  Texts,
-  FloatingContainer,
-} from '../../../shared';
-
-import '../styles/work.scss';
+import { useAppContext, useFocus, Title, Texts, FloatingContainer } from '../../../shared';
 
 type WorkViewProps = {
   id: string;
@@ -21,9 +13,9 @@ const WorkView = ({ id }: WorkViewProps): JSX.Element => {
 
   return (
     <FloatingContainer id={id}>
-      <div className="content">
-        <div className="component_title">
-          {renderStyledTitle({
+      <div className="view__content">
+        <div className="section__title">
+          {Title({
             title: Texts[language].work.title,
             id: 'work-section',
             ref: headingRef,

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { AppProvider } from './shared/context/AppContext';
 import { HelmetProvider } from 'react-helmet-async';
-import './global.css';
+import './index.css';
 import App from './App';
 
 const rootElement = document.getElementById('root');

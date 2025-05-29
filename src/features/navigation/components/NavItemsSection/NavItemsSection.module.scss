@@ -1,0 +1,9 @@
+@use '../../../../shared/styles/main.scss' as *;
+
+.icon_button__active {
+  color: $main-color;
+
+  svg {
+    fill: $main-color;
+  }
+}

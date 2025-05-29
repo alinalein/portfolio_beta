@@ -1,0 +1,64 @@
+@use '../../../../shared//styles//main' as *;
+.technologies__title {
+  margin: 10px 0;
+}
+.technologies__list {
+  padding-left: 0;
+}
+
+.technologies__item {
+  background: linear-gradient(80deg, rgb(185, 238, 245), $main-color);
+  padding: 4px 7px;
+  border-radius: 5px;
+  margin: 10px 10px 0 0;
+  display: inline-block;
+  box-shadow: 1px 1px 5px rgba(159, 157, 157, 0.3);
+  font-weight: 600;
+  color: black;
+
+  &:hover {
+    animation:
+      toggleRotation 0.5s ease-in-out forwards,
+      colorChange 0.5s ease-in-out forwards;
+  }
+}
+
+@keyframes toggleRotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  30% {
+    transform: rotate(15deg);
+  }
+
+  70% {
+    transform: rotate(-15deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    background: linear-gradient(80deg, rgb(185, 238, 245), $main-color);
+  }
+
+  30% {
+    background: linear-gradient(200deg, rgb(185, 238, 245), $main-color);
+  }
+
+  50% {
+    background: linear-gradient(80deg, rgb(185, 238, 245), $main-color);
+  }
+
+  70% {
+    background: linear-gradient(200deg, rgb(185, 238, 245), $main-color);
+  }
+
+  100% {
+    background: linear-gradient(80deg, rgb(185, 238, 245), $main-color);
+  }
+}
