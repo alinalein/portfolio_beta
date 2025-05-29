@@ -1,0 +1,12 @@
+@use '../../../../shared/styles/main.scss' as *;
+
+.navigation__impressum {
+  color: $text-color-light;
+  font-size: 12px;
+  height: 2vh;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $main-color;
+  }
+}

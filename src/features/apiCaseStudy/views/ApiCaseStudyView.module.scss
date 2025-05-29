@@ -1,0 +1,161 @@
+@use '../../../shared/styles/main.scss' as *;
+
+.api_case_study {
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 999;
+  position: relative;
+  width: 95%;
+  height: 100%;
+  box-shadow: 0 0 10px rgba(159, 157, 157, 0.7);
+  scroll-behavior: smooth;
+  overflow: auto;
+  background:
+    radial-gradient(circle at 30% 30%, rgb(255, 255, 255), transparent 60%),
+    linear-gradient(to bottom right, rgba(249, 249, 249, 0.89), rgba(249, 255, 255, 0.993));
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(159, 157, 157, 0.3);
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $main-color;
+    border-radius: 10px;
+  }
+
+  &__sections {
+    font-family: sans-serif;
+    margin-top: 20px;
+    padding: 10px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 30px; // aligns with center of icons
+      top: 40px;
+      width: 2px;
+      bottom: 0;
+      background-color: rgba(151, 147, 147, 0.3);
+      box-shadow: 0 0 2px rgba(173, 173, 173, 0.9);
+      z-index: -1;
+    }
+  }
+
+  &__back_button {
+    // element on a new line, takes up whole width of parent HTML
+    display: block;
+    position: sticky;
+    border: none;
+    z-index: 999;
+    bottom: 10px;
+    // margin-left:0 doesnt work
+    margin-left: auto;
+    right: 10px;
+    padding: 5px 10px;
+  }
+}
+
+.case_study__section {
+  display: flex;
+  align-items: flex-start;
+}
+
+.case_study__icon.case_study__icon {
+  display: flex;
+  align-items: flex-start;
+  background: linear-gradient(0deg, rgb(185, 238, 245), $main-color);
+  box-shadow: 0 0 10px rgba(112, 110, 110, 0.9);
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 40px;
+  margin-right: 12px;
+  transition: transform 0.5s ease;
+
+  &:hover {
+    transform: scale(0.8);
+  }
+}
+
+.case_study__header {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.case_study__title {
+  margin-top: 10px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+@media (max-width: 1050px) {
+  .api_case_study {
+    margin: 15px;
+
+    &__back_button {
+      position: fixed;
+      bottom: 25px;
+      right: 75px;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .api_case_study__sections {
+    margin-top: 20px;
+    padding: 2px;
+    position: relative;
+    &::before {
+      left: 22px;
+      top: 30px;
+      width: 1px;
+    }
+    &__back_button {
+      right: 55px;
+      font-size: 14px;
+    }
+  }
+
+  .case_study__section {
+    display: flex;
+    align-items: flex-start;
+    font-weight: 400;
+  }
+  .case_study__header {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .case_study__title {
+    margin-top: 5px;
+    font-weight: 600;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 550px) {
+  .api_case_study__back_button {
+    right: 40px;
+    font-size: 13px;
+  }
+  .api_case_study__sections {
+    &::before {
+      left: 18px;
+      top: 30px;
+      width: 1px;
+    }
+  }
+  .case_study__icon.case_study__icon {
+    padding: 10px;
+    font-size: 32px;
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,49 @@
+@use '../../../../shared//styles//main' as *;
+.images {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  white-space: nowrap;
+  max-height: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: auto;
+  border-radius: 4px;
+  flex-shrink: 0; // otherwise img will be cut off
+
+  &__item {
+    height: 250px;
+    width: auto;
+    max-width: 70vw; // makes sure that pic not too big and then gets cuf of because doesnt fit in div
+    object-fit: cover;
+    border-radius: 8px;
+    padding: 0 5px;
+    object-fit: contain;
+  }
+
+  &::-webkit-scrollbar {
+    height: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(159, 157, 157, 0.3);
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $main-color;
+    border-radius: 10px;
+  }
+}
+
+@media all and (max-width: 890px) {
+  .images__item {
+    height: 200px;
+  }
+}
+
+@media all and (max-width: 650px) {
+  .images__item {
+    height: 150px;
+  }
+}

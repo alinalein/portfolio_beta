@@ -1,0 +1,11 @@
+@use '../../../shared//styles/main.scss' as *;
+
+.impressum_page {
+  z-index: 1;
+  align-items: flex-start;
+  color: $text-color-light;
+}
+
+.impressum_link {
+  color: $text-color-light;
+}

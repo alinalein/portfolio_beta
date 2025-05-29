@@ -1,0 +1,68 @@
+@use '../../../shared/styles/main.scss' as *;
+
+.navigation {
+  display: flex;
+  width: 170px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 10px;
+  box-shadow: 0 0 50px rgba(159, 157, 157, 0.3);
+  height: 90vh;
+  border-radius: 5px;
+  position: relative;
+  background-color: $background-color-light;
+  z-index: 999;
+
+  &__text {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  &__intro {
+    width: 180px;
+  }
+}
+
+@media all and (max-width: 1050px) {
+  .navigation {
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    height: 9vh;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 0 10px rgba(159, 157, 157, 0.3);
+    background-color: $background-color-light;
+    border-radius: 0 0 20px 20px;
+    justify-content: space-around;
+
+    &__intro {
+      min-width: 160px;
+      margin: 0 10%;
+    }
+    &__socials {
+      display: none;
+    }
+  }
+}
+
+@media all and (max-width: 750px) {
+  .navigation {
+    height: 6vh;
+    justify-content: space-between;
+
+    &__intro {
+      margin: 0;
+    }
+    &__text {
+      font-size: 10px;
+    }
+  }
+}
+@media all and (max-width: 450px) {
+  .navigation__intro {
+    min-width: 115px;
+  }
+}

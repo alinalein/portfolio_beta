@@ -1,0 +1,28 @@
+.lest_connect__socials {
+  margin: 30px;
+}
+
+.lets_connect__link {
+  width: 20%;
+}
+
+.lets_connect_section {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  max-width: 100%;
+  margin-bottom: 20px;
+
+  &__image {
+    width: 100%;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 2px;
+  }
+}
+
+@media all and (max-width: 1050px) {
+  .lets_connect_section {
+    margin-bottom: 5px;
+  }
+}

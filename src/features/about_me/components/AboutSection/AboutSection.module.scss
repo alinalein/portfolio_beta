@@ -1,0 +1,26 @@
+@use '../../../../shared/styles/main.scss' as *;
+
+.about__image {
+  max-width: 25%;
+  border-radius: 40%;
+  height: auto;
+  margin: auto 2.5%;
+}
+
+@media all and (max-width: 750px) {
+  .about__image {
+    width: 20vw;
+  }
+}
+
+.about__text {
+  align-items: left;
+  text-align: left;
+  width: 90%;
+  flex-direction: column;
+  margin: 0 10px;
+}
+
+.about__resume_link {
+  color: $main-color;
+}

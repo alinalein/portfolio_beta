@@ -1,0 +1,32 @@
+@use '../../../../shared/styles/main.scss' as *;
+
+.background__layout {
+  margin: -10px auto 10px auto;
+}
+
+.background__text {
+  text-align: left;
+  padding: 0 10px;
+  margin: -15px 0;
+}
+
+.background__image {
+  float: right;
+  margin: 0 10px;
+  border-radius: 5px;
+  border: 2px solid $main-color;
+  max-width: 400px;
+  height: auto;
+}
+
+@media all and (max-width: 950px) {
+  .background__layout {
+    flex-direction: column;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .background__image {
+    max-width: 300px;
+  }
+}

@@ -1,0 +1,15 @@
+@use '../../../../shared/styles/main.scss';
+
+.typing_section {
+  font-family: monospace;
+  font-size: 15px;
+  position: relative;
+  white-space: nowrap;
+  color: var(--main-color);
+  padding: 2% 0;
+
+  &__text {
+    font-weight: bold;
+    margin-left: 2px;
+  }
+}

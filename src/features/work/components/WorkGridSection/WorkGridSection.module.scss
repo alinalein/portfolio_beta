@@ -1,0 +1,105 @@
+@use '../../../../shared/styles/main' as *;
+
+.work {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  margin: 30px 20% 10px 20%;
+  grid-gap: 10px 20px;
+
+  &__item {
+    margin: 0 0 10px 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    .work__item_title {
+      margin: 5px 0;
+      transition: color 0.5s ease;
+      padding: 5px 0;
+      font-size: 15px;
+    }
+
+    // effect will apply when hover over work_grid_item
+    &:hover {
+      .work__image_wrapper {
+        .work__image {
+          transform: scale(1.05);
+        }
+
+        .work__overlay {
+          opacity: 0.8;
+        }
+      }
+
+      .work__item_title {
+        color: $main-color;
+      }
+    }
+  }
+}
+
+.work__image_wrapper {
+  position: relative;
+  width: 30vw;
+  height: 25vh;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.work__image {
+  // centers the img in the div / if needed adjust width
+  max-width: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.work__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(120deg, $main-color, rgba(185, 238, 245, 0.2));
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.work__overlay_plus {
+  color: rgba(231, 231, 231, 0.95);
+  font-size: 50px;
+  position: relative;
+  bottom: 0%;
+  left: 0%;
+}
+.work__details_container {
+  display: flex;
+  overflow: auto;
+  gap: 10px;
+  /* Space between images */
+  max-width: 100%;
+}
+@media all and (max-width: 1050px) {
+  .work {
+    margin: 40px 15% auto 15%;
+
+    &__image_wrapper {
+      width: 40vw;
+      height: 150px;
+    }
+    &__item_title {
+      font-size: 14px;
+    }
+  }
+}
+
+@media all and (max-width: 650px) {
+  .work {
+    grid-template-columns: 1fr;
+
+    &__image_wrapper {
+      width: 70vw;
+      height: 140px;
+    }
+  }
+}

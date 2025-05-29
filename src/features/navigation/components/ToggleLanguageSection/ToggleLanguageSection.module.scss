@@ -1,0 +1,70 @@
+@use '../../../../shared/styles/main.scss' as *;
+
+.language_toggle {
+  position: relative;
+  display: flex;
+  width: 65%;
+  height: 6vh;
+  background-color: $background-color-light; // Background of the switch
+  border-radius: 25px;
+  border: 2px solid $main-color;
+  box-sizing: border-box; // Border color
+  overflow: hidden;
+
+  &__option {
+    width: 50%; // Each option takes 50% of the container
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $text-color-light;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    transition: color 0.3s;
+  }
+
+  &__indicator {
+    position: absolute;
+    width: 50%; // Same width as a single option
+    height: 100%;
+    background-color: rgba(51, 180, 197, 0.8); // Background for the active option
+    border-radius: 25px;
+    border: 3px solid transparent;
+    transition: all 0.3s ease;
+
+    &.active_en {
+      left: 0;
+    }
+
+    &.active_de {
+      left: 50%;
+    }
+  }
+}
+
+@media all and (max-width: 1050px) {
+  .language_toggle {
+    height: 7vh;
+    margin: 0 5px;
+    width: 80%;
+    font-size: 5px;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .language_toggle {
+    font-size: 10px;
+    height: 5vh;
+    margin: 0 3px;
+    width: 100%;
+    &__option {
+      font-size: 10px;
+    }
+  }
+}
+@media all and (max-width: 500px) {
+  .language_toggle__option {
+    font-size: 8px;
+  }
+}

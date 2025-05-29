@@ -1,0 +1,100 @@
+@use './variables' as *;
+/* floating container */
+body.dark-mode .floating_container {
+  background-color: $background-color-dark;
+  color: $text-color-dark;
+}
+
+/* social links */
+body.dark-mode .social_items__icon {
+  color: $text-color-dark;
+}
+
+/* contact  */
+body.dark-mode .contact_form__input,
+body.dark-mode .contact_form__textarea {
+  color: $text-color-dark;
+}
+
+/* navigation  */
+body.dark-mode .navigation,
+body.dark-mode .language_toggle {
+  background-color: $background-color-dark;
+  color: $text-color-dark;
+}
+
+body.dark-mode .impressum__link,
+body.dark-mode .icon_button,
+body.dark-mode .language_toggle__option {
+  color: $text-color-dark;
+}
+
+body.dark-mode .impressum__link:hover,
+body.dark-mode .icon_button:hover {
+  color: $main-color;
+}
+
+/* background */
+body.dark-mode .bubbles_animation {
+  background-color: $background-color-dark;
+}
+
+body.dark-mode .bubbles_container {
+  background: linear-gradient(180deg, $main-color, rgb(78, 111, 116));
+}
+
+/* impressum */
+body.dark-mode .impressum {
+  color: $text-color-dark;
+}
+
+/* work  */
+body.dark-mode .work_grid_item p,
+body.dark-mode .work__item_title {
+  color: $text-color-dark;
+}
+
+/* project_details */
+body.dark-mode .modal_div {
+  background-color: $background-color-dark;
+  color: $text-color-dark;
+}
+
+/* apiCaseStudy */
+body.dark-mode .api_case_study {
+  background:
+    radial-gradient(circle at 30% 40%, $background-color-dark, transparent 60%),
+    radial-gradient(circle at 70% 70%, $background-color-dark, transparent 60%),
+    linear-gradient(to bottom right, rgba(14, 14, 14, 0.89), rgb(89, 155, 168));
+
+  color: $text-color-dark;
+}
+
+body.dark-mode .case_study__icon,
+body.dark-mode .case_study__table th {
+  background: linear-gradient(180deg, $main-color, rgb(78, 111, 116));
+}
+
+body.dark-mode .crud__glow_frame {
+  background: rgb(63, 63, 63);
+}
+
+body.dark-mode .mongo__code,
+body.dark-mode .auth_section__label,
+body.dark-mode .challenges_section__code {
+  color: $main-color;
+}
+
+body.dark-mode .debugging_section__circle {
+  box-shadow: inset 0 0 35px rgba(7, 22, 23, 0.8);
+  background-color: #287984e3;
+  &:hover {
+    box-shadow:
+      0 0 25px $main-color,
+      inset 0 0 15px rgba(255, 255, 255, 0.4);
+  }
+}
+
+body.dark-mode .final_section__puzzle_icon_second {
+  fill: black;
+}

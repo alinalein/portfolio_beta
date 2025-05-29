@@ -1,0 +1,16 @@
+.features__title {
+  margin-bottom: 5px;
+}
+.features__list {
+  padding-left: 0;
+}
+.features_item {
+  display: flex;
+  align-items: flex-start;
+  /* Aligns bullet and text at the top */
+  margin-bottom: 2px;
+} /* Adds space between items */
+.features__bullet {
+  margin-right: 10px;
+  flex-shrink: 0;
+}
