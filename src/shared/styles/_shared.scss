@@ -76,6 +76,7 @@
     font-size: 25px;
   }
 }
+
 .impressum__link {
   color: $text-color-light;
   font-size: 12px;
@@ -86,6 +87,7 @@
     color: $main-color;
   }
 }
+
 @media all and (max-width: 1050px) {
   .view__content {
     overflow: visible;

@@ -1,13 +1,3 @@
-/* nachdem in die eizelnne ordner verschoben , dann löschen  */
-
-:root {
-  --background-color-light: rgb(241, 247, 247);
-  --text-color-light: black;
-  --background-color-dark: rgb(63, 63, 63);
-  --text-color-dark: rgba(218, 213, 213, 0.842);
-  --main-color: #33b4c5e3;
-}
-
 * {
   box-sizing: border-box;
 }

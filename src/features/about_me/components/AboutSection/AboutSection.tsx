@@ -52,7 +52,7 @@ const AboutSection = (): JSX.Element => {
           rel="noopener noreferrer"
           target="_blank"
         >
-          {language === 'en' ? 'Download resume (PDF)' : 'Lebenslauf herunterladen (PDF)'}
+          {language === 'en' ? 'Open resume (PDF)' : 'Lebenslauf öffnen (PDF)'}
         </a>
       </div>
     </section>
