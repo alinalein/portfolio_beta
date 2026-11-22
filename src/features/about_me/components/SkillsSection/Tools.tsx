@@ -56,7 +56,7 @@ const Tools = (): JSX.Element => {
     { src: SQL, alt: 'SQL' },
     { src: AWS, alt: 'AWS' },
   ];
-  //takes the svg array and puts it a new one and does thsie twice, so in new array all items from svgs are twice
+  //   takes the svg array and puts it a new one and does thsie twice, so in new array all items from svgs are twice
   const doubledSvgs = [...svgs, ...svgs];
 
   useEffect(() => {
@@ -64,7 +64,7 @@ const Tools = (): JSX.Element => {
     if (prefersReducedMotion) return;
 
     const sequence = async () => {
-      // X * svgs.length; -> x is the speed
+      //      X * svgs.length; -> x is the speed
       // if last icon jumps to the left, increase X
       // if the last icon jumps to the right, decrease X
       const totalWidth = 88.3 * svgs.length;

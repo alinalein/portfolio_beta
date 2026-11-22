@@ -9,3 +9,8 @@
 .impressum_link {
   color: $text-color-light;
 }
+
+:global(body.dark-mode) .impressum_page,
+:global(body.dark-mode) .impressum_link {
+  color: $text-color-dark;
+}

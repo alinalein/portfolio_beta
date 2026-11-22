@@ -98,20 +98,26 @@ const Texts = {
       skillsTitle: 'Skills & Technologies',
       backgroundTitle: 'My background',
       backgroundText: `With over five years of experience in Sales and Customer Success, primarily in the SaaS industry, 
-            I have spent the past three years as a Customer Success Manager, handling sensitive CRM data and working closely with product teams to improve our software.
-            I contribute to CRM data documentation, assist in troubleshooting software issues for clients through cross-functional teamwork, and enjoy brainstorming with my team to boost the customer experience.
-            Additionally, I have two years of experience in software troubleshooting and three years in digital solutions, which have helped me build solid technical expertise.
-             \n\nThrough this role, I have gained a solid understanding of user needs, software functionality, and the importance of clear, effective communication between technical and non-technical teams, all while strengthening my problem-solving skills.`,
+            I developed a strong understanding of customer needs, software functionality, and digital products.
+            As a Customer Success Manager, I worked closely with product and engineering teams, supported software troubleshooting, managed CRM data, and contributed to improving the overall customer experience.
+
+            \n\nOver the past years, I transitioned into software development and gained hands-on experience as a Founding Engineer in a SaaS startup and later as a Software Engineer. 
+            This combination of technical experience and customer-focused expertise allows me to build solutions that are not only functional but also aligned with real user needs.
+
+            \n\nI value clear communication between technical and non-technical teams and enjoy solving complex problems through structured thinking, collaboration, and continuous learning.`,
       whyCodingTitle: 'Why coding?',
-      whyCodingText: `**Working in a SaaS company** in a customer-focused role sparked my interest in web development. 
-            As a Customer Success Manager, I often assisted in troubleshooting software issues and acted as an intermediary. 
-            Wanting to improve efficiency and contribute more directly, I took the initiative and began teaching myself coding two years ago. 
-            I quickly became fascinated by it and enrolled in a Full Stack Web Developer course at CareerFoundry, driven by a desire to keep learning. 
-            \n\n**My coding journey** is fueled by a passion for creating user-friendly experiences, I enjoy every aspect of building interactive apps—from front-end to back-end development.
-            I find the debugging process especially thrilling, it feels like detective work, solving puzzles and uncovering the root cause of issues. 
-             \n\n**As a web developer**, I prioritize writing clean, well-structured code and building layouts that are both visually appealing and efficient, designed to perform seamlessly on any device.
-            I create interfaces that are easy to use and accessible, making sure every user can navigate smoothly and have a great experience. Just as I guided customers to success in my current role, I now aim to guide users through digital interfaces with ease. 
-            \n\nI'm excited to finally transition my career into the field I would love to work in and make a meaningful impact—**coding**!`,
+      whyCodingText: `**Working in a SaaS company** in a customer-focused role sparked my interest in software development. 
+        As a Customer Success Manager, I regularly supported troubleshooting processes and worked closely with product and engineering teams. 
+        I wanted to contribute more directly to solving technical challenges, which led me to start learning how to code and eventually transition into software development.
+
+        \n\n**My passion for coding** comes from building solutions that create real value for users. 
+        I enjoy working across the stack, from developing intuitive front-end interfaces to building reliable back-end functionality. 
+        The debugging process is especially rewarding to me — understanding complex problems, finding their root cause, and creating effective solutions feels like solving a puzzle.
+
+        \n\n**As a Software Engineer**, I focus on writing clean, maintainable code and creating digital products that are intuitive, accessible, and user-focused. 
+        My background in Customer Success gives me a unique perspective on user needs and helps me build solutions that are not only technically sound but also provide a great experience.
+
+        \n\nToday, I combine my technical skills with my experience in SaaS and customer experience to build products that solve real problems and make a meaningful impact.`,
     },
     contact: {
       formTitle: 'Get in touch',
@@ -322,23 +328,25 @@ scratch while ensuring a seamless connection between them.`,
             Diese Neugier und Entschlossenheit spiegeln sich auch in meinen Coding-Projekten wider, in denen ich mit einem lösungsorientierten Ansatz meine Kenntnisse in HTML, CSS, JavaScript, React, TypeScript, Node.js und Debugging einbringe.`,
       skillsTitle: 'Skills & Technologien',
       backgroundTitle: 'Werdegang',
-      backgroundText: `Ich habe über fünf Jahre Erfahrung in Sales und Customer Success, davon drei Jahre als Customer Success Manager in der SaaS-Branche. 
-            Dabei betreue ich sensible CRM-Daten, unterstütze bei der Lösung von Softwareproblemen und arbeite eng mit Produktteams an der Weiterentwicklung unserer Software. 
-            Gemeinsam mit meinem Team arbeite ich stetig an Ideen zur Verbesserung der Kundenerfahrung. Zusätzlich habe ich zwei Jahre Erfahrung in der Software-Fehlerbehebung 
-            und drei Jahre im Bereich digitaler Lösungen gesammelt, wodurch ich mir technische Expertise aufbauen konnte.
-            \n\nIn dieser Tätigkeit habe ich viel gelernt über die Bedürfnisse der User, die Funktionalität der Software und wie wichtig klare Kommunikation zwischen technischen und nicht-technischen Teams ist. 
-            Gleichzeitig konnte ich immer besser Probleme lösen und mich mit digitalen Herausforderungen auseinandersetzen.`,
+      backgroundText: `Ich habe vier Jahre Erfahrung als Customer Success Manager in der SaaS-Branche.
+            Dabei betreute ich sensible CRM-Daten, unterstützte bei der Lösung von Softwareproblemen und arbeitete eng mit Produktteams an der Weiterentwicklung unserer Software.
+            Gemeinsam mit meinem Team entwickelte ich Ideen zur Verbesserung der Customer Experience. Zusätzlich sammelte ich zwei Jahre Erfahrung in der Software-Fehlerbehebung und drei Jahre im Bereich digitaler Lösungen, wodurch ich mir ein solides technisches Verständnis aufbauen konnte.
+
+            \n\nDer Wechsel in die Softwareentwicklung war für mich der nächste logische Schritt. Nach meiner Weiterbildung zum Full-Stack Web Developer arbeitete ich zunächst als Founding Engineer in einem SaaS-Startup. Dort war ich maßgeblich am Aufbau und der Weiterentwicklung des Produkts beteiligt und übernahm Verantwortung für Frontend-, Backend- und Produktentwicklung. Anschließend vertiefte ich meine Erfahrung als Software Engineer und arbeitete dort an der Entwicklung moderner Webanwendungen.
+
+            \n\nDurch meine Erfahrung an der Schnittstelle zwischen Kunden, Produkt und Entwicklung kann ich technische Herausforderungen aus verschiedenen Perspektiven betrachten und Lösungen entwickeln, die nachhaltig und benutzerorientiert sind.`,
       whyCodingTitle: 'Warum Coding?',
       whyCodingText: `**Die Arbeit in einem SaaS-Unternehmen** in einer kundenorientierten Rolle weckte mein Interesse an der Webentwicklung. 
-            Als Customer Success Manager unterstützte ich oft bei der Fehlerbehebung von Softwareproblemen und fungierte als Vermittler. 
-            Ich wollte mehr zum Problemlösen beitragen und den Prozess beschleunigen, deshalb ergriff ich die Initiative und begann vor zwei Jahren, mir das Programmieren selbst beizubringen. 
-           Ich war schnell begeistert und meldete mich bei CareerFoundry zu einem Full-Stack-Web-Developer-Kurs an. Mein Ziel: meine Kenntnisse immer weiter auszubauen.
-            \n\n**Meine Leidenschaft** für die Entwicklung interaktiver Apps treibt mich an, 
-            stets bessere Lösungen zu schaffen. Ich genieße sowohl die Front-End- als auch die Back-End-Entwicklung und finde den Debugging-Prozess besonders spannend – wie ein Detektiv löse ich Rätsel und gehe Problemen auf den Grund.
-            \n\n**Als Web Developer** lege ich großen Wert auf sauberen, strukturierten Code und gestalte User Interfaces, die intuitiv, barrierefrei und geräteübergreifend nutzbar sind. 
-            Ich will ansprechende und funktionale digitale Lösungen schaffen, die den Usern eine mühelose und sichere Orientierung ermöglichen. Ich habe bereits erfolgreich Kunden unterstützt und freue mich darauf, 
-            meine Fähigkeiten einzubringen, um die digitale User Experience weiter zu optimieren.
-            \n\nIch freue mich wirklich sehr, dass ich nun endlich die Möglichkeit erhalte, mich in dem Bereich zu verwirklichen, in dem ich schon lange arbeiten möchte – **Coding**!`,
+            Als Customer Success Manager unterstützte ich häufig bei der Fehlerbehebung von Softwareproblemen und arbeitete eng mit Entwicklungsteams zusammen. 
+            Dabei entstand der Wunsch, nicht nur Probleme zu analysieren, sondern selbst Lösungen zu entwickeln. Deshalb begann ich, mir das Programmieren beizubringen und absolvierte anschließend einen Full-Stack-Web-Developer-Kurs bei CareerFoundry.
+
+            \n\n**Meine Leidenschaft** für die Entwicklung interaktiver Anwendungen treibt mich an, kontinuierlich bessere Lösungen zu schaffen. 
+            Ich arbeite gerne sowohl im Frontend als auch im Backend und finde besonders den Debugging-Prozess spannend – Probleme zu analysieren, Ursachen zu verstehen und nachhaltige Lösungen zu entwickeln.
+
+            \n\n**Als Software Engineer** lege ich großen Wert auf sauberen, strukturierten Code und entwickle User Interfaces, die intuitiv, barrierefrei und geräteübergreifend nutzbar sind. 
+            Durch meine Erfahrung im Customer Success habe ich zusätzlich ein starkes Verständnis für Nutzerbedürfnisse und die Bedeutung einer guten User Experience.
+
+            \n\nMeine Erfahrung aus der SaaS-Welt hilft mir dabei, technische Entscheidungen mit einem klaren Verständnis für Nutzerbedürfnisse zu verbinden und Lösungen zu entwickeln, die einfach, zuverlässig und intuitiv sind.`,
     },
     contact: {
       formTitle: 'Melde dich gerne bei mir',
