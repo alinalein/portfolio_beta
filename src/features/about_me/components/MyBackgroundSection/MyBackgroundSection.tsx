@@ -19,7 +19,8 @@ const MyBackground = (): JSX.Element => {
           </p>
         ))}
       </div>
-      <img
+      {/* Customer Success Image */}
+      {/* <img
         src={CSM}
         alt={
           language === 'en'
@@ -27,7 +28,7 @@ const MyBackground = (): JSX.Element => {
             : 'Darstellung der Aufgaben eines Customer Success Managers'
         }
         className={styles.background__image}
-      />
+      /> */}
     </section>
   );
 };

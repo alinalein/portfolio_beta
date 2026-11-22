@@ -8,6 +8,12 @@ import styles from './AboutSection.module.scss';
 
 const AboutSection = (): JSX.Element => {
   const { language } = useAppContext();
+  const bold = (text: string) =>
+    text
+      .split(
+        /\b(TypeScript|React|Node\.js|SaaS|AI Engineering|Full-Stack Developer|LLM Applications|RAG|AI Agents|LLM-Anwendungen)\b/i
+      )
+      .map((part, i) => (i % 2 ? <strong key={i}>{part}</strong> : part));
 
   return (
     <section className="about__section_layout" aria-labelledby="about-heading">
@@ -18,42 +24,22 @@ const AboutSection = (): JSX.Element => {
       />
 
       <div className={styles.about__text} lang={language}>
-        <p className="p__no_margin">{Texts[language].about.welcomeText}</p>
-        <p>
-          {Texts[language].about.description.split('\n').map((line, index) => (
-            <span key={index}>
-              {line.split(' ').map((word, wordIndex) => {
-                const technologiesToBold = [
-                  'HTML',
-                  'CSS',
-                  'JavaScript',
-                  'React',
-                  'TypeScript',
-                  'Node.js',
-                ];
-                const cleanedWord = word.replace(/[,]/g, ''); // Remove commas only.
-
-                const isBold = technologiesToBold.some(
-                  (tech) => cleanedWord.toLowerCase() === tech.toLowerCase()
-                );
-
-                return (
-                  <React.Fragment key={wordIndex}>
-                    {isBold ? <strong>{word}</strong> : word}{' '}
-                  </React.Fragment>
-                );
-              })}
-            </span>
-          ))}
-        </p>
-        <a
+        {/* <p className="p__no_margin">{Texts[language].about.welcomeText}</p> */}
+        {Texts[language].about.welcomeText.map((paragraph, index) => (
+          <p className="p__no_margin" key={index}>
+            {bold(paragraph)}
+          </p>
+        ))}
+        <p>{bold(Texts[language].about.description)}</p>
+        {/* link to download the CV  */}
+        {/* <a
           href={language === 'en' ? CV_en : CV_ger}
           className={styles.about__resume_link}
           rel="noopener noreferrer"
           target="_blank"
         >
           {language === 'en' ? 'Download resume (PDF)' : 'Lebenslauf herunterladen (PDF)'}
-        </a>
+        </a> */}
       </div>
     </section>
   );

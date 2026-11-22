@@ -91,33 +91,31 @@ const Texts = {
     },
     about: {
       title: 'About me',
-      welcomeText:
-        'Welcome to my page! I am Alina, a newly certified Full-Stack Web Developer living all over the world but mostly in Berlin.🖤',
+      welcomeText: [
+        'Welcome to my page!',
+        "I'm Alina, a Full-Stack Developer focused on TypeScript, React and Node.js. In SaaS teams, I've implemented features, integrated REST APIs and analyzed bugs across frontend, backend and deployment. I'm currently expanding my skills in AI Engineering (LLM Applications, RAG, AI Agents).",
+        'I live all over the world, but my home base is Berlin. 🖤',
+      ],
       description: `I enjoy exploring new places and challenging myself with activities like escape rooms, skydiving and hiking unfamiliar trails. 
-            I bring the same curiosity, determination, and problem-solving mindset to my coding projects, where I apply my skills in HTML, CSS, JavaScript, React, TypeScript, Node.js, and debugging.`,
+            I bring the same curiosity, determination, and problem-solving mindset to my coding projects.`,
       skillsTitle: 'Skills & Technologies',
       backgroundTitle: 'My background',
-      backgroundText: `With over five years of experience in Sales and Customer Success, primarily in the SaaS industry, 
+      backgroundText: `With **over five years of experience in Sales and Customer Success**, primarily in the SaaS industry, 
             I developed a strong understanding of customer needs, software functionality, and digital products.
             As a Customer Success Manager, I worked closely with product and engineering teams, supported software troubleshooting, managed CRM data, and contributed to improving the overall customer experience.
 
-            \n\nOver the past years, I transitioned into software development and gained hands-on experience as a Founding Engineer in a SaaS startup and later as a Software Engineer. 
-            This combination of technical experience and customer-focused expertise allows me to build solutions that are not only functional but also aligned with real user needs.
+            \n\nOver the past year, **I transitioned into software development** and gained hands-on experience as a Founding Engineer in a SaaS startup and later as a Software Engineer. 
+            This combination of **technical experience and customer-focused expertise** allows me to build solutions that are not only functional but also aligned with real user needs.
 
-            \n\nI value clear communication between technical and non-technical teams and enjoy solving complex problems through structured thinking, collaboration, and continuous learning.`,
+            \n\nI value **clear communication between technical and non-technical teams** and enjoy solving complex problems through structured thinking, collaboration, and continuous learning.`,
       whyCodingTitle: 'Why coding?',
-      whyCodingText: `**Working in a SaaS company** in a customer-focused role sparked my interest in software development. 
-        As a Customer Success Manager, I regularly supported troubleshooting processes and worked closely with product and engineering teams. 
-        I wanted to contribute more directly to solving technical challenges, which led me to start learning how to code and eventually transition into software development.
+      whyCodingText: `**I understand both sides.** Working in sales and customer success, I’ve seen where software falls short in everyday use and where users really get stuck. I didn’t just want to report these problems—I wanted to solve them myself.
+      
+        \n\n**I work across the entire stack—frontend, backend, and deployment.** I analyze errors across all layers and look for the root cause rather than just fixing the symptoms. For me, debugging isn’t a chore—it’s the most exciting part of the job.
 
-        \n\n**My passion for coding** comes from building solutions that create real value for users. 
-        I enjoy working across the stack, from developing intuitive front-end interfaces to building reliable back-end functionality. 
-        The debugging process is especially rewarding to me — understanding complex problems, finding their root cause, and creating effective solutions feels like solving a puzzle.
+        \n\n**I think in terms of architecture and requirements.** Clean structure, clear user stories, and interfaces that are intuitive, accessible, and work on any device.
 
-        \n\n**As a Software Engineer**, I focus on writing clean, maintainable code and creating digital products that are intuitive, accessible, and user-focused. 
-        My background in Customer Success gives me a unique perspective on user needs and helps me build solutions that are not only technically sound but also provide a great experience.
-
-        \n\nToday, I combine my technical skills with my experience in SaaS and customer experience to build products that solve real problems and make a meaningful impact.`,
+        \n\n**For me, AI is a tool that I control and evaluate.** As part of my continuing education in AI engineering, I build LLM applications, RAG systems, and AI agents. In my day-to-day work, I take a specification-driven approach: I define architecture and requirements, guide AI coding agents during implementation, and take responsibility for the final result.`,
     },
     contact: {
       formTitle: 'Get in touch',
@@ -173,7 +171,7 @@ scratch while ensuring a seamless connection between them.`,
       mongodb: {
         tag: 'Mongo Database',
         introduction_1: `In a software application, a database is used to store all kinds of information, 
-                like  product catalogs.`,
+                like product catalogs.`,
         introduction_2:
           'A MongoDB database stores this data in an easy-to-read format, similar to a list:',
       },
@@ -243,11 +241,11 @@ scratch while ensuring a seamless connection between them.`,
         angular: {
           title: 'Angular myFlix',
           description:
-            'Dies ist das Angular-Front-End für das Movie_API-Back-End-Projekt. Die App bietet verschiedene Interface-Ansichten und ermöglicht es Usern über die REST-API-Endpunkte des Movie_API-Servers auf die Daten in der Datenbank zuzugreifen.',
+            'Dies ist das Angular-Front-End für das Movie_API-Back-End-Projekt. Die App bietet verschiedene Interface-Ansichten und ermöglicht es Usern, über die REST-API-Endpunkte des Movie_API-Servers auf die Daten in der Datenbank zuzugreifen.',
           features: [
             'Willkommensseite: User können sich anmelden oder ein neues Konto erstellen.',
             'Filmliste: Zeigt alle Filme für angemeldete User an.',
-            'Filmkarten: Jede Filmkarte enthält Buttons, um Infos zum Film, Genre oder Regisseur anzusehen. Zusätzlich können User hier Filme zur Favoritenliste hinzufügen oder entfernen',
+            'Filmkarten: Jede Filmkarte enthält Buttons, um Infos zum Film, Genre oder Regisseur anzusehen. Zusätzlich können User hier Filme zur Favoritenliste hinzufügen oder entfernen.',
             'Profilseite: User können ihre Daten ansehen und aktualisieren oder ihr Profil löschen. Ebenso sind hier die Lieblingsfilme des jeweiligen Users gelistet.',
             'Navigation: Icons für Profil, alle Filme und zum Abmelden aus dem Profil.',
           ],
@@ -290,7 +288,7 @@ scratch while ensuring a seamless connection between them.`,
         react: {
           title: 'React myFlix',
           description:
-            'Dies ist das React-Front-End für das Movie_API-Back-End-Projekt. Die App bietet verschiedene Interface-Ansichten und ermöglicht es Usern über die REST-API-Endpunkte des Movie_API-Servers auf die Daten in der Datenbank zuzugreifen.',
+            'Dies ist das React-Front-End für das Movie_API-Back-End-Projekt. Die App bietet verschiedene Interface-Ansichten und ermöglicht es Usern, über die REST-API-Endpunkte des Movie_API-Servers auf die Daten in der Datenbank zuzugreifen.',
           features: [
             'Willkommensseite: User können sich anmelden oder ein neues Konto erstellen.',
             'Filmliste: Zeigt alle Filme für angemeldete User an, bietet Filteroptionen nach Genre, eine Titelsuche sowie Optionen zum Hinzufügen oder Entfernen von Favoriten.',
@@ -321,32 +319,38 @@ scratch while ensuring a seamless connection between them.`,
     },
     about: {
       title: 'Über mich',
-      welcomeText: `Hallo und willkommen auf meiner Seite! Hallo, ich bin Alina, frisch zertifizierte Full-Stack Web Developer.
-            Ich lebe überall auf der Welt, aber mein Hauptsitz ist Berlin.🖤`,
-      description: `Ich liebe es, neue Orte zu entdecken und mich Herausforderungen zu stellen – sei es in Escape Rooms, 
+      welcomeText: [
+        'Willkommen auf meiner Seite!',
+        'Ich bin Alina, Full-Stack Developer mit Schwerpunkt TypeScript, React und Node.js. Ich habe in SaaS-Teams Features umgesetzt, REST-APIs integriert und Fehler über Frontend, Backend und Deployment hinweg analysiert. Aktuell bilde ich mich im Bereich AI Engineering weiter (LLM-Anwendungen, RAG, AI Agents).',
+        'Ich lebe überall auf der Welt, aber mein Hauptsitz ist Berlin. 🖤',
+      ],
+      description: `Ich liebe es, neue Orte zu entdecken und mich Herausforderungen zu stellen, sei es in Escape Rooms, 
             beim Fallschirmspringen oder auf abenteuerlichen Wanderungen abseits bekannter Pfade. 
-            Diese Neugier und Entschlossenheit spiegeln sich auch in meinen Coding-Projekten wider, in denen ich mit einem lösungsorientierten Ansatz meine Kenntnisse in HTML, CSS, JavaScript, React, TypeScript, Node.js und Debugging einbringe.`,
+            Diese Neugier und Entschlossenheit spiegeln sich auch in meinen Coding-Projekten wider, in denen ich mit einem lösungsorientierten Ansatz meine Kenntnisse einbringe.`,
       skillsTitle: 'Skills & Technologien',
       backgroundTitle: 'Werdegang',
-      backgroundText: `Ich habe vier Jahre Erfahrung als Customer Success Manager in der SaaS-Branche.
-            Dabei betreute ich sensible CRM-Daten, unterstützte bei der Lösung von Softwareproblemen und arbeitete eng mit Produktteams an der Weiterentwicklung unserer Software.
-            Gemeinsam mit meinem Team entwickelte ich Ideen zur Verbesserung der Customer Experience. Zusätzlich sammelte ich zwei Jahre Erfahrung in der Software-Fehlerbehebung und drei Jahre im Bereich digitaler Lösungen, wodurch ich mir ein solides technisches Verständnis aufbauen konnte.
+      backgroundText: `Mit **über fünf Jahren Erfahrung in den Bereichen Vertrieb und Customer Success**, 
+      vor allem in der SaaS-Branche, habe ich ein tiefes Verständnis für Kundenbedürfnisse, Softwarefunktionalitäten 
+      und digitale Produkte entwickelt. Als Customer Success Manager habe ich eng mit Produkt- und Entwicklungsteams zusammengearbeitet, 
+      bei der Fehlerbehebung in der Software unterstützt, CRM-Daten verwaltet und zur Verbesserung des gesamten Kundenerlebnisses beigetragen.
 
-            \n\nDer Wechsel in die Softwareentwicklung war für mich der nächste logische Schritt. Nach meiner Weiterbildung zum Full-Stack Web Developer arbeitete ich zunächst als Founding Engineer in einem SaaS-Startup. Dort war ich maßgeblich am Aufbau und der Weiterentwicklung des Produkts beteiligt und übernahm Verantwortung für Frontend-, Backend- und Produktentwicklung. Anschließend vertiefte ich meine Erfahrung als Software Engineer und arbeitete dort an der Entwicklung moderner Webanwendungen.
-
-            \n\nDurch meine Erfahrung an der Schnittstelle zwischen Kunden, Produkt und Entwicklung kann ich technische Herausforderungen aus verschiedenen Perspektiven betrachten und Lösungen entwickeln, die nachhaltig und benutzerorientiert sind.`,
+            \n\nIm vergangenen Jahr habe ich den **Wechsel in die Softwareentwicklung** vollzogen 
+            und praktische Erfahrungen als Gründungsingenieur in einem SaaS-Start-up und später 
+            als Softwareentwickler gesammelt. Diese **Kombination aus technischer Erfahrung und kundenorientiertem 
+            Fachwissen** ermöglicht es mir, Lösungen zu entwickeln, die nicht nur funktional sind, sondern auch den 
+            tatsächlichen Bedürfnissen der Nutzer entsprechen.
+           
+            \n\nMir ist **klare Kommunikation zwischen technischen und nicht-technischen Teams** wichtig. Dazu habe ich
+            Freude daran, komplexe Probleme durch strukturiertes Denken, Zusammenarbeit und kontinuierliches Lernen zu lösen.`,
       whyCodingTitle: 'Warum Coding?',
-      whyCodingText: `**Die Arbeit in einem SaaS-Unternehmen** in einer kundenorientierten Rolle weckte mein Interesse an der Webentwicklung. 
-            Als Customer Success Manager unterstützte ich häufig bei der Fehlerbehebung von Softwareproblemen und arbeitete eng mit Entwicklungsteams zusammen. 
-            Dabei entstand der Wunsch, nicht nur Probleme zu analysieren, sondern selbst Lösungen zu entwickeln. Deshalb begann ich, mir das Programmieren beizubringen und absolvierte anschließend einen Full-Stack-Web-Developer-Kurs bei CareerFoundry.
+      whyCodingText: `**Ich verstehe beide Seiten.** In Sales und Customer Success habe ich gesehen, 
+      woran Software im Alltag scheitert und woran Nutzer wirklich hängen bleiben. Ich wollte diese Probleme nicht nur melden, sondern selbst lösen.
 
-            \n\n**Meine Leidenschaft** für die Entwicklung interaktiver Anwendungen treibt mich an, kontinuierlich bessere Lösungen zu schaffen. 
-            Ich arbeite gerne sowohl im Frontend als auch im Backend und finde besonders den Debugging-Prozess spannend – Probleme zu analysieren, Ursachen zu verstehen und nachhaltige Lösungen zu entwickeln.
+            \n\n**Ich arbeite über den ganzen Stack.** Frontend, Backend, Deployment: Ich analysiere Fehler über alle Schichten hinweg und suche die Ursache, statt Symptome zu beheben. Debugging ist für mich kein Pflichtteil, sondern das Spannendste an der Arbeit.
 
-            \n\n**Als Software Engineer** lege ich großen Wert auf sauberen, strukturierten Code und entwickle User Interfaces, die intuitiv, barrierefrei und geräteübergreifend nutzbar sind. 
-            Durch meine Erfahrung im Customer Success habe ich zusätzlich ein starkes Verständnis für Nutzerbedürfnisse und die Bedeutung einer guten User Experience.
+            \n\n**Ich denke in Architektur und Anforderungen.** Saubere Struktur, klare User Stories und Oberflächen, die intuitiv, barrierefrei und auf jedem Gerät funktionieren.
 
-            \n\nMeine Erfahrung aus der SaaS-Welt hilft mir dabei, technische Entscheidungen mit einem klaren Verständnis für Nutzerbedürfnisse zu verbinden und Lösungen zu entwickeln, die einfach, zuverlässig und intuitiv sind.`,
+            \n\n**KI ist für mich ein Werkzeug, das ich steuere und prüfe.** In meiner Weiterbildung im AI Engineering baue ich LLM-Anwendungen, RAG-Systeme und AI Agents. Im Alltag arbeite ich spezifikationsgetrieben: Ich definiere Architektur und Anforderungen, steuere KI-Coding-Agenten bei der Umsetzung und verantworte das Ergebnis.`,
     },
     contact: {
       formTitle: 'Melde dich gerne bei mir',
@@ -362,7 +366,7 @@ scratch while ensuring a seamless connection between them.`,
         'Leider konnte deine Nachricht nicht gesendet werden. Bitte versuche es erneut.',
     },
     impressum: {
-      information: 'Angaben gemäß § 5 TMG',
+      information: 'Angaben gemäß § 5 TMG:',
       register: 'Es gibt keinen Eintrag im Handelsregister.',
       email: 'E-Mail:',
     },
@@ -371,7 +375,7 @@ scratch while ensuring a seamless connection between them.`,
       overview: {
         purpose_and_context: {
           title: 'ZWECK UND KONTEXT',
-          description: `Die Herausforderung bestand darin, die API und die Datenbank von Grund auf zu
+          description: `Die Herausforderung bestand darin, die API und die Datenbank von Grund auf neu zu
 neu zu erstellen und gleichzeitig eine nahtlose Verbindung zwischen ihnen zu gewährleisten.`,
         },
         project_duration: {
@@ -387,8 +391,9 @@ neu zu erstellen und gleichzeitig eine nahtlose Verbindung zwischen ihnen zu gew
       },
       rest_api: {
         p: 'Eine REST-API ist wie ein Bote zwischen zwei verschiedenen Systemen, der sie miteinander kommunizieren lässt.',
-        client: 'KUNDE',
+        client: 'CLIENT',
         request: 'ANFRAGE',
+        server: 'SERVER',
         response: 'ANTWORT',
         database: 'DATENBANK',
       },
@@ -412,12 +417,12 @@ neu zu erstellen und gleichzeitig eine nahtlose Verbindung zwischen ihnen zu gew
           authentication_title: 'AUTHENTIFIZIERUNG',
           authentication: `Bei der einfachen HTTP-Authentifizierung werden die Anmeldedaten sicher in der Kopfzeile gesendet, 
                     und die API prüft sie mit der Datenbank, um den Benutzer anzumelden.`,
-          authorization_title: 'AUTHORIZATION',
+          authorization_title: 'AUTORISIERUNG',
           authorization:
             'Wenn der Benutzername und das Passwort korrekt sind, generiert die App ein sicheres Token. Dieses Token wird mit jeder Anfrage gesendet und ist für den Zugriff auf die App erforderlich.',
           security_title: 'SICHERHEIT',
           security: `Die Film-API verwendet Passwort-Hashing und wandelt Passwörter in Geheimcodes um, bevor sie gespeichert werden. 
-                    Selbst wenn die Datenbank gehackt wird, bleiben die echten Kennwörter verborgen und nur der Nutzer kennt sie.`,
+                    Selbst wenn die Datenbank gehackt wird, bleiben die echten Passwörter verborgen und nur der Nutzer kennt sie.`,
         },
       },
       testing: {
@@ -435,7 +440,7 @@ neu zu erstellen und gleichzeitig eine nahtlose Verbindung zwischen ihnen zu gew
         overview: {
           strategic_title: 'Strategisches Debugging über Stack-Schichten hinweg',
           strategic: `Da ich sowohl im Frontend als auch im Backend auf unerwartetes Verhalten gestoßen bin, habe ich mich auf Entwicklungswerkzeuge, strukturierte 
-                             console.log-Ausgaben und try/catch-Blöcke, um die Ursachen zu isolieren.`,
+                            console.log-Ausgaben und try/catch-Blöcke gestützt, um die Ursachen zu isolieren.`,
           implementing_title:
             'Implementierung der Zugriffskontrolle für die Integrität der Benutzerdaten',
           implementing:
